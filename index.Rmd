@@ -1,0 +1,193 @@
+---
+title: "Kevin's Notes 2024-2025"
+subtitle: "For personal use"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: true
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+  }
+</style>
+```
+# Introductory Courses
+
+<br />
+
+## GV4L8 Introductory Maths
+
+**GV4L8 Introductory Maths for Political Science**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## GV4L9 Introductory R
+
+**GV4L8 Introductory R for Political Science**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## EU409 Basic Economics
+
+**EU409 Basic Economics Concepts for Political Economy**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+# Autumn Term Courses
+
+<br />
+
+## GV481 Quantitative Analysis
+
+**GV481 Quantitative Analysis for Political Science**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## GV4C8 Game Theory
+
+**GV4C8 Game Theory for Political Science**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## MY452A Regression Analysis
+
+**MY452A Applied Regression Analysis**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+# Winter Term Courses
+
+<br />
+
+## GV482 Current Issues
+
+**GV482 Political Science and Political Economy: Current Issues**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## MY457 Causal Inference
+
+**MY457 Causal Inference for Observational and Experimental Studies**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## MY459 Text Analysis
+
+**MY459 Quantitative Text Analysis**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+# Audited Courses
+
+<br />
+
+## MY455 Multivariate Analysis
+
+**MY455 Multivariate Analysis and Measurement**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## DV494 Development Econometrics
+
+**DV494 Fundamentals of Applied Econometrics for Economic Development**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## DV490 Macro Development Policy
+
+**DV490 Economic Development Policy I: Macroeconomic Development**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## DV491 Micro Development Policy
+
+**DV491 Economic Development Policy II: Microeconomic Analysis**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## DV492 Gov Development Policy
+
+**DV492 Economic Development Policy III: Government Policy Analysis**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+# Non-Uni Courses
+
+<br />
+
+## AC110 Principles of Accounting
+
+**AC110 Principles of Accounting**
+
+1.  Session 1
+
+<br />
+
+## Other Notes
