@@ -51,7 +51,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **EU409 Basic Economics Concepts for Political Economy**
 
-1.  Session 1
+1.  [Intro to Economics, Supply and Demand](https://kevinli03.github.io/notes/EU409/1.html)
 
 <br />
 
