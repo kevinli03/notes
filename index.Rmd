@@ -190,5 +190,3 @@ knitr::opts_chunk$set(echo = TRUE)
 1.  Session 1
 
 <br />
-
-## Other Notes
