@@ -54,7 +54,7 @@ knitr::opts_chunk$set(echo = TRUE)
 **EU409 Basic Economics Concepts for Political Economy**
 
 1.  [Intro to Economics, Supply and Demand](https://kevinli03.github.io/notes/EU409/1.html)
-2.  [Macroeconomics I: Inflation and Unemployment](https://kevinli03.github.io/notes/EU409/2.html)
+2.  [Macroeconomics I: Supply-Side and Unemployment](https://kevinli03.github.io/notes/EU409/2.html)
 
 <br />
 

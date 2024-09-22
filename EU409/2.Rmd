@@ -1,5 +1,5 @@
 ---
-title: 'Macroeconomics I: Phillips Curve, Aggregate Supply'
+title: 'Macroeconomics I: Supply-Side and Unemployment'
 subtitle: "Session 2, EU409"
 output:
   html_document:
