@@ -30,8 +30,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **GV4L8 Introductory Maths for Political Science**
 
-1.  Session 1
-2.  Session 2
+1.  Sets, Expressions, Functions
+2.  Vectors, Matrices, Continuity, Limits
+3.  Derivatives, Optimisation, Integrals
+4.  Counting, Probability, Random Variables
 
 <br />
 
@@ -52,6 +54,7 @@ knitr::opts_chunk$set(echo = TRUE)
 **EU409 Basic Economics Concepts for Political Economy**
 
 1.  [Intro to Economics, Supply and Demand](https://kevinli03.github.io/notes/EU409/1.html)
+2.  [Macroeconomics I: Inflation and Unemployment](https://kevinli03.github.io/notes/EU409/2.html)
 
 <br />
 
