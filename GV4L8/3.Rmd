@@ -1,0 +1,31 @@
+---
+title: "Derivatives, Optimisation, Integrals"
+subtitle: "Session 3, GV4L8"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+  }
+</style>
+```
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
+
+------------------------------------------------------------------------
+
+# Title 1
+
+### Subtitle 1

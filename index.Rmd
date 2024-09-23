@@ -30,10 +30,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **GV4L8 Introductory Maths for Political Science**
 
-1.  Sets, Expressions, Functions
-2.  Vectors, Matrices, Continuity, Limits
-3.  Derivatives, Optimisation, Integrals
-4.  Counting, Probability, Random Variables
+1.  [Sets, Expressions, Functions](https://kevinli03.github.io/notes/GV4L8/1.html)
+2.  [Vectors, Matrices, Continuity, Limits](https://kevinli03.github.io/notes/GV4L8/2.html)
+3.  [Derivatives, Optimisation, Integrals](https://kevinli03.github.io/notes/GV4L8/3.html)
+4.  [Counting, Probability, Random Variables](https://kevinli03.github.io/notes/GV4L8/4.html)
 
 <br />
 
@@ -94,6 +94,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
+## MY470 Computer Programming
+
+**MY470 Computer Programming**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## EU443 Models of Capitalism
+
+**EU443 European Models of Capitalism**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
 # Winter Term Courses
 
 <br />
@@ -118,20 +138,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-## MY459 Text Analysis
-
-**MY459 Quantitative Text Analysis**
-
-1.  Session 1
-
-<br />
-
-------------------------------------------------------------------------
-
-# Audited Courses
-
-<br />
-
 ## MY455 Multivariate Analysis
 
 **MY455 Multivariate Analysis and Measurement**
@@ -142,19 +148,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-## DV494 Development Econometrics
+## ST304 Time Series
 
-**DV494 Fundamentals of Applied Econometrics for Economic Development**
-
-1.  Session 1
-
-<br />
-
-------------------------------------------------------------------------
-
-## DV490 Macro Development Policy
-
-**DV490 Economic Development Policy I: Macroeconomic Development**
+**ST304 Time Series and Forecasting**
 
 1.  Session 1
 
@@ -162,19 +158,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-## DV491 Micro Development Policy
+## IR480 Inequality and Development
 
-**DV491 Economic Development Policy II: Microeconomic Analysis**
-
-1.  Session 1
-
-<br />
-
-------------------------------------------------------------------------
-
-## DV492 Gov Development Policy
-
-**DV492 Economic Development Policy III: Government Policy Analysis**
+**IR480 The Politics of Inequality and Development**
 
 1.  Session 1
 
@@ -182,7 +168,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-# Non-Uni Courses
+# Other Courses
 
 <br />
 
@@ -193,3 +179,11 @@ knitr::opts_chunk$set(echo = TRUE)
 1.  Session 1
 
 <br />
+
+------------------------------------------------------------------------
+
+# Short Guides
+
+-   Microeconomics Essentials
+
+-   Financial Modelling Essentials
