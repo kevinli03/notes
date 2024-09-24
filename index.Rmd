@@ -104,9 +104,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-## EU443 Models of Capitalism
+## DV423 Global Political Economy
 
-**EU443 European Models of Capitalism**
+**DV423 Global Political Economy**
 
 1.  Session 1
 
@@ -161,6 +161,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ## IR480 Inequality and Development
 
 **IR480 The Politics of Inequality and Development**
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## EU443 Models of Capitalism
+
+**EU443 European Models of Capitalism**
 
 1.  Session 1
 

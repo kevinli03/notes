@@ -26,6 +26,304 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-# Title 1
+# Numbers, Intervals, Sets
 
-### Subtitle 1
+### Typlogy of Numbers
+
+These are the common types of numbers, and how we often reference them in set notation
+
+-   $N$: Natural numbers - numbers we use to count 1 onwards {1,2,3,...}
+
+-   $W$: Whole numbers - counting numbers from 0 {0,1,2,3...}
+
+-   $Z$: Integers - non-decimal numbers both negative and positive {...,-1,0,1,2...}
+
+-   $Q$: Rational Numbers - numbers that can be written as fractions
+
+-   $R$: Real numbers - all values not in imaginary pane (ex. $\pi, \sqrt{2}$)
+
+-   $C$: Complex numbers - values with imaginary pane (ex. $3 + 4i$)
+
+<br />
+
+### Intervals
+
+Common symbols used in defining intervals:
+
+-   $\equiv$ means "is equivalent to - represents"
+
+-   $\in$: means "in", or "belongs to". (ex. $3 \in N$)
+
+-   $:$ means such that
+
+-   Open intervals (not including boundaries) with parentheses ()
+
+    -   Ex. $(a,b) = \{ a < x < b \}$
+
+-   Closed intervals (including boundaries) with brackets []
+
+    -   Ex. $[a,b] = \{ a≤x≤b \}$
+
+    -   Note: we can mix and match open and closed intervals on either side
+
+<br />
+
+### Introduction Sets
+
+A set is a collection of distinct objects (generally numbers)
+
+-   The set is labeled with a capital number (ex. $A$)
+
+-   An element within a set is labeled with a lowercase number (ex. $a$)
+
+<br />
+
+We can define sets as follows - below is a set $A$ with elements $a, b ,c$
+
+$$
+A = \{ a, b,c \}
+$$
+
+We can also define sets with ranges - below is a set $A$ with all real numbers between -1 and 3
+
+$$
+A = \{ x:-1<x≤3, x \in R \}
+$$
+
+<br />
+
+Intersection of sets is the overlap between the elements of the sets: $A \cap B$
+
+-   Basically, are there any common elements between the two, that appear in both sets?
+
+If there are no overlap between sets, we notate that with the empty set $\varnothing$
+
+$$
+A \cap B = \varnothing
+$$
+
+For example, if $A = \{ a, b, c \}, B = \{b, c, d \}$, then $A \cap B = \{ b, c \}$
+
+<br />
+
+Union of sets is the combination of the elements of both sets: $A \cup B$
+
+For example, $A = \{ a, b, c \}, B = \{d, e, f \}$, then $A \cup B = \{ a,b, c,d,e,f \}$
+
+<br />
+
+### Typology of Sets
+
+These are types of sets
+
+-   Empty set: $\varnothing$ - nothing present
+
+-   Universal set: the set of all elements in a specific context (all possible values, for example)
+
+-   Complement: $A^c$ - all the elements not in set $A$, that are a part of the universal set
+
+-   Proper Subset: $A \subset B$ - elements of set $A$ are all included within set $B$, and the number of elements in set $A$ is less than the number of elements in set $B$
+
+-   Improper subset: $A \subseteq B$ - elements of set $A$ are all included within set $B$, but it is possible the number of elements in both sets are the same
+
+-   The difference of set: $A - B$ - the elements that are a part of $A$, that are not a part of $B$
+
+-   Open and Closed sets - sets defined in either open (not include edgepoints) or closed intervals (include edgepoints)
+
+<br />
+
+Other Set Typologies
+
+-   Boundary: A group of points, that touch the complement of a set (basically the edges of the set)
+
+-   Interior Point: A point inside the boundary of a set
+
+-   Bounded set: All points are within a certain finite space (so not infinity)
+
+-   Unbounded set: Points are not within a finite space, so the sets extends infinitely
+
+-   Compact set: A set that is both closed, and bounded (easiest type of sets to work with)
+
+<br />
+
+Example in Social Sciences
+
+-   Study of social networks (Bonacich 1978)
+
+-   Each student has a set of events they go to - $A,B,C...,N$ (each being a different type of events, such as sports, academic, etc.)
+
+-   The intersection of sets between students is the events multiple students all went to
+
+<br />
+
+------------------------------------------------------------------------
+
+# Topics in Algebra
+
+### Exponents and Logarithms
+
+These are the properties of exponents:
+
+-   Product of powers: $a^m \times a^n = a^{m+n}$
+
+-   Quotient of powers: $\frac{a^m}{a^n} = a^{m-n}$
+
+-   Power of a power: $(a^m)^n = a^{m \times n}$
+
+-   Power of a product: $(a \times b)^n = a^n \times b^n$
+
+-   Power of a quotient: $(\frac{a}{b})^n = \frac{a^n}{b^n}$
+
+<br />
+
+Logarithms, such as $\log_a b = c$ , the solution is what power $c$ of $a$ gets $b$ ( $a^c = b$ )
+
+These are the properties of logarithms:
+
+-   Product Rule: $\log_a (b \times c) = \log_a b + \log_a c$
+
+-   Quotient Rule: $\log_a (\frac{b}{c}) = \log_a b - \log_a c$
+
+-   Power Rule: $\log_a (b^c) = c * \log_a b$
+
+-   Change of Base Formula: $\log_a b = \frac{\log_c b}{\log_c a}$
+
+<br />
+
+### Factorisation and Roots
+
+Factorisation is the process of expressing a polynomial, as a product of its factors. How to do this.
+
+Take the example $ax^2 + bx + c$
+
+-   Find 2 numbers $d, e$, that sum to $b$, and multiply to $c$
+
+-   Then, put in form of $(x+d)(x+e)$
+
+<br />
+
+For example, $x^2+5x+6$
+
+-   We need to find numbers that add to $5$, and multiply to $6$
+
+-   These two numbers that work are $2,3$
+
+-   Thus, the factorisation is $(x+2)(x+3)$
+
+<br />
+
+This helps us solve for the zeroes/roots of the equation, just set this equal to 0:
+
+$$
+(x+2)(x+3) = 0
+$$
+
+$$
+x=-2, -3
+$$
+
+<br />
+
+We can check our factorisation as follows by multiplying out and seeing if we get the same expression as before
+
+$$
+(x+2)(x+3)
+$$
+
+$$
+= x^2 + 3x + 2x + 6
+$$
+
+$$
+= x^2 + 5x + 6
+$$
+
+<br />
+
+### Quadratic Formula and Roots
+
+Quadratic formula can be used to find the roots/zeroes of any quadratic equation in the form of $ax^2+bx+c=0$
+
+$$
+x = \frac{-b ± \sqrt{b^2 - 4ac}}{2a}
+$$
+
+Remember to test both the $+$ and $-$ to get all the roots (usually 2)
+
+<br />
+
+### Solving Inequalities
+
+You solve inequalities the same way as expressions, with one note:
+
+-   Flip the direction of the sign when you multiply both sides by a negative number
+
+-   DON'T FORGET NEGATIVE SIGNS
+
+<br />
+
+------------------------------------------------------------------------
+
+# Functions
+
+### Overview of Function
+
+Functions are a "black box" algorithm used for "mapping"
+
+-   We take an input from set $X$, and map each element to output from set $Y$
+
+-   For each element in $X$, each element can only map to one output in $Y$ (i.e. one input can only result in one output)
+
+-   However, one output can be a result of multiple inputs.
+
+<br />
+
+### Types of Functions
+
+-   Monomials: $ax^k$ - $a$ is coefficient, $k$ is power
+
+-   Polynomials: sum of monomials, such as $ax^3 + bx^2$
+
+    -   The degree of the polynomial is the highest power $x$ takes in all the monomials of the polynomial
+
+    -   Linear functions are a polynomial of degree 1 (straight line). Non-Linear functions are ones that are any other function except linear.
+
+    -   Quadratics are a polynomial of degree 2
+
+-   Rational Functions: one polynomial divided by another polynomial
+
+-   Exponential Functions: $2^x$ (the base is constant, unlike monomials)
+
+-   Trigonometric Functions: $\cos(x), \sin(x)$
+
+<br />
+
+### Composite Functions
+
+Composite functions are when the output of one function, is used as the input of another:
+
+-   Basically, one function nested in another
+
+$$
+f[g(x)] = f \circ g = fg(x)
+$$
+
+<br />
+
+For example, given $h(x) = x^2$, and $f(x) = x-5$, then $f[h(x)] = (x)^2 - 5$
+
+NOTE: order matters - $f \circ g ≠ g \circ f$
+
+<br />
+
+### Applied Example of Functions
+
+How do we aggregate individual preferences (inputs) into a collective decision (output)?
+
+Kenneth created the Arrow's Impossibility Theorem (1951) showed that under certain fairness conditions, no "perfect voting system exists when there are 3 or more alternative policy options.
+
+-   Three voters, and three policy options, A, B, C
+
+-   Each voter has preferences $P_1, P_2, P_3$, which inform the preferences of society $P_{\text{society}}$
+
+-   Thus, society (output) would be a function of these preferences: $P_{\text{society}} = f(P_1, P_2, P_3)$

@@ -2792,10 +2792,315 @@ max-width: 1100px;
 <p><a href="https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths">GV4L8
 Homepage</a></p>
 <hr />
-<div id="title-1" class="section level1">
-<h1>Title 1</h1>
-<div id="subtitle-1" class="section level3">
-<h3>Subtitle 1</h3>
+<div id="numbers-intervals-sets" class="section level1">
+<h1>Numbers, Intervals, Sets</h1>
+<div id="typlogy-of-numbers" class="section level3">
+<h3>Typlogy of Numbers</h3>
+<p>These are the common types of numbers, and how we often reference
+them in set notation</p>
+<ul>
+<li><p><span class="math inline">\(N\)</span>: Natural numbers - numbers
+we use to count 1 onwards {1,2,3,…}</p></li>
+<li><p><span class="math inline">\(W\)</span>: Whole numbers - counting
+numbers from 0 {0,1,2,3…}</p></li>
+<li><p><span class="math inline">\(Z\)</span>: Integers - non-decimal
+numbers both negative and positive {…,-1,0,1,2…}</p></li>
+<li><p><span class="math inline">\(Q\)</span>: Rational Numbers -
+numbers that can be written as fractions</p></li>
+<li><p><span class="math inline">\(R\)</span>: Real numbers - all values
+not in imaginary pane (ex. <span class="math inline">\(\pi,
+\sqrt{2}\)</span>)</p></li>
+<li><p><span class="math inline">\(C\)</span>: Complex numbers - values
+with imaginary pane (ex. <span class="math inline">\(3 +
+4i\)</span>)</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="intervals" class="section level3">
+<h3>Intervals</h3>
+<p>Common symbols used in defining intervals:</p>
+<ul>
+<li><p><span class="math inline">\(\equiv\)</span> means “is equivalent
+to - represents”</p></li>
+<li><p><span class="math inline">\(\in\)</span>: means “in”, or “belongs
+to”. (ex. <span class="math inline">\(3 \in N\)</span>)</p></li>
+<li><p><span class="math inline">\(:\)</span> means such that</p></li>
+<li><p>Open intervals (not including boundaries) with parentheses ()</p>
+<ul>
+<li>Ex. <span class="math inline">\((a,b) = \{ a &lt; x &lt; b
+\}\)</span></li>
+</ul></li>
+<li><p>Closed intervals (including boundaries) with brackets []</p>
+<ul>
+<li><p>Ex. <span class="math inline">\([a,b] = \{ a≤x≤b
+\}\)</span></p></li>
+<li><p>Note: we can mix and match open and closed intervals on either
+side</p></li>
+</ul></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="introduction-sets" class="section level3">
+<h3>Introduction Sets</h3>
+<p>A set is a collection of distinct objects (generally numbers)</p>
+<ul>
+<li><p>The set is labeled with a capital number (ex. <span class="math inline">\(A\)</span>)</p></li>
+<li><p>An element within a set is labeled with a lowercase number (ex.
+<span class="math inline">\(a\)</span>)</p></li>
+</ul>
+<p><br /></p>
+<p>We can define sets as follows - below is a set <span class="math inline">\(A\)</span> with elements <span class="math inline">\(a, b ,c\)</span></p>
+<p><span class="math display">\[
+A = \{ a, b,c \}
+\]</span></p>
+<p>We can also define sets with ranges - below is a set <span class="math inline">\(A\)</span> with all real numbers between -1 and
+3</p>
+<p><span class="math display">\[
+A = \{ x:-1&lt;x≤3, x \in R \}
+\]</span></p>
+<p><br /></p>
+<p>Intersection of sets is the overlap between the elements of the sets:
+<span class="math inline">\(A \cap B\)</span></p>
+<ul>
+<li>Basically, are there any common elements between the two, that
+appear in both sets?</li>
+</ul>
+<p>If there are no overlap between sets, we notate that with the empty
+set <span class="math inline">\(\varnothing\)</span></p>
+<p><span class="math display">\[
+A \cap B = \varnothing
+\]</span></p>
+<p>For example, if <span class="math inline">\(A = \{ a, b, c \}, B =
+\{b, c, d \}\)</span>, then <span class="math inline">\(A \cap B = \{ b,
+c \}\)</span></p>
+<p><br /></p>
+<p>Union of sets is the combination of the elements of both sets: <span class="math inline">\(A \cup B\)</span></p>
+<p>For example, <span class="math inline">\(A = \{ a, b, c \}, B = \{d,
+e, f \}\)</span>, then <span class="math inline">\(A \cup B = \{ a,b,
+c,d,e,f \}\)</span></p>
+<p><br /></p>
+</div>
+<div id="typology-of-sets" class="section level3">
+<h3>Typology of Sets</h3>
+<p>These are types of sets</p>
+<ul>
+<li><p>Empty set: <span class="math inline">\(\varnothing\)</span> -
+nothing present</p></li>
+<li><p>Universal set: the set of all elements in a specific context (all
+possible values, for example)</p></li>
+<li><p>Complement: <span class="math inline">\(A^c\)</span> - all the
+elements not in set <span class="math inline">\(A\)</span>, that are a
+part of the universal set</p></li>
+<li><p>Proper Subset: <span class="math inline">\(A \subset B\)</span> -
+elements of set <span class="math inline">\(A\)</span> are all included
+within set <span class="math inline">\(B\)</span>, and the number of
+elements in set <span class="math inline">\(A\)</span> is less than the
+number of elements in set <span class="math inline">\(B\)</span></p></li>
+<li><p>Improper subset: <span class="math inline">\(A \subseteq
+B\)</span> - elements of set <span class="math inline">\(A\)</span> are
+all included within set <span class="math inline">\(B\)</span>, but it
+is possible the number of elements in both sets are the same</p></li>
+<li><p>The difference of set: <span class="math inline">\(A - B\)</span>
+- the elements that are a part of <span class="math inline">\(A\)</span>, that are not a part of <span class="math inline">\(B\)</span></p></li>
+<li><p>Open and Closed sets - sets defined in either open (not include
+edgepoints) or closed intervals (include edgepoints)</p></li>
+</ul>
+<p><br /></p>
+<p>Other Set Typologies</p>
+<ul>
+<li><p>Boundary: A group of points, that touch the complement of a set
+(basically the edges of the set)</p></li>
+<li><p>Interior Point: A point inside the boundary of a set</p></li>
+<li><p>Bounded set: All points are within a certain finite space (so not
+infinity)</p></li>
+<li><p>Unbounded set: Points are not within a finite space, so the sets
+extends infinitely</p></li>
+<li><p>Compact set: A set that is both closed, and bounded (easiest type
+of sets to work with)</p></li>
+</ul>
+<p><br /></p>
+<p>Example in Social Sciences</p>
+<ul>
+<li><p>Study of social networks (Bonacich 1978)</p></li>
+<li><p>Each student has a set of events they go to - <span class="math inline">\(A,B,C...,N\)</span> (each being a different type
+of events, such as sports, academic, etc.)</p></li>
+<li><p>The intersection of sets between students is the events multiple
+students all went to</p></li>
+</ul>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="topics-in-algebra" class="section level1">
+<h1>Topics in Algebra</h1>
+<div id="exponents-and-logarithms" class="section level3">
+<h3>Exponents and Logarithms</h3>
+<p>These are the properties of exponents:</p>
+<ul>
+<li><p>Product of powers: <span class="math inline">\(a^m \times a^n =
+a^{m+n}\)</span></p></li>
+<li><p>Quotient of powers: <span class="math inline">\(\frac{a^m}{a^n} =
+a^{m-n}\)</span></p></li>
+<li><p>Power of a power: <span class="math inline">\((a^m)^n = a^{m
+\times n}\)</span></p></li>
+<li><p>Power of a product: <span class="math inline">\((a \times b)^n =
+a^n \times b^n\)</span></p></li>
+<li><p>Power of a quotient: <span class="math inline">\((\frac{a}{b})^n
+= \frac{a^n}{b^n}\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>Logarithms, such as <span class="math inline">\(\log_a b = c\)</span>
+, the solution is what power <span class="math inline">\(c\)</span> of
+<span class="math inline">\(a\)</span> gets <span class="math inline">\(b\)</span> ( <span class="math inline">\(a^c =
+b\)</span> )</p>
+<p>These are the properties of logarithms:</p>
+<ul>
+<li><p>Product Rule: <span class="math inline">\(\log_a (b \times c) =
+\log_a b + \log_a c\)</span></p></li>
+<li><p>Quotient Rule: <span class="math inline">\(\log_a (\frac{b}{c}) =
+\log_a b - \log_a c\)</span></p></li>
+<li><p>Power Rule: <span class="math inline">\(\log_a (b^c) = c * \log_a
+b\)</span></p></li>
+<li><p>Change of Base Formula: <span class="math inline">\(\log_a b =
+\frac{\log_c b}{\log_c a}\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="factorisation-and-roots" class="section level3">
+<h3>Factorisation and Roots</h3>
+<p>Factorisation is the process of expressing a polynomial, as a product
+of its factors. How to do this.</p>
+<p>Take the example <span class="math inline">\(ax^2 + bx +
+c\)</span></p>
+<ul>
+<li><p>Find 2 numbers <span class="math inline">\(d, e\)</span>, that
+sum to <span class="math inline">\(b\)</span>, and multiply to <span class="math inline">\(c\)</span></p></li>
+<li><p>Then, put in form of <span class="math inline">\((x+d)(x+e)\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>For example, <span class="math inline">\(x^2+5x+6\)</span></p>
+<ul>
+<li><p>We need to find numbers that add to <span class="math inline">\(5\)</span>, and multiply to <span class="math inline">\(6\)</span></p></li>
+<li><p>These two numbers that work are <span class="math inline">\(2,3\)</span></p></li>
+<li><p>Thus, the factorisation is <span class="math inline">\((x+2)(x+3)\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>This helps us solve for the zeroes/roots of the equation, just set
+this equal to 0:</p>
+<p><span class="math display">\[
+(x+2)(x+3) = 0
+\]</span></p>
+<p><span class="math display">\[
+x=-2, -3
+\]</span></p>
+<p><br /></p>
+<p>We can check our factorisation as follows by multiplying out and
+seeing if we get the same expression as before</p>
+<p><span class="math display">\[
+(x+2)(x+3)
+\]</span></p>
+<p><span class="math display">\[
+= x^2 + 3x + 2x + 6
+\]</span></p>
+<p><span class="math display">\[
+= x^2 + 5x + 6
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="quadratic-formula-and-roots" class="section level3">
+<h3>Quadratic Formula and Roots</h3>
+<p>Quadratic formula can be used to find the roots/zeroes of any
+quadratic equation in the form of <span class="math inline">\(ax^2+bx+c=0\)</span></p>
+<p><span class="math display">\[
+x = \frac{-b ± \sqrt{b^2 - 4ac}}{2a}
+\]</span></p>
+<p>Remember to test both the <span class="math inline">\(+\)</span> and
+<span class="math inline">\(-\)</span> to get all the roots (usually
+2)</p>
+<p><br /></p>
+</div>
+<div id="solving-inequalities" class="section level3">
+<h3>Solving Inequalities</h3>
+<p>You solve inequalities the same way as expressions, with one
+note:</p>
+<ul>
+<li><p>Flip the direction of the sign when you multiply both sides by a
+negative number</p></li>
+<li><p>DON’T FORGET NEGATIVE SIGNS</p></li>
+</ul>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="functions" class="section level1">
+<h1>Functions</h1>
+<div id="overview-of-function" class="section level3">
+<h3>Overview of Function</h3>
+<p>Functions are a “black box” algorithm used for “mapping”</p>
+<ul>
+<li><p>We take an input from set <span class="math inline">\(X\)</span>,
+and map each element to output from set <span class="math inline">\(Y\)</span></p></li>
+<li><p>For each element in <span class="math inline">\(X\)</span>, each
+element can only map to one output in <span class="math inline">\(Y\)</span> (i.e. one input can only result in one
+output)</p></li>
+<li><p>However, one output can be a result of multiple inputs.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="types-of-functions" class="section level3">
+<h3>Types of Functions</h3>
+<ul>
+<li><p>Monomials: <span class="math inline">\(ax^k\)</span> - <span class="math inline">\(a\)</span> is coefficient, <span class="math inline">\(k\)</span> is power</p></li>
+<li><p>Polynomials: sum of monomials, such as <span class="math inline">\(ax^3 + bx^2\)</span></p>
+<ul>
+<li><p>The degree of the polynomial is the highest power <span class="math inline">\(x\)</span> takes in all the monomials of the
+polynomial</p></li>
+<li><p>Linear functions are a polynomial of degree 1 (straight line).
+Non-Linear functions are ones that are any other function except
+linear.</p></li>
+<li><p>Quadratics are a polynomial of degree 2</p></li>
+</ul></li>
+<li><p>Rational Functions: one polynomial divided by another
+polynomial</p></li>
+<li><p>Exponential Functions: <span class="math inline">\(2^x\)</span>
+(the base is constant, unlike monomials)</p></li>
+<li><p>Trigonometric Functions: <span class="math inline">\(\cos(x),
+\sin(x)\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="composite-functions" class="section level3">
+<h3>Composite Functions</h3>
+<p>Composite functions are when the output of one function, is used as
+the input of another:</p>
+<ul>
+<li>Basically, one function nested in another</li>
+</ul>
+<p><span class="math display">\[
+f[g(x)] = f \circ g = fg(x)
+\]</span></p>
+<p><br /></p>
+<p>For example, given <span class="math inline">\(h(x) = x^2\)</span>,
+and <span class="math inline">\(f(x) = x-5\)</span>, then <span class="math inline">\(f[h(x)] = (x)^2 - 5\)</span></p>
+<p>NOTE: order matters - <span class="math inline">\(f \circ g ≠ g \circ
+f\)</span></p>
+<p><br /></p>
+</div>
+<div id="applied-example-of-functions" class="section level3">
+<h3>Applied Example of Functions</h3>
+<p>How do we aggregate individual preferences (inputs) into a collective
+decision (output)?</p>
+<p>Kenneth created the Arrow’s Impossibility Theorem (1951) showed that
+under certain fairness conditions, no “perfect voting system exists when
+there are 3 or more alternative policy options.</p>
+<ul>
+<li><p>Three voters, and three policy options, A, B, C</p></li>
+<li><p>Each voter has preferences <span class="math inline">\(P_1, P_2,
+P_3\)</span>, which inform the preferences of society <span class="math inline">\(P_{\text{society}}\)</span></p></li>
+<li><p>Thus, society (output) would be a function of these preferences:
+<span class="math inline">\(P_{\text{society}} = f(P_1, P_2,
+P_3)\)</span></p></li>
+</ul>
 </div>
 </div>
 
