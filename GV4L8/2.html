@@ -11,7 +11,7 @@
 
 
 
-<title>Vectors, Matrices, Continuity</title>
+<title>Vectors, Matrices, Limits</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -2778,7 +2778,7 @@ font-size: 0.95em;
 
 
 
-<h1 class="title toc-ignore">Vectors, Matrices, Continuity</h1>
+<h1 class="title toc-ignore">Vectors, Matrices, Limits</h1>
 <h3 class="subtitle">Session 2, GV4L8</h3>
 
 </div>
@@ -2792,10 +2792,381 @@ max-width: 1100px;
 <p><a href="https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths">GV4L8
 Homepage</a></p>
 <hr />
-<div id="title-1" class="section level1">
-<h1>Title 1</h1>
-<div id="subtitle-1" class="section level3">
-<h3>Subtitle 1</h3>
+<div id="scalars-and-vectors" class="section level1">
+<h1>Scalars and Vectors</h1>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>Scalars are a single number representing a magnitude or value</p>
+<ul>
+<li>Ex. <span class="math inline">\(c=3\)</span> is a scalar</li>
+</ul>
+<p>Vector is a list of <span class="math inline">\(n\)</span> numbers -
+where <span class="math inline">\(n\)</span> in dicates the number of
+dimensions</p>
+<p><span class="math display">\[
+v =
+\begin{bmatrix}
+v_1 \\
+v_2 \\
+v_3
+\end{bmatrix}, \text{ for example},
+v =
+\begin{bmatrix}
+2 \\
+-1 \\
+4
+\end{bmatrix}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="vector-scalar-multiplication" class="section level3">
+<h3>Vector-Scalar Multiplication</h3>
+<p>To multiply a scalar with a vector, we multiply each element of a
+vector with the scalar:</p>
+<p><span class="math display">\[
+c \times v =
+\begin{bmatrix}
+v_1 \times c\\
+v_2 \times c \\
+v_3 \times c
+\end{bmatrix}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="vector-addition-and-subtraction" class="section level3">
+<h3>Vector Addition and Subtraction</h3>
+<p>To add/subtract vectors, we just do addition/subtraction for each
+respective element of the vector</p>
+<ul>
+<li>Vectors must be of the same length to do addition/subtraction</li>
+</ul>
+<p><span class="math display">\[
+v + u =
+\begin{bmatrix}
+v_1 + u_1\\
+v_2 + u_2 \\
+v_3 + u_2
+\end{bmatrix}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="vector-inner-product-dot-product" class="section level3">
+<h3>Vector Inner Product (Dot Product)</h3>
+<p>The aim is to find one number, by multiplying every respective
+element and summing all the products:</p>
+<ul>
+<li>Dot product produces a scalar</li>
+</ul>
+<p><span class="math display">\[
+\sum\limits_{i=1}^n u_i v_i = u_1v_1 + u_2v_2 + ... + u_n v_n
+\]</span></p>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="matrix-operations" class="section level1">
+<h1>Matrix Operations</h1>
+<div id="matrices" class="section level3">
+<h3>Matrices</h3>
+<p>A matrix is an array, with <span class="math inline">\(m\)</span>
+rows by <span class="math inline">\(n\)</span> columns</p>
+<ul>
+<li><p>Rows always before column</p></li>
+<li><p>Note: Matrices are basically special vectors with only one row or
+one column</p></li>
+</ul>
+<p>To notate elements of matrices, we subscript the row by column
+location of that element:</p>
+<p><span class="math display">\[
+U_{2 \times 3} = \begin{bmatrix}
+u_{11} &amp; u_{12} &amp; u_{13} \\
+u_{21} &amp; u_{22} &amp; u_{23}
+\end{bmatrix}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="matrix-addition-and-subtraction" class="section level3">
+<h3>Matrix Addition and Subtraction</h3>
+<p>Matrix addition and subtraction is the same intuition as vector
+addition and subtraction - just add the respective elements</p>
+<ul>
+<li>Matrices that are added together must have the same dimensional
+(number of rows and columns)</li>
+</ul>
+<p>For example, the sum of matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[
+A_{2 \times 2} + B_{2 \times 2} =
+\begin{bmatrix}
+a_{11} + b_{11} &amp; a_{12} + b_{12} \\
+a_{21} + b_{21} &amp; a_{22} + b_{22}
+\end{bmatrix}
+\]</span></p>
+<p>Same applies for subtraction.</p>
+<p><br /></p>
+</div>
+<div id="scalar-multiplication" class="section level3">
+<h3>Scalar Multiplication</h3>
+<p>Scalar multiplication is always possible, and takes the same
+intuition as vector scalar multiplication. Just multiply every element
+in the matrix by the scalar:</p>
+<p><span class="math display">\[
+c \times A_{2 \times 2} =
+\begin{bmatrix}
+c \times a_{11} &amp; c \times a_{12} \\
+c \times a_{21} &amp; c \times a_{22}
+\end{bmatrix}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="matrix-multiplication" class="section level3">
+<h3>Matrix Multiplication</h3>
+<p>Before we start - we need to make sure that in <span class="math inline">\(A \times B\)</span>, the number of columns in
+<span class="math inline">\(A\)</span> must equal the number of rows in
+<span class="math inline">\(B\)</span></p>
+<p>The resulting product matrix is the dimensions of the number of rows
+in <span class="math inline">\(A\)</span>, and the number of columns in
+<span class="math inline">\(B\)</span></p>
+<p><br /></p>
+<p>To do Matrix Multiplication, we multiply the 1st row of matrix <span class="math inline">\(A\)</span> with the 1st column of matrix <span class="math inline">\(B\)</span></p>
+<p>For example, take the matrices:</p>
+<p><span class="math display">\[
+A = \begin{bmatrix}
+2 &amp; 1 \\
+4 &amp; 2 \\
+6 &amp; 3
+\end{bmatrix}, B =
+\begin{bmatrix}
+2 &amp; 1 \\
+1 &amp; 3
+\end{bmatrix}
+\]</span></p>
+<p>Now, take the first row of <span class="math inline">\(A\)</span>
+times the first column of <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[
+A = [2, 1], B = [2, 1]
+\]</span></p>
+<p>Now, multiply the first element of the first row of <span class="math inline">\(A\)</span>, with the first element of the first
+column of <span class="math inline">\(B\)</span>. Then do it for the
+second element, and so on:</p>
+<p><span class="math display">\[
+2 \times 2 = 4
+\]</span></p>
+<p><span class="math display">\[
+1 \times 1 = 1
+\]</span></p>
+<p>Then, find the sum:</p>
+<p><span class="math display">\[
+4 + 1 = 5
+\]</span></p>
+<p>This goes in the resulting matrix <span class="math inline">\(C\)</span> in slot <span class="math inline">\(c_{11}\)</span></p>
+<p><br /></p>
+<p>Now do the same for all the other slots of final matrix <span class="math inline">\(C\)</span></p>
+<ul>
+<li>where <span class="math inline">\(c_{n \times m}\)</span> means take
+the dot product of the <span class="math inline">\(n\)</span>th row of
+<span class="math inline">\(A\)</span> and the <span class="math inline">\(m\)</span>th column of <span class="math inline">\(B\)</span></li>
+</ul>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="matrix-properties" class="section level1">
+<h1>Matrix Properties</h1>
+<div id="associative-properties" class="section level3">
+<h3>Associative Properties</h3>
+<p>The associative property for matrix addition says the following is
+true:</p>
+<p><span class="math display">\[
+(A+B)+C = A+(B+C)
+\]</span></p>
+<p>This is pretty obvious, as addition also has this property, and
+matrix addition is simply a set of different addition operations</p>
+<p><br /></p>
+<p>The associative property also says this with matrix
+multiplication:</p>
+<p><span class="math display">\[
+(AB)C = A(BC)
+\]</span></p>
+<p><br /></p>
+<p>However, associative property does not apply to matrix
+subtraction:</p>
+<p><span class="math display">\[
+(A-B)-C ≠ A-(B-C)
+\]</span></p>
+<p>This again is obvious from simple subtraction, for example <span class="math inline">\(5-3-2 = 0\)</span>, while <span class="math inline">\(5-(3-2)=5-1=4\)</span></p>
+<p><br /></p>
+</div>
+<div id="commutative-property" class="section level3">
+<h3>Commutative Property</h3>
+<p>The commutative property for matrix addition</p>
+<p><span class="math display">\[
+A+B = B+A
+\]</span></p>
+<p>This is self explanatory, as it applies to normal addition, and
+matrix addition is just a set of separate normal addition operations</p>
+<p><br /></p>
+<p>However, there is no commutative property for multiplication</p>
+<p><span class="math display">\[
+AB ≠ BA
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="distributive-properties" class="section level3">
+<h3>Distributive Properties</h3>
+<p>There is a distributive property of matrix operations, stating:</p>
+<p><span class="math display">\[
+A(B+C) = AB + AC, \text{ and}
+\]</span></p>
+<p><span class="math display">\[
+(A+B)C = AC+BC
+\]</span></p>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="types-of-matrices" class="section level1">
+<h1>Types of Matrices</h1>
+<div id="transpose-matrix" class="section level3">
+<h3>Transpose Matrix</h3>
+<p>A transpose matrix <span class="math inline">\(A^T\)</span> is
+obtained by swapping the rows with columns. For example:</p>
+<p><span class="math display">\[
+\text{If } A =
+\begin{bmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{bmatrix}, A^T =
+\begin{bmatrix}
+1 &amp; 3 \\
+2 &amp; 4
+\end{bmatrix}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="diagonal-and-identity-matrix" class="section level3">
+<h3>Diagonal and Identity Matrix</h3>
+<p>A diagonal matrix is where all the information is in the diagonal
+(top left to bottom right) of the matrix, and all other off-diagonal
+slots are 0.</p>
+<p>The identity matrix is a diagonal matrix with only 1’s on the
+diagonal:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</span></p>
+<p>Upper triangular matrix is a matrix where all elements below the
+diagonal are zero</p>
+<ul>
+<li>Basically, all values are at the diagonal or above in the upper
+right side</li>
+</ul>
+<p>Lower triangular matrix is a matrix where all elements above the
+diagonal are zero</p>
+<ul>
+<li>Basically all values are at the diagonal or below in the lower left
+side</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="limits" class="section level1">
+<h1>Limits</h1>
+<div id="neighbourhoods-and-continuity" class="section level3">
+<h3>Neighbourhoods and Continuity</h3>
+<p>Neighbourhoods of a point, is a set that contains that point, and
+includes an open set around that point</p>
+<ul>
+<li>For example, if our point is <span class="math inline">\(p=3\)</span>, the neighbourhood could be the
+interval <span class="math inline">\((2,4)\)</span></li>
+</ul>
+<p>Continuity is quite intuitive - the possibility of drawing a function
+without raising our pencil</p>
+<ul>
+<li><p>Basically, no jumps or breaks in our function</p></li>
+<li><p>We will provide a more formal definition in a bit</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="definition-of-limits" class="section level3">
+<h3>Definition of Limits</h3>
+<p>The intuition of limits is this:</p>
+<ul>
+<li><p>We use limits when we can’t work something out directly at a
+point of a function</p></li>
+<li><p>However, we can see what it should be, as we get closer and
+closer to a point</p></li>
+<li><p>For example, maybe function <span class="math inline">\(f(x)\)</span> is undefined at <span class="math inline">\(x=c\)</span>. We can still learn about this by
+finding out what happens to <span class="math inline">\(f(x)\)</span> as
+it approaches <span class="math inline">\(x=c\)</span>. That is a
+limit</p></li>
+<li><p>This is often used for undefined points in a function, or
+infinity</p></li>
+</ul>
+<p>Limits are notated as the following - as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span>. <span class="math inline">\(f(x)\)</span> approaches the value <span class="math inline">\(L\)</span>:</p>
+<p><span class="math display">\[
+\lim\limits_{x \rightarrow c} f(x) = L
+\]</span></p>
+<p><br /></p>
+<p>For example, take the function <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x =
+1\)</span></p>
+<p><span class="math display">\[
+f(x) =\frac{x^2 - 1}{x-1}, f(1) = \frac{0}{0}
+\]</span></p>
+<p>We know that <span class="math inline">\(0/0\)</span> is undefined.
+However, we can learn about this value by seeing what the function <span class="math inline">\(f(x)\)</span> approaches as it gets closer to
+<span class="math inline">\(x=1\)</span></p>
+<ul>
+<li>First, we calculate <span class="math inline">\(x=0.5\)</span>, then
+<span class="math inline">\(x=0.9\)</span>, then <span class="math inline">\(x=0.99\)</span>, then <span class="math inline">\(x=0.999\)</span></li>
+</ul>
+<p>If we evaluate all of these, we see that <span class="math inline">\(f(x)\)</span> approaches <span class="math inline">\(2\)</span> as <span class="math inline">\(x\)</span> gets infinitely close to <span class="math inline">\(1\)</span>. Thus:</p>
+<p><span class="math display">\[
+\lim\limits_{x \rightarrow c} f(x) = 2
+\]</span></p>
+<p><br /></p>
+<p>Important note: for a limit to exist, the function <span class="math inline">\(f(x)\)</span> needs to approach the same value
+from both sides (both the right of <span class="math inline">\(x=c\)</span>, and the left).</p>
+<ul>
+<li>If they don’t approach the same number, then there is no limit</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="types-of-limits" class="section level3">
+<h3>Types of Limits</h3>
+<p>There are several types of limits:</p>
+<ol style="list-style-type: decimal">
+<li>Right handed limits: the value approached by <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches from the right side -
+denotated as <span class="math inline">\(\lim\limits_{x^+ \rightarrow c}
+f(x)\)</span></li>
+<li>Left handed limits: The value approached by <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches from the left side -
+denotated as <span class="math inline">\(\lim\limits_{x^- \rightarrow c}
+f(x)\)</span></li>
+<li>Infinity/negative infinity: the value approached by <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> goes infinitely positive or infinitely
+negative</li>
+</ol>
+<p><br /></p>
+</div>
+<div id="properties-of-limits" class="section level3">
+<h3>Properties of Limits</h3>
+<p>These are the properties of limits that are useful</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\lim\limits_{x \rightarrow c} [ f(x)
++ g(x) ] = \lim\limits_{x \rightarrow c} f(x) + \lim\limits_{x
+\rightarrow c} g(x)\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{x \rightarrow c} [ c
+\times f(x)] = c \times \lim\limits_{x \rightarrow c}
+f(x)\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{x \rightarrow c} [f(x) +
+g(x)] = \lim\limits_{x \rightarrow c} f(x) \times \lim\limits_{x
+\rightarrow c} g(x)\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{x \rightarrow c} \left[
+\frac{f(x)}{g(x)} \right] = \frac{ \lim\limits_{x \rightarrow c} f(x)}{
+\lim\limits_{x \rightarrow c} g(x)}\)</span>, given the denominator is
+not <span class="math inline">\(0\)</span></p></li>
+</ol>
 </div>
 </div>
 

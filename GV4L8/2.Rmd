@@ -1,5 +1,5 @@
 ---
-title: "Vectors, Matrices, Continuity"
+title: "Vectors, Matrices, Limits"
 subtitle: "Session 2, GV4L8"
 output:
   html_document:
@@ -26,6 +26,382 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-# Title 1
+# Scalars and Vectors
 
-### Subtitle 1
+### Introduction
+
+Scalars are a single number representing a magnitude or value
+
+-   Ex. $c=3$ is a scalar
+
+Vector is a list of $n$ numbers - where $n$ in dicates the number of dimensions
+
+$$
+v =
+\begin{bmatrix}
+v_1 \\
+v_2 \\
+v_3
+\end{bmatrix}, \text{ for example},
+v =
+\begin{bmatrix}
+2 \\
+-1 \\
+4
+\end{bmatrix}
+$$
+
+<br />
+
+### Vector-Scalar Multiplication
+
+To multiply a scalar with a vector, we multiply each element of a vector with the scalar:
+
+$$
+c \times v =
+\begin{bmatrix}
+v_1 \times c\\
+v_2 \times c \\
+v_3 \times c
+\end{bmatrix}
+$$
+
+<br />
+
+### Vector Addition and Subtraction
+
+To add/subtract vectors, we just do addition/subtraction for each respective element of the vector
+
+-   Vectors must be of the same length to do addition/subtraction
+
+$$
+v + u =
+\begin{bmatrix}
+v_1 + u_1\\
+v_2 + u_2 \\
+v_3 + u_2
+\end{bmatrix}
+$$
+
+<br />
+
+### Vector Inner Product (Dot Product)
+
+The aim is to find one number, by multiplying every respective element and summing all the products:
+
+-   Dot product produces a scalar
+
+$$
+\sum\limits_{i=1}^n u_i v_i = u_1v_1 + u_2v_2 + ... + u_n v_n
+$$
+
+<br />
+
+------------------------------------------------------------------------
+
+# Matrix Operations
+
+### Matrices
+
+A matrix is an array, with $m$ rows by $n$ columns
+
+-   Rows always before column
+
+-   Note: Matrices are basically special vectors with only one row or one column
+
+To notate elements of matrices, we subscript the row by column location of that element:
+
+$$
+U_{2 \times 3} = \begin{bmatrix}
+u_{11} & u_{12} & u_{13} \\
+u_{21} & u_{22} & u_{23}
+\end{bmatrix}
+$$
+
+<br />
+
+### Matrix Addition and Subtraction
+
+Matrix addition and subtraction is the same intuition as vector addition and subtraction - just add the respective elements
+
+-   Matrices that are added together must have the same dimensional (number of rows and columns)
+
+For example, the sum of matrices $A$ and $B$:
+
+$$
+A_{2 \times 2} + B_{2 \times 2} = 
+\begin{bmatrix}
+a_{11} + b_{11} & a_{12} + b_{12} \\
+a_{21} + b_{21} & a_{22} + b_{22}
+\end{bmatrix}
+$$
+
+Same applies for subtraction.
+
+<br />
+
+### Scalar Multiplication
+
+Scalar multiplication is always possible, and takes the same intuition as vector scalar multiplication. Just multiply every element in the matrix by the scalar:
+
+$$
+c \times A_{2 \times 2} =
+\begin{bmatrix}
+c \times a_{11} & c \times a_{12} \\
+c \times a_{21} & c \times a_{22}
+\end{bmatrix}
+$$
+
+<br />
+
+### Matrix Multiplication
+
+Before we start - we need to make sure that in $A \times B$, the number of columns in $A$ must equal the number of rows in $B$
+
+The resulting product matrix is the dimensions of the number of rows in $A$, and the number of columns in $B$
+
+<br />
+
+To do Matrix Multiplication, we multiply the 1st row of matrix $A$ with the 1st column of matrix $B$
+
+For example, take the matrices:
+
+$$
+A = \begin{bmatrix}
+2 & 1 \\
+4 & 2 \\
+6 & 3
+\end{bmatrix}, B = 
+\begin{bmatrix}
+2 & 1 \\
+1 & 3
+\end{bmatrix}
+$$
+
+Now, take the first row of $A$ times the first column of $B$:
+
+$$
+A = [2, 1], B = [2, 1]
+$$
+
+Now, multiply the first element of the first row of $A$, with the first element of the first column of $B$. Then do it for the second element, and so on:
+
+$$
+2 \times 2 = 4
+$$
+
+$$
+1 \times 1 = 1
+$$
+
+Then, find the sum:
+
+$$
+4 + 1 = 5
+$$
+
+This goes in the resulting matrix $C$ in slot $c_{11}$
+
+<br />
+
+Now do the same for all the other slots of final matrix $C$
+
+-   where $c_{n \times m}$ means take the dot product of the $n$th row of $A$ and the $m$th column of $B$
+
+<br />
+
+------------------------------------------------------------------------
+
+# Matrix Properties
+
+### Associative Properties
+
+The associative property for matrix addition says the following is true:
+
+$$
+(A+B)+C = A+(B+C)
+$$
+
+This is pretty obvious, as addition also has this property, and matrix addition is simply a set of different addition operations
+
+<br />
+
+The associative property also says this with matrix multiplication:
+
+$$
+(AB)C = A(BC)
+$$
+
+<br />
+
+However, associative property does not apply to matrix subtraction:
+
+$$
+(A-B)-C ≠ A-(B-C)
+$$
+
+This again is obvious from simple subtraction, for example $5-3-2 = 0$, while $5-(3-2)=5-1=4$
+
+<br />
+
+### Commutative Property
+
+The commutative property for matrix addition
+
+$$
+A+B = B+A
+$$
+
+This is self explanatory, as it applies to normal addition, and matrix addition is just a set of separate normal addition operations
+
+<br />
+
+However, there is no commutative property for multiplication
+
+$$
+AB ≠ BA
+$$
+
+<br />
+
+### Distributive Properties
+
+There is a distributive property of matrix operations, stating:
+
+$$
+A(B+C) = AB + AC, \text{ and}
+$$
+
+$$
+(A+B)C = AC+BC
+$$
+
+<br />
+
+------------------------------------------------------------------------
+
+# Types of Matrices
+
+### Transpose Matrix
+
+A transpose matrix $A^T$ is obtained by swapping the rows with columns. For example:
+
+$$
+\text{If } A = 
+\begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix}, A^T = 
+\begin{bmatrix}
+1 & 3 \\
+2 & 4
+\end{bmatrix}
+$$
+
+<br />
+
+### Diagonal and Identity Matrix
+
+A diagonal matrix is where all the information is in the diagonal (top left to bottom right) of the matrix, and all other off-diagonal slots are 0.
+
+The identity matrix is a diagonal matrix with only 1's on the diagonal:
+
+$$
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+Upper triangular matrix is a matrix where all elements below the diagonal are zero
+
+-   Basically, all values are at the diagonal or above in the upper right side
+
+Lower triangular matrix is a matrix where all elements above the diagonal are zero
+
+-   Basically all values are at the diagonal or below in the lower left side
+
+------------------------------------------------------------------------
+
+# Limits
+
+### Neighbourhoods and Continuity
+
+Neighbourhoods of a point, is a set that contains that point, and includes an open set around that point
+
+-   For example, if our point is $p=3$, the neighbourhood could be the interval $(2,4)$
+
+Continuity is quite intuitive - the possibility of drawing a function without raising our pencil
+
+-   Basically, no jumps or breaks in our function
+
+-   We will provide a more formal definition in a bit
+
+<br />
+
+### Definition of Limits
+
+The intuition of limits is this:
+
+-   We use limits when we can't work something out directly at a point of a function
+
+-   However, we can see what it should be, as we get closer and closer to a point
+
+-   For example, maybe function $f(x)$ is undefined at $x=c$. We can still learn about this by finding out what happens to $f(x)$ as it approaches $x=c$. That is a limit
+
+-   This is often used for undefined points in a function, or infinity
+
+Limits are notated as the following - as $x$ approaches $c$. $f(x)$ approaches the value $L$:
+
+$$
+\lim\limits_{x \rightarrow c} f(x) = L
+$$
+
+<br />
+
+For example, take the function $f(x)$ at $x = 1$
+
+$$
+f(x) =\frac{x^2 - 1}{x-1}, f(1) = \frac{0}{0}
+$$
+
+We know that $0/0$ is undefined. However, we can learn about this value by seeing what the function $f(x)$ approaches as it gets closer to $x=1$
+
+-   First, we calculate $x=0.5$, then $x=0.9$, then $x=0.99$, then $x=0.999$
+
+If we evaluate all of these, we see that $f(x)$ approaches $2$ as $x$ gets infinitely close to $1$. Thus:
+
+$$
+\lim\limits_{x \rightarrow c} f(x) = 2
+$$
+
+<br />
+
+Important note: for a limit to exist, the function $f(x)$ needs to approach the same value from both sides (both the right of $x=c$, and the left).
+
+-   If they don't approach the same number, then there is no limit
+
+<br />
+
+### Types of Limits
+
+There are several types of limits:
+
+1.  Right handed limits: the value approached by $f(x)$ as $x$ approaches from the right side - denotated as $\lim\limits_{x^+ \rightarrow c} f(x)$
+2.  Left handed limits: The value approached by $f(x)$ as $x$ approaches from the left side - denotated as $\lim\limits_{x^- \rightarrow c} f(x)$
+3.  Infinity/negative infinity: the value approached by $f(x)$ as $x$ goes infinitely positive or infinitely negative
+
+<br />
+
+### Properties of Limits
+
+These are the properties of limits that are useful
+
+1.  $\lim\limits_{x \rightarrow c} [ f(x) + g(x) ] = \lim\limits_{x \rightarrow c} f(x) + \lim\limits_{x \rightarrow c} g(x)$
+
+2.  $\lim\limits_{x \rightarrow c} [ c \times f(x)] = c \times \lim\limits_{x \rightarrow c} f(x)$
+
+3.  $\lim\limits_{x \rightarrow c} [f(x) + g(x)] = \lim\limits_{x \rightarrow c} f(x) \times \lim\limits_{x \rightarrow c} g(x)$
+
+4.  $\lim\limits_{x \rightarrow c} \left[ \frac{f(x)}{g(x)} \right] = \frac{ \lim\limits_{x \rightarrow c} f(x)}{ \lim\limits_{x \rightarrow c} g(x)}$, given the denominator is not $0$
