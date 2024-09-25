@@ -39,16 +39,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-## GV4L9 Introductory R
-
-**GV4L8 Introductory R for Political Science**
-
-1.  Session 1
-
-<br />
-
-------------------------------------------------------------------------
-
 ## EU409 Basic Economics
 
 **EU409 Basic Economics Concepts for Political Economy**
@@ -104,21 +94,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-## DV423 Global Political Economy
-
-**DV423 Global Political Economy**
-
-1.  Session 1
-
-<br />
-
-------------------------------------------------------------------------
-
 # Winter Term Courses
 
 <br />
 
-## GV482 Current Issues
+## GV482 Political Economy
 
 **GV482 Political Science and Political Economy: Current Issues**
 
@@ -151,26 +131,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ## ST304 Time Series
 
 **ST304 Time Series and Forecasting**
-
-1.  Session 1
-
-<br />
-
-------------------------------------------------------------------------
-
-## IR480 Inequality and Development
-
-**IR480 The Politics of Inequality and Development**
-
-1.  Session 1
-
-<br />
-
-------------------------------------------------------------------------
-
-## EU443 Models of Capitalism
-
-**EU443 European Models of Capitalism**
 
 1.  Session 1
 
