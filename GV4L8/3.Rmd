@@ -26,6 +26,204 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-# Title 1
+# Derivatives
 
-### Subtitle 1
+### Definition of Derivative
+
+A derivative is the rate of change of a function, at a certain point in the function
+
+-   Remember when we calculate slope - select 2 points, find the rise/run
+
+-   Now, we reduce the $x$ distance between the 2 points, until we essentially have the rise/run of a point in the function.
+
+<br />
+
+A more mathematical definition of the derivative of $f$ at point $a$ is as follows:
+
+$$
+f'(a) = \lim\limits_{h \rightarrow 0} \frac{f(a+h)-f(a)}{h}
+$$
+
+Where basically, $h$ is the $x$-distance between the two points - and we are slowly reducing the distance to 0, so we achieve a slope at one point of $f$
+
+-   The formula takes the normal form of slope - rise over run
+
+<br />
+
+Derivatives are notated in a variety of ways:
+
+-   Prime notation (Lagrange's Notation): $f'(x)$
+
+-   Leibniz Notation: $\frac{d}{dx}, \frac{dy}{dx}$
+
+-   Partial Derivatives: $\frac{\partial}{\partial x}$
+
+<br />
+
+### Evaluation of Derivatives
+
+To evaluate a derivative, we can actually just input the values of the above definition
+
+-   However, this can be very complex
+
+Luckily, there are some rules (derived from plugging into the definition) that apply to certain functions in certain forms:
+
+-   Constant Rule: $\frac{d}{dx} [c] = 0$
+
+-   Constant multiple rule: $\frac{d}{dx} [c \times f(x)] = c \times \frac{d}{dx}[f(x)]$
+
+-   Sum Rule: $\frac{d}{dx} [f(x) + g(x)] = \frac{d}{dx}[f(x) + \frac{d}{dx}[g(x)]$
+
+-   Power Rule: $\frac{d}{dx}[x^n] = nx^{n-1}$
+
+-   Product Rule: $\frac{d}{dx} [f(x) \times g(x)] = f'(x) \times g(x) + f(x) \times g'(x)$
+
+-   Quotient Rule: $\frac{d}{dx} [f(x)/g(x)] = \frac{f'(x) \times g(x) - f(x) \times g'(x)}{[g(x)]^2}$
+
+-   Chain Rule: $\frac{d}{dx}[ f[g(x)]] = f'[g(x)] \times g'(x)$
+
+-   Exponential Rule: $\frac{d}{dx} [e^x] = e^x$
+
+-   Exponential Nested Rule: $\frac{d}{dx} [e^{u(x)}] = e^{u(x)}u'(x)$
+
+-   Natural Log Rule: $\frac{d}{dx} \ln x = \frac{1}{x}$
+
+-   Natural Log Nested Rule: $\frac{d}{dx} \ln u(x) = \frac{u'(x)}{u(x)}$
+
+<br />
+
+------------------------------------------------------------------------
+
+# Optimisation
+
+### Introduction
+
+Optimisation is the process of determining the optimal value of a function, sometimes with a set of constraints.
+
+-   Optimum values are often either the mininum value or maximum value of the function
+
+-   This is because we are often interested in minimising things (like cost, error) and maximising things (like profit, utility)
+
+<br />
+
+Lets say we are interested in maximising a function - the highest output value of a function. What input do we need?
+
+There are two types of maximums:
+
+-   Local maximum - maximum in its "neighbourhood", but not for the entire function (like a little mountain peak, but not the tallest)
+
+-   Global maximum - maximum in the entire domain of the function
+
+The same applies to mininums - local and global mininums exist
+
+<br />
+
+### Mininums and Maximums
+
+We know that maximums and mininums will be at a point where the derivative is 0
+
+-   In other words, mininums and maximums will be $f'(x) = 0$
+
+-   Why? Well, a maximum/mininum is when the slope goes from rising to falling, or where the slope goes from falling to rising. The slope (and derivative) thus crosses 0 at the maximum
+
+<br />
+
+To distinguish maximums and mininums from each other, we have to explore the second derivative
+
+-   The second derivative is the derivative, of a derivative
+
+-   If a second derivative $f''(x)$ is greater than $0$, then it is a minimum
+
+    -   Why? A mininum point is when the slope changes from falling to rising - or the slope changes from negative to positive
+
+    -   Thus, the change in the slope is rising
+
+-   If a second derivative $f''(x)$ is less than $0$, then it is a maximum
+
+    -   Why? A maximum point is when the slope changes from rising to falling - or the slope changes from positive to negative
+
+    -   Thus, the change in the slope is falling
+
+-   If the second derivative $f''(x)$ is exactly $0$, then we are unsure. It is possible for one to not exist - for example, a straight line
+
+<br />
+
+IMPORTANT NOTE: If you are given an interval to find a maximum, you must check the edge cases (the boundaries of the interval).
+
+-   Why? if you have a function where $\lim\limits_{x \rightarrow -∞}f(x) = ±∞, \lim\limits_{x \rightarrow ∞}f(x) = ±∞$, then, it is very possible that the edge cases are the maximums/mininums.
+
+<br />
+
+### Optimisation with Constraints
+
+Let us take the function $f(x,y)=xy$ - and we want to maximise this function
+
+-   But however, we have a constraint - $x + y = 10$
+
+-   This is like in the real world - we often have a constraint on our inputs (such as limited resources)
+
+<br />
+
+To solve this, take these steps
+
+1.  Solve for one variable in the constraint. Ex. $y = 10 - x$
+2.  Now, substitute this into the function we are trying to maximise $f(x,y) = xy = x(10-x)$
+3.  Simplify: $f(x) = -x^2 + 10x$
+4.  Find the first derivative to check for maximums and minimums: $f'(x) = -2x + 10$ - and then set this to 0. Record the $x$ (or other variables) values
+5.  Distinguish maximums and mininums by taking the second derivative: $f''(x) = -2$ . Note which $x$ (or other variable) values are maximum or mininums
+6.  Now we have $x$ value - plug it into the constraint to find $y$
+7.  Then plug everything in to find the output of the maximum/mininum value of $f(x,y)$
+
+<br />
+
+------------------------------------------------------------------------
+
+# Integrals
+
+### Definition of Integrals
+
+Integral represents the area under a curve or function
+
+-   They are also the opposite of derivatives - the anti-derivative
+
+-   Integrals are notated as $\int\limits_a^b f(x)dx$ , where $(a,b)$ is the interval where we find the area under the curve. They can also be notated with a capital $F(x)$
+
+-   Indefinite integrals are the function of the area under the curve - without the limits $(a, b)$
+
+<br />
+
+### Evaluating Indefinite Integrals
+
+There are several rules for evaluating integrals (note, always add the constant of integration $+C$:
+
+-   Constant rule: $\int c \space dx = cx + C$
+
+-   Power Rule: $\int x^n dx = \frac{1}{n+1} x^n+1 + C$
+
+-   Sum Rule: $\int [f(x)+g(x)]dx = \int f(x)dx + \int g(x)dx$
+
+-   Constant Rule: $\int [c \times f(x)]dx = c \times \int f(x)dx$
+
+-   Integration by Substitution: $\int f[u(x)] u'(x)dx = F[u(x)] + C$
+
+-   Integration by Parts: $\int u(x) v'(x)dx = u(x)v(x) - \int v(x) u'(x)dx$
+
+-   Exponent: $\int e^xdx = e^x + C$
+
+-   Natural Log: $\int \frac{1}{x}dx = \ln x + C$
+
+-   Exponent Nested: $\int e^{f(x)} f'(x) = e^{f(x)} + C$
+
+-   Nested Natural Log: $\int \frac{f'(x)}{f(x)}dx = \ln f(x) + C$
+
+<br />
+
+### Evaluating Definite Integrals
+
+If we are interested in finding the area under a curve between $a$ and $b$, the following is true:
+
+$$
+\int\limits_a^b f(x)dx = F(b) - F(a)
+$$
+
+This is the "fundamental theorem of calculus".

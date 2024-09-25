@@ -2792,10 +2792,230 @@ max-width: 1100px;
 <p><a href="https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths">GV4L8
 Homepage</a></p>
 <hr />
-<div id="title-1" class="section level1">
-<h1>Title 1</h1>
-<div id="subtitle-1" class="section level3">
-<h3>Subtitle 1</h3>
+<div id="derivatives" class="section level1">
+<h1>Derivatives</h1>
+<div id="definition-of-derivative" class="section level3">
+<h3>Definition of Derivative</h3>
+<p>A derivative is the rate of change of a function, at a certain point
+in the function</p>
+<ul>
+<li><p>Remember when we calculate slope - select 2 points, find the
+rise/run</p></li>
+<li><p>Now, we reduce the <span class="math inline">\(x\)</span>
+distance between the 2 points, until we essentially have the rise/run of
+a point in the function.</p></li>
+</ul>
+<p><br /></p>
+<p>A more mathematical definition of the derivative of <span class="math inline">\(f\)</span> at point <span class="math inline">\(a\)</span> is as follows:</p>
+<p><span class="math display">\[
+f&#39;(a) = \lim\limits_{h \rightarrow 0} \frac{f(a+h)-f(a)}{h}
+\]</span></p>
+<p>Where basically, <span class="math inline">\(h\)</span> is the <span class="math inline">\(x\)</span>-distance between the two points - and
+we are slowly reducing the distance to 0, so we achieve a slope at one
+point of <span class="math inline">\(f\)</span></p>
+<ul>
+<li>The formula takes the normal form of slope - rise over run</li>
+</ul>
+<p><br /></p>
+<p>Derivatives are notated in a variety of ways:</p>
+<ul>
+<li><p>Prime notation (Lagrange’s Notation): <span class="math inline">\(f&#39;(x)\)</span></p></li>
+<li><p>Leibniz Notation: <span class="math inline">\(\frac{d}{dx},
+\frac{dy}{dx}\)</span></p></li>
+<li><p>Partial Derivatives: <span class="math inline">\(\frac{\partial}{\partial x}\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="evaluation-of-derivatives" class="section level3">
+<h3>Evaluation of Derivatives</h3>
+<p>To evaluate a derivative, we can actually just input the values of
+the above definition</p>
+<ul>
+<li>However, this can be very complex</li>
+</ul>
+<p>Luckily, there are some rules (derived from plugging into the
+definition) that apply to certain functions in certain forms:</p>
+<ul>
+<li><p>Constant Rule: <span class="math inline">\(\frac{d}{dx} [c] =
+0\)</span></p></li>
+<li><p>Constant multiple rule: <span class="math inline">\(\frac{d}{dx}
+[c \times f(x)] = c \times \frac{d}{dx}[f(x)]\)</span></p></li>
+<li><p>Sum Rule: <span class="math inline">\(\frac{d}{dx} [f(x) + g(x)]
+= \frac{d}{dx}[f(x) + \frac{d}{dx}[g(x)]\)</span></p></li>
+<li><p>Power Rule: <span class="math inline">\(\frac{d}{dx}[x^n] =
+nx^{n-1}\)</span></p></li>
+<li><p>Product Rule: <span class="math inline">\(\frac{d}{dx} [f(x)
+\times g(x)] = f&#39;(x) \times g(x) + f(x) \times
+g&#39;(x)\)</span></p></li>
+<li><p>Quotient Rule: <span class="math inline">\(\frac{d}{dx}
+[f(x)/g(x)] = \frac{f&#39;(x) \times g(x) - f(x) \times
+g&#39;(x)}{[g(x)]^2}\)</span></p></li>
+<li><p>Chain Rule: <span class="math inline">\(\frac{d}{dx}[ f[g(x)]] =
+f&#39;[g(x)] \times g&#39;(x)\)</span></p></li>
+<li><p>Exponential Rule: <span class="math inline">\(\frac{d}{dx} [e^x]
+= e^x\)</span></p></li>
+<li><p>Exponential Nested Rule: <span class="math inline">\(\frac{d}{dx}
+[e^{u(x)}] = e^{u(x)}u&#39;(x)\)</span></p></li>
+<li><p>Natural Log Rule: <span class="math inline">\(\frac{d}{dx} \ln x
+= \frac{1}{x}\)</span></p></li>
+<li><p>Natural Log Nested Rule: <span class="math inline">\(\frac{d}{dx}
+\ln u(x) = \frac{u&#39;(x)}{u(x)}\)</span></p></li>
+</ul>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="optimisation" class="section level1">
+<h1>Optimisation</h1>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>Optimisation is the process of determining the optimal value of a
+function, sometimes with a set of constraints.</p>
+<ul>
+<li><p>Optimum values are often either the mininum value or maximum
+value of the function</p></li>
+<li><p>This is because we are often interested in minimising things
+(like cost, error) and maximising things (like profit, utility)</p></li>
+</ul>
+<p><br /></p>
+<p>Lets say we are interested in maximising a function - the highest
+output value of a function. What input do we need?</p>
+<p>There are two types of maximums:</p>
+<ul>
+<li><p>Local maximum - maximum in its “neighbourhood”, but not for the
+entire function (like a little mountain peak, but not the
+tallest)</p></li>
+<li><p>Global maximum - maximum in the entire domain of the
+function</p></li>
+</ul>
+<p>The same applies to mininums - local and global mininums exist</p>
+<p><br /></p>
+</div>
+<div id="mininums-and-maximums" class="section level3">
+<h3>Mininums and Maximums</h3>
+<p>We know that maximums and mininums will be at a point where the
+derivative is 0</p>
+<ul>
+<li><p>In other words, mininums and maximums will be <span class="math inline">\(f&#39;(x) = 0\)</span></p></li>
+<li><p>Why? Well, a maximum/mininum is when the slope goes from rising
+to falling, or where the slope goes from falling to rising. The slope
+(and derivative) thus crosses 0 at the maximum</p></li>
+</ul>
+<p><br /></p>
+<p>To distinguish maximums and mininums from each other, we have to
+explore the second derivative</p>
+<ul>
+<li><p>The second derivative is the derivative, of a derivative</p></li>
+<li><p>If a second derivative <span class="math inline">\(f&#39;&#39;(x)\)</span> is greater than <span class="math inline">\(0\)</span>, then it is a minimum</p>
+<ul>
+<li><p>Why? A mininum point is when the slope changes from falling to
+rising - or the slope changes from negative to positive</p></li>
+<li><p>Thus, the change in the slope is rising</p></li>
+</ul></li>
+<li><p>If a second derivative <span class="math inline">\(f&#39;&#39;(x)\)</span> is less than <span class="math inline">\(0\)</span>, then it is a maximum</p>
+<ul>
+<li><p>Why? A maximum point is when the slope changes from rising to
+falling - or the slope changes from positive to negative</p></li>
+<li><p>Thus, the change in the slope is falling</p></li>
+</ul></li>
+<li><p>If the second derivative <span class="math inline">\(f&#39;&#39;(x)\)</span> is exactly <span class="math inline">\(0\)</span>, then we are unsure. It is possible for
+one to not exist - for example, a straight line</p></li>
+</ul>
+<p><br /></p>
+<p>IMPORTANT NOTE: If you are given an interval to find a maximum, you
+must check the edge cases (the boundaries of the interval).</p>
+<ul>
+<li>Why? if you have a function where <span class="math inline">\(\lim\limits_{x \rightarrow -∞}f(x) = ±∞,
+\lim\limits_{x \rightarrow ∞}f(x) = ±∞\)</span>, then, it is very
+possible that the edge cases are the maximums/mininums.</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="optimisation-with-constraints" class="section level3">
+<h3>Optimisation with Constraints</h3>
+<p>Let us take the function <span class="math inline">\(f(x,y)=xy\)</span> - and we want to maximise this
+function</p>
+<ul>
+<li><p>But however, we have a constraint - <span class="math inline">\(x
++ y = 10\)</span></p></li>
+<li><p>This is like in the real world - we often have a constraint on
+our inputs (such as limited resources)</p></li>
+</ul>
+<p><br /></p>
+<p>To solve this, take these steps</p>
+<ol style="list-style-type: decimal">
+<li>Solve for one variable in the constraint. Ex. <span class="math inline">\(y = 10 - x\)</span></li>
+<li>Now, substitute this into the function we are trying to maximise
+<span class="math inline">\(f(x,y) = xy = x(10-x)\)</span></li>
+<li>Simplify: <span class="math inline">\(f(x) = -x^2 +
+10x\)</span></li>
+<li>Find the first derivative to check for maximums and minimums: <span class="math inline">\(f&#39;(x) = -2x + 10\)</span> - and then set this
+to 0. Record the <span class="math inline">\(x\)</span> (or other
+variables) values</li>
+<li>Distinguish maximums and mininums by taking the second derivative:
+<span class="math inline">\(f&#39;&#39;(x) = -2\)</span> . Note which
+<span class="math inline">\(x\)</span> (or other variable) values are
+maximum or mininums</li>
+<li>Now we have <span class="math inline">\(x\)</span> value - plug it
+into the constraint to find <span class="math inline">\(y\)</span></li>
+<li>Then plug everything in to find the output of the maximum/mininum
+value of <span class="math inline">\(f(x,y)\)</span></li>
+</ol>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="integrals" class="section level1">
+<h1>Integrals</h1>
+<div id="definition-of-integrals" class="section level3">
+<h3>Definition of Integrals</h3>
+<p>Integral represents the area under a curve or function</p>
+<ul>
+<li><p>They are also the opposite of derivatives - the
+anti-derivative</p></li>
+<li><p>Integrals are notated as <span class="math inline">\(\int\limits_a^b f(x)dx\)</span> , where <span class="math inline">\((a,b)\)</span> is the interval where we find the
+area under the curve. They can also be notated with a capital <span class="math inline">\(F(x)\)</span></p></li>
+<li><p>Indefinite integrals are the function of the area under the curve
+- without the limits <span class="math inline">\((a,
+b)\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="evaluating-indefinite-integrals" class="section level3">
+<h3>Evaluating Indefinite Integrals</h3>
+<p>There are several rules for evaluating integrals (note, always add
+the constant of integration <span class="math inline">\(+C\)</span>:</p>
+<ul>
+<li><p>Constant rule: <span class="math inline">\(\int c \space dx = cx
++ C\)</span></p></li>
+<li><p>Power Rule: <span class="math inline">\(\int x^n dx =
+\frac{1}{n+1} x^n+1 + C\)</span></p></li>
+<li><p>Sum Rule: <span class="math inline">\(\int [f(x)+g(x)]dx = \int
+f(x)dx + \int g(x)dx\)</span></p></li>
+<li><p>Constant Rule: <span class="math inline">\(\int [c \times f(x)]dx
+= c \times \int f(x)dx\)</span></p></li>
+<li><p>Integration by Substitution: <span class="math inline">\(\int
+f[u(x)] u&#39;(x)dx = F[u(x)] + C\)</span></p></li>
+<li><p>Integration by Parts: <span class="math inline">\(\int u(x)
+v&#39;(x)dx = u(x)v(x) - \int v(x) u&#39;(x)dx\)</span></p></li>
+<li><p>Exponent: <span class="math inline">\(\int e^xdx = e^x +
+C\)</span></p></li>
+<li><p>Natural Log: <span class="math inline">\(\int \frac{1}{x}dx = \ln
+x + C\)</span></p></li>
+<li><p>Exponent Nested: <span class="math inline">\(\int e^{f(x)}
+f&#39;(x) = e^{f(x)} + C\)</span></p></li>
+<li><p>Nested Natural Log: <span class="math inline">\(\int
+\frac{f&#39;(x)}{f(x)}dx = \ln f(x) + C\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="evaluating-definite-integrals" class="section level3">
+<h3>Evaluating Definite Integrals</h3>
+<p>If we are interested in finding the area under a curve between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, the following is true:</p>
+<p><span class="math display">\[
+\int\limits_a^b f(x)dx = F(b) - F(a)
+\]</span></p>
+<p>This is the “fundamental theorem of calculus”.</p>
 </div>
 </div>
 
