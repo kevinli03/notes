@@ -94,6 +94,8 @@ Luckily, there are some rules (derived from plugging into the definition) that a
 
 ------------------------------------------------------------------------
 
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
+
 # Optimisation
 
 ### Introduction
@@ -178,6 +180,8 @@ To solve this, take these steps
 
 ------------------------------------------------------------------------
 
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
+
 # Integrals
 
 ### Definition of Integrals
@@ -226,4 +230,12 @@ $$
 \int\limits_a^b f(x)dx = F(b) - F(a)
 $$
 
-This is the "fundamental theorem of calculus".
+This is the "fundamental theorem of calculus"
+
+-   Note, the $+C$ constant of integration cancels out when taking the definite integral
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)

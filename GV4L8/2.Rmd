@@ -99,6 +99,8 @@ $$
 
 ------------------------------------------------------------------------
 
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
+
 # Matrix Operations
 
 ### Matrices
@@ -212,6 +214,8 @@ Now do the same for all the other slots of final matrix $C$
 
 ------------------------------------------------------------------------
 
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
+
 # Matrix Properties
 
 ### Associative Properties
@@ -280,6 +284,8 @@ $$
 
 ------------------------------------------------------------------------
 
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
+
 # Types of Matrices
 
 ### Transpose Matrix
@@ -323,6 +329,8 @@ Lower triangular matrix is a matrix where all elements above the diagonal are ze
 -   Basically all values are at the diagonal or below in the lower left side
 
 ------------------------------------------------------------------------
+
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
 
 # Limits
 
@@ -405,3 +413,9 @@ These are the properties of limits that are useful
 3.  $\lim\limits_{x \rightarrow c} [f(x) + g(x)] = \lim\limits_{x \rightarrow c} f(x) \times \lim\limits_{x \rightarrow c} g(x)$
 
 4.  $\lim\limits_{x \rightarrow c} \left[ \frac{f(x)}{g(x)} \right] = \frac{ \lim\limits_{x \rightarrow c} f(x)}{ \lim\limits_{x \rightarrow c} g(x)}$, given the denominator is not $0$
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)

@@ -30,6 +30,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **GV4L8 Introductory Maths for Political Science**
 
+Lecturer: Dr. Marta Antonetti
+
+Assessment: None
+
 1.  [Sets, Expressions, Functions](https://kevinli03.github.io/notes/GV4L8/1.html)
 2.  [Vectors, Matrices, Continuity, Limits](https://kevinli03.github.io/notes/GV4L8/2.html)
 3.  [Derivatives, Optimisation, Integrals](https://kevinli03.github.io/notes/GV4L8/3.html)
@@ -50,13 +54,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-# Autumn Term Courses
+# Enrolled Modules
 
 <br />
 
 ## GV481 Quantitative Analysis
 
-**GV481 Quantitative Analysis for Political Science**
+**GV481 Quantitative Analysis for Political Science (Autumn Term)**
+
+Lecturer: Dr. Aliz Toth
+
+Assessment: Coursework (50%, AT), Exam (50%, Spring)
 
 1.  Session 1
 
@@ -66,7 +74,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## GV4C8 Game Theory
 
-**GV4C8 Game Theory for Political Science**
+**GV4C8 Game Theory for Political Science (Autumn Term)**
+
+Lecturer: Prof. Rafael Hortala-Vallve
+
+Assessment: Problem Sets (50%, WT), Exam (50%, January)
 
 1.  Session 1
 
@@ -76,7 +88,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## MY452A Regression Analysis
 
-**MY452A Applied Regression Analysis**
+**MY452A Applied Regression Analysis (Autumn Term)**
+
+Lecturer: Prof. Jouni Kuha
+
+Assessment: Exam (100%, Spring)
 
 1.  Session 1
 
@@ -84,23 +100,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-## MY470 Computer Programming
-
-**MY470 Computer Programming**
-
-1.  Session 1
-
 <br />
 
-------------------------------------------------------------------------
+## GV482 Current Issues
 
-# Winter Term Courses
+**GV482 Political Science and Political Economy: Current Issues (Winter Term)**
 
-<br />
+Lecturer: Prof. Stephane Wolton
 
-## GV482 Political Economy
-
-**GV482 Political Science and Political Economy: Current Issues**
+Assessment: Coursework (50%, WT), Online Assessment (50%, Spring)
 
 1.  Session 1
 
@@ -110,7 +118,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## MY457 Causal Inference
 
-**MY457 Causal Inference for Observational and Experimental Studies**
+**MY457 Causal Inference for Observational and Experimental Studies (Winter Term)**
+
+Lecturer: Dr. Daniel De Kadt
+
+Assessment: Take-Home Assessment (100%, Spring)
 
 1.  Session 1
 
@@ -120,7 +132,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## MY455 Multivariate Analysis
 
-**MY455 Multivariate Analysis and Measurement**
+**MY455 Multivariate Analysis and Measurement (Winter Term)**
+
+Lecturer: Prof. Jouni Kuha
+
+Assessment: Exam (100%, Spring)
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+# Auditing Modules
+
+## MY470 Computer Programming
+
+**MY470 Computer Programming**
+
+Lecturer: Dr. Milena Tsvetkova
 
 1.  Session 1
 
@@ -131,6 +161,44 @@ knitr::opts_chunk$set(echo = TRUE)
 ## ST304 Time Series
 
 **ST304 Time Series and Forecasting**
+
+Lecturer
+
+1.  Session 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## Topics in Political Economy
+
+**From a Combination of Courses I Find Interesting**
+
+[EC453 Political Economy]{.underline}
+
+-   Lecture 3
+
+[IR470 International Political Economy]{.underline}
+
+-   Lecture 1
+
+[DV464 Democracy and Development]{.underline}
+
+-   Lecture 3
+
+[EU443 European Models of Capitalism]{.underline}
+
+-   Lecture 1
+
+<br />
+
+------------------------------------------------------------------------
+
+## MA108 Mathematical Methods
+
+**MA108 Methods in Calculus and Linear Algebra (Autumn Term)**
+
+Lecturer: Dr. Ioannis Kouletsis
 
 1.  Session 1
 
@@ -145,6 +213,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## AC110 Principles of Accounting
 
 **AC110 Principles of Accounting**
+
+Lecturer: Dr. Jeroen Koenraadt, Dr. Gulnaz Khamidullina
 
 1.  Session 1
 

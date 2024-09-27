@@ -2793,10 +2793,614 @@ max-width: 1100px;
 <p><a href="https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths">GV4L8
 Homepage</a></p>
 <hr />
-<div id="title-1" class="section level1">
-<h1>Title 1</h1>
-<div id="subtitle-1" class="section level3">
-<h3>Subtitle 1</h3>
+<div id="counting" class="section level1">
+<h1>Counting</h1>
+<div id="fundamental-theorem-of-counting" class="section level3">
+<h3>Fundamental Theorem of Counting</h3>
+<p>The fundamental theorem of counting determines the number of possible
+outcomes, when there are multiple stages or events:</p>
+<ul>
+<li>If event <span class="math inline">\(A\)</span> can occur in <span class="math inline">\(m\)</span> ways, and event <span class="math inline">\(B\)</span> can occur in <span class="math inline">\(n\)</span> ways - then the amount of ways that
+both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> can possibly occur is <span class="math inline">\(m \times n\)</span></li>
+</ul>
+<p>Basically, the total amount of ways 2 events can occur - is the
+amount of ways 1 can occur multiplied by the amount of ways the other
+can occur</p>
+<ul>
+<li>This also applies to more events</li>
+</ul>
+<p><br /></p>
+<p>For example, if we have a 3 character password, where the 1st digit
+is a letter (26 choices), the second is a number between 0 and 9 (10
+choices), and the third is a symbol (5 choices), how many different
+passwords can we create?</p>
+<ul>
+<li>Simply, multiply <span class="math inline">\(26 \times 10 \times 5 =
+1300\)</span></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="factorials" class="section level3">
+<h3>Factorials</h3>
+<p>Factorials are a mathematical operation, that is commonly used in
+counting.</p>
+<p>Factorials are defined as:</p>
+<p><span class="math display">\[
+n! = n \times (n-1) \times (n-2) \times ... \times 1
+\]</span></p>
+<p>For example, <span class="math inline">\(5!\)</span> would be:</p>
+<p><span class="math display">\[
+5! = 5 \times 4 \times 3 \times 2 \times 1 = 120
+\]</span></p>
+<p><br /></p>
+<p>Factorials are useful when discussing arrangements (where order
+matters - a different order is a different arrangement)</p>
+<ul>
+<li><p>Ex. How many ways can we re-arrange ABC?</p></li>
+<li><p>ABC, ACB, BAC, BCA, CAB, CBA</p></li>
+<li><p>We can explore this mathematically - for the first position, we
+can choose either A, B, or C (3 choices). For the second position, we
+only have 2 (because we have already chosen one). Then, for the final
+position, we only have 1 (because the other 2 have been chosen)</p></li>
+<li><p>Thus, the number of arrangements is <span class="math inline">\(3
+\times 2 \times 1 = 3!\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="permutations" class="section level3">
+<h3>Permutations</h3>
+<p>Permutations are not super common in politics, but they do exist.</p>
+<p>Permutations is the arrangement of objects, when order is
+important:</p>
+<ul>
+<li>For example, ABC, and CBA, are considered different arrangements
+because the order is different.</li>
+</ul>
+<p><br /></p>
+<p>The number of arrangements when order matters, when you take <span class="math inline">\(r\)</span> number of objects from <span class="math inline">\(n\)</span> total objects, is as follows:</p>
+<p><span class="math display">\[
+P(n,r) = \frac{n!}{(n-r)!}
+\]</span></p>
+<p><br /></p>
+<p>For example, what is the number of ways to arrange 3 books out of 5
+from a shelf?</p>
+<ul>
+<li><p>For the first book, we can choose from 5 books on the shelf (5
+options)</p></li>
+<li><p>For the second book, since we already took a book off, we only
+have 4 options left</p></li>
+<li><p>For the third book, since we already took 2 books off, we only
+have 3 options left.</p></li>
+<li><p>We stop there, because we only want to select 3 books.</p></li>
+<li><p>Thus, the probability is <span class="math inline">\(5 \times 4
+\times 3\)</span></p></li>
+</ul>
+<p>Notice, this is the same as the permutation formula result:</p>
+<p><span class="math display">\[
+P(5,3) = \frac{5!}{(5-3)!} = \frac{5 \times 4 \times 3 \times 2 \times
+1}{2 \times 1} = 5 \times 4 \times 3
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="combinations" class="section level3">
+<h3>Combinations</h3>
+<p>Combinations differ from permutations, because order is not
+important</p>
+<ul>
+<li><p>For example, ABC and CBA are considered 1 outcome, because the
+order doesn’t matter - only what objects are included in them</p></li>
+<li><p>This means combinations will yield less results than permutations
+(simply because we don’t count different orders)</p></li>
+</ul>
+<p><br /></p>
+<p>The number of arrangements when order does not matter, when you take
+<span class="math inline">\(r\)</span> number of objects from <span class="math inline">\(n\)</span> total objects, is as follows:</p>
+<p><span class="math display">\[
+C(n,r) = \frac{n!}{r!(n-r)!}
+\]</span></p>
+<p><br /></p>
+<p>Lets take the same example as above, selecting 3 books from 5 on a
+shelf. But this time, order does not matter:</p>
+<ul>
+<li><p>We will notice that combinations have an extra <span class="math inline">\(r!\)</span> in the denominator. Why?</p></li>
+<li><p>Well, <span class="math inline">\(r\)</span> is the number of
+books we are taking off the shelf, and thus, <span class="math inline">\(r!\)</span> is the number of arrangements of those
+books.</p></li>
+<li><p>We don’t care about the arrangement of those books in a
+combination</p></li>
+<li><p>Thus, we do an extra division of <span class="math inline">\(r!\)</span></p></li>
+</ul>
+<p>Thus, the number of possibilities is:</p>
+<p><span class="math display">\[
+C(5,3) = \frac{5!}{3!(5-3)!} = 10
+\]</span></p>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths">GV4L8
+Homepage</a></p>
+</div>
+</div>
+<div id="probability" class="section level1">
+<h1>Probability</h1>
+<div id="definition-of-probability" class="section level3">
+<h3>Definition of Probability</h3>
+<p>Probability measures the likelihood of an event occurring</p>
+<ul>
+<li><p>Must be between 0 and 1</p></li>
+<li><p>Where 0 means the event for certain will not happen, and 1 means
+the event is certain to happen</p></li>
+<li><p>More formally, <span class="math inline">\(0 ≤ P(A) ≤
+1\)</span></p></li>
+</ul>
+<p>For example, the probability of heads is 0.5</p>
+<p><br /></p>
+<p>A sample space is a space of all the possibilities (including the
+possibility of nothing happen).</p>
+<ul>
+<li>It is the sum of all probabilities relating to the event</li>
+</ul>
+<!-- -->
+<ul>
+<li>The area of the sample space is 1 - something has to happen</li>
+</ul>
+<p>For example, the sample space of flipping a coin is the space of all
+possibilities - getting a heads, and getting a tails (assuming it is
+impossible to land on the side).</p>
+<ul>
+<li>The total probability of the sample space (sum of all the
+probabilities) - getting either heads or tails, is 1</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="axioms-of-probability" class="section level3">
+<h3>Axioms of Probability</h3>
+<p>There are three fundamental “axioms” (truths) in probability
+theory:</p>
+<ol style="list-style-type: decimal">
+<li>Non-Negativity - the probability cannot be negative</li>
+<li>Normalisation - the probability of the entire sample space <span class="math inline">\(S\)</span> is 1</li>
+<li>Countable Additivity - if events are mutually exclusive, the
+probability of their union (both occurring) is the sum of their
+individual properties
+<ul>
+<li>Mutual Exclusivity means if one event happens, the other one cannot
+happen</li>
+<li>Union is the probability of both events occuring <span class="math inline">\(P(A \cup B)\)</span></li>
+</ul></li>
+</ol>
+<p><br /></p>
+<p>Let us give an example of countable additivity: rolling a dice</p>
+<ul>
+<li><p>The outcomes are 1,2,3,4,5,6</p></li>
+<li><p>All outcomes are mutually exclusive - if you roll a 2, it cannot
+be a 3 at the same time</p></li>
+</ul>
+<p>Thus, since they are mutually exclusive, the probability of multiple
+events occurring is the sum of the probability of the events:</p>
+<ul>
+<li>For example - the probability of rolling a 1,2, or 3 is <span class="math inline">\(P(1) + P(2) + P(3)\)</span></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="joint-probability" class="section level3">
+<h3>Joint Probability</h3>
+<p>Joint Probability is the opposite of mutual exclusivity - it is about
+two or more events occurring simultaneously (at the same time):</p>
+<ul>
+<li>The probability of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> occurring together is <span class="math inline">\(P(A \cap B)\)</span></li>
+</ul>
+<p><br /></p>
+<p>For example, in a deck of cards, you can draw a red card at the same
+time as a heart (they are not mutually exclusive).</p>
+<ul>
+<li>Thus, the joint probability is the probability of getting a card
+that is both red and heart at the same moment</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="conditional-probability" class="section level3">
+<h3>Conditional Probability</h3>
+<p>Conditional probability is the probability of one event, given
+another event has already happened</p>
+<ul>
+<li>Probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> has already occurred is labeled as
+<span class="math inline">\(P(A|B)\)</span></li>
+</ul>
+<p>Conditional Probability is calculated as the following:</p>
+<p><span class="math display">\[
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+\]</span></p>
+<p><br /></p>
+<p>For example, what is the probability of drawing an ace, given you
+already know you drew a spade.</p>
+<p><span class="math display">\[
+P(A \cap B) = 1/52
+\]</span></p>
+<p><span class="math display">\[
+P(B) = 13/52
+\]</span></p>
+<p><span class="math display">\[
+P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{1/52}{13/52} = \frac{1}{13}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="law-of-total-probability" class="section level3">
+<h3>Law of Total Probability</h3>
+<p>Law of Total Probability helps calculate the probability of an event,
+by considering different mutually exclusive events that partition the
+sample space.</p>
+<p>For example, the probability of being a smoker, by considering
+different groups (males and females) with different smoking rates:</p>
+<ul>
+<li><p>Male and Female are (traditionally) mutually exclusive
+events</p></li>
+<li><p>Probability of smoking as a male is a conditional probability
+(see above), same as probability of smoking as a female</p></li>
+</ul>
+<p>Thus, the law of total probability states that knowing these
+conditional probabilities, given they are mutually exclusive, we know
+the total probability of smoking is:</p>
+<p><span class="math display">\[
+P(A) = \sum P(A|B_i) \times P(B_i)
+\]</span></p>
+<p><span class="math display">\[
+=P(A|B_M) \times P(B_M) + P(A|B_F) \times P(B_F)
+\]</span></p>
+<p>Where <span class="math inline">\(B_M\)</span> is male and <span class="math inline">\(B_F\)</span> is female.</p>
+<p><br /></p>
+<p>For this law to apply, the following conditions must be met:</p>
+<ul>
+<li><p>The <span class="math inline">\(B_i\)</span> events are mutually
+exclusive (ex. male and female are mutually exclusive)</p></li>
+<li><p>All the <span class="math inline">\(B_i\)</span> events consist
+of the entire sample space (ex. male and female [at least traditionally]
+consist of 100% of the population)</p></li>
+</ul>
+<p><br /></p>
+<p>Another Example: Imagine you only have 3 routes you can get to
+work.</p>
+<ul>
+<li><p><span class="math inline">\(P(A)\)</span> is the probability you
+arrive on time</p></li>
+<li><p><span class="math inline">\(P(B_1)\)</span> is the probability
+you take route 1 (same goes for routes 2,3)</p></li>
+<li><p><span class="math inline">\(P(A|B_1)\)</span> is the probability
+you are on time, given you take route 1 (and same goes for routes
+2,3)</p></li>
+</ul>
+<p>Thus, the total probability of arriving on time <span class="math inline">\(P(A)\)</span>, by the law of total probability,
+is:</p>
+<p><span class="math display">\[
+P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + P(A|B_3) P(B_3)
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="bayes-theorem" class="section level3">
+<h3>Bayes’ Theorem</h3>
+<p>Bayes’ Theorem provides a way to “update” the probability of an event
+based on new evidence.</p>
+<ul>
+<li>Relates the conditional probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>, to the conditional probability of
+<span class="math inline">\(B\)</span> given <span class="math inline">\(A\)</span></li>
+</ul>
+<p>Bayes Theorem is one of the most important things to remember about
+statistics, and is very useful</p>
+<ul>
+<li>For example - you can use it to update the probability of having a
+disease, after you have received a positive test result (remember, it is
+not 100%, tests can be wrong)</li>
+</ul>
+<p><br /></p>
+<p>Bayes Theorem states the following relationship:</p>
+<p><span class="math display">\[
+P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><span class="math inline">\(P(A|B)\)</span> is the posterior
+probability (probability of <span class="math inline">\(A\)</span> given
+<span class="math inline">\(B\)</span> has occurred)</p></li>
+<li><p><span class="math inline">\(P(B|A)\)</span> is the likelihood
+(probability of <span class="math inline">\(B\)</span> given <span class="math inline">\(A\)</span> has occurred)</p></li>
+<li><p><span class="math inline">\(P(A)\)</span> is the prior
+probability (initial probability of <span class="math inline">\(A\)</span> before the new info</p></li>
+<li><p><span class="math inline">\(P(B)\)</span> is the marginal
+probability (total probability of <span class="math inline">\(B\)</span>)</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="deriving-bayes-theorem" class="section level3">
+<h3>Deriving Bayes’ Theorem</h3>
+<p>We start with the definition of conditional probability (see
+above):</p>
+<p><span class="math display">\[
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+\]</span></p>
+<p>We can rearrange that equation to get:</p>
+<p><span class="math display">\[
+P(A \cap B) = P(A|B) \times P(B)
+\]</span></p>
+<p><br /></p>
+<p>Then, let us consider the conditional probability of <span class="math inline">\(B|A\)</span> (basically, conditional probability
+reversed)</p>
+<p><span class="math display">\[
+P(B|A) = \frac{P(B \cap A)}{P(A)}
+\]</span></p>
+<p>Do the same rearrangement as above:</p>
+<p><span class="math display">\[
+P(B \cap A) = P(B|A) \times P(A)
+\]</span></p>
+<p><br /></p>
+<p>We know by the laws of sets, that:</p>
+<p><span class="math display">\[
+P(A \cap B) = P(B \cap A)
+\]</span></p>
+<p>Thus, we can set the other sides of the equations equal to each
+other:</p>
+<p><span class="math display">\[
+P(A|B) \times P(B) = P(B|A) \times P(A)
+\]</span></p>
+<p>And isolate <span class="math inline">\(P(A|B)\)</span> for Bayes’
+Theorem:</p>
+<p><span class="math display">\[
+P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="booles-inequality" class="section level3">
+<h3>Boole’s Inequality</h3>
+<p>Boole’s Inequality provides an upper bound of the probability of the
+union of multiple events:</p>
+<p><span class="math display">\[
+P \left( \bigcup^n_{i=1} A_i \right) ≤ \sum\limits_{i=1}^n P(A_i)
+\]</span></p>
+<p><br /></p>
+<p>Basically - the probability of multiple events occurring, is equal or
+less than the sum of there probabilities. Why?</p>
+<ul>
+<li><p>Well, we know that the probability of multiple mutually exclusive
+events is equal to the sum of the individual probabilities</p></li>
+<li><p>If they are not mutually exclusive, the probability will be less
+than the sum of the probabilities (because of overlap)</p></li>
+<li><p>Thus, there is no chance where the probability of multiple events
+is greater than the sum of the individual probabilities</p></li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths">GV4L8
+Homepage</a></p>
+</div>
+</div>
+<div id="random-variables" class="section level1">
+<h1>Random Variables</h1>
+<div id="levels-of-measurement" class="section level3">
+<h3>Levels of Measurement</h3>
+<p>Data is often classified into four levels of measurement:</p>
+<ul>
+<li><p>Nominal/Categorical - No meaningful order to categories</p></li>
+<li><p>Ordinal - categories, but they have a order, but not consistent
+distance</p></li>
+<li><p>Interval: Ordered values with consistent differences between
+values</p></li>
+<li><p>Ratio: Interval data with meaningful zero</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="random-variables-1" class="section level3">
+<h3>Random Variables</h3>
+<p>A random variable is a numerical outcome of a random process</p>
+<ul>
+<li><p>Assigns a real number to each possible outcome</p></li>
+<li><p>Discrete Random Variable: can take on countable values (1, 2, 3,
+but not decimals) - used for categorical and ordinal
+measurements</p></li>
+<li><p>Continuous Random Variable: can take on any real number in an
+interval - used to interval and ratio measurements</p></li>
+</ul>
+<p>Random variables can be graphed into distribution functions based on
+the probability of each outcome</p>
+<ul>
+<li><p>X axis is the outcomes (1,2,3,4 for example)</p></li>
+<li><p>Y axis is the probability of the outcome</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="probability-mass-functions" class="section level3">
+<h3>Probability Mass Functions</h3>
+<p>The Probability Mass Function gives the probability of some outcome
+in a discrete random variable</p>
+<ul>
+<li><p>For example, if you roll a dice, the outcomes are discrete
+(1,2,3,4,5, or 6).</p></li>
+<li><p>The Probability Mass Function tells you the probability of
+getting a certain outcome</p></li>
+</ul>
+<p><br /></p>
+<p>Probability mass functions are notated as following:</p>
+<p><span class="math display">\[
+P(X=x) = p(x)
+\]</span></p>
+<p>Where the following:</p>
+<ul>
+<li><p>Big <span class="math inline">\(X\)</span> is the possible
+outcomes</p></li>
+<li><p>Small <span class="math inline">\(x\)</span> is the outcome we
+plug in, that we are interested in the probability</p></li>
+</ul>
+<p><br /></p>
+<p>Probability Mass Functions have the following properties:</p>
+<ul>
+<li><p><span class="math inline">\(P(X=x)\)</span> for any <span class="math inline">\(x\)</span> event should be between 0 and 1 (since
+it is a probability of an outcome, and probability cannot exceed 0 or
+1)</p></li>
+<li><p>Sum of all the probabilities for every <span class="math inline">\(x\)</span> is 1, since something has to
+happen</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="probability-density-function" class="section level3">
+<h3>Probability Density Function</h3>
+<p>The Probability Density Function gives the probability of some range
+of outcomes in a continuous random variable</p>
+<ul>
+<li>Not a single point, since the variable is continuous, so it would be
+weird to find the chance of outcome being, for example, 1.2352</li>
+</ul>
+<p>Probability Density Functions are notated as <span class="math inline">\(f(x)\)</span></p>
+<p><br /></p>
+<p>Probability of any specific point is zero</p>
+<ul>
+<li>So, we have to use an interval</li>
+</ul>
+<p>Then, we can calculate the probability between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> as:</p>
+<p><span class="math display">\[
+\int\limits_a^b f(x)dx
+\]</span></p>
+<p><br /></p>
+<p>Also, the total sum of all outputs is 1 (since something has to
+happen)</p>
+<p><span class="math display">\[
+\int\limits_{-∞}^∞ f(x) = 1
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="expectations" class="section level3">
+<h3>Expectations</h3>
+<p>Expectations, also called expected value or mean, is the key summary
+measure</p>
+<ul>
+<li><p>Represents the weighted average of all possible values of the
+variable, with the weights being probability</p></li>
+<li><p>Basically, the best “guess” of the value of a random variable
+given the probabilities and possible outcomes</p></li>
+</ul>
+<p><br /></p>
+<p>For discrete random variable <span class="math inline">\(Y\)</span>,
+the expected value is:</p>
+<p><span class="math display">\[
+E(Y) = \sum\limits_i y_i \times p(y_i)
+\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(y_i\)</span> is some outcome
+value, and <span class="math inline">\(p(y_i)\)</span> is the
+probability that specific outcome occurs</li>
+</ul>
+<p>For example, tossing the fair die, the expected value is:</p>
+<p><span class="math display">\[
+E(Y) = \frac{1}{6} (1+2+3+4+5+6) = 3.5
+\]</span></p>
+<p><br /></p>
+<p>For a continuous random variable <span class="math inline">\(Y\)</span>, the expected value is the centre or
+average of <span class="math inline">\(Y\)</span></p>
+<ul>
+<li>A weighted average, where the weights are given by the probability
+of each outcome (which is given by the probability density
+function)</li>
+</ul>
+<p>It is the same as a mean or average:</p>
+<p><span class="math display">\[
+\int\limits_{-∞}^{∞} y \times f(y)dy
+\]</span></p>
+<ul>
+<li><p>Where <span class="math inline">\(f(y)\)</span> is the
+probability density function, and <span class="math inline">\(y\)</span>
+is the outcome value</p></li>
+<li><p>Same intuition as the discrete random variable we showed
+above.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="measures-of-spread" class="section level3">
+<h3>Measures of Spread</h3>
+<p>The deviation of a value <span class="math inline">\(y\)</span>, from
+the mean <span class="math inline">\(E[Y]\)</span> is: <span class="math inline">\(y - E[Y]\)</span></p>
+<ul>
+<li>Basically, how far is the value from the mean</li>
+</ul>
+<p>The squared deviation is the deviation squared: <span class="math inline">\((y-E[Y])^2\)</span></p>
+<ul>
+<li>This gets rid of the negatives</li>
+</ul>
+<p><br /></p>
+<p>Then, we get to the <strong>variance</strong>: which measures the
+spread of a random variable around the mean</p>
+<ul>
+<li>Essentially, the expected value of the squared deviations</li>
+</ul>
+<p><span class="math display">\[
+Var(Y) = \sigma^2= E \left[ (y-E[Y])^2 \right]
+\]</span></p>
+<p>The <strong>standard deviation</strong> is the square root of the
+variance:</p>
+<p><span class="math display">\[
+\sigma = \sqrt{Var(Y)}
+\]</span></p>
+<p>Both these present a measure of how “spread out” or “dispersed” your
+data is</p>
+<p><br /></p>
+</div>
+<div id="covariance-and-correlation" class="section level3">
+<h3>Covariance and Correlation</h3>
+<p>Covariance measures how two random variables vary together:</p>
+<p><span class="math display">\[
+Cov(X,Y) = E[ \space (X-E(X)) \times (Y-E(Y)) \space ]
+\]</span></p>
+<p><span class="math display">\[
+=E[XY] - E[X] \times E[Y]
+\]</span></p>
+<p><br /></p>
+<p>Correlation is covariance, but normalised</p>
+<ul>
+<li><p>Basically, covariance, but weighted by the standard deviation of
+the variables of interest</p></li>
+<li><p>This tells us the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><span class="math display">\[
+= \frac{Cov(X,Y)}{\sigma_x \sigma_y}
+\]</span></p>
+<p>This weighted structure means covariance is always between -1 and
+1</p>
+<ul>
+<li><p>Negative numbers are negative relationship</p></li>
+<li><p>Positive numbers are positive relationship</p></li>
+<li><p>0 is no relationship</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="normal-distribution" class="section level3">
+<h3>Normal Distribution</h3>
+<p>The Normal Distribution, also called Gaussian Distribution, describes
+a form a random continuous variable distribution</p>
+<ul>
+<li><p>Where all 3 measures of central tendency (mean, median, and mode)
+are equal</p></li>
+<li><p>There is one central peak, and it is symmetric and bell
+shaped</p></li>
+</ul>
+<p><br /></p>
+<p>The Probability Density Function of a Normal Distribution is as
+follows:</p>
+<p><span class="math display">\[
+f(y) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{ \left (-\frac{(y - \mu) ^2}{2
+\sigma^2} \right) }
+\]</span></p>
+<p>Where <span class="math inline">\(\sigma^2\)</span> s the variance,
+and <span class="math inline">\(\mu\)</span> is the mean.</p>
+<p><br /></p>
+<p>The normal distribution has a cool rule - the 68-95-99.7 Rule:</p>
+<ul>
+<li><p>68% of the data falls within one standard deviation from the
+mean: <span class="math inline">\(\mu ± \sigma\)</span></p></li>
+<li><p>95% of the data falls within 2 standard deviations from the mean:
+<span class="math inline">\(\mu ± 2\sigma\)</span></p></li>
+<li><p>99.7% of the data falls within 3 standard deviations from the
+mean: <span class="math inline">\(\mu ± 3 \sigma\)</span></p></li>
+</ul>
+<p>This allows us to calculate confidence intervals of estimates</p>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths">GV4L8
+Homepage</a></p>
 </div>
 </div>
 

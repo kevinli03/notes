@@ -158,6 +158,8 @@ Example in Social Sciences
 
 ------------------------------------------------------------------------
 
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
+
 # Topics in Algebra
 
 ### Exponents and Logarithms
@@ -264,6 +266,8 @@ You solve inequalities the same way as expressions, with one note:
 
 ------------------------------------------------------------------------
 
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
+
 # Functions
 
 ### Overview of Function
@@ -327,3 +331,9 @@ Kenneth created the Arrow's Impossibility Theorem (1951) showed that under certa
 -   Each voter has preferences $P_1, P_2, P_3$, which inform the preferences of society $P_{\text{society}}$
 
 -   Thus, society (output) would be a function of these preferences: $P_{\text{society}} = f(P_1, P_2, P_3)$
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4L8 Homepage](https://kevinli03.github.io/notes/#GV4L8_Introductory_Maths)
