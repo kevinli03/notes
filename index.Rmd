@@ -24,9 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 # Introductory Courses
 
-<br />
-
-## GV4L8 Introductory Maths
+### GV4L8 Introductory Maths
 
 **GV4L8 Introductory Maths for Political Science**
 
@@ -43,7 +41,7 @@ Assessment: None
 
 ------------------------------------------------------------------------
 
-## EU409 Basic Economics
+### EU409 Basic Economics
 
 **EU409 Basic Economics Concepts for Political Economy**
 
@@ -56,9 +54,7 @@ Assessment: None
 
 # Enrolled Modules
 
-<br />
-
-## GV481 Quantitative Analysis
+### GV481 Quantitative Analysis
 
 **GV481 Quantitative Analysis for Political Science (Autumn Term)**
 
@@ -72,7 +68,7 @@ Assessment: Coursework (50%, AT), Exam (50%, Spring)
 
 ------------------------------------------------------------------------
 
-## GV4C8 Game Theory
+### GV4C8 Game Theory
 
 **GV4C8 Game Theory for Political Science (Autumn Term)**
 
@@ -86,7 +82,7 @@ Assessment: Problem Sets (50%, WT), Exam (50%, January)
 
 ------------------------------------------------------------------------
 
-## MY452A Regression Analysis
+### MY452A Regression Analysis
 
 **MY452A Applied Regression Analysis (Autumn Term)**
 
@@ -102,7 +98,7 @@ Assessment: Exam (100%, Spring)
 
 <br />
 
-## GV482 Current Issues
+### GV482 Current Issues
 
 **GV482 Political Science and Political Economy: Current Issues (Winter Term)**
 
@@ -116,7 +112,7 @@ Assessment: Coursework (50%, WT), Online Assessment (50%, Spring)
 
 ------------------------------------------------------------------------
 
-## MY457 Causal Inference
+### MY457 Causal Inference
 
 **MY457 Causal Inference for Observational and Experimental Studies (Winter Term)**
 
@@ -130,7 +126,7 @@ Assessment: Take-Home Assessment (100%, Spring)
 
 ------------------------------------------------------------------------
 
-## MY455 Multivariate Analysis
+### MY455 Multivariate Analysis
 
 **MY455 Multivariate Analysis and Measurement (Winter Term)**
 
@@ -146,9 +142,9 @@ Assessment: Exam (100%, Spring)
 
 # Auditing Modules
 
-## MY470 Computer Programming
+### MY470 Computer Programming
 
-**MY470 Computer Programming**
+**MY470 Computer Programming (Autumn Term)**
 
 Lecturer: Dr. Milena Tsvetkova
 
@@ -158,9 +154,9 @@ Lecturer: Dr. Milena Tsvetkova
 
 ------------------------------------------------------------------------
 
-## ST304 Time Series
+### ST304 Time Series
 
-**ST304 Time Series and Forecasting**
+**ST304 Time Series and Forecasting (Winter Term)**
 
 Lecturer
 
@@ -170,9 +166,9 @@ Lecturer
 
 ------------------------------------------------------------------------
 
-## Topics in Political Economy
+### Topics in Political Economy
 
-**From a Combination of Courses I Find Interesting**
+**From a Combination of Courses I Find Interesting (Full Year)**
 
 [EC453 Political Economy]{.underline}
 
@@ -194,7 +190,7 @@ Lecturer
 
 ------------------------------------------------------------------------
 
-## MA108 Mathematical Methods
+### MA108 Mathematical Methods
 
 **MA108 Methods in Calculus and Linear Algebra (Autumn Term)**
 
@@ -208,9 +204,7 @@ Lecturer: Dr. Ioannis Kouletsis
 
 # Other Courses
 
-<br />
-
-## AC110 Principles of Accounting
+### AC110 Principles of Accounting
 
 **AC110 Principles of Accounting**
 
@@ -222,7 +216,7 @@ Lecturer: Dr. Jeroen Koenraadt, Dr. Gulnaz Khamidullina
 
 ------------------------------------------------------------------------
 
-# Short Guides
+### Short Guides
 
 -   Microeconomics Essentials
 
