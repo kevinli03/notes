@@ -1,6 +1,5 @@
 ---
 title: "Kevin's Notes 2024-2025"
-subtitle: "For personal use"
 output:
   html_document:
     df_print: paged
@@ -22,6 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
   }
 </style>
 ```
+Note: For Personal Use
+
 # Introductory Courses
 
 ### GV4L8 Introductory Maths
