@@ -22,7 +22,21 @@ knitr::opts_chunk$set(echo = TRUE)
   }
 </style>
 ```
-Note: For Personal Use
+Quick Links:
+
+-   [LSE Moodle](https://moodle.lse.ac.uk/my/)
+
+-   [LSE Outlook Email](https://outlook.office.com/mail/inbox/id/AAQkADU3NWU3M2RlLTk2NmMtNGEyZS1iYTU2LTQ2NTRhZWMzNTMyZQAQAIHp9iDvCC9KkshVxv4XT9U%3D)
+
+-   [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=1*5ghr49*_gcl_au*MTk0MjQzMTI2MS4xNzEzMzg0NDcy*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w)
+
+-   [LSE Student For You](https://portal.lse.ac.uk/studentservices/s/?_gl=1*1c1xkmp*_gcl_au*MTU2NDcwMzc5MS4xNzIxMjM1NTAz*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w)
+
+-   [LSE Student Hub](https://studenthub.lse.ac.uk/login)
+
+<br />
+
+------------------------------------------------------------------------
 
 # Introductory Courses
 
