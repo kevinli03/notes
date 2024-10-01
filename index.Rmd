@@ -164,7 +164,7 @@ Assessment: Exam (100%, Spring)
 
 Lecturer: Dr. Milena Tsvetkova
 
-1.  Session 1
+1.  [Welcome to Computer Programming](https://kevinli03.github.io/notes/MY470/1.html)
 
 <br />
 
