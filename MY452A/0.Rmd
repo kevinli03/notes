@@ -1,0 +1,232 @@
+---
+title: "Statistical Inference Review"
+subtitle: "Session 0, MY452A"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+Note: This lesson draws from both the Review Material provided in MY452A, and Session 1 of DV494 Fundamentals of Applied Econometrics for Economic Development Policy
+
+------------------------------------------------------------------------
+
+# Statistical Foundations
+
+### Probability Distributions
+
+Probability distributions are a function that tells us, from each individual possible outcome, what is the likelihood that outcome will happen
+
+-   Basically, observe data, and plot a frequency plot (histogram), where the $x$ axis is possible outcomes, and $y$ is frequency
+
+-   Then, divide each outcome $x$'s frequency $y$ by the total number of observations
+
+-   That gives you the probability of getting outcome $x$
+
+-   A probability distribution is the probability of getting each outcome $x$
+
+<br />
+
+The probability distribution allows us to guess an outcome, that is more accurate than any other form of blind guessing.
+
+<br />
+
+Discrete Probability Distirbution is when there are seperate categories of outcomes:
+
+-   Ex. Yes or No
+
+-   Ex. Heads or Tails
+
+-   Ex. Which side of a dice
+
+<br />
+
+Continuous Probability Distributions are continuous:
+
+-   Ex. What is the temperature? This can be any value between -273 C and $∞$ C.
+
+-   However, we cannot know the probability of a specific value - why? Well, what is the probability of getting exactly 27.343249324898 C? This is meaningless
+
+-   Instead, we use ranged (ex. what is the probability of getting between 20C and 30C)
+
+-   This is the integral of the probability density function between the range we are interested in
+
+<br />
+
+For both, the total probability (of all possible outcomes) is always $1$ - something has to happen.
+
+<br />
+
+### Types of Distributions
+
+Creating a probability distribution for every event we are interested is very time consuming
+
+-   Luckily, many events share similar probability distributions
+
+-   Thus, we can simplify the process by using a "off-the-shelf" probability distributions
+
+<br />
+
+Normal Distributions
+
+-   Most Frequent type of distribution
+
+-   Is bell-shaped and symmetrical
+
+-   Around 68% of data is within $\mu ± \sigma$, 95% data is $\mu ± 2 \sigma$, and 99.7% of data is between $\mu ± 3 \sigma$
+
+-   This will be very useful for Central Limit Theorem and Hypothesis Tests (see below)
+
+<br />
+
+Uniform Distributions
+
+-   A distribution where all outcomes have the same probability (a straight line)
+
+-   Ex. Rolling a dice - all sides have an equal chance of being rolled
+
+<br />
+
+Poisson Distribution
+
+-   Used to measure uncommon count events
+
+-   Basically, the output is how many times something occurs in a specific time period
+
+-   They are characterised by their mean number of occurences in a set period of time - knowing this, we can find the probability of any possible outcome
+
+<br />
+
+### Sampling
+
+Sampling is the process by which we select a portion of observations from a population
+
+-   Without actually gathering every observation in the population (because that is often impractical)
+
+-   Sampling allows us to learn about the larger population, without going through all the work of collecting all individual observations in a population
+
+<br />
+
+What makes a good sample?
+
+-   Sampling Procedure - how we choose to sample
+
+-   Luck - which we cannot control
+
+Because we cannot control for luck, we need tools like hypothesis testing (see later)
+
+<br />
+
+With a good procedure, we can have a sample that does a relatively good job of mimicking the population (of course, there is still luck/randomisation involved)
+
+-   We want to avoid bias. For example, if you are trying to collect a sample of students to see what causes good grades, you probably don't want to do your survey in front of the library - since the good students will be overrepresented
+
+-   To do this, we want to do a Random Sample
+
+<br />
+
+### Central Limit Theorem
+
+Let us go back to the point of luck in a good sample
+
+-   What if we somehow, by terrible luck, select all the tallest people randomly in a sample. Clearly, this is not representative
+
+Well, we don't have to worry. Central Limit Theorem states that there is a systematic relationship between a particular sample, and how far that is from the true population average
+
+-   Basically, we can know the probability of obtaining a certain mean of a particular sample, given the true mean of the population
+
+-   Why? if we take random sample after random sample from the same population, the more sample means we have, the more the distribution of sample means converge into a normal distribution with a mean that is equal to the true population mean.
+
+    -   Note: a distribution of sample means, is basically, taking many samples, finding their means, and plotting that into a probability distribution. Now take another sample, and another, and keep adding to the probability distribution
+
+-   Central Limit Theorem says that the distribution of sample means is normally distributed (even if the original distribution is not normally distributed). Thus, we can apply the 68-95-99.7 rule to find out the probability of a certain sample mean
+
+<br />
+
+Central Limit Theorem states that the distribution of sample means is normally distributed, given the following conditions:
+
+-   Data must be sampled at random from the population
+
+-   Samples should be independent - one sample should not impact the other samples
+
+-   When sampling without replacement, sample size should not exceed 10% of the population
+
+-   Sample size generally needs to be 30 or higher
+
+<br />
+
+### Hypothesis Testing
+
+Hypothesis Testing allows us to use Central Limit Theorem, to control the likelihood of making mistakes in statistics
+
+-   In statistics, we often cannot know the truth
+
+-   But, hypothesis testing allows us to be a certain percent confident of our results (generally, 95% confident)
+
+<br />
+
+To do this, we create "confidence intervals" around our estimates - a buffer to increase our confidence
+
+-   How? Well, we know that the distribution of sample means is normally distributed around the mean $\mu$
+
+-   Thus, we assume our sample mean is the true mean
+
+-   Then, we can draw a distribution of sample means around our one sample mean
+
+<br />
+
+We know the 68-95-99.7 rule exists for normal distributions
+
+-   Thus, within 2 standard deviations of the mean $\mu ± 2 \sigma$, there is 95% chance the true mean is within this range
+
+-   So, if another sample mean is outside this range, then we can be 95% confident it is from a different population
+
+    -   And vice versa - if it is within the range, we cannot claim that it is not a different population
+
+<br >
+
+When comparing different samples, we always start with the null hypothesis - that there is no significant difference between the two sample's parent populations.
+
+-   However, if the two sample means are outside the $\mu ± 2 \sigma$ range, then we are 95% confident that the two sample means are not the same
+
+-   So, we can reject our null hypothesis, and accept that the two samples are from different populations
+
+-   If the two sample means are within $\mu ± 2 \sigma$, that means the two means are within the 95% plausibility range, so we cannot conclude they are different
+
+<br />
+
+### Hypothesis Testing Example
+
+In western court systems - we presume innocent until before guilty
+
+-   Thus, our null hypothesis is that someone is innocent
+
+We can only claim someone is guilty if we prove beyond a reasonable doubt, and reject the null hypothesis of innocence
+
+-   In statistics, the "beyond a reasonable doubt" threshold is generally "with more than 95% confidence"
+
+-   Remember, 95% is 2 standard deviations on either side of the mean
+
+-   If the 2nd sample's mean is outside the $\mu ± 2 \sigma$ range, we can then, and only then, reject the null hypothesis and claim that the two samples are different
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)

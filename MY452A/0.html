@@ -11,7 +11,7 @@
 
 
 
-<title>Kevin’s Notes 2024-2025</title>
+<title>Statistical Inference Review</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -2778,7 +2778,8 @@ font-size: 0.95em;
 
 
 
-<h1 class="title toc-ignore">Kevin’s Notes 2024-2025</h1>
+<h1 class="title toc-ignore">Statistical Inference Review</h1>
+<h3 class="subtitle">Session 0, MY452A</h3>
 
 </div>
 
@@ -2789,907 +2790,241 @@ max-width: 1100px;
 font-size: 12pt;
 }
 </style>
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+<p>Note: This lesson draws from both the Review Material provided in
+MY452A, and Session 1 of DV494 Fundamentals of Applied Econometrics for
+Economic Development Policy</p>
 <hr />
-<div id="quick-links" class="section level1">
-<h1>Quick Links</h1>
-<table>
-<colgroup>
-<col width="45%" />
-<col width="54%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ul>
-<li><a href="https://moodle.lse.ac.uk/my/">LSE Moodle</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&amp;renew=true&amp;_gl=1*5ghr49*_gcl_au*MTk0MjQzMTI2MS4xNzEzMzg0NDcy*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w">LSE
-For You</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://portal.lse.ac.uk/studentservices/s/?_gl=1*1c1xkmp*_gcl_au*MTU2NDcwMzc5MS4xNzIxMjM1NTAz*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w">LSE
-Student For You</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://studenthub.lse.ac.uk/login">LSE Student
-Hub</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://outlook.office.com/mail/inbox/id/AAQkADU3NWU3M2RlLTk2NmMtNGEyZS1iYTU2LTQ2NTRhZWMzNTMyZQAQAIHp9iDvCC9KkshVxv4XT9U%3D">LSE
-Outlook Email</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://lsecloud-my.sharepoint.com">LSE OneDrive</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://www.lse.ac.uk/resources/calendar/programmeRegulations/taughtMasters/2024/MScPoliticalSciencePoliticalScienceAndPoliticalEconomy.htm">Course
-Regulations</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://www.lse.ac.uk/study-at-lse/Graduate/degree-programmes-2024/MSc-Political-Science-Political-Science-and-Political-Economy">Course
-Page</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://info.lse.ac.uk/staff/divisions/academic-registrars-division/systems/what-we-do/statistics-on-lse">Stats
-on LSE</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://info.lse.ac.uk/current-students/timetables">Timetables</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm">Undergrad
-Modules</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm">Postgrad
-Modules</a></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-<div id="introductory-courses" class="section level1">
-<h1>Introductory Courses</h1>
-<div id="gv4l8-introductory-maths" class="section level3">
-<h3>GV4L8 Introductory Maths</h3>
-<p><strong>GV4L8 Introductory Maths for Political Science</strong></p>
-<p>Lecturer: Dr. Marta Antonetti</p>
-<p>Assessment: None (Pre-Sessional)</p>
-<table>
-<colgroup>
-<col width="101%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/GV4L8/1.html">Sets,
-Expressions, Functions</a></li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="2" style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/GV4L8/2.html">Vectors,
-Matrices, Continuity, Limits</a></li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="3" style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/GV4L8/3.html">Derivatives,
-Optimisation, Integrals</a></li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="4" style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/GV4L8/4.html">Counting,
-Probability, Random Variables</a></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-<div id="eu409-basic-economics" class="section level3">
-<h3>EU409 Basic Economics</h3>
-<p><strong>EU409 Basic Economics Concepts for Political
-Economy</strong></p>
-<p>Lecturer: LSE European Institute</p>
-<p>Assessment: N/A (Pre-Sessional)</p>
-<table>
-<colgroup>
-<col width="101%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/EU409/1.html">Introduction to
-Economics, Supply &amp; Demand</a></li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="2" style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/EU409/2.html">Macro I:
-Supply-Side and Unemployment</a></li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Macro II: Aggregate Demand and Macro-Economic Equilibrium</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Micro I: Household Decisions</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Micro II: Economic Choices of the Firm</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="6" style="list-style-type: decimal">
-<li>Micro III: Market Structure and Imperfections</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Welfare Economics: Social Welfare and Government</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Open Economy Macroeconomics</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Unemployment and the Labour Market</li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-</div>
-<div id="autumn-term" class="section level1">
-<h1>Autumn Term</h1>
-<div id="gv481-quantitative-analysis" class="section level3">
-<h3>GV481 Quantitative Analysis</h3>
-<p><strong>GV481 Quantitative Analysis for Political
-Science</strong></p>
-<p>Lecturer: Dr. Aliz Toth</p>
-<p>Assessment: Coursework (50%, AT), Exam (50%, Spring)</p>
-<table style="width:83%;">
-<colgroup>
-<col width="61%" />
-<col width="22%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol style="list-style-type: decimal">
-<li>Introduction to Quantitative Thinking</li>
-</ol></td>
-<td><ol style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="2" style="list-style-type: decimal">
-<li>Correlation and OLS</li>
-</ol></td>
-<td><ol start="2" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Uncertainty</li>
-</ol></td>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Causal Inference</li>
-</ol></td>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Randomised Experiments</li>
-</ol></td>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="6" style="list-style-type: decimal">
-<li>READING WEEK</li>
-</ol></td>
-<td></td>
-</tr>
-<tr>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Selection on Observables</li>
-</ol></td>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Instrumental Variables</li>
-</ol></td>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Regression Discontinuity</li>
-</ol></td>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Differences-in-Differences</li>
-</ol></td>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Survey Experiments</li>
-</ol></td>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-<div id="gv4c8-game-theory" class="section level3">
-<h3>GV4C8 Game Theory</h3>
-<p><strong>GV4C8 Game Theory for Political Science</strong></p>
-<p>Lecturer: Prof. Rafael Hortala-Vallve</p>
-<p>Assessment: Problem Sets (50%, WT), Exam (50%, January)</p>
-<table style="width:67%;">
-<colgroup>
-<col width="26%" />
-<col width="40%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol style="list-style-type: decimal">
-<li>Session 1</li>
-</ol></td>
-<td><ol style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="2" style="list-style-type: decimal">
-<li>Session 2</li>
-</ol></td>
-<td><ol start="2" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Session 3</li>
-</ol></td>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Session 4</li>
-</ol></td>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Session 5</li>
-</ol></td>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="6" style="list-style-type: decimal">
-<li>READING WEEK</li>
-</ol></td>
-<td></td>
-</tr>
-<tr>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Session 7</li>
-</ol></td>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Session 8</li>
-</ol></td>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Session 9</li>
-</ol></td>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Session 10</li>
-</ol></td>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Session 11</li>
-</ol></td>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Readings &amp; Problem Set</li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-<div id="my452a-regression-analysis" class="section level3">
-<h3>MY452A Regression Analysis</h3>
-<p><strong>MY452A Applied Regression Analysis</strong></p>
-<p>Lecturer: Prof. Jouni Kuha</p>
-<p>Assessment: Exam (100%, Spring)</p>
-<table>
-<colgroup>
-<col width="85%" />
-<col width="14%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol start="0" style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/MY452A/0.html">Statistical
-Inference Review</a></li>
-</ol></td>
-<td></td>
-</tr>
-<tr>
-<td><ol style="list-style-type: decimal">
-<li>Introduction to Regression Modelling</li>
-</ol></td>
-<td><ol style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="2" style="list-style-type: decimal">
-<li>Linear Regression I: Basic Elements</li>
-</ol></td>
-<td><ol start="2" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Linear Regression II: Types of Explanatory Variables</li>
-</ol></td>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Linear Regression III: Conceptual Questions</li>
-</ol></td>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Linear Regression IV: Panel &amp; Clustered Data</li>
-</ol></td>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="6" style="list-style-type: decimal">
-<li>READING WEEK</li>
-</ol></td>
-<td></td>
-</tr>
-<tr>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Binary Logistic Regression I: Definition &amp; Interpretation</li>
-</ol></td>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Binary Logistic Regression II: Inference &amp; Model Selection</li>
-</ol></td>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Multinomial Logistic Regression</li>
-</ol></td>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Models for Counts</li>
-</ol></td>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Further Topics</li>
-</ol></td>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Readings</li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-<div id="my470-computer-programming" class="section level3">
-<h3>MY470 Computer Programming</h3>
-<p><strong>MY470 Computer Programming (Autumn Term)</strong></p>
-<p>Lecturer: Dr. Milena Tsvetkova</p>
-<p>Exam: N/A (Auditing)</p>
-<table>
-<colgroup>
-<col width="80%" />
-<col width="19%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/MY470/1.html">What is
-Computation</a></li>
-</ol></td>
-<td></td>
-</tr>
-<tr>
-<td><ol start="2" style="list-style-type: decimal">
-<li>Data Types</li>
-</ol></td>
-<td><ol start="2" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Control Flow</li>
-</ol></td>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Functions</li>
-</ol></td>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Classes</li>
-</ol></td>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="6" style="list-style-type: decimal">
-<li>READING WEEK</li>
-</ol></td>
-<td></td>
-</tr>
-<tr>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Testing and Debugging</li>
-</ol></td>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="8" style="list-style-type: decimal">
-<li>R Programming Language</li>
-</ol></td>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Algorithms and Order of Growth</li>
-</ol></td>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Searching and Sorting Algorithms</li>
-</ol></td>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Tree and Graph Algorithms</li>
-</ol></td>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Problem Set</li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-</div>
-<div id="winter-term" class="section level1">
-<h1>Winter Term</h1>
-<div id="gv482-current-issues" class="section level3">
-<h3>GV482 Current Issues</h3>
-<p><strong>GV482 Political Science and Political Economy: Current
-Issues</strong></p>
-<p>Lecturer: Prof. Stephane Wolton</p>
-<p>Assessment: Coursework (50%, WT), Online Assessment (50%, Spring)</p>
-<p><br /></p>
-<hr />
-</div>
-<div id="my457-causal-inference" class="section level3">
-<h3>MY457 Causal Inference</h3>
-<p><strong>MY457 Causal Inference for Observational and Experimental
-Studies</strong></p>
-<p>Lecturer: Dr. Daniel De Kadt</p>
-<p>Assessment: Take-Home Assessment (100%, Spring)</p>
-<p><br /></p>
-<hr />
-</div>
-<div id="my455-multivariate-analysis" class="section level3">
-<h3>MY455 Multivariate Analysis</h3>
-<p><strong>MY455 Multivariate Analysis and Measurement</strong></p>
-<p>Lecturer: Prof. Jouni Kuha</p>
-<p>Assessment: Exam (100%, Spring)</p>
-<p><br /><br />
-</p>
-<hr />
-</div>
-<div id="st304-time-series" class="section level3">
-<h3>ST304 Time Series</h3>
-<p><strong>ST304 Time Series and Forecasting (Winter Term)</strong></p>
-<p>Lecturer</p>
-<p><br /></p>
-<hr />
-</div>
-</div>
-<div id="other-lse-notes" class="section level1">
-<h1>Other LSE Notes</h1>
-<div id="ec453-political-economy" class="section level3">
-<h3>EC453 Political Economy</h3>
-<p><strong>EC453 Political Economy (Full Year)</strong></p>
-<p>Lecturer: Professor Stephane Wolton</p>
-<table style="width:82%;">
-<colgroup>
-<col width="81%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Information Aggregation in Elections</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="4" style="list-style-type: decimal">
-<li>Electoral Competition I</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="5" style="list-style-type: decimal">
-<li>Electoral Competition II</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="6" style="list-style-type: decimal">
-<li>READING WEEK</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="7" style="list-style-type: decimal">
-<li>Political Agency I</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="8" style="list-style-type: decimal">
-<li>Political Agency II</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="9" style="list-style-type: decimal">
-<li>Institutions and Policy Outcomes</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="10" style="list-style-type: decimal">
-<li>Politics in Developing Democracies - Corruption</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="11" style="list-style-type: decimal">
-<li>Politics in Developing Democracies - State Capacity</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="12" style="list-style-type: decimal">
-<li>Media</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="13" style="list-style-type: decimal">
-<li>Social Media</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="14" style="list-style-type: decimal">
-<li>Interest Groups</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="15" style="list-style-type: decimal">
-<li>Populism</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="16" style="list-style-type: decimal">
-<li>Discrimination I</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="17" style="list-style-type: decimal">
-<li>READING WEEK</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="18" style="list-style-type: decimal">
-<li>Discrimination II: Women in Politics</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="19" style="list-style-type: decimal">
-<li>Autocratic Politics I: Elite Behaviour</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="20" style="list-style-type: decimal">
-<li>Autocratic Politics II: Role of Parliament</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="21" style="list-style-type: decimal">
-<li>Autocratic Politics III: Role of Media and Elections</li>
-</ol></td>
-</tr>
-<tr>
-<td><ol start="22" style="list-style-type: decimal">
-<li>Democratisation</li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-<div id="other-topics-in-political-economy" class="section level3">
-<h3>Other Topics in Political Economy</h3>
-<p><strong>From a Combination of Courses I Find Interesting</strong></p>
+<div id="statistical-foundations" class="section level1">
+<h1>Statistical Foundations</h1>
+<div id="probability-distributions" class="section level3">
+<h3>Probability Distributions</h3>
+<p>Probability distributions are a function that tells us, from each
+individual possible outcome, what is the likelihood that outcome will
+happen</p>
 <ul>
-<li><p>IR470 International Political Economy</p></li>
-<li><p>DV464 Democracy and Development</p></li>
-<li><p>EU443 European Models of Capitalism</p></li>
+<li><p>Basically, observe data, and plot a frequency plot (histogram),
+where the <span class="math inline">\(x\)</span> axis is possible
+outcomes, and <span class="math inline">\(y\)</span> is
+frequency</p></li>
+<li><p>Then, divide each outcome <span class="math inline">\(x\)</span>’s frequency <span class="math inline">\(y\)</span> by the total number of
+observations</p></li>
+<li><p>That gives you the probability of getting outcome <span class="math inline">\(x\)</span></p></li>
+<li><p>A probability distribution is the probability of getting each
+outcome <span class="math inline">\(x\)</span></p></li>
 </ul>
-<table style="width:79%;">
-<colgroup>
-<col width="58%" />
-<col width="20%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol style="list-style-type: decimal">
-<li>IPE 1st Lecture</li>
-</ol></td>
-<td><ul>
-<li>IR470</li>
-</ul></td>
-</tr>
-<tr>
-<td><ol start="2" style="list-style-type: decimal">
-<li>IPE Second Lecture</li>
-</ol></td>
-<td><ul>
-<li>IR470</li>
-</ul></td>
-</tr>
-<tr>
-<td><ol start="3" style="list-style-type: decimal">
-<li>Democracy &amp; Development 3rd Lecture</li>
-</ol></td>
-<td><ul>
-<li>DV464</li>
-</ul></td>
-</tr>
-<tr>
-<td><ol start="4" style="list-style-type: decimal">
-<li>European Models of Capitalism</li>
-</ol></td>
-<td><ul>
-<li>EU443</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
 <p><br /></p>
-<hr />
+<p>The probability distribution allows us to guess an outcome, that is
+more accurate than any other form of blind guessing.</p>
 <p><br /></p>
-</div>
-<div id="other-topics-in-methodology" class="section level3">
-<h3>Other Topics in Methodology</h3>
-<p><br /></p>
-<hr />
-</div>
-<div id="pspe-research-seminars" class="section level3">
-<h3>PSPE Research Seminars</h3>
-<p>Seminar Conveners: Dr. Aliz Toth, Dr. Carl Muller Crepon,
-Dr. Nirvikar Jassal</p>
-<p>Location: SAL.3.05 Tuesday 14:00 - 15:30</p>
-<table>
-<colgroup>
-<col width="56%" />
-<col width="43%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ol style="list-style-type: decimal">
-<li>Are US Tax Policies Increasingly Polarised?</li>
-</ol></td>
-<td><ul>
-<li>Alisa Tazhitdinova (UCSB)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Federica Braccioli (Vienna)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Volha Charnysh (MIT)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Maggie Penn (Emory)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Nina McMurray (Vanderbilt)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Austin Wright (Chicago)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Hunter Rendleman (UC)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Luca Braghieri (Bocconi)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Dominik Hangartner (ETH Zurich)</li>
-</ul></td>
-</tr>
-<tr>
-<td></td>
-<td><ul>
-<li>Judith Spirig (UCL)</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<hr />
-</div>
-</div>
-<div id="other-courses" class="section level1">
-<h1>Other Courses</h1>
-<div id="ac110-principles-of-accounting" class="section level3">
-<h3>AC110 Principles of Accounting</h3>
-<p><strong>AC110 Principles of Accounting</strong></p>
-<p>Lecturer: Dr. Jeroen Koenraadt, Dr. Gulnaz Khamidullina</p>
-<ol style="list-style-type: decimal">
-<li>Session 1</li>
-</ol>
-<p><br /></p>
-<hr />
-</div>
-<div id="short-guides" class="section level3">
-<h3>Short Guides</h3>
+<p>Discrete Probability Distirbution is when there are seperate
+categories of outcomes:</p>
 <ul>
-<li><p>Microeconomics Essentials</p></li>
-<li><p>Financial Modelling Essentials</p></li>
+<li><p>Ex. Yes or No</p></li>
+<li><p>Ex. Heads or Tails</p></li>
+<li><p>Ex. Which side of a dice</p></li>
 </ul>
+<p><br /></p>
+<p>Continuous Probability Distributions are continuous:</p>
+<ul>
+<li><p>Ex. What is the temperature? This can be any value between -273 C
+and <span class="math inline">\(∞\)</span> C.</p></li>
+<li><p>However, we cannot know the probability of a specific value -
+why? Well, what is the probability of getting exactly 27.343249324898 C?
+This is meaningless</p></li>
+<li><p>Instead, we use ranged (ex. what is the probability of getting
+between 20C and 30C)</p></li>
+<li><p>This is the integral of the probability density function between
+the range we are interested in</p></li>
+</ul>
+<p><br /></p>
+<p>For both, the total probability (of all possible outcomes) is always
+<span class="math inline">\(1\)</span> - something has to happen.</p>
+<p><br /></p>
+</div>
+<div id="types-of-distributions" class="section level3">
+<h3>Types of Distributions</h3>
+<p>Creating a probability distribution for every event we are interested
+is very time consuming</p>
+<ul>
+<li><p>Luckily, many events share similar probability
+distributions</p></li>
+<li><p>Thus, we can simplify the process by using a “off-the-shelf”
+probability distributions</p></li>
+</ul>
+<p><br /></p>
+<p>Normal Distributions</p>
+<ul>
+<li><p>Most Frequent type of distribution</p></li>
+<li><p>Is bell-shaped and symmetrical</p></li>
+<li><p>Around 68% of data is within <span class="math inline">\(\mu ±
+\sigma\)</span>, 95% data is <span class="math inline">\(\mu ± 2
+\sigma\)</span>, and 99.7% of data is between <span class="math inline">\(\mu ± 3 \sigma\)</span></p></li>
+<li><p>This will be very useful for Central Limit Theorem and Hypothesis
+Tests (see below)</p></li>
+</ul>
+<p><br /></p>
+<p>Uniform Distributions</p>
+<ul>
+<li><p>A distribution where all outcomes have the same probability (a
+straight line)</p></li>
+<li><p>Ex. Rolling a dice - all sides have an equal chance of being
+rolled</p></li>
+</ul>
+<p><br /></p>
+<p>Poisson Distribution</p>
+<ul>
+<li><p>Used to measure uncommon count events</p></li>
+<li><p>Basically, the output is how many times something occurs in a
+specific time period</p></li>
+<li><p>They are characterised by their mean number of occurences in a
+set period of time - knowing this, we can find the probability of any
+possible outcome</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="sampling" class="section level3">
+<h3>Sampling</h3>
+<p>Sampling is the process by which we select a portion of observations
+from a population</p>
+<ul>
+<li><p>Without actually gathering every observation in the population
+(because that is often impractical)</p></li>
+<li><p>Sampling allows us to learn about the larger population, without
+going through all the work of collecting all individual observations in
+a population</p></li>
+</ul>
+<p><br /></p>
+<p>What makes a good sample?</p>
+<ul>
+<li><p>Sampling Procedure - how we choose to sample</p></li>
+<li><p>Luck - which we cannot control</p></li>
+</ul>
+<p>Because we cannot control for luck, we need tools like hypothesis
+testing (see later)</p>
+<p><br /></p>
+<p>With a good procedure, we can have a sample that does a relatively
+good job of mimicking the population (of course, there is still
+luck/randomisation involved)</p>
+<ul>
+<li><p>We want to avoid bias. For example, if you are trying to collect
+a sample of students to see what causes good grades, you probably don’t
+want to do your survey in front of the library - since the good students
+will be overrepresented</p></li>
+<li><p>To do this, we want to do a Random Sample</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="central-limit-theorem" class="section level3">
+<h3>Central Limit Theorem</h3>
+<p>Let us go back to the point of luck in a good sample</p>
+<ul>
+<li>What if we somehow, by terrible luck, select all the tallest people
+randomly in a sample. Clearly, this is not representative</li>
+</ul>
+<p>Well, we don’t have to worry. Central Limit Theorem states that there
+is a systematic relationship between a particular sample, and how far
+that is from the true population average</p>
+<ul>
+<li><p>Basically, we can know the probability of obtaining a certain
+mean of a particular sample, given the true mean of the
+population</p></li>
+<li><p>Why? if we take random sample after random sample from the same
+population, the more sample means we have, the more the distribution of
+sample means converge into a normal distribution with a mean that is
+equal to the true population mean.</p>
+<ul>
+<li>Note: a distribution of sample means, is basically, taking many
+samples, finding their means, and plotting that into a probability
+distribution. Now take another sample, and another, and keep adding to
+the probability distribution</li>
+</ul></li>
+<li><p>Central Limit Theorem says that the distribution of sample means
+is normally distributed (even if the original distribution is not
+normally distributed). Thus, we can apply the 68-95-99.7 rule to find
+out the probability of a certain sample mean</p></li>
+</ul>
+<p><br /></p>
+<p>Central Limit Theorem states that the distribution of sample means is
+normally distributed, given the following conditions:</p>
+<ul>
+<li><p>Data must be sampled at random from the population</p></li>
+<li><p>Samples should be independent - one sample should not impact the
+other samples</p></li>
+<li><p>When sampling without replacement, sample size should not exceed
+10% of the population</p></li>
+<li><p>Sample size generally needs to be 30 or higher</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="hypothesis-testing" class="section level3">
+<h3>Hypothesis Testing</h3>
+<p>Hypothesis Testing allows us to use Central Limit Theorem, to control
+the likelihood of making mistakes in statistics</p>
+<ul>
+<li><p>In statistics, we often cannot know the truth</p></li>
+<li><p>But, hypothesis testing allows us to be a certain percent
+confident of our results (generally, 95% confident)</p></li>
+</ul>
+<p><br /></p>
+<p>To do this, we create “confidence intervals” around our estimates - a
+buffer to increase our confidence</p>
+<ul>
+<li><p>How? Well, we know that the distribution of sample means is
+normally distributed around the mean <span class="math inline">\(\mu\)</span></p></li>
+<li><p>Thus, we assume our sample mean is the true mean</p></li>
+<li><p>Then, we can draw a distribution of sample means around our one
+sample mean</p></li>
+</ul>
+<p><br /></p>
+<p>We know the 68-95-99.7 rule exists for normal distributions</p>
+<ul>
+<li><p>Thus, within 2 standard deviations of the mean <span class="math inline">\(\mu ± 2 \sigma\)</span>, there is 95% chance the
+true mean is within this range</p></li>
+<li><p>So, if another sample mean is outside this range, then we can be
+95% confident it is from a different population</p>
+<ul>
+<li>And vice versa - if it is within the range, we cannot claim that it
+is not a different population</li>
+</ul></li>
+</ul>
+<p><br></p>
+<p>When comparing different samples, we always start with the null
+hypothesis - that there is no significant difference between the two
+sample’s parent populations.</p>
+<ul>
+<li><p>However, if the two sample means are outside the <span class="math inline">\(\mu ± 2 \sigma\)</span> range, then we are 95%
+confident that the two sample means are not the same</p></li>
+<li><p>So, we can reject our null hypothesis, and accept that the two
+samples are from different populations</p></li>
+<li><p>If the two sample means are within <span class="math inline">\(\mu ± 2 \sigma\)</span>, that means the two means
+are within the 95% plausibility range, so we cannot conclude they are
+different</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="hypothesis-testing-example" class="section level3">
+<h3>Hypothesis Testing Example</h3>
+<p>In western court systems - we presume innocent until before
+guilty</p>
+<ul>
+<li>Thus, our null hypothesis is that someone is innocent</li>
+</ul>
+<p>We can only claim someone is guilty if we prove beyond a reasonable
+doubt, and reject the null hypothesis of innocence</p>
+<ul>
+<li><p>In statistics, the “beyond a reasonable doubt” threshold is
+generally “with more than 95% confidence”</p></li>
+<li><p>Remember, 95% is 2 standard deviations on either side of the
+mean</p></li>
+<li><p>If the 2nd sample’s mean is outside the <span class="math inline">\(\mu ± 2 \sigma\)</span> range, we can then, and
+only then, reject the null hypothesis and claim that the two samples are
+different</p></li>
+</ul>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
 </div>
 </div>
 
