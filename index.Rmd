@@ -68,17 +68,29 @@ Assessment: None
 
 ------------------------------------------------------------------------
 
-# Enrolled Modules
+# Autumn Term
 
 ### GV481 Quantitative Analysis
 
-**GV481 Quantitative Analysis for Political Science (Autumn Term)**
+**GV481 Quantitative Analysis for Political Science**
 
 Lecturer: Dr. Aliz Toth
 
 Assessment: Coursework (50%, AT), Exam (50%, Spring)
 
-1.  Session 1
+| Week | Lecture                                | Resources |
+|------|----------------------------------------|-----------|
+| 1    | Introduction to Quantitative Thinking  | Readings  |
+| 2    | Correlation and OLS                    | Readings  |
+| 3    | Uncertainty                            | Readings  |
+| 4    | Causal Inference                       | Readings  |
+| 5    | Randomised Experiments                 | Readings  |
+| 6    | READING WEEK                           |           |
+| 7    | Selection on Observables               | Readings  |
+| 8    | Instrumental Variables                 | Readings  |
+| 9    | Regression Discontinuity               | Readings  |
+| 10   | Differences-in-Differences             | Readings  |
+| 11   | Survey Experiments                     | Readings  |
 
 <br />
 
@@ -86,7 +98,7 @@ Assessment: Coursework (50%, AT), Exam (50%, Spring)
 
 ### GV4C8 Game Theory
 
-**GV4C8 Game Theory for Political Science (Autumn Term)**
+**GV4C8 Game Theory for Political Science**
 
 Lecturer: Prof. Rafael Hortala-Vallve
 
@@ -100,7 +112,7 @@ Assessment: Problem Sets (50%, WT), Exam (50%, January)
 
 ### MY452A Regression Analysis
 
-**MY452A Applied Regression Analysis (Autumn Term)**
+**MY452A Applied Regression Analysis**
 
 Lecturer: Prof. Jouni Kuha
 
@@ -112,11 +124,11 @@ Assessment: Exam (100%, Spring)
 
 ------------------------------------------------------------------------
 
-<br />
+# Winter Term
 
 ### GV482 Current Issues
 
-**GV482 Political Science and Political Economy: Current Issues (Winter Term)**
+**GV482 Political Science and Political Economy: Current Issues**
 
 Lecturer: Prof. Stephane Wolton
 
@@ -130,7 +142,7 @@ Assessment: Coursework (50%, WT), Online Assessment (50%, Spring)
 
 ### MY457 Causal Inference
 
-**MY457 Causal Inference for Observational and Experimental Studies (Winter Term)**
+**MY457 Causal Inference for Observational and Experimental Studies**
 
 Lecturer: Dr. Daniel De Kadt
 
@@ -144,7 +156,7 @@ Assessment: Take-Home Assessment (100%, Spring)
 
 ### MY455 Multivariate Analysis
 
-**MY455 Multivariate Analysis and Measurement (Winter Term)**
+**MY455 Multivariate Analysis and Measurement**
 
 Lecturer: Prof. Jouni Kuha
 
@@ -156,7 +168,7 @@ Assessment: Exam (100%, Spring)
 
 ------------------------------------------------------------------------
 
-# Auditing Modules
+# Audited Modules
 
 ### MY470 Computer Programming
 
@@ -182,37 +194,36 @@ Lecturer
 
 ------------------------------------------------------------------------
 
-### Topics in Political Economy
+### EC453 Political Economy
+
+**EC453 Political Economy (Full Year)**
+
+Lecturer: Professor Stephane Wolton
+
+1.  Game Theory Refresher Part 1 (No Notes)
+2.  Game Theory Refresher part 2 (No Notes)
+3.  Session 3
+
+<br />
+
+------------------------------------------------------------------------
+
+### Other Audited Lectures
 
 **From a Combination of Courses I Find Interesting (Full Year)**
 
-[EC453 Political Economy]{.underline}
-
--   Lecture 3
-
-[IR470 International Political Economy]{.underline}
+[IR470 International Political Economy (Lectures 1 and 2)]{.underline}
 
 -   Lecture 1
+-   
 
-[DV464 Democracy and Development]{.underline}
+[DV464 Democracy and Development (Lecture 3)]{.underline}
 
 -   Lecture 3
 
 [EU443 European Models of Capitalism]{.underline}
 
 -   Lecture 1
-
-<br />
-
-------------------------------------------------------------------------
-
-### MA108 Mathematical Methods
-
-**MA108 Methods in Calculus and Linear Algebra (Autumn Term)**
-
-Lecturer: Dr. Ioannis Kouletsis
-
-1.  Session 1
 
 <br />
 
