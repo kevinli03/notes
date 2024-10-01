@@ -22,17 +22,20 @@ knitr::opts_chunk$set(echo = TRUE)
   }
 </style>
 ```
-Quick Links:
 
--   [LSE Moodle](https://moodle.lse.ac.uk/my/)
+------------------------------------------------------------------------
 
--   [LSE Outlook Email](https://outlook.office.com/mail/inbox/id/AAQkADU3NWU3M2RlLTk2NmMtNGEyZS1iYTU2LTQ2NTRhZWMzNTMyZQAQAIHp9iDvCC9KkshVxv4XT9U%3D)
+# Quick Links
 
--   [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=1*5ghr49*_gcl_au*MTk0MjQzMTI2MS4xNzEzMzg0NDcy*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w)
-
--   [LSE Student For You](https://portal.lse.ac.uk/studentservices/s/?_gl=1*1c1xkmp*_gcl_au*MTU2NDcwMzc5MS4xNzIxMjM1NTAz*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w)
-
--   [LSE Student Hub](https://studenthub.lse.ac.uk/login)
++:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:+:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:+:--------------------------------------------------------------------------------------:+
+| [LSE Moodle](https://moodle.lse.ac.uk/my/)                                                                                                                                                                                                                     | [LSE Outlook Email](https://outlook.office.com/mail/inbox/id/AAQkADU3NWU3M2RlLTk2NmMtNGEyZS1iYTU2LTQ2NTRhZWMzNTMyZQAQAIHp9iDvCC9KkshVxv4XT9U%3D)                                                                   | [LSE OneDrive](https://lsecloud-my.sharepoint.com)                                     |
+|                                                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |                                                                                        |
+| [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=1*5ghr49*_gcl_au*MTk0MjQzMTI2MS4xNzEzMzg0NDcy*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w) | [Course Page](https://www.lse.ac.uk/study-at-lse/Graduate/degree-programmes-2024/MSc-Political-Science-Political-Science-and-Political-Economy)                                                                    | [LSE Student Hub](https://studenthub.lse.ac.uk/login)                                  |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+| [Course Regulations](https://www.lse.ac.uk/resources/calendar/programmeRegulations/taughtMasters/2024/MScPoliticalSciencePoliticalScienceAndPoliticalEconomy.htm)                                                                                              | [LSE Student For You](https://portal.lse.ac.uk/studentservices/s/?_gl=1*1c1xkmp*_gcl_au*MTU2NDcwMzc5MS4xNzIxMjM1NTAz*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w) | [Postgrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm) |
+|                                                                                                                                                                                                                                                                |                                                                                                                                                                                                                    |                                                                                        |
+| [Undergrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm)                                                                                                                                                                   | [Stats on LSE](https://info.lse.ac.uk/staff/divisions/academic-registrars-division/systems/what-we-do/statistics-on-lse)                                                                                           | [Timetables](https://info.lse.ac.uk/current-students/timetables)                       |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
 
 <br />
 
@@ -46,12 +49,17 @@ Quick Links:
 
 Lecturer: Dr. Marta Antonetti
 
-Assessment: None
+Assessment: None (Pre-Sessional)
 
-1.  [Sets, Expressions, Functions](https://kevinli03.github.io/notes/GV4L8/1.html)
-2.  [Vectors, Matrices, Continuity, Limits](https://kevinli03.github.io/notes/GV4L8/2.html)
-3.  [Derivatives, Optimisation, Integrals](https://kevinli03.github.io/notes/GV4L8/3.html)
-4.  [Counting, Probability, Random Variables](https://kevinli03.github.io/notes/GV4L8/4.html)
++-----------------------------------------------------------------------------------------------+
+| 1.  [Sets, Expressions, Functions](https://kevinli03.github.io/notes/GV4L8/1.html)            |
++-----------------------------------------------------------------------------------------------+
+| 2.  [Vectors, Matrices, Continuity, Limits](https://kevinli03.github.io/notes/GV4L8/2.html)   |
++-----------------------------------------------------------------------------------------------+
+| 3.  [Derivatives, Optimisation, Integrals](https://kevinli03.github.io/notes/GV4L8/3.html)    |
++-----------------------------------------------------------------------------------------------+
+| 4.  [Counting, Probability, Random Variables](https://kevinli03.github.io/notes/GV4L8/4.html) |
++-----------------------------------------------------------------------------------------------+
 
 <br />
 
@@ -61,8 +69,29 @@ Assessment: None
 
 **EU409 Basic Economics Concepts for Political Economy**
 
-1.  [Intro to Economics, Supply and Demand](https://kevinli03.github.io/notes/EU409/1.html)
-2.  [Macroeconomics I: Supply-Side and Unemployment](https://kevinli03.github.io/notes/EU409/2.html)
+Lecturer: LSE European Institute
+
+Assessment: N/A (Pre-Sessional)
+
++--------------------------------------------------------------------------------------------------+
+| 1.  [Introduction to Economics, Supply & Demand](https://kevinli03.github.io/notes/EU409/1.html) |
++--------------------------------------------------------------------------------------------------+
+| 2.  [Macro I: Supply-Side and Unemployment](https://kevinli03.github.io/notes/EU409/2.html)      |
++--------------------------------------------------------------------------------------------------+
+| 3.  Macro II: Aggregate Demand and Macro-Economic Equilibrium                                    |
++--------------------------------------------------------------------------------------------------+
+| 4.  Micro I: Household Decisions                                                                 |
++--------------------------------------------------------------------------------------------------+
+| 5.  Micro II: Economic Choices of the Firm                                                       |
++--------------------------------------------------------------------------------------------------+
+| 6.  Micro III: Market Structure and Imperfections                                                |
++--------------------------------------------------------------------------------------------------+
+| 7.  Welfare Economics: Social Welfare and Government                                             |
++--------------------------------------------------------------------------------------------------+
+| 8.  Open Economy Macroeconomics                                                                  |
++--------------------------------------------------------------------------------------------------+
+| 9.  Unemployment and the Labour Market                                                           |
++--------------------------------------------------------------------------------------------------+
 
 <br />
 
@@ -78,19 +107,29 @@ Lecturer: Dr. Aliz Toth
 
 Assessment: Coursework (50%, AT), Exam (50%, Spring)
 
-| Week | Lecture                                | Resources |
-|------|----------------------------------------|-----------|
-| 1    | Introduction to Quantitative Thinking  | Readings  |
-| 2    | Correlation and OLS                    | Readings  |
-| 3    | Uncertainty                            | Readings  |
-| 4    | Causal Inference                       | Readings  |
-| 5    | Randomised Experiments                 | Readings  |
-| 6    | READING WEEK                           |           |
-| 7    | Selection on Observables               | Readings  |
-| 8    | Instrumental Variables                 | Readings  |
-| 9    | Regression Discontinuity               | Readings  |
-| 10   | Differences-in-Differences             | Readings  |
-| 11   | Survey Experiments                     | Readings  |
++-------------------------------------------+--------------+
+| 1.  Introduction to Quantitative Thinking | -   Readings |
++-------------------------------------------+--------------+
+| 2.  Correlation and OLS                   | -   Readings |
++-------------------------------------------+--------------+
+| 3.  Uncertainty                           | -   Readings |
++-------------------------------------------+--------------+
+| 4.  Causal Inference                      | -   Readings |
++-------------------------------------------+--------------+
+| 5.  Randomised Experiments                | -   Readings |
++-------------------------------------------+--------------+
+| 6.  READING WEEK                          |              |
++-------------------------------------------+--------------+
+| 7.  Selection on Observables              | -   Readings |
++-------------------------------------------+--------------+
+| 8.  Instrumental Variables                | -   Readings |
++-------------------------------------------+--------------+
+| 9.  Regression Discontinuity              | -   Readings |
++-------------------------------------------+--------------+
+| 10. Differences-in-Differences            | -   Readings |
++-------------------------------------------+--------------+
+| 11. Survey Experiments                    | -   Readings |
++-------------------------------------------+--------------+
 
 <br />
 
@@ -104,7 +143,29 @@ Lecturer: Prof. Rafael Hortala-Vallve
 
 Assessment: Problem Sets (50%, WT), Exam (50%, January)
 
-1.  Session 1
++------------------+--------------+-----------------+
+| 1.  Session 1    | -   Readings |                 |
++------------------+--------------+-----------------+
+| 2.  Session 2    | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
+| 3.  Session 3    | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
+| 4.  Session 4    | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
+| 5.  Session 5    | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
+| 6.  READING WEEK |              |                 |
++------------------+--------------+-----------------+
+| 7.  Session 7    | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
+| 8.  Session 8    | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
+| 9.  Session 9    | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
+| 10. Session 10   | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
+| 11. Session 11   | -   Readings | -   Problem Set |
++------------------+--------------+-----------------+
 
 <br />
 
@@ -118,7 +179,65 @@ Lecturer: Prof. Jouni Kuha
 
 Assessment: Exam (100%, Spring)
 
-1.  Session 1
++----------------------------------------------------------------+--------------+
+| 1.  Introduction to Regression Modelling                       | -   Readings |
++----------------------------------------------------------------+--------------+
+| 2.  Linear Regression I: Basic Elements                        | -   Readings |
++----------------------------------------------------------------+--------------+
+| 3.  Linear Regression II: Types of Explanatory Variables       | -   Readings |
++----------------------------------------------------------------+--------------+
+| 4.  Linear Regression III: Conceptual Questions                | -   Readings |
++----------------------------------------------------------------+--------------+
+| 5.  Linear Regression IV: Panel & Clustered Data               | -   Readings |
++----------------------------------------------------------------+--------------+
+| 6.  READING WEEK                                               |              |
++----------------------------------------------------------------+--------------+
+| 7.  Binary Logistic Regression I: Definition & Interpretation  | -   Readings |
++----------------------------------------------------------------+--------------+
+| 8.  Binary Logistic Regression II: Inference & Model Selection | -   Readings |
++----------------------------------------------------------------+--------------+
+| 9.  Multinomial Logistic Regression                            | -   Readings |
++----------------------------------------------------------------+--------------+
+| 10. Models for Counts                                          | -   Readings |
++----------------------------------------------------------------+--------------+
+| 11. Further Topics                                             | -   Readings |
++----------------------------------------------------------------+--------------+
+
+<br />
+
+------------------------------------------------------------------------
+
+### MY470 Computer Programming
+
+**MY470 Computer Programming (Autumn Term)**
+
+Lecturer: Dr. Milena Tsvetkova
+
+Exam: N/A (Auditing)
+
++---------------------------------------------------------------------------+--------------+
+| 1.  [What is Computation](https://kevinli03.github.io/notes/MY470/1.html) |              |
++---------------------------------------------------------------------------+--------------+
+| 2.  Data Types                                                            | -   Problems |
++---------------------------------------------------------------------------+--------------+
+| 3.  Control Flow                                                          | -   Problems |
++---------------------------------------------------------------------------+--------------+
+| 4.  Functions                                                             | -   Problems |
++---------------------------------------------------------------------------+--------------+
+| 5.  Classes                                                               | -   Problems |
++---------------------------------------------------------------------------+--------------+
+| 6.  READING WEEK                                                          |              |
++---------------------------------------------------------------------------+--------------+
+| 7.  Testing and Debugging                                                 | -   Problems |
++---------------------------------------------------------------------------+--------------+
+| 8.  R Programming Language                                                | -   Problems |
++---------------------------------------------------------------------------+--------------+
+| 9.  Algorithms and Order of Growth                                        | -   Problems |
++---------------------------------------------------------------------------+--------------+
+| 10. Searching and Sorting Algorithms                                      | -   Problems |
++---------------------------------------------------------------------------+--------------+
+| 11. Tree and Graph Algorithms                                             | -   Problems |
++---------------------------------------------------------------------------+--------------+
 
 <br />
 
@@ -134,8 +253,6 @@ Lecturer: Prof. Stephane Wolton
 
 Assessment: Coursework (50%, WT), Online Assessment (50%, Spring)
 
-1.  Session 1
-
 <br />
 
 ------------------------------------------------------------------------
@@ -147,8 +264,6 @@ Assessment: Coursework (50%, WT), Online Assessment (50%, Spring)
 Lecturer: Dr. Daniel De Kadt
 
 Assessment: Take-Home Assessment (100%, Spring)
-
-1.  Session 1
 
 <br />
 
@@ -162,23 +277,7 @@ Lecturer: Prof. Jouni Kuha
 
 Assessment: Exam (100%, Spring)
 
-1.  Session 1
-
-<br />
-
-------------------------------------------------------------------------
-
-# Audited Modules
-
-### MY470 Computer Programming
-
-**MY470 Computer Programming (Autumn Term)**
-
-Lecturer: Dr. Milena Tsvetkova
-
-1.  [Welcome to Computer Programming](https://kevinli03.github.io/notes/MY470/1.html)
-
-<br />
+<br />\
 
 ------------------------------------------------------------------------
 
@@ -188,11 +287,11 @@ Lecturer: Dr. Milena Tsvetkova
 
 Lecturer
 
-1.  Session 1
-
 <br />
 
 ------------------------------------------------------------------------
+
+# Other LSE Notes
 
 ### EC453 Political Economy
 
@@ -200,30 +299,77 @@ Lecturer
 
 Lecturer: Professor Stephane Wolton
 
-1.  Game Theory Refresher Part 1 (No Notes)
-2.  Game Theory Refresher part 2 (No Notes)
-3.  Session 3
++----------------------------------------------------------+
+| 3.  Information Aggregation in Elections                 |
++----------------------------------------------------------+
+| 4.  Electoral Competition I                              |
++----------------------------------------------------------+
+| 5.  Electoral Competition II                             |
++----------------------------------------------------------+
+| 6.  READING WEEK                                         |
++----------------------------------------------------------+
+| 7.  Political Agency I                                   |
++----------------------------------------------------------+
+| 8.  Political Agency II                                  |
++----------------------------------------------------------+
+| 9.  Institutions and Policy Outcomes                     |
++----------------------------------------------------------+
+| 10. Politics in Developing Democracies - Corruption      |
++----------------------------------------------------------+
+| 11. Politics in Developing Democracies - State Capacity  |
++----------------------------------------------------------+
+| 12. Media                                                |
++----------------------------------------------------------+
+| 13. Social Media                                         |
++----------------------------------------------------------+
+| 14. Interest Groups                                      |
++----------------------------------------------------------+
+| 15. Populism                                             |
++----------------------------------------------------------+
+| 16. Discrimination I                                     |
++----------------------------------------------------------+
+| 17. READING WEEK                                         |
++----------------------------------------------------------+
+| 18. Discrimination II: Women in Politics                 |
++----------------------------------------------------------+
+| 19. Autocratic Politics I: Elite Behaviour               |
++----------------------------------------------------------+
+| 20. Autocratic Politics II: Role of Parliament           |
++----------------------------------------------------------+
+| 21. Autocratic Politics III: Role of Media and Elections |
++----------------------------------------------------------+
+| 22. Democratisation                                      |
++----------------------------------------------------------+
 
 <br />
 
 ------------------------------------------------------------------------
 
-### Other Audited Lectures
+### Other Topics in Political Economy
 
-**From a Combination of Courses I Find Interesting (Full Year)**
+**From a Combination of Courses I Find Interesting**
 
-[IR470 International Political Economy (Lectures 1 and 2)]{.underline}
+-   IR470 International Political Economy
 
--   Lecture 1
--   
+-   DV464 Democracy and Development
 
-[DV464 Democracy and Development (Lecture 3)]{.underline}
+-   EU443 European Models of Capitalism
 
--   Lecture 3
++-----------------------------------------+-----------+
+| 1.  IPE 1st Lecture                     | -   IR470 |
++-----------------------------------------+-----------+
+| 2.  IPE Second Lecture                  | -   IR470 |
++-----------------------------------------+-----------+
+| 3.  Democracy & Development 3rd Lecture | -   DV464 |
++-----------------------------------------+-----------+
+| 4.  European Models of Capitalism       | -   EU443 |
++-----------------------------------------+-----------+
 
-[EU443 European Models of Capitalism]{.underline}
+<br />
 
--   Lecture 1
+------------------------------------------------------------------------
+
+### PSPE Research Seminars
 
 <br />
 
