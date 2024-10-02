@@ -27,4 +27,202 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
-# Introduction
+# Statistical Inference
+
+### Introduction to Inference
+
+This course is about inference: using facts you know (data) to learn facts you don't know (what we are interested in)
+
+-   Data generating process: process generating the data we observe.
+
+    -   Ex. Height in the module - data generating process depends on who got into the module, who went to the lecture, who applied to the LSE, etc.
+
+-   If you know the data generating process, you can use probability to make an inference on the observed data
+
+-   Opposite is also true - you can use probability with the observed data to determine the data generating process
+
+<br />
+
+Probability vs. Inference:
+
+-   Probability: If I have a coin, what is the probability I get a head?
+
+-   Inference: Given I have $x$ number of heads, and $z$ number of tails, is this coin a fair coin?
+
+<br />
+
+### 3 Types of Inference
+
+There are 3 types of inference: descriptive, predictive, and causal inference
+
+-   Descriptive inference: we want to learn about the prevalence of a feature, or a correlation between 2 features in the population
+
+    -   Basically - what is going on in the world
+
+-   Predictive inference: we want to learn about the value of a feature, that we do not observe
+
+    -   Ex. predicting who will vote, when it isn't election time yet (in the future)
+
+-   Causal Inference: we want to learn about the causal effect of a treatment, on an outcome, on the population
+
+    -   How does $x$ cause $y$?
+
+    -   Ex. does disclosing information about corruption, cause an improvement in electoral accountability
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Covariance and Correlation
+
+### Introduction
+
+We want to learn about the relationship between two features of the world
+
+-   Ex. Are oil producer countries more likely to be autocratic?
+
+The correlation between two features - is the extent, to which they tend to occur together
+
+-   When we are more likely to observe feature $Y$ when feature $X$ is present, the correlation between $Y$ and $X$ is positive
+
+-   When we are less likely to observe feature $Y$ when feature $X$ is present, the correlation between $Y$ and $X$ is negative
+
+-   When there is no relationship between observing $Y$ and $X$, there is no correlation
+
+We can visually see relationships between variables by graphing them in a scatterplot.
+
+<br />
+
+### Measure of Covariance
+
+Covariance is - to what extent, does $X$ and $Y$ vary together:
+
+$$
+Cov(X,Y) = E[(X_i - E[X])(Y_i - E[Y])
+$$
+
+Intuitively:
+
+-   $X_i$ is some value of $X$, while $E[X]$ is the mean of $X$
+
+-   Thus, $X_i - E[X]$ is the distance between any point $X_i$ and its mean $E[X]$
+
+-   $Y_i - E[Y]$ is the same, but for another feature $Y$
+
+-   Multiply the two together for every point
+
+-   Then, we find the expectation of the products (divide by number of observations $n$)
+
+<br />
+
+Let us look at the signs of the covariance:
+
+-   If $X_i - E[X]$ tends to be positive while $Y_i - E[Y]$ is also positive, the product will be positive, hence a positive correlation (when one increases, the other also increases)
+
+-   If one is positive and one is negative, the product will be negative, hence a negative correlation (when one increases, the other decreases)
+
+<br />
+
+### Measure of Correlation
+
+Covariance does not show how strong a correlation is.
+
+-   Why? If we change the way we measure $X$ and $Y$ (such as multiplying each variable by 100), the product would be much higher
+
+-   But, the relationship is still proportional to each other
+
+Thus, we need some other, normalised measure, to show correlation
+
+-   We can normalise by the variance of each variables's standard deviation $\sigma = \sqrt{var(x)}$
+
+<br />
+
+Thus, the correlation coefficient is as follows:
+
+$$
+Corr(X, Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} = \frac{Cov(X,Y)}{\sigma_X \sigma_Y}
+$$
+
+<br />
+
+Correlation coefficient is always between -1 and 1
+
+-   A larger negative number means a stronger negative correlation, with -1 being a perfect negative correlation
+
+-   A larger positive number means a stronger positive correlation, with 1 being a perfect positive correlation
+
+-   0 means no correlation
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Linear Predictors
+
+### Introduction
+
+The best linear predictor, is the linear function of $X$, that best predicts $Y$
+
+-   A linear function takes the form $Y = \alpha + \beta X$
+
+-   Linear functions are straight lines
+
+-   $\alpha$ is the $Y$ intercept - the value of $Y$ given $X = 0$
+
+-   $\beta$ is the slope - for every increase of 1 in $X$, the $Y$ value increases by this much
+
+Once we know $\alpha$ and $\beta$, this will give us the best guess of $Y$, given a value of $X$
+
+<br />
+
+### Estimation of Coefficients
+
+How do we get the values of coefficients $\alpha$ and $\beta$?
+
+-   We want to find the line that minimises the squared prediction errors - this produces the best linear estimate
+
+What are the squared prediction errors?
+
+-   If we draw a predictive line, we will have a predicted $\hat{y}$, and a actual $y$ value in the data
+
+-   The difference between $y$ and $\hat{y}$ is the error of the prediction
+
+-   Why square the error? Well we don't care if the error is in a positive or negative direction - so we square them to get rid of the signs
+
+-   We sum every squared error to get the sum of squared errors
+
+-   Then, we find the line with the lowest squared errors - that is the best linear prediction
+
+<br />
+
+### Interpretation of Coefficients
+
+We are primarily interested in $\beta$, the slope
+
+-   This is because it tells us both the direction of the correlation, and the magnitude of the correlation
+
+-   If we are for sure (generally 95% sure) that $\beta>0$, then the correlation is positive .
+
+-   If we are for sure (generally 95% sure) that $\beta < 0$, then the correlation is negative
+
+-   If we cannot be sure of either, then we cannot conclude there is a correlation
+
+<br />
+
+### Formula for Coefficient
+
+$\beta$ is related to both covariance that we previously discussed:
+
+$$
+\beta = \frac{cov(X,Y)}{\sigma^2_X} = \frac{\sum\limits_{i=1}^N (x_i - \bar{x})(y_i - \bar{y})}{\sum\limits_{i=1}^N (x_i - \bar{x})^2}
+$$
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)

@@ -2793,8 +2793,224 @@ font-size: 12pt;
 <p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
 Homepage</a></p>
 <hr />
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
+<div id="statistical-inference" class="section level1">
+<h1>Statistical Inference</h1>
+<div id="introduction-to-inference" class="section level3">
+<h3>Introduction to Inference</h3>
+<p>This course is about inference: using facts you know (data) to learn
+facts you don’t know (what we are interested in)</p>
+<ul>
+<li><p>Data generating process: process generating the data we
+observe.</p>
+<ul>
+<li>Ex. Height in the module - data generating process depends on who
+got into the module, who went to the lecture, who applied to the LSE,
+etc.</li>
+</ul></li>
+<li><p>If you know the data generating process, you can use probability
+to make an inference on the observed data</p></li>
+<li><p>Opposite is also true - you can use probability with the observed
+data to determine the data generating process</p></li>
+</ul>
+<p><br /></p>
+<p>Probability vs. Inference:</p>
+<ul>
+<li><p>Probability: If I have a coin, what is the probability I get a
+head?</p></li>
+<li><p>Inference: Given I have <span class="math inline">\(x\)</span>
+number of heads, and <span class="math inline">\(z\)</span> number of
+tails, is this coin a fair coin?</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="types-of-inference" class="section level3">
+<h3>3 Types of Inference</h3>
+<p>There are 3 types of inference: descriptive, predictive, and causal
+inference</p>
+<ul>
+<li><p>Descriptive inference: we want to learn about the prevalence of a
+feature, or a correlation between 2 features in the population</p>
+<ul>
+<li>Basically - what is going on in the world</li>
+</ul></li>
+<li><p>Predictive inference: we want to learn about the value of a
+feature, that we do not observe</p>
+<ul>
+<li>Ex. predicting who will vote, when it isn’t election time yet (in
+the future)</li>
+</ul></li>
+<li><p>Causal Inference: we want to learn about the causal effect of a
+treatment, on an outcome, on the population</p>
+<ul>
+<li><p>How does <span class="math inline">\(x\)</span> cause <span class="math inline">\(y\)</span>?</p></li>
+<li><p>Ex. does disclosing information about corruption, cause an
+improvement in electoral accountability</p></li>
+</ul></li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
+</div>
+<div id="covariance-and-correlation" class="section level1">
+<h1>Covariance and Correlation</h1>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>We want to learn about the relationship between two features of the
+world</p>
+<ul>
+<li>Ex. Are oil producer countries more likely to be autocratic?</li>
+</ul>
+<p>The correlation between two features - is the extent, to which they
+tend to occur together</p>
+<ul>
+<li><p>When we are more likely to observe feature <span class="math inline">\(Y\)</span> when feature <span class="math inline">\(X\)</span> is present, the correlation between
+<span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> is positive</p></li>
+<li><p>When we are less likely to observe feature <span class="math inline">\(Y\)</span> when feature <span class="math inline">\(X\)</span> is present, the correlation between
+<span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> is negative</p></li>
+<li><p>When there is no relationship between observing <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>, there is no correlation</p></li>
+</ul>
+<p>We can visually see relationships between variables by graphing them
+in a scatterplot.</p>
+<p><br /></p>
+</div>
+<div id="measure-of-covariance" class="section level3">
+<h3>Measure of Covariance</h3>
+<p>Covariance is - to what extent, does <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> vary together:</p>
+<p><span class="math display">\[
+Cov(X,Y) = E[(X_i - E[X])(Y_i - E[Y])
+\]</span></p>
+<p>Intuitively:</p>
+<ul>
+<li><p><span class="math inline">\(X_i\)</span> is some value of <span class="math inline">\(X\)</span>, while <span class="math inline">\(E[X]\)</span> is the mean of <span class="math inline">\(X\)</span></p></li>
+<li><p>Thus, <span class="math inline">\(X_i - E[X]\)</span> is the
+distance between any point <span class="math inline">\(X_i\)</span> and
+its mean <span class="math inline">\(E[X]\)</span></p></li>
+<li><p><span class="math inline">\(Y_i - E[Y]\)</span> is the same, but
+for another feature <span class="math inline">\(Y\)</span></p></li>
+<li><p>Multiply the two together for every point</p></li>
+<li><p>Then, we find the expectation of the products (divide by number
+of observations <span class="math inline">\(n\)</span>)</p></li>
+</ul>
+<p><br /></p>
+<p>Let us look at the signs of the covariance:</p>
+<ul>
+<li><p>If <span class="math inline">\(X_i - E[X]\)</span> tends to be
+positive while <span class="math inline">\(Y_i - E[Y]\)</span> is also
+positive, the product will be positive, hence a positive correlation
+(when one increases, the other also increases)</p></li>
+<li><p>If one is positive and one is negative, the product will be
+negative, hence a negative correlation (when one increases, the other
+decreases)</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="measure-of-correlation" class="section level3">
+<h3>Measure of Correlation</h3>
+<p>Covariance does not show how strong a correlation is.</p>
+<ul>
+<li><p>Why? If we change the way we measure <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> (such as multiplying each variable by
+100), the product would be much higher</p></li>
+<li><p>But, the relationship is still proportional to each
+other</p></li>
+</ul>
+<p>Thus, we need some other, normalised measure, to show correlation</p>
+<ul>
+<li>We can normalise by the variance of each variables’s standard
+deviation <span class="math inline">\(\sigma =
+\sqrt{var(x)}\)</span></li>
+</ul>
+<p><br /></p>
+<p>Thus, the correlation coefficient is as follows:</p>
+<p><span class="math display">\[
+Corr(X, Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} =
+\frac{Cov(X,Y)}{\sigma_X \sigma_Y}
+\]</span></p>
+<p><br /></p>
+<p>Correlation coefficient is always between -1 and 1</p>
+<ul>
+<li><p>A larger negative number means a stronger negative correlation,
+with -1 being a perfect negative correlation</p></li>
+<li><p>A larger positive number means a stronger positive correlation,
+with 1 being a perfect positive correlation</p></li>
+<li><p>0 means no correlation</p></li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
+</div>
+<div id="linear-predictors" class="section level1">
+<h1>Linear Predictors</h1>
+<div id="introduction-1" class="section level3">
+<h3>Introduction</h3>
+<p>The best linear predictor, is the linear function of <span class="math inline">\(X\)</span>, that best predicts <span class="math inline">\(Y\)</span></p>
+<ul>
+<li><p>A linear function takes the form <span class="math inline">\(Y =
+\alpha + \beta X\)</span></p></li>
+<li><p>Linear functions are straight lines</p></li>
+<li><p><span class="math inline">\(\alpha\)</span> is the <span class="math inline">\(Y\)</span> intercept - the value of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X =
+0\)</span></p></li>
+<li><p><span class="math inline">\(\beta\)</span> is the slope - for
+every increase of 1 in <span class="math inline">\(X\)</span>, the <span class="math inline">\(Y\)</span> value increases by this much</p></li>
+</ul>
+<p>Once we know <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, this will give us the best guess
+of <span class="math inline">\(Y\)</span>, given a value of <span class="math inline">\(X\)</span></p>
+<p><br /></p>
+</div>
+<div id="estimation-of-coefficients" class="section level3">
+<h3>Estimation of Coefficients</h3>
+<p>How do we get the values of coefficients <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>?</p>
+<ul>
+<li>We want to find the line that minimises the squared prediction
+errors - this produces the best linear estimate</li>
+</ul>
+<p>What are the squared prediction errors?</p>
+<ul>
+<li><p>If we draw a predictive line, we will have a predicted <span class="math inline">\(\hat{y}\)</span>, and a actual <span class="math inline">\(y\)</span> value in the data</p></li>
+<li><p>The difference between <span class="math inline">\(y\)</span> and
+<span class="math inline">\(\hat{y}\)</span> is the error of the
+prediction</p></li>
+<li><p>Why square the error? Well we don’t care if the error is in a
+positive or negative direction - so we square them to get rid of the
+signs</p></li>
+<li><p>We sum every squared error to get the sum of squared
+errors</p></li>
+<li><p>Then, we find the line with the lowest squared errors - that is
+the best linear prediction</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="interpretation-of-coefficients" class="section level3">
+<h3>Interpretation of Coefficients</h3>
+<p>We are primarily interested in <span class="math inline">\(\beta\)</span>, the slope</p>
+<ul>
+<li><p>This is because it tells us both the direction of the
+correlation, and the magnitude of the correlation</p></li>
+<li><p>If we are for sure (generally 95% sure) that <span class="math inline">\(\beta&gt;0\)</span>, then the correlation is
+positive .</p></li>
+<li><p>If we are for sure (generally 95% sure) that <span class="math inline">\(\beta &lt; 0\)</span>, then the correlation is
+negative</p></li>
+<li><p>If we cannot be sure of either, then we cannot conclude there is
+a correlation</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="formula-for-coefficient" class="section level3">
+<h3>Formula for Coefficient</h3>
+<p><span class="math inline">\(\beta\)</span> is related to both
+covariance that we previously discussed:</p>
+<p><span class="math display">\[
+\beta = \frac{cov(X,Y)}{\sigma^2_X} = \frac{\sum\limits_{i=1}^N (x_i -
+\bar{x})(y_i - \bar{y})}{\sum\limits_{i=1}^N (x_i - \bar{x})^2}
+\]</span></p>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
 </div>
 
 
