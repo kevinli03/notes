@@ -1,0 +1,254 @@
+---
+title: "States Versus Markets"
+subtitle: "IR470 International Political Economy W1"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[EC453 Homepage](https://kevinli03.github.io/notes/#EC453_Political_Economy)
+
+------------------------------------------------------------------------
+
+# Political Economy
+
+### Introduction
+
+What is the relationship between states and markets - i.e. politics and economics?
+
+-   Susan Strange: Economics and Politics have specialists, who didn't really care about the other fields. Not enough people were taking the others seriously.
+
+-   Yet, politics and economics are very interconnected - economists assume markets won't be disrupted by war and civil disorder, while politics assumes the economy will continue to function reasonably smoothly
+
+-   The goal of international political economy - is about breaking down the dividing walls between these fields
+
+<br />
+
+### Approaches in Political Economy
+
+In the field of IPE, there are 2 broad answers to the question - what is the relationship between states and markets.
+
+-   These 2 answers are the **liberal** tradition, and the **republican** tradition
+
+-   These are not about contemporary political parties - they are about traditional literature
+
+    -   Republicanism reflects from the ideas of Machiavelli and Hobbes
+
+    -   Liberalism reflects the works of Locke and Smith
+
+<br />
+
+------------------------------------------------------------------------
+
+[EC453 Homepage](https://kevinli03.github.io/notes/#EC453_Political_Economy)
+
+# Liberalism
+
+### Independence of Markets
+
+The liberal approach of political economy begins with the expectation that markets can **work without politics**
+
+-   John Locke: Inequality of private possessions is made without government, politics, etc.
+
+    -   There are substantial market interactions before we create a government (we were trading with each other)
+
+    -   And there are still substantial interactions free of government interference, even when government exists
+
+-   This suggests that international economic relationships don't need politics - they could act independently of what governments think
+
+<br />
+
+Adam Smith added to the liberal school:
+
+-   He disliked colonialism of Britain in America - where the British Mercantilism parliament was telling how the colonists in America how to trade, and who they could trade with
+
+-   He believed that this was unnecessary - since among hunter and gatherers, and herders, there were not governments, yet they could complete exchanges and did do trade
+
+<br />
+
+### Rise of Politics
+
+If we follow the above rationale - that markets function without states, then what resulted in the rise of states? What gives rise to politics?
+
+-   If we can have markets work, why do we need politics (and thus tax, and militaries, and wars).
+
+Locke and Smith provide different answers to this question - hence the split in the liberal tradition of Political Economy:
+
+-   Left Liberals follow the Locke Explanation
+
+-   Right Liberals follow the Smith Explanation
+
+<br />
+
+### Left Liberals
+
+Left liberals, like Locke, often worry about market failures
+
+-   Markets work well, but there are failures - where we get sub-optimal results from markets
+
+<br />
+
+Locke specifically focuses on a few types of market failures:
+
+-   Under-provision of Public Goods: like weights, measures, and reliable currency.
+
+    -   Imagine a society where we didn't have a way to measure things and use currency - trade would be very difficult
+
+    -   Locke believes the government should provide these to facilitate trade
+
+-   Externalities: such as the tragic use of common resources
+
+    -   People tend to over-consume things - since people who over-consume don't bear the costs of over-consuming (market failure, since individual cost isn't the same as societal costs)
+
+    -   Other tragedy of the commons sources
+
+    -   He believes politics needs to intervene here
+
+-   Keyensian: Sometimes there are adjustments between demand and supply of labour
+
+    -   So, he supported things like training, etc.
+
+<br />
+
+Thus, for left liberals, political institutions can be used to reduce market failure
+
+-   Thus, politics makes markets better
+
+<br />
+
+### Right Liberals
+
+In his pinnacle book, the Wealth of Nations, Smith says the following:
+
+-   Smith believes that wealthier nations generally had less state intervention in markets
+
+-   And **State Intervention generally produces un-optimal results - and makes markets worse**
+
+-   Thus, we should enable the market to run with as little interference as possible
+
+<br />
+
+Basically, right liberals argue that state intervention can cause unintended consequences - and we should think carefully about the costs of state intervention
+
+-   Not just the cost of the state programme, but also the unintended consequences regarding incentives, information, etc.
+
+-   He often argues that governments are dominated by the rich - so governments may actually worsen inequality
+
+<br />
+
+Smith specifically targeted mercantalism - specifically the UK's approach to the American colonies and Revolutionary War
+
+-   He argues that the overbearing mercantilism of the British Empire caused the American Revolution
+
+-   For example, the British government keeps defending the interests of rich companies (like the British East India Company) - and not caring about farmers and workers in the UK
+
+-   So - he argues that the government is just pursuing its own interests of expanding the wealth of the wealthy
+
+    -   He focuses particularly a lot on **special interest capture of government** - since small groups of organised interests is much more better at mobilising than the vast population and their interests
+
+Thus, the fear of special interest capture of government, and unintended consequences, it is probably better to not interfere in markets
+
+<br />
+
+**Hayek** further expands on the dangers of government intervention with his **information problem**:
+
+-   Basically, no one can know everything about everyone's preferences - remember, billions of transactions are being made every day
+
+-   How can a small number of policy-makers decide what is best for every individual and firm - it is not possible
+
+-   Ex. how many shoes should we make, what colours, who should make the shoes, and for whom? How do we know all this data?
+
+-   Luckily for us, the market solves this information problem that the state cannot
+
+<br />
+
+### Application: Public Health
+
+Let us view how we apply left and right liberal views to the Covid-19 Crisis:
+
+-   Left Liberals (Starmer) wanted government to force people to work at home
+
+    -   Government needs an extensive, highly specific plan for regulating the economy in the crisis - or else, there will be too many market failures
+
+-   Right Liberals (Johnson) encouraged people to "work at home if you can"
+
+    -   Bureaucrats in London cannot know that business and workers will be better if they work from home. Will that hurt their work significantly? What is your risk of infection at work for each individual in the country?
+
+    -   Thus, it is better that government issue broad principles, and let the people with the information (the citizens) make those decisions
+
+<br />
+
+------------------------------------------------------------------------
+
+[EC453 Homepage](https://kevinli03.github.io/notes/#EC453_Political_Economy)
+
+# Republicanism
+
+### Republican Approach
+
+Hobbes is a classic example of Republican approaches
+
+-   In the state of nature (no government), no industry occurs, and things are just terrible - a lot of fear and death
+
+    -   Why - no protection from stealing, so lack of ability to trade and do commerce
+
+-   Essentially - **markets cannot function without government**
+
+<br />
+
+Thus, the republican view is that **state trumps markets**
+
+-   Ex. Jack Ma, successful in markets, was basically banished for not understanding his place in politics
+
+Aristotle: Humans are political animals - you cannot be outside political society
+
+<br />
+
+### Politics at the Centre
+
+Often, Republicanism means subduing markets for a "higher calling"
+
+Queen Elizabeth I is an example of this:
+
+-   England was facing the Spanish Armada, and potential loss of its protestant revolution
+
+-   Elizabeth tells her soldiers that economics, wealth, and trade of an empire, should be dedicated to preserving this protestant identity - the higher calling
+
+<br />
+
+Hitler expands on this view in his National Socialism:
+
+-   He emphasizes the need of the national economic structure as secondary, and the primary goal is the "preservation of the nation"
+
+-   This shows the dangers of Republicanism (and Political Economy) - and the important implications of this
+
+<br />
+
+His opponents also used Republicanism to denounce him. For example, Bishop Clemens August Graf von Galen:
+
+-   He criticised the Nazi purge of the unproductive, disabled, etc.
+
+-   He argued that politics should be above markets - that productivity, ability to do work, should not be the reason we exist
+
+<br />
+
+------------------------------------------------------------------------
+
+[EC453 Homepage](https://kevinli03.github.io/notes/#EC453_Political_Economy)
