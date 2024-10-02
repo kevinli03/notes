@@ -11,7 +11,7 @@
 
 
 
-<title>Introduction to Quantitative Thinking</title>
+<title>Week 1 Readings and Problems</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -2778,7 +2778,7 @@ font-size: 0.95em;
 
 
 
-<h1 class="title toc-ignore">Introduction to Quantitative Thinking</h1>
+<h1 class="title toc-ignore">Week 1 Readings and Problems</h1>
 <h3 class="subtitle">Session 1, GV481</h3>
 
 </div>
@@ -2792,9 +2792,169 @@ font-size: 12pt;
 </style>
 <p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
 Homepage</a></p>
+<p><br /></p>
+<p><strong>Readings for the Week:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Chapter 1, Mesquita et al (2021) <em>Thinking Clearly with Data: A
+Guide to Quantitative Reasoning and Analysis</em></li>
+<li>Chapter 2, Mesquita et al (2021) <em>Thinking Clearly with Data: A
+Guide to Quantitative Reasoning and Analysis</em></li>
+</ol>
+<p><br /></p>
 <hr />
-<div id="key-points" class="section level1">
-<h1>Key Points</h1>
+<div id="mesquita-chapter-1" class="section level1">
+<h1>Mesquita Chapter 1</h1>
+<p>Chapter 1, Mesquita et al (2021) <em>Thinking Clearly with Data: A
+Guide to Quantitative Reasoning and Analysis</em></p>
+<div id="key-points" class="section level3">
+<h3>Key Points</h3>
+<ul>
+<li><p>We must be careful before making causal claims - make sure that
+alternative explanations are controlled for, and that we do not mistake
+correlation as causation</p></li>
+<li><p>Data alone cannot tell us the answer - we must use our domain
+knowledge</p></li>
+<li><p>Always be critical - our initial hunches are often wrong, and
+just because there is data, does not mean an argument is
+foolproof</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="cautionary-tales" class="section level3">
+<h3>Cautionary Tales</h3>
+<p>Scenario: Ethan’s child, Abe, tested positive for a disease in test
+<span class="math inline">\(A\)</span>, but tested negative for disease
+in test <span class="math inline">\(B\)</span> (2 tests for same
+diagnosis)</p>
+<ul>
+<li><p>Doctors said the positive test <span class="math inline">\(A\)</span> is 80% accurate, doctor says it is a
+strong diagnosis</p></li>
+<li><p>Ethan wants to be sure, so he does his own research</p></li>
+<li><p>There are 2 types of measures of effectiveness for diagnostic
+tests:</p>
+<ul>
+<li><p>False negative - how frequently the test says a person is
+healthy, when they are actually sick</p></li>
+<li><p>False positive - how frequently the test says a person is sick,
+when they are actually healthy</p></li>
+</ul></li>
+<li><p>Ethan’s doctor said 80% accurate - but we aren’t sure if that is
+a 20% false negative or 20% false positive</p></li>
+<li><p>Ethan does more research</p>
+<ul>
+<li><p>He finds that the test for the disease has false negative rate of
+20%, but has a false positive rate of 50%</p></li>
+<li><p>Basically, people who don’t have the disease, are just as likely
+to test positive as testing negative</p></li>
+<li><p>His research for the test of test <span class="math inline">\(B\)</span> shows a much lower false negative and
+false positive rate</p></li>
+</ul></li>
+<li><p>Before getting test results, let us say his chance of having
+disease <span class="math inline">\(A\)</span> is 1 in 100. However,
+with the new information, the actual likelihood is about 1 in
+1,000</p></li>
+<li><p>After getting a second opinion, the new doctor agreed, and it was
+true - Abe did not have the disease. This shows how the data - an 80%
+success rate - can be very misleading</p></li>
+</ul>
+<p><br /></p>
+<p>Scenario: You want to protest the government (for whatever reason).
+Should you adopt a non-violent approach, or encourage violence? Let us
+put morals aside - ask which is more effective at changing government
+behaviour, and what are the potential risks (jail, injury, death)?</p>
+<ul>
+<li><p>Let us look at some evidence:</p>
+<ul>
+<li><p>Comparing anti-government movements across the world over time,
+those that use less violence are more likely to achieve their
+goals</p></li>
+<li><p>Personal risks of violent protest are greater - making concerns
+about jail, injury, and death much higher</p></li>
+</ul></li>
+<li><p>This seems convincing - however, let us think a little more
+carefully about this</p>
+<ul>
+<li><p>People are more likely to engage in non-violent protests, when
+the government is more willing to negotiate</p></li>
+<li><p>Or maybe, people are more likely to use non-violent protests when
+their cause is more popular with the population</p></li>
+</ul></li>
+<li><p>The point is - while there may be correlation (non-violence is
+associated with more change in government behaviour), we cannot be sure
+if there is causality</p>
+<ul>
+<li>We would need to hold all other factors equal to isolate. the
+effect</li>
+</ul></li>
+</ul>
+<p><br /></p>
+<p>Scenario: Police on foot-patrol reduced the fear of violent crime in
+Newark, NJ. Why was this the case?</p>
+<ul>
+<li><p>Kelling and Wilson created a theory: crime sprials downward - a
+small crime, like a broken window leads to more emboldened children,
+which leads to families moving out and more criminals moving in, and so
+on…</p>
+<ul>
+<li>The claim is - if an area is “disorderly” (such as visible
+graffitti), people are more likely to do “undesirable behaviour”</li>
+</ul></li>
+<li><p>Thus, police departments started on minimising disorder to reduce
+violent crime - focusing heavily on the “little crime”</p>
+<ul>
+<li><p>NYC started this programme in the 90s, and saw a drastic
+reduction in crime</p></li>
+<li><p>Later analysis showed that neighbourhoods where police were more
+focused on the “small things” saw a larger reduction in crime</p></li>
+</ul></li>
+<li><p>So this means that the theory is correct right? There is a causal
+relationship? – not so quickly</p>
+<ul>
+<li><p>Which precincts were likely to have had more focus of the police?
+Of course, the most dangerous ones - especially right before the
+implementation of the policies</p></li>
+<li><p>However, crime is very variable - and often “reverts back to the
+mean” and corrects</p></li>
+<li><p>So, we can’t be sure if the dropping of crime in these
+neighbourhoods was a result of the policing, or just a natural return to
+the mean</p></li>
+</ul></li>
+<li><p>Further research showed that looking at areas with similar levels
+of crime, the policing approach actually had the opposite effect - it
+had an increase in violent crime where the broken windows approach was
+implemented</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="thinking-and-data" class="section level3">
+<h3>Thinking and Data</h3>
+<p>As the tales above show, data alone cannot tell us the answer</p>
+<ul>
+<li><p>Just because data is involved, does not mean the argument is
+correct - in fact, quantitative skills without clear thinking is
+dangerous</p></li>
+<li><p>We must combine data analysis with clear thinking</p></li>
+<li><p>Furthermore, our initial hunches are often wrong - so we should
+always be sceptical</p></li>
+</ul>
+<p><br /></p>
+<p>The goal of this book is to internalise the ways of thinking</p>
+<ul>
+<li>Be critical - be sceptical, don’t just accept data for what it is -
+try to poke holes in arguments</li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
+</div>
+<div id="mesquita-chapter-2" class="section level1">
+<h1>Mesquita Chapter 2</h1>
+<p>Chapter 2, Mesquita et al (2021) <em>Thinking Clearly with Data: A
+Guide to Quantitative Reasoning and Analysis</em></p>
+<div id="key-points-1" class="section level3">
+<h3>Key Points</h3>
 <p>Correlation is the extent to which two features tend to occur
 together</p>
 <ul>
@@ -2843,225 +3003,281 @@ line is related to covariance. Tells us the magnitude of the effect of
 \beta_1 = \frac{cov(X,Y)}{\sigma^2_X}
 \]</span></p>
 <p><br /></p>
-<hr />
 </div>
-<div id="statistical-inference" class="section level1">
-<h1>Statistical Inference</h1>
-<div id="introduction-to-inference" class="section level3">
-<h3>Introduction to Inference</h3>
-<p>This course is about inference: using facts you know (data) to learn
-facts you don’t know (what we are interested in)</p>
-<ul>
-<li><p>Data generating process: process generating the data we
-observe.</p>
-<ul>
-<li>Ex. Height in the module - data generating process depends on who
-got into the module, who went to the lecture, who applied to the LSE,
-etc.</li>
-</ul></li>
-<li><p>If you know the data generating process, you can use probability
-to make an inference on the observed data</p></li>
-<li><p>Opposite is also true - you can use probability with the observed
-data to determine the data generating process</p></li>
-</ul>
-<p><br /></p>
-<p>Probability vs. Inference:</p>
-<ul>
-<li><p>Probability: If I have a coin, what is the probability I get a
-head?</p></li>
-<li><p>Inference: Given I have <span class="math inline">\(x\)</span>
-number of heads, and <span class="math inline">\(z\)</span> number of
-tails, is this coin a fair coin?</p></li>
-</ul>
-<p><br /></p>
-</div>
-<div id="types-of-inference" class="section level3">
-<h3>3 Types of Inference</h3>
-<p>There are 3 types of inference: descriptive, predictive, and causal
-inference</p>
-<ul>
-<li><p>Descriptive inference: we want to learn about the prevalence of a
-feature, or a correlation between 2 features in the population</p>
-<ul>
-<li>Basically - what is going on in the world</li>
-</ul></li>
-<li><p>Predictive inference: we want to learn about the value of a
-feature, that we do not observe</p>
-<ul>
-<li>Ex. predicting who will vote, when it isn’t election time yet (in
-the future)</li>
-</ul></li>
-<li><p>Causal Inference: we want to learn about the causal effect of a
-treatment, on an outcome, on the population</p>
-<ul>
-<li><p>How does <span class="math inline">\(x\)</span> cause <span class="math inline">\(y\)</span>?</p></li>
-<li><p>Ex. does disclosing information about corruption, cause an
-improvement in electoral accountability</p></li>
-</ul></li>
-</ul>
-<p><br /></p>
-<hr />
-<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
-Homepage</a></p>
-</div>
-</div>
-<div id="covariance-and-correlation" class="section level1">
-<h1>Covariance and Correlation</h1>
-<div id="introduction" class="section level3">
-<h3>Introduction</h3>
-<p>We want to learn about the relationship between two features of the
-world</p>
-<ul>
-<li>Ex. Are oil producer countries more likely to be autocratic?</li>
-</ul>
-<p>The correlation between two features - is the extent, to which they
+<div id="what-is-a-correlation" class="section level3">
+<h3>What is a Correlation?</h3>
+<p>The correlation between two features, is the extent to which they
 tend to occur together</p>
 <ul>
-<li><p>When we are more likely to observe feature <span class="math inline">\(Y\)</span> when feature <span class="math inline">\(X\)</span> is present, the correlation between
-<span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> is positive</p></li>
-<li><p>When we are less likely to observe feature <span class="math inline">\(Y\)</span> when feature <span class="math inline">\(X\)</span> is present, the correlation between
-<span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> is negative</p></li>
-<li><p>When there is no relationship between observing <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>, there is no correlation</p></li>
+<li><p>This tells us the relationship between two things</p></li>
+<li><p>If these two things tend to occur together, it is a positive
+relationship</p></li>
+<li><p>If the occurrence of one feature means the other tends not to
+occur, it is a negative relationship</p></li>
+<li><p>If the occurrence of one feature has no effect on the occurrence
+of another, then there is no relationship</p></li>
 </ul>
-<p>We can visually see relationships between variables by graphing them
-in a scatterplot.</p>
+<p><br /></p>
+<p>What does it mean for features to occur together?</p>
+<ul>
+<li><p>Take two features <span class="math inline">\(A\)</span> and
+<span class="math inline">\(B\)</span>, each with only two values <span class="math inline">\(0,1\)</span></p>
+<ul>
+<li><p><span class="math inline">\(A\)</span> represents a “major oil
+producer”. If a country produces more than 40,000 barrels per day per
+million people, then it gets a value of <span class="math inline">\(1\)</span>. If not, it is <span class="math inline">\(0\)</span></p></li>
+<li><p><span class="math inline">\(B\)</span> represents democracies (
+<span class="math inline">\(1\)</span> ) vs. autocracies ( <span class="math inline">\(0\)</span> )</p></li>
+</ul></li>
+<li><p>We can figure out if they are correlated, by making a
+comparison</p>
+<ul>
+<li><p>Are major oil producers more likely to be autocracies than
+countries who are not major oil producers?</p></li>
+<li><p>Are autocracies more likely to be major oil producers than
+democracies?</p></li>
+</ul></li>
+<li><p>These questions of comparison help us determine if there is a
+correlation</p></li>
+</ul>
+<p><br /></p>
+<p>Knowledge of correlation is useful:</p>
+<ul>
+<li><p>If we know the direction of relationship (positive/negative),
+that could be useful for prediction</p>
+<ul>
+<li>For example, if we know the relationship between major oil producers
+and democracy/autocracy, we can better predict if a country will be a
+democracy given their oil production</li>
+</ul></li>
+<li><p>If we know the direction of relationship (positive/negative),
+that could also be useful for causation</p>
+<ul>
+<li>After all, for something to cause something else, we would expect
+that changing one feature would affect the other (hence, a
+correlation)</li>
+</ul></li>
+</ul>
+<p><br /></p>
+<p>For non-binary variables, we can use a scatterplot to plot
+correlations</p>
+<ul>
+<li><p>Put one feature on the <span class="math inline">\(x\)</span>
+axis, and one feature on the <span class="math inline">\(y\)</span>
+axis</p></li>
+<li><p>Often, just by looking at the scatterplot, we can tell the
+direction of the correlation</p></li>
+</ul>
 <p><br /></p>
 </div>
-<div id="measure-of-covariance" class="section level3">
-<h3>Measure of Covariance</h3>
-<p>Covariance is - to what extent, does <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> vary together:</p>
-<p><span class="math display">\[
-Cov(X,Y) = E[(X_i - E[X])(Y_i - E[Y])
-\]</span></p>
-<p>Intuitively:</p>
+<div id="fact-or-correlation" class="section level3">
+<h3>Fact or Correlation?</h3>
+<p>In order to establish a correlation, you must always make a
+comparison of some kind</p>
 <ul>
-<li><p><span class="math inline">\(X_i\)</span> is some value of <span class="math inline">\(X\)</span>, while <span class="math inline">\(E[X]\)</span> is the mean of <span class="math inline">\(X\)</span></p></li>
-<li><p>Thus, <span class="math inline">\(X_i - E[X]\)</span> is the
-distance between any point <span class="math inline">\(X_i\)</span> and
-its mean <span class="math inline">\(E[X]\)</span></p></li>
-<li><p><span class="math inline">\(Y_i - E[Y]\)</span> is the same, but
-for another feature <span class="math inline">\(Y\)</span></p></li>
-<li><p>Multiply the two together for every point</p></li>
-<li><p>Then, we find the expectation of the products (divide by number
-of observations <span class="math inline">\(n\)</span>)</p></li>
+<li><p>For example, if we want to learn about the correlation between
+temperature and crime, we need to <strong>compare</strong> hot and cold
+days, and how crime varies with them. We could also
+<strong>compare</strong> low and high crime days, and how temperature
+varies with them</p></li>
+<li><p>However, if we don’t make a comparison, it is just a fact</p>
+<ul>
+<li>For example, this is a fact: Hot days have high crime</li>
+</ul></li>
+<li><p>To make this a correlation - we have to add a comparison</p>
+<ul>
+<li>When the day is more hot, there is more crime</li>
+</ul></li>
 </ul>
 <p><br /></p>
-<p>Let us look at the signs of the covariance:</p>
+<p>Take these following examples:</p>
+<ol style="list-style-type: decimal">
+<li>Fact: People who live to be 100 years old typically take
+vitamins</li>
+<li>Correlation: Cities with more crime tend to hire more police
+officers</li>
+<li>Fact: Successful people have spend at least 10,000 hours honing
+their craft</li>
+<li>Fact: Most politicians engulfed in a scandal win re-election</li>
+<li>Correlation: Older people vote more than younger people</li>
+</ol>
+<p><br /></p>
+</div>
+<div id="what-is-a-correlation-good-for" class="section level3">
+<h3>What is a Correlation Good For?</h3>
+<p>Correlation is good for description, forecasting, and causal
+inference</p>
 <ul>
-<li><p>If <span class="math inline">\(X_i - E[X]\)</span> tends to be
-positive while <span class="math inline">\(Y_i - E[Y]\)</span> is also
-positive, the product will be positive, hence a positive correlation
-(when one increases, the other also increases)</p></li>
-<li><p>If one is positive and one is negative, the product will be
-negative, hence a negative correlation (when one increases, the other
-decreases)</p></li>
+<li><p>Description: this is the most straight forward - describing
+reality - the relationship between 2 features.</p>
+<ul>
+<li>This is often very important for identifying problems - observing
+reality</li>
+</ul></li>
+<li><p>Forecasting/Prediction: If you know the relationship is positive,
+then you know increasing one variable will likely increase the other
+variable, even if we have no data on that new point</p>
+<ul>
+<li><p>Forecasting is important in prediction of elections, who will
+vote, predicting disasters, predicting length of recession, public
+policy, etc.</p></li>
+<li><p>However, we have to be careful - past correlations may not always
+hold i nthe future</p></li>
+</ul></li>
+<li><p>Causal inference: you can’t have causality without
+co-variation</p>
+<ul>
+<li><p>Since, by definition, causation means changing one thing will
+change the other</p></li>
+<li><p>Causation is very useful for a variety of topics in the social
+sciences - especially in designing better policy. It is also important
+with decision making</p></li>
+<li><p>If we know what causes something, we can then either do that
+thing that causes that thing (if the outcome is good), or avoid doing
+that thing that causes that thing (if the outcome is bad)</p></li>
+</ul></li>
 </ul>
 <p><br /></p>
 </div>
-<div id="measure-of-correlation" class="section level3">
-<h3>Measure of Correlation</h3>
-<p>Covariance does not show how strong a correlation is.</p>
+<div id="measuring-correlations" class="section level3">
+<h3>Measuring Correlations</h3>
+<p>Before we start, let us get some notation out of the way:</p>
 <ul>
-<li><p>Why? If we change the way we measure <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> (such as multiplying each variable by
-100), the product would be much higher</p></li>
-<li><p>But, the relationship is still proportional to each
-other</p></li>
-</ul>
-<p>Thus, we need some other, normalised measure, to show correlation</p>
-<ul>
-<li>We can normalise by the variance of each variables’s standard
-deviation <span class="math inline">\(\sigma =
-\sqrt{var(x)}\)</span></li>
+<li><p>A subscript <span class="math inline">\(i\)</span> refers to one
+specific observation. So, an observation of <span class="math inline">\(x\)</span> would be denoted as <span class="math inline">\(x_i\)</span></p></li>
+<li><p>Mean is denoted with <span class="math inline">\(\mu\)</span>, or
+with a bar over the variable <span class="math inline">\(\bar{x}\)</span>, or with the function <span class="math inline">\(E[X]\)</span></p></li>
+<li><p>Variance is detonated as <span class="math inline">\(\sigma^2\)</span>, and standard deviation is
+denoted as <span class="math inline">\(\sigma\)</span></p></li>
 </ul>
 <p><br /></p>
-<p>Thus, the correlation coefficient is as follows:</p>
+<p>Simple descriptive statistics are as follows:</p>
+<ul>
+<li><p>Mean/average, <span class="math inline">\(\mu\)</span>: is simply
+the sum of all the observations <span class="math inline">\(\sum
+u_i\)</span> , divided by the number of observations <span class="math inline">\(N\)</span></p></li>
+<li><p>Variance: <span class="math inline">\(\sigma^2\)</span>: a
+measure of how far the mean tends to be from the individual values - a
+measure of spread</p>
+<ul>
+<li><p>Calculated by first, finding the distance between a point, and
+the mean of the variable</p></li>
+<li><p>Then squaring that distance</p></li>
+<li><p>Then doing the same for every point</p></li>
+<li><p>Now sum all the squared values you have, and divide by the number
+of observations</p></li>
+<li><p>A mathematical formula is given below</p></li>
+</ul></li>
+<li><p>Standard deviation <span class="math inline">\(\sigma\)</span> is
+the square root of variance <span class="math inline">\(\sigma^2\)</span> - denotes how far we expect
+observations to be from the mean, on average</p></li>
+</ul>
+<p>Variance, more mathematically, is defined as:</p>
 <p><span class="math display">\[
-Corr(X, Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} =
-\frac{Cov(X,Y)}{\sigma_X \sigma_Y}
+\sigma^2_X = \frac{\sum\limits_i^N (x_i - \bar{x})^2}{N}
 \]</span></p>
 <p><br /></p>
-<p>Correlation coefficient is always between -1 and 1</p>
+<p>Covariance is calculated as follows:</p>
 <ul>
-<li><p>A larger negative number means a stronger negative correlation,
-with -1 being a perfect negative correlation</p></li>
-<li><p>A larger positive number means a stronger positive correlation,
-with 1 being a perfect positive correlation</p></li>
-<li><p>0 means no correlation</p></li>
+<li><p>Lets say we have 2 variables, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, and thus, a set of pairs <span class="math inline">\((x_i, y_i)\)</span></p></li>
+<li><p>For an observation, take the value of the point <span class="math inline">\(x_i\)</span>, and subtract the mean <span class="math inline">\(\bar{x}\)</span> from it. Do the same for <span class="math inline">\(y\)</span></p></li>
+<li><p>Now, multiply the differences we just calculated</p></li>
+<li><p>Now, do the above for all the ordered pairs <span class="math inline">\((x_i, y_i)\)</span></p></li>
+<li><p>Sum up all the products, then divide by the number of ordered
+pairs</p></li>
+</ul>
+<p>More mathematically:</p>
+<p><span class="math display">\[
+cov(X,Y) = \frac{\sum\limits_i^N (x_i - \bar{x})(y_i - \bar{y})}{N} = E[
+\space (x_i - E[X]) \times (y_i - E[Y]) \space ]
+\]</span></p>
+<p>We cannot interpret the magnitude of covariance, however, we can
+interpret the sign</p>
+<ul>
+<li><p>Positive covariance is a positive relationship</p></li>
+<li><p>Negative covariance is a negative relationship</p></li>
+<li><p>0 covariance is no relationship</p></li>
+</ul>
+<p><br /></p>
+<p>Correlation Coefficients are a way to interpret the strength of a
+correlation</p>
+<ul>
+<li><p>It normalises covariance based on the variance - so that the
+correlation coefficient always sits between -1 and 1</p></li>
+<li><p>This normalised scale allows us to compare across different sets
+of data, and interpret the strength of a correlation</p></li>
+</ul>
+<p>Correlation coefficients are calculated simply by dividing the
+covariance by the standard deviation of <span class="math inline">\(X\)</span> and the standard deviation of <span class="math inline">\(Y\)</span>. Or mathematically:</p>
+<p><span class="math display">\[
+corr(X,Y)=r = \frac{cov(X,Y)}{\sigma_X \sigma_Y}
+\]</span></p>
+<p>We often use <span class="math inline">\(r\)</span> to notate the
+correlation coefficient:</p>
+<ul>
+<li><p>A value closer to +1 is a strong positive correlation</p></li>
+<li><p>A value closer to -1 is a strong negative correlation</p></li>
+<li><p>A value closer to 0 is a weak correlation</p></li>
+<li><p>0 is when there is no correlation at all</p></li>
+</ul>
+<p><br /></p>
+<p>We can square the correlation coefficient <span class="math inline">\(r\)</span> to get <span class="math inline">\(r^2\)</span></p>
+<ul>
+<li><p>This is always between 0 and 1 (since the square gets rid of the
+negatives)</p></li>
+<li><p>This allows us to see the “proportion of <span class="math inline">\(Y\)</span> explained by <span class="math inline">\(X\)</span>”</p></li>
+<li><p>This is particularly useful in multivariate regression models, to
+show how good our predictors <span class="math inline">\(X_1, X_2, ...,
+X_n\)</span>are at prediction <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>Slope of the regression line (best fit linear line) is another way to
+measure the relationship between <span class="math inline">\(X\)</span>
+and <span class="math inline">\(Y\)</span></p>
+<ul>
+<li><p>This value not only tells us how strong a relationship is, but
+the magnitude of the relationship</p></li>
+<li><p>For example, you can have a perfectly strong relationship with
+almost perfect correlation. However, the actual effect of that
+relationship could be very small - one change in <span class="math inline">\(X\)</span> barely changes <span class="math inline">\(Y\)</span>, but the correlation is still strong
+since the points are almost directly on top of the best fit
+line</p></li>
+<li><p>We are often interested in the magnitude of the relationship -
+after all, who cares if there is a correlation, but it doesn’t mean
+much</p></li>
+</ul>
+<p>The slope of the regression best fit line is the following
+formula:</p>
+<p><span class="math display">\[
+\beta_1 = \frac{cov(X,Y)}{\sigma^2_X}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="straight-talk-about-linearity" class="section level3">
+<h3>Straight Talk about Linearity</h3>
+<p>So far, we have focused on linear relationships</p>
+<ul>
+<li><p>But, not all relationships are linear - they can be quadratic,
+exponential, logarithmic, etc.</p></li>
+<li><p>These non-linear relationships often don’t appear on our
+statistics of covariance and correlation, however, we can see them on a
+scatterplot</p></li>
+<li><p>We will explore approaches dealing with non-linearity later, such
+as transforming variables so they are more linear, or non-linear
+regression methods</p>
+<ul>
+<li>For example, instead of finding the correlation between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, we could look at the correlation
+between <span class="math inline">\(X^2\)</span> and <span class="math inline">\(Y\)</span></li>
+</ul></li>
+<li><p>We focus on linear relationships, because even non-linear
+relationships mirror linearity when we “zoom in”.</p>
+<ul>
+<li>However, we have to be careful about problems of extrapolation with
+these scenarios.</li>
+</ul></li>
 </ul>
 <p><br /></p>
 <hr />
-<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
-Homepage</a></p>
-</div>
-</div>
-<div id="linear-predictors" class="section level1">
-<h1>Linear Predictors</h1>
-<div id="introduction-1" class="section level3">
-<h3>Introduction</h3>
-<p>The best linear predictor, is the linear function of <span class="math inline">\(X\)</span>, that best predicts <span class="math inline">\(Y\)</span></p>
-<ul>
-<li><p>A linear function takes the form <span class="math inline">\(Y =
-\alpha + \beta X\)</span></p></li>
-<li><p>Linear functions are straight lines</p></li>
-<li><p><span class="math inline">\(\alpha\)</span> is the <span class="math inline">\(Y\)</span> intercept - the value of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X =
-0\)</span></p></li>
-<li><p><span class="math inline">\(\beta\)</span> is the slope - for
-every increase of 1 in <span class="math inline">\(X\)</span>, the <span class="math inline">\(Y\)</span> value increases by this much</p></li>
-</ul>
-<p>Once we know <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, this will give us the best guess
-of <span class="math inline">\(Y\)</span>, given a value of <span class="math inline">\(X\)</span></p>
-<p><br /></p>
-</div>
-<div id="estimation-of-coefficients" class="section level3">
-<h3>Estimation of Coefficients</h3>
-<p>How do we get the values of coefficients <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>?</p>
-<ul>
-<li>We want to find the line that minimises the squared prediction
-errors - this produces the best linear estimate</li>
-</ul>
-<p>What are the squared prediction errors?</p>
-<ul>
-<li><p>If we draw a predictive line, we will have a predicted <span class="math inline">\(\hat{y}\)</span>, and a actual <span class="math inline">\(y\)</span> value in the data</p></li>
-<li><p>The difference between <span class="math inline">\(y\)</span> and
-<span class="math inline">\(\hat{y}\)</span> is the error of the
-prediction</p></li>
-<li><p>Why square the error? Well we don’t care if the error is in a
-positive or negative direction - so we square them to get rid of the
-signs</p></li>
-<li><p>We sum every squared error to get the sum of squared
-errors</p></li>
-<li><p>Then, we find the line with the lowest squared errors - that is
-the best linear prediction</p></li>
-</ul>
-<p><br /></p>
-</div>
-<div id="interpretation-of-coefficients" class="section level3">
-<h3>Interpretation of Coefficients</h3>
-<p>We are primarily interested in <span class="math inline">\(\beta\)</span>, the slope</p>
-<ul>
-<li><p>This is because it tells us both the direction of the
-correlation, and the magnitude of the correlation</p></li>
-<li><p>If we are for sure (generally 95% sure) that <span class="math inline">\(\beta&gt;0\)</span>, then the correlation is
-positive .</p></li>
-<li><p>If we are for sure (generally 95% sure) that <span class="math inline">\(\beta &lt; 0\)</span>, then the correlation is
-negative</p></li>
-<li><p>If we cannot be sure of either, then we cannot conclude there is
-a correlation</p></li>
-</ul>
-<p><br /></p>
-</div>
-<div id="formula-for-coefficient" class="section level3">
-<h3>Formula for Coefficient</h3>
-<p><span class="math inline">\(\beta\)</span> is related to both
-covariance that we previously discussed:</p>
-<p><span class="math display">\[
-\beta = \frac{cov(X,Y)}{\sigma^2_X} = \frac{\sum\limits_{i=1}^N (x_i -
-\bar{x})(y_i - \bar{y})}{\sum\limits_{i=1}^N (x_i - \bar{x})^2}
-\]</span></p>
-<p><br /></p>
-<hr />
-<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
-Homepage</a></p>
 </div>
 </div>
 
