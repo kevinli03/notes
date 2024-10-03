@@ -1,12 +1,11 @@
 ---
-title: "Introduction to Game Theory"
-subtitle: "Session 1, GV4C8"
+title: "Political Economy, Game Theory, Aggregation of Preferences"
 output:
   html_document:
     df_print: paged
     toc: yes
     toc_float:
-      collapsed: false
+      collapsed: true
     toc_depth: 4
     theme: lumen
 ---
@@ -25,9 +24,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
 
-------------------------------------------------------------------------
+**Week 1, GV4C8 Game Theory for Political Science**
 
-# Key Points
+-   **Title**: Political Economy, Game Theory, Aggregation of Preferences
+
+-   **Topics**: Political Economy, Properties of Game Theory, Difficulty in Aggregating Preferences
+
+-   **Readings:**
+
+    1.  Chapter 1, Osborne, M. J. (2004) *An Introduction to Game Theory* (Oxford University Press)
 
 <br />
 
@@ -35,9 +40,61 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
 
-# Game Theory
+# Key Points
 
-### Political Economy
+[**Game theory**]{.underline} is a collection of models
+
+-   A model is an abstraction we use to understand our observations
+
+-   A model's assumptions should be similar to reality - or else, it is not a reflective model of our observed world
+
+-   At the same time, models should be simple - not containing irrelevant details (after all, the need for a model is due to the complexity of the world)
+
+<br />
+
+[**Key properties**]{.underline} of Game Theory:
+
+-   Payoffs are interdependent - one person's actions affects another's payoffs
+
+-   There is **common knowledge** of the rules of the game: everyone knows, that everyone knows, that everyone knows,.... and so on, the rules of the game
+
+-   A player predicts what other players will do - and will react to that
+
+-   Their optimal action, depends on the beliefs of what others will do
+
+Players will take actions, and they will yield some outcomes
+
+$$
+\text{actions } \rightarrow \text{ outcomes}
+$$
+
+The path from actions to outcomes is the environment - other factors that affect your input to produce an output
+
+-   Your beliefs on the environment, influence your choice of action
+
+<br />
+
+[**Arrow's Impossibility Theorem**]{.underline}: No reasonable (easy, obvious) way to aggregate preferences - to come to joint decisions
+
+-   If you want to satisfy some basic criteria of preferences, the only way forward is dictatorship
+
+<br />
+
+[**Aggregating Preferences**]{.underline} is often influenced by:
+
+-   Agenda power: who sets the way things are voted on
+
+-   Strategic manipulation - deviating from one's preferences in order to manipulate the final result in aggregating preferences
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# Political Economy
+
+### Introduction
 
 Political Economy is:
 
@@ -92,7 +149,11 @@ There are different approaches to modelling
 
 <br />
 
-### Game Theory
+------------------------------------------------------------------------
+
+# Game Theory
+
+### Introduction
 
 Game theory is as follows:
 
@@ -103,6 +164,8 @@ Game theory is as follows:
 -   Insights for scholars in social science and decision makers
 
 <br />
+
+### Properties of Game Theory
 
 Key properties of Game Theory:
 
@@ -123,10 +186,6 @@ Game Theory is present in almost all situation:
 Should you take steroids in cycling?
 
 -   If I take them, and you don't, I will have an advantage. If I don't, but everyone else does, then I would be at a disadvantage
-
-```{=html}
-<!-- -->
-```
 -   This is a prisoner's dilemma - you should always take steroids as it is a dominant strategy
 
 <br />
@@ -224,6 +283,8 @@ Note: between any 2 options, the group always has a preference. However, there i
 ![](figure1.1.png){width="60%"}
 
 <br />
+
+### Arrow's Impossibility Theorem
 
 Condorcet's Paradox: group preferences are usually not rational
 
@@ -334,6 +395,190 @@ We can construct a cyclic as following:
 1.  (3, 2, 5)
 2.  (5, 5, 0)
 3.  (6, 1, 3)
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# Reading 1: Osborne
+
+### Key Points
+
+Game theory is a collection of models
+
+-   A model is an abstraction we use to understand our observations
+
+-   A model's assumptions should be similar to reality - or else, it is not a reflective model of our observed world
+
+-   At the same time, models should be simple - not containing irrelevant details (after all, the need for a model is due to the complexity of the world)
+
+<br />
+
+Decision-makers have **preferences** over the outcomes of their actions:
+
+-   When presented with a pair of outcomes, they know that they either prefers one of them, or perceives both as equally desirable (indifferent)
+
+-   Preferences should be consistent - if she prefers $a$ over $b$, and $b$ over $c$, she should prefer $a$ to $c$ (transitivity)
+
+We can represent preferences in a **payoff function** as $u$ (utility), such that:
+
+-   If $u(a) > u(b)$, then the decision maker prefers $a$ to $b$
+
+<br />
+
+The **theory of rational choice** is that - given any subset of possible actions, they will choose the one that is best according to their preferences
+
+<br />
+
+### What is Game Theory?
+
+Game theory helps us understand situations in which decision makers interact
+
+-   Games - in real life, are competitive activities with a set of rules
+
+-   Many real world scenarios can be represented as games, such as firms competing, political candidates competing, jury members deciding on a verdict, bidders in an auction, etc.
+
+<br />
+
+Game theory is a collection of models
+
+-   A model is an abstraction we use to understand our observations
+
+-   A model's assumptions should be similar to reality - or else, it is not a reflective model of our observed world
+
+-   At the same time, models should be simple - not containing irrelevant details (after all, the need for a model is due to the complexity of the world)
+
+<br />
+
+Models are neither "right" or "wrong"
+
+-   Whether a model is useful, depends on what it is being used for
+
+-   For example, finding a short driving route, you can use a flat map, even though the world is round
+
+<br />
+
+Game theory is useful for social, political, and economic arenas
+
+-   Suggests ways which individual behaviours can be modified to improve welfare
+
+-   Looking at incentives and likely outcomes, we can find advantages and disadvantages of policies and strategies
+
+<br />
+
+Models of game theory are precise
+
+-   Verbal descriptions can be very very long and winded
+
+-   For precision, many mathematical symbols are used
+
+<br />
+
+### Rational Choice Theory
+
+Rational Choice theory is often used in many models in game theory
+
+-   Essentially, the theory states that a decision maker will choose the best action according to their preferences
+
+-   Preferences are expressed over potential outcomes - and it is assumed that individuals will choose the one that they favour the most
+
+<br />
+
+A decision-maker has a set $A$ of all the **actions** that are available to them
+
+-   Essentially, set $A$ contains all possible actions they can do
+
+In any situation, the decision maker will face a subset of $A$, which from, they must choose an action
+
+-   The decision maker knows this subset of available choices - and this subset is not influeced by their preferences
+
+For example, set $A$ could be the set of all possible goods a decision-maker can choose to consume
+
+-   The subset of $A$ would be the goods a decision-maker could consume given their income
+
+<br />
+
+Decision-makers have **preferences** over the outcomes of their actions:
+
+-   When presented with a pair of outcomes, they know that they either prefers one of them, or perceives both as equally desirable (indifferent)
+
+-   Preferences should be consistent - if she prefers $a$ over $b$, and $b$ over $c$, she should prefer $a$ to $c$ (transitivity)
+
+How do we describe a decision-makers preferences?
+
+-   We could specify, for each possible pair of actions, the action the decision maker prefers
+
+-   Or, we can represent the preferences by a payoff function - associating a number with each action, where higher numbers are preferred
+
+We often label this **payoff function** as $u$ (utility), such that:
+
+-   If $u(a) > u(b)$, then the decision maker prefers $a$ to $b$
+
+<br />
+
+It is important that utility is often ordinal - not cardinal
+
+-   Ordinal in the sense that there is order in the preferences - the decision maker prefers higher values of the function $u$
+
+-   However, not cardinal - utility of 2 is not necessarily twice of the utility of 1
+
+<br />
+
+The **theory of rational choice** is that - given any subset of possible actions, they will choose the one that is best according to their preferences
+
+-   Essentially, if they prefer one action over another - they will always choose the action they prefer 100% of the time
+
+-   If they are indifferent between two actions, they may sometimes choose one or the other
+
+<br />
+
+Rational Choice Theory is enormously successful:
+
+-   They pretty much dominate economics as a field
+
+-   However, it is important to note that humans make decisions with variance - i.e. they will not 100% of the time choose an action over another, even if they prefer the first action
+
+-   No current general theory challenges rational choice theory - but it has limits
+
+<br />
+
+### Interacting Decision Makers
+
+Previously, we discussed how one decision-maker chooses an action from set $A$, and only cares about this action
+
+-   This is very unlikely in the real world - almost never does one control everything on their own
+
+-   Often, other decision makers affect our outcomes
+
+The study of interacting decision makers, who affect each other, is game theory
+
+<br />
+
+For example, firms competing for business
+
+-   Each firm controls their price, but not the other firm's prices
+
+-   However, the other firm's chosen price affects every other firm
+
+For example, political candidate for office
+
+-   Each candidate chooses their own policy, but not their opponent's policies
+
+-   However, the opponents chosen policies affect all the other candidates
+
+<br />
+
+Game Theory has several different forms of games
+
+-   Strategic game and an extensive game focus on the actions of individuals
+
+-   Coalition games focus on the outcomes that can be achieved by groups of individuals
+
+-   Strategic game and Coalition game consider situations which actions are chosen once and for all
+
+-   Extensive games allow for the possibility that the plans may be revised as they are carried out
 
 <br />
 

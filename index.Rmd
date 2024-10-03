@@ -51,19 +51,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **GV4L8 Introductory Maths for Political Science**
 
-Lecturer: Dr. Marta Antonetti
+[Lecturer]{.underline}: Dr. Marta Antonetti
 
-Assessment: None (Pre-Sessional)
+[Assessment]{.underline}: None (Pre-Sessional)
 
-+-----------------------------------------------------------------------------------------------+
-| 1.  [Sets, Expressions, Functions](https://kevinli03.github.io/notes/GV4L8/1.html)            |
-+-----------------------------------------------------------------------------------------------+
-| 2.  [Vectors, Matrices, Continuity, Limits](https://kevinli03.github.io/notes/GV4L8/2.html)   |
-+-----------------------------------------------------------------------------------------------+
-| 3.  [Derivatives, Optimisation, Integrals](https://kevinli03.github.io/notes/GV4L8/3.html)    |
-+-----------------------------------------------------------------------------------------------+
-| 4.  [Counting, Probability, Random Variables](https://kevinli03.github.io/notes/GV4L8/4.html) |
-+-----------------------------------------------------------------------------------------------+
+<br />
+
+Course Content (Lectures, Readings, and Problems):
+
+1.  [Sets, Expressions, Functions](https://kevinli03.github.io/notes/GV4L8/1.html)
+2.  [Vectors, Matrices, Continuity, Limits](https://kevinli03.github.io/notes/GV4L8/2.html)
+3.  [Derivatives, Optimisation, Integrals](https://kevinli03.github.io/notes/GV4L8/3.html)
+4.  [Counting, Probability, Random Variables](https://kevinli03.github.io/notes/GV4L8/4.html)
 
 <br />
 
@@ -73,29 +72,23 @@ Assessment: None (Pre-Sessional)
 
 **EU409 Basic Economics Concepts for Political Economy**
 
-Lecturer: LSE European Institute
+[Lecturer]{.underline}: LSE European Institute
 
-Assessment: N/A (Pre-Sessional)
+[Summative Assessment]{.underline}: N/A (Pre-Sessional)
 
-+--------------------------------------------------------------------------------------------------+
-| 1.  [Introduction to Economics, Supply & Demand](https://kevinli03.github.io/notes/EU409/1.html) |
-+--------------------------------------------------------------------------------------------------+
-| 2.  [Macro I: Supply-Side and Unemployment](https://kevinli03.github.io/notes/EU409/2.html)      |
-+--------------------------------------------------------------------------------------------------+
-| 3.  Macro II: Aggregate Demand and Macro-Economic Equilibrium                                    |
-+--------------------------------------------------------------------------------------------------+
-| 4.  Micro I: Household Decisions                                                                 |
-+--------------------------------------------------------------------------------------------------+
-| 5.  Micro II: Economic Choices of the Firm                                                       |
-+--------------------------------------------------------------------------------------------------+
-| 6.  Micro III: Market Structure and Imperfections                                                |
-+--------------------------------------------------------------------------------------------------+
-| 7.  Welfare Economics: Social Welfare and Government                                             |
-+--------------------------------------------------------------------------------------------------+
-| 8.  Open Economy Macroeconomics                                                                  |
-+--------------------------------------------------------------------------------------------------+
-| 9.  Unemployment and the Labour Market                                                           |
-+--------------------------------------------------------------------------------------------------+
+<br />
+
+Course Content (Lectures, Readings, and Problems):
+
+1.  [Introduction to Economics, Supply & Demand](https://kevinli03.github.io/notes/EU409/1.html)
+2.  [Macro I: Supply-Side and Unemployment](https://kevinli03.github.io/notes/EU409/2.html)
+3.  Macro II: Aggregate Demand and Macro-Economic Equilibrium
+4.  Micro I: Household Decisions
+5.  Micro II: Economic Choices of the Firm
+6.  Micro III: Market Structure and Imperfections
+7.  Welfare Economics: Social Welfare and Government
+8.  Open Economy Macroeconomics
+9.  Unemployment and the Labour Market
 
 <br />
 
@@ -107,33 +100,30 @@ Assessment: N/A (Pre-Sessional)
 
 **GV481 Quantitative Analysis for Political Science**
 
-Lecturer: Dr. Aliz Toth
+[Lecturer]{.underline}: Dr. Aliz Toth
 
-Formative Assessment: Problem Set 1 (AT W7), Problem Set 2 (AT W9)
+[Formative Assessment]{.underline}: Problem Set 1 (AT W7), Problem Set 2 (AT W9)
 
-Summative Assessment: Coursework (50%, 10 Jan), Exam (50%, Spring)
+[Summative Assessment]{.underline}: Coursework (50%, 10 Jan), Exam (50%, Spring)
 
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 1.  [Introduction to Quantitative Thinking](https://kevinli03.github.io/notes/GV481/1.html) | 1.  [Readings](https://kevinli03.github.io/notes/GV481/1R.html) |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 2.  Correlation and OLS                                                                     | 2.  Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 3.  Uncertainty & Hypothesis Testing                                                        | 3.  Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 4.  Causal Inference                                                                        | 4.  Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 5.  Randomised Experiments                                                                  | 5.  Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 7.  Selection on Observables                                                                | 7.  Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 8.  Instrumental Variables                                                                  | 8.  Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 9.  Regression Discontinuity                                                                | 9.  Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 10. Differences-in-Differences                                                              | 10. Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-| 11. Survey Experiments                                                                      | 11. Readings & Problems                                         |
-+---------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+<br />
+
+Course Content (Lectures, Readings, and Problems):
+
+1.  [Quantitative Thinking and Correlations](https://kevinli03.github.io/notes/GV481/1.html)
+2.  Correlation and OLS
+3.  Uncertainty and Hypothesis Testing
+4.  Causal Inference
+5.  Randomised Experiments
+
+```{=html}
+<!-- -->
+```
+7.  Selection on Observables
+8.  Instrumental Variables
+9.  Regression Discontinuity
+10. Differences-in-Differences
+11. Survey Experiements
 
 <br />
 
@@ -143,31 +133,29 @@ Summative Assessment: Coursework (50%, 10 Jan), Exam (50%, Spring)
 
 **GV4C8 Game Theory for Political Science**
 
-Lecturer: Prof. Rafael Hortala-Vallve
+[Lecturer]{.underline}: Professor Rafael Hortala-Vallve
 
-Assessment: Problem Sets (50%, WT), Exam (50%, January)
+[Formative Assessment]{.underline}: Weekly Problem Sets, Week 11 Mock Exam
 
-+-----------------------------------------------------------------------------------+-------------------------+
-| 1.  [Introduction to Game Theory](https://kevinli03.github.io/notes/GV4C8/1.html) | 1.  Readings            |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 2.  Nash Equilibrium                                                              | 2.  Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 3.  Electoral Competition                                                         | 3.  Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 4.  Redistributive Models & Mixed Strategies                                      | 4.  Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 5.  Dynamic Games of Complete Information                                         | 5.  Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 7.  Repeated Games                                                                | 7.  Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 8.  Static Bayesian Games                                                         | 8.  Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 9.  Dynamic Games of Incomplete Information                                       | 9.  Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 10. Models of Dynamic Games                                                       | 10. Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
-| 11. Session 11                                                                    | 11. Readings & Problems |
-+-----------------------------------------------------------------------------------+-------------------------+
+[Summative Assessment]{.underline}: Problem Set 1 (25%, AT W7), Problem Set 2 (25%, AT W11) Exam (50%, Spring)
+
+<br />
+
+Course Content (Lectures, Readings, Problems):
+
+1.  [Political Economy, Game Theory, Aggregation of Preferences](https://kevinli03.github.io/notes/GV4C8/1.html)
+2.  Nash Equilibrium, Static Games of Complete Information
+3.  Downsian Models of Electoral Competition
+4.  Mixed Strategies, Strategic Foresight
+5.  Dynamic Games of Complete Information, Legislative Bargaining
+
+```{=html}
+<!-- -->
+```
+7.  Elections as Incentive Devices, Counter-terrorism, Repeated Games
+8.  Imperfect and Incomplete Information, Bayesian Nash Equilibrium
+9.  Perfect Bayesian Equilibrium
+10. Signalling and Elections as Accountability Mechanism
 
 <br />
 
@@ -177,33 +165,29 @@ Assessment: Problem Sets (50%, WT), Exam (50%, January)
 
 **MY452A Applied Regression Analysis**
 
-Lecturer: Prof. Jouni Kuha
+[Lecturer]{.underline}: Prof. Jouni Kuha
 
-Assessment: Exam (100%, Spring)
+[Summative Assessment]{.underline}: Exam (100%, Spring)
 
-+-------------------------------------------------------------------------------------+--------------+
-| 0.  [Statistical Inference Review](https://kevinli03.github.io/notes/MY452A/0.html) |              |
-+-------------------------------------------------------------------------------------+--------------+
-| 1.  Introduction to Regression Modelling                                            | 1.  Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 2.  Linear Regression I: Basic Elements                                             | 2.  Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 3.  Linear Regression II: Types of Explanatory Variables                            | 3.  Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 4.  Linear Regression III: Conceptual Questions                                     | 4.  Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 5.  Linear Regression IV: Panel & Clustered Data                                    | 5.  Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 7.  Binary Logistic Regression I: Definition & Interpretation                       | 7.  Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 8.  Binary Logistic Regression II: Inference & Model Selection                      | 8.  Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 9.  Multinomial Logistic Regression                                                 | 9.  Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 10. Models for Counts                                                               | 10. Readings |
-+-------------------------------------------------------------------------------------+--------------+
-| 11. Further Topics                                                                  | 11. Readings |
-+-------------------------------------------------------------------------------------+--------------+
+<br />
+
+Course Content (Lectures, Readings, and Problems):
+
+0.  [Statistical Inference Review](https://kevinli03.github.io/notes/MY452A/0.html)
+1.  Introduction to Regression Modelling
+2.  Linear Regression I: Basic Elements
+3.  Linear Regression II: Different Types of Explanatory Variables
+4.  Linear Regression III: Broader Conceptual Questions
+5.  Linear Regression IV: Models for Longitudinal and Clustered Data
+
+```{=html}
+<!-- -->
+```
+7.  Binary Logistic Regression I: Definition and Interpretation
+8.  Binary Logistic Regression II: Estimation and Inference
+9.  Models for Polytomous Responses
+10. Models for Counts
+11. Further Topics
 
 <br />
 
@@ -213,31 +197,28 @@ Assessment: Exam (100%, Spring)
 
 **MY470 Computer Programming (Autumn Term)**
 
-Lecturer: Dr. Milena Tsvetkova
+[Lecturer]{.underline}: Dr. Milena Tsvetkova
 
-Exam: N/A (Auditing)
+[Summative Assessment]{.underline}: N/A (Auditing)
 
-+---------------------------------------------------------------------------+-----------------+
-| 1.  [What is Computation](https://kevinli03.github.io/notes/MY470/1.html) |                 |
-+---------------------------------------------------------------------------+-----------------+
-| 2.  Data Types                                                            | 2.  Problem Set |
-+---------------------------------------------------------------------------+-----------------+
-| 3.  Control Flow                                                          | 3.  Problem Set |
-+---------------------------------------------------------------------------+-----------------+
-| 4.  Functions                                                             | 4.  Problem Set |
-+---------------------------------------------------------------------------+-----------------+
-| 5.  Classes                                                               | 5.  Problem Set |
-+---------------------------------------------------------------------------+-----------------+
-| 7.  Testing and Debugging                                                 | 7.  Problem Set |
-+---------------------------------------------------------------------------+-----------------+
-| 8.  R Programming Language                                                | 8.  Problem Set |
-+---------------------------------------------------------------------------+-----------------+
-| 9.  Algorithms and Order of Growth                                        | 9.  Problem Set |
-+---------------------------------------------------------------------------+-----------------+
-| 10. Searching and Sorting Algorithms                                      | 10. Problem Set |
-+---------------------------------------------------------------------------+-----------------+
-| 11. Tree and Graph Algorithms                                             | 11. Problem Set |
-+---------------------------------------------------------------------------+-----------------+
+<br />
+
+Course Content (Lectures, Readings, and Problems):
+
+1.  [What is Computation](https://kevinli03.github.io/notes/MY470/1.html)
+2.  Data Types
+3.  Control Flow
+4.  Functions
+5.  Classes
+
+```{=html}
+<!-- -->
+```
+7.  Testing and Debugging
+8.  R Programming Language
+9.  Algorithms and Order of Growth
+10. Searching and Sorting Algorithms
+11. Tree and Graph Algorithms
 
 <br />
 
@@ -247,31 +228,28 @@ Exam: N/A (Auditing)
 
 **DV464 Democracy & Development**
 
-Lecturer: Professor Elliot Green
+[Lecturer]{.underline}: Professor Elliot Green
 
-Assessment: N/A (Auditing)
+[Summative Assessment]{.underline}: N/A (Auditing)
 
-+---------------------------------------------------------------+
-| 1.  Democracy and Modernisation Theory                        |
-+---------------------------------------------------------------+
-| 2.  How Poverty Hinders Democratisation                       |
-+---------------------------------------------------------------+
-| 3.  How Democracies Promote Development                       |
-+---------------------------------------------------------------+
-| 4.  Democratisation and Public Service Delivery               |
-+---------------------------------------------------------------+
-| 5.  Democratisation, Redistribution, Inequality               |
-+---------------------------------------------------------------+
-| 7.  Politics of Social Development: Religion, Ethnicity, Race |
-+---------------------------------------------------------------+
-| 8.  Autocracies and Development                               |
-+---------------------------------------------------------------+
-| 9.  Democracy and Development in Unequal Countries            |
-+---------------------------------------------------------------+
-| 10. Democracy and Development in India                        |
-+---------------------------------------------------------------+
-| 11. Democracy and Development in the Future                   |
-+---------------------------------------------------------------+
+<br />
+
+Course Content (Lectures, Readings, and Problems):
+
+1.  Democracy and Modernisation Theory
+2.  How Poverty Hinders Democratisation
+3.  How Democracies Promote Development
+4.  Democratisation and Public Service Delivery
+5.  Democratisation, Redistribution, Inequality
+
+```{=html}
+<!-- -->
+```
+7.  Politics of Social Development: Religion, Ethnicity, Race
+8.  Autocracies and Development
+9.  Democracy and Development in Unequal Countries: Brazil, South Africa
+10. Democracy and Development in India
+11. Democracy and Development in the Future
 
 <br />
 
