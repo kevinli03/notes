@@ -1,6 +1,5 @@
 ---
 title: "Statistical Inference Review"
-subtitle: "Session 0, MY452A"
 output:
   html_document:
     df_print: paged
@@ -25,9 +24,21 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
 
-Note: This lesson draws from both the Review Material provided in MY452A, and Session 1 of DV494 Fundamentals of Applied Econometrics for Economic Development Policy
+Week 0, Applied Regression Analysis
+
+-   Title: Statistical Inference Review
+
+-   Topics: Sampling, Central Limit Theorem, Difference in Means, Hypothesis Testing
+
+-   Readings: N/A
+
+-   Note: This lesson draws from both the Review Material provided in MY452A, and Session 1 of DV494 Fundamentals of Applied Econometrics for Economic Development Policy
+
+<br />
 
 ------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
 
 # Key Points
 

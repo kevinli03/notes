@@ -116,9 +116,8 @@ Course Content (Lectures, Readings, and Problems):
 4.  Causal Inference
 5.  Randomised Experiments
 
-```{=html}
 <!-- -->
-```
+
 7.  Selection on Observables
 8.  Instrumental Variables
 9.  Regression Discontinuity
@@ -149,9 +148,8 @@ Course Content (Lectures, Readings, Problems):
 4.  Mixed Strategies, Strategic Foresight
 5.  Dynamic Games of Complete Information, Legislative Bargaining
 
-```{=html}
 <!-- -->
-```
+
 7.  Elections as Incentive Devices, Counter-terrorism, Repeated Games
 8.  Imperfect and Incomplete Information, Bayesian Nash Equilibrium
 9.  Perfect Bayesian Equilibrium
@@ -174,15 +172,14 @@ Course Content (Lectures, Readings, Problems):
 Course Content (Lectures, Readings, and Problems):
 
 0.  [Statistical Inference Review](https://kevinli03.github.io/notes/MY452A/0.html)
-1.  Introduction to Regression Modelling
+1.  [Introduction to Regression Modelling](https://kevinli03.github.io/notes/MY452A/1.html)
 2.  Linear Regression I: Basic Elements
 3.  Linear Regression II: Different Types of Explanatory Variables
 4.  Linear Regression III: Broader Conceptual Questions
 5.  Linear Regression IV: Models for Longitudinal and Clustered Data
 
-```{=html}
 <!-- -->
-```
+
 7.  Binary Logistic Regression I: Definition and Interpretation
 8.  Binary Logistic Regression II: Estimation and Inference
 9.  Models for Polytomous Responses
@@ -211,9 +208,8 @@ Course Content (Lectures, Readings, and Problems):
 4.  Functions
 5.  Classes
 
-```{=html}
 <!-- -->
-```
+
 7.  Testing and Debugging
 8.  R Programming Language
 9.  Algorithms and Order of Growth
@@ -242,9 +238,8 @@ Course Content (Lectures, Readings, and Problems):
 4.  Democratisation and Public Service Delivery
 5.  Democratisation, Redistribution, Inequality
 
-```{=html}
 <!-- -->
-```
+
 7.  Politics of Social Development: Religion, Ethnicity, Race
 8.  Autocracies and Development
 9.  Democracy and Development in Unequal Countries: Brazil, South Africa
