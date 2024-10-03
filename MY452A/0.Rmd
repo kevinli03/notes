@@ -29,6 +29,76 @@ Note: This lesson draws from both the Review Material provided in MY452A, and Se
 
 ------------------------------------------------------------------------
 
+# Key Points
+
+[**Sampling**]{.underline} is the process by which we select a portion of observations from a population
+
+What makes a good sample?
+
+-   Sampling Procedure - how we choose to sample
+
+-   Luck - which we cannot control
+
+Because we cannot control for luck, we need tools like hypothesis testing that account for uncertainty (see later)
+
+<br />
+
+[**Central Limit Theorem**]{.underline} says that the distribution of sample means is normally distributed
+
+-   Even if the original distribution is not normally distributed.
+
+-   Thus, we can apply the 68-95-99.7 rule to find out the probability of a certain sample mean
+
+<br />
+
+A [**difference of means**]{.underline} test is when we try to find if there is a significant difference between two populations, given one sample.
+
+First, we find the difference between our sample means:
+
+$$
+\Delta = \bar{Y}_2 - \bar{Y}_1
+$$
+
+Then, create a 95% confidence interval
+
+-   Since we know the distribution of sample means of both populations is normal (central limit theorem), their difference is also normal
+
+-   So we use the $\sigma$ of the difference-sample-means distribution multiplied by 1.96:
+
+$$
+\Delta ± 1.96 \times \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}
+$$
+
+<br />
+
+[**Hypothesis Testing**]{.underline} allows us to reject a null hypothesis (no relationship/difference), and conclude a alternative hypothesis (there is a relationship/difference)
+
+We need to calculate a t-statistic
+
+$$
+t = \frac{\hat{\Delta}}{\hat{se}(\hat{\Delta})} = \frac{ \bar{Y}_2 - \bar{Y}_1}{\hat{\sigma} \sqrt{1/n_2 + 1/n_1}}
+$$
+
+Where $\hat{\sigma}$ in the final section is defined as:
+
+$$
+\hat{\sigma} = \sqrt{\frac{(n_2-1)\sigma_2^2 + (n_1 - 1) \sigma_1^2}{n_1+n_2-2} }
+$$
+
+Larger (both positive and negative) values of $t$ indicate evidence against $H_0$
+
+Then using the t-statistic, we calculate a p-value
+
+-   P-value is is the probability of obtaining a test statistic, as or more extreme, as the one we observed in our sample
+
+-   If the p-value is low enough, that means the probability that our null is true is extremely unlikely, and thus, at a certain level ( $<0.05$ ), we can reject the null and accept the alternative hypothesis
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
 # Statistical Foundations
 
 ### Probability Distributions
@@ -131,7 +201,7 @@ What makes a good sample?
 
 -   Luck - which we cannot control
 
-Because we cannot control for luck, we need tools like hypothesis testing (see later)
+Because we cannot control for luck, we need tools like hypothesis testing that account for uncertainty (see later)
 
 <br />
 
@@ -151,13 +221,27 @@ Let us go back to the point of luck in a good sample
 
 Well, we don't have to worry. Central Limit Theorem states that there is a systematic relationship between a particular sample, and how far that is from the true population average
 
+-   CLT gives an idea of how much values of the mean, would vary from sample to sample
+
+<!-- -->
+
 -   Basically, we can know the probability of obtaining a certain mean of a particular sample, given the true mean of the population
 
--   Why? if we take random sample after random sample from the same population, the more sample means we have, the more the distribution of sample means converge into a normal distribution with a mean that is equal to the true population mean.
+How?
+
+-   If we take random sample after random sample from the same population, and plot the means on a histogram...
+
+-   The more sample means we have, the more the histogram distribution of sample means converges into a **normal distribution**
+
+    -   With a mean that is equal to the true population mean.
 
     -   Note: a distribution of sample means, is basically, taking many samples, finding their means, and plotting that into a probability distribution. Now take another sample, and another, and keep adding to the probability distribution
 
--   Central Limit Theorem says that the distribution of sample means is normally distributed (even if the original distribution is not normally distributed). Thus, we can apply the 68-95-99.7 rule to find out the probability of a certain sample mean
+-   **Central Limit Theorem says that the distribution of sample means is normally distributed**
+
+    -   Even if the original distribution is not normally distributed).
+
+    -   Thus, we can apply the 68-95-99.7 rule to find out the probability of a certain sample mean
 
 <br />
 
@@ -173,60 +257,172 @@ Central Limit Theorem states that the distribution of sample means is normally d
 
 <br />
 
-### Hypothesis Testing
-
-Hypothesis Testing allows us to use Central Limit Theorem, to control the likelihood of making mistakes in statistics
-
--   In statistics, we often cannot know the truth
-
--   But, hypothesis testing allows us to be a certain percent confident of our results (generally, 95% confident)
-
-<br />
-
-To do this, we create "confidence intervals" around our estimates - a buffer to increase our confidence
-
--   How? Well, we know that the distribution of sample means is normally distributed around the mean $\mu$
-
--   Thus, we assume our sample mean is the true mean
-
--   Then, we can draw a distribution of sample means around our one sample mean
-
-<br />
-
-We know the 68-95-99.7 rule exists for normal distributions
-
--   Thus, within 2 standard deviations of the mean $\mu ± 2 \sigma$, there is 95% chance the true mean is within this range
-
--   So, if another sample mean is outside this range, then we can be 95% confident it is from a different population
-
-    -   And vice versa - if it is within the range, we cannot claim that it is not a different population
-
-<br >
-
-When comparing different samples, we always start with the null hypothesis - that there is no significant difference between the two sample's parent populations.
-
--   However, if the two sample means are outside the $\mu ± 2 \sigma$ range, then we are 95% confident that the two sample means are not the same
-
--   So, we can reject our null hypothesis, and accept that the two samples are from different populations
-
--   If the two sample means are within $\mu ± 2 \sigma$, that means the two means are within the 95% plausibility range, so we cannot conclude they are different
-
-<br />
-
-### Hypothesis Testing Example
-
-In western court systems - we presume innocent until before guilty
-
--   Thus, our null hypothesis is that someone is innocent
-
-We can only claim someone is guilty if we prove beyond a reasonable doubt, and reject the null hypothesis of innocence
-
--   In statistics, the "beyond a reasonable doubt" threshold is generally "with more than 95% confidence"
-
--   Remember, 95% is 2 standard deviations on either side of the mean
-
--   If the 2nd sample's mean is outside the $\mu ± 2 \sigma$ range, we can then, and only then, reject the null hypothesis and claim that the two samples are different
-
 ------------------------------------------------------------------------
 
 [MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Significance Testing
+
+### Difference in Means
+
+Let us say we want to find if two different sample's means are significantly different
+
+-   i.e., the samples come from different populations
+
+-   For example: Do people in the UK and France work different average weekly working hours?
+
+<br />
+
+First, we can find the difference between the sample means of France and the UK's average weekly working hours. For example:
+
+$$
+\bar{Y}_{FR} - \bar{Y}_{UK} = 40.35-38.74 = 1.61
+$$
+
+So we can see, there is a difference of $1.61$ between the two sample means
+
+<br />
+
+HOWEVER, we are interested in the difference between the UK and France, not just between the samples we have (\~ 4000 observations), but the entire population
+
+-   We want to use the sample information to draw conclusions about the population
+
+More mathematically, we are interested in the true population's difference of means:
+
+$$
+\Delta = \mu_2 - \mu_1
+$$
+
+If there is a significant difference, the two should be different, and thus, $\Delta ≠ 0$
+
+<br />
+
+But what is the true means of the populations?
+
+-   Our sample mean is not enough
+
+-   Why? If we collected another sample from the population, we are unlikely to get the same exact sample means as the ones we have - so the answer might be slightly different
+
+<br />
+
+So how do we do this? With Sampling Distributions covered earlier in the Central Limit Theorem
+
+-   We know that the distribution of sample means from multiple samples taken from the same population, will take the form of a normal distribution
+
+-   This distribution gives an idea of how much values of the estimate, would vary from sample to sample
+
+<br />
+
+Our above sampling for the UK and France fits the criteria for central limit theorem. Thus, we know that the sample means are normally distributed.
+
+Using the sample means $\bar{Y}_{FR}, \bar{Y}_{UK}$ as the centre of these sampling distributions, we can draw these two sampling distributions:
+
+![](figure0.1.png){width="60%"}
+
+<br />
+
+If we do $\bar{Y}_2 - \bar{Y}_1$ for the sampling distributions, we get the sampling distribution of $\hat{\Delta}$.
+
+-   This again, is a normal distribution, with a mean that is equal to our original sample's $\Delta$.
+
+The standard error (standard deviation) of this distribution is calculated with the following formula:
+
+$$
+se(\hat{\Delta}) = \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}
+$$
+
+<br />
+
+Using this distribution and the standard error, we can calculate a **confidence interval** around the mean $\Delta$ that contains 95% of the area under the normal distribution
+
+-   Remember, 95% is around 2 standard deviations from the mean (actually 1.96)
+
+So, the 95% confidence interval estimate of the difference between sample means is:
+
+$$
+\Delta ± 1.96 \times \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}
+$$
+
+That means, we are **95% confident that the true difference in means lies within the interval**.
+
+-   See below for hypothesis testing
+
+<br />
+
+### Hypothesis Testing
+
+Hypothesis testing is a tool for examining the plausibility of a claim
+
+In a difference of means example (like above), we first start with the null hypothesis $H_0$:
+
+-   The null hypothesis $H_0$ **always assumes that there is no relationship**
+
+-   Thus, a null hypothesis in a difference of means test, would be that there is no difference
+
+Or mathematically speaking, the null hypothesis is:
+
+$$
+H_0:\Delta = 0
+$$
+
+<br />
+
+The alternative hypothesis, is, well the alternative - that there is some relationship
+
+-   Thus, an alternative hypothesis in a difference of means test, would be that there is a significant difference between the means
+
+Mathematically speaking, the alternative hypothesis is:
+
+$$
+H_a=H_1 : \Delta ≠ 0
+$$
+
+<br />
+
+The basic idea of hypothesis testing is as follows:
+
+1.  We observe the difference between our two samples $\hat{\Delta}$
+2.  We want to know where this observed difference $\hat{\Delta}$ lies in our sampling distribution of difference in means (the normal distribution we found previously)
+3.  We note this location with a **test statistic**
+4.  Then, we calculate the **p-value**: the probability of observing our difference between two samples, if the null hypothesis is true
+    -   If that probability is very low, then we know that it is unlikely that the null hypothesis is true
+
+<br />
+
+We have already done the first two steps in the previous section. Now, let us note the location of the t-test statistic.
+
+Mathematically speaking, the t-test statistic is as follows:
+
+$$
+t = \frac{\hat{\Delta}}{\hat{se}(\hat{\Delta})} = \frac{ \bar{Y}_2 - \bar{Y}_1}{\hat{\sigma} \sqrt{1/n_2 + 1/n_1}}
+$$
+
+Where $\hat{\sigma}$ is defined as:
+
+$$
+\hat{\sigma} = \sqrt{\frac{(n_2-1)\sigma_2^2 + (n_1 - 1) \sigma_1^2}{n_1+n_2-2} }
+$$
+
+Larger (both positive and negative) values of $t$ indicate evidence against $H_0$
+
+<br />
+
+Now, let us find the p-value: the plausibility of the null hypothesis given our observed sample
+
+-   It is the probability of obtaining a test statistic, as or more extreme, as the one we observed in our sample
+
+-   To find this, we generally have a chart of t-statistics and p-values
+
+The p-value tells us the following:
+
+-   A small p-value is evidence against the null hypothesis, which means that there is likely a difference between the means
+
+-   We typically select **significance levels** $\alpha$ - where if the p-value falls below them, we reject the null and accept the alternative hypothesis
+
+    -   In social sciences, it is generally 0.05 or 5%
+
+<br />
+
+Hypothesis testing and confidence intervals get the same results when they use the same significance/confidence level:
+
+-   The significance level $\alpha$ is equal to the $(1-\alpha)$% confidence interval

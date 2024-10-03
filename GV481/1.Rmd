@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Key Points
 
-Correlation is the extent to which two features tend to occur together
+[**Correlation**]{.underline} is the extent to which two features tend to occur together
 
 -   Positive correlation means as $X$ rises, $Y$ rises
 
@@ -39,13 +39,13 @@ Correlation is the extent to which two features tend to occur together
 
 <br />
 
-Mean/Average $\mu, \bar{x}, E[X]$ of a variable is:
+[**Mean**]{.underline}/Average $\mu, \bar{x}, E[X]$ of a variable is:
 
 $$
 \mu = \bar{x} = E[X] = \frac{\sum x_i}{n}
 $$
 
-Variance $\sigma^2$ is as follows (square root for standard deviation $\sigma$):
+[**Variance**]{.underline} $\sigma^2$ is as follows (square root for [**standard deviation**]{.underline} $\sigma$):
 
 $$
 \sigma^2_X = \frac{\sum (x_i - \bar{x})^2}{n}
@@ -53,13 +53,13 @@ $$
 
 <br />
 
-Covariance $\sigma_{X,Y}$ is as follows - we cannot interpret the actual value, only the sign:
+[**Covariance**]{.underline} $\sigma_{X,Y}$ is as follows - we cannot interpret the actual value, only the sign:
 
 $$
 cov(X,Y) = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{n} = E[ \space (x_i - E[X]) \times (y_i - E[Y]) \space ]
 $$
 
-Correlation coefficients $r, \rho_{X,Y}$ are a normalised form of covariance (always between -1 and 1), so we can interpret the strength of correlation:
+[**Correlation coefficients**]{.underline} $r, \rho_{X,Y}$ are a normalised form of covariance (always between -1 and 1), so we can interpret the strength of correlation:
 
 $$
 corr(X,Y)=r = \rho_{X,Y} = \frac{cov(X,Y)}{\sigma_X \sigma_Y}
@@ -72,7 +72,7 @@ r^2 = \left( \frac{cov(X,Y)}{\sigma_X \sigma_Y} \right )^2$$
 
 <br />
 
-Linear best fit lines take the following form:
+[**Linear best fit**]{.underline} lines take the following form:
 
 $$
 y = \alpha + \beta x
