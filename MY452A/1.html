@@ -2744,12 +2744,6 @@ font-size: 0.90em;
 .tocify .list-group-item {
 border-radius: 0px;
 }
-.tocify-subheader {
-display: inline;
-}
-.tocify-subheader .tocify-item {
-font-size: 0.95em;
-}
 </style>
 
 
@@ -2797,7 +2791,9 @@ Homepage</a></p>
 <li><p>Topics:</p></li>
 <li><p>Readings:</p>
 <ol style="list-style-type: decimal">
-<li></li>
+<li><p>Chapter 1, Coursepack</p></li>
+<li><p>Section 3.1-3.3, Coursepack</p></li>
+<li><p>Chapters 1-3, Gelman et al</p></li>
 </ol></li>
 </ul>
 <p><br /></p>
@@ -2806,6 +2802,230 @@ Homepage</a></p>
 Homepage</a></p>
 <div id="key-points" class="section level1">
 <h1>Key Points</h1>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+<div id="intro-to-regression" class="section level1">
+<h1>Intro to Regression</h1>
+<div id="what-is-regression" class="section level3">
+<h3>What is Regression?</h3>
+<p>Situations where we have a response value, and a set of explanatory
+variable:</p>
+<ul>
+<li><p>How do the explanatory variables relate to the response
+variable</p></li>
+<li><p>Methods for predicting values - given explanatory variable
+values, what would you predict the response to be</p></li>
+</ul>
+<p>Very important - many other methods build on regression</p>
+<p><br /></p>
+<p>Regression can help with the following:</p>
+<ul>
+<li><p>Describing relationships and associations between
+variables</p></li>
+<li><p>Estimating causal effects</p></li>
+<li><p>Prediction of new values of the response variable</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="learning-about-regressions" class="section level3">
+<h3>Learning about Regressions</h3>
+<p>What does it mean to learn about regressions?</p>
+<ol style="list-style-type: decimal">
+<li>Technical: formal structure - definitions, estimation, formal
+interpretation, implementation</li>
+<li>Conceptual: how do we use the technical in actual research
+design</li>
+</ol>
+<p>The focus is on technical aspects, but conceptual questions are
+always in the background</p>
+<p><br /></p>
+<p>For different regression models, we want to learn about:</p>
+<ul>
+<li><p>Model specification and building</p></li>
+<li><p>Methods of estimation and inference for parameters</p></li>
+<li><p>Using tools to fit and examine models</p></li>
+<li><p>Interpretation of models</p></li>
+<li><p>Criticism of models</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="conventional-notation" class="section level3">
+<h3>Conventional Notation</h3>
+<p>Here are some conventional notations:</p>
+<ul>
+<li><p>Response variable notated as <span class="math inline">\(Y\)</span></p>
+<ul>
+<li>On this course, only one <span class="math inline">\(Y\)</span>
+variable, but there can be more</li>
+</ul></li>
+<li><p>Explanatory variables notated as <span class="math inline">\(X\)</span></p>
+<ul>
+<li><p>There are often more than one <span class="math inline">\(X\)</span>, so we have <span class="math inline">\(X_1, X_2, ..., X_k\)</span></p></li>
+<li><p>Sometimes, to denote all <span class="math inline">\(X\)</span>
+variables together, we will notate it as a vector <span class="math inline">\(\overrightarrow{X} = (X_1, X_2, ..., X_k)\)</span>
+(can also be bolded)</p></li>
+</ul></li>
+</ul>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="regression-models" class="section level1">
+<h1>Regression Models</h1>
+<div id="specification-of-regression" class="section level3">
+<h3>Specification of Regression</h3>
+<p>In formal statistical terminology, a regression model is a
+specification of the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(\overrightarrow{X}\)</span></p>
+<ul>
+<li><p>It states that the distribution of values that <span class="math inline">\(Y\)</span> will have, depends on the value of
+<span class="math inline">\(\overrightarrow{X}\)</span></p></li>
+<li><p>So that sets of observations with different <span class="math inline">\(\overrightarrow{X}\)</span> will have different
+distributions of <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>For example, say <span class="math inline">\(X\)</span> is age, <span class="math inline">\(Y\)</span> is attitude towards immigration</p>
+<ul>
+<li><p>If <span class="math inline">\(X = 30\)</span>, then we are
+wondering what the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=30\)</span> - given a particular age, what is
+the distribution of their attitudes towards immigration</p>
+<ul>
+<li>We focus on the mean of that distribution</li>
+</ul></li>
+<li><p>If <span class="math inline">\(X\)</span> changes (i.e. age
+changes), the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span> also changes</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="linear-regression-coefficients" class="section level3">
+<h3>Linear Regression Coefficients</h3>
+<p>We we focus on the linear regression model in the first few
+weeks:</p>
+<p><span class="math display">\[
+E(Y|\overrightarrow{X}) = \alpha + \beta_1 X_1 + \beta_2 X_2 + ... +
+\beta_k X_k
+\]</span></p>
+<p>These are the features of this linear model:</p>
+<ul>
+<li><p><span class="math inline">\(E(Y|\overrightarrow{X})\)</span> is
+the expected value of the conditional distribution of <span class="math inline">\(Y\)</span> given some <span class="math inline">\(X\)</span></p></li>
+<li><p><span class="math inline">\(\beta_1, \beta_2, ...
+\beta_k\)</span> are the regression coefficients - each attached to a
+<span class="math inline">\(X\)</span> variable.</p>
+<ul>
+<li>We sometimes notate these coefficients as a vector <span class="math inline">\(\overrightarrow{\beta}\)</span></li>
+</ul></li>
+<li><p>Coefficient <span class="math inline">\(\beta_j\)</span> of
+explanatory variable <span class="math inline">\(X_j\)</span> describes
+the direction and strength of the relationship of <span class="math inline">\(X_j\)</span> and <span class="math inline">\(Y\)</span>, holding other <span class="math inline">\(X\)</span> constant</p></li>
+<li><p><span class="math inline">\(\alpha\)</span> or <span class="math inline">\(\beta_0\)</span> is the constant or intercept term
+- when all <span class="math inline">\(X = 0\)</span>, what is <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="parameter-estimation" class="section level3">
+<h3>Parameter Estimation</h3>
+<p>We use observed data on our variables, to learn about a model and its
+parameters</p>
+<ul>
+<li>Observations are elements with values of all <span class="math inline">\(X\)</span> variables and <span class="math inline">\(Y\)</span> variable: <span class="math inline">\((\overrightarrow{X}_i, Y_i)\)</span> for <span class="math inline">\(i = 1,...,n\)</span>, where <span class="math inline">\(n\)</span> is the number of observations</li>
+</ul>
+<p>We then obtain estimates of the regression coefficients</p>
+<ul>
+<li><p>Specific values that best match the observed data</p></li>
+<li><p>This is called “fitting the model” to the data</p></li>
+<li><p>We typically put a “hat” on estimated parameters (ex. <span class="math inline">\(\hat{\beta_1}\)</span>)</p></li>
+</ul>
+<p>We also carry out statistical inference (significance tests and
+confidence intervals) for the coefficients</p>
+<p><br /></p>
+</div>
+<div id="fitted-values" class="section level3">
+<h3>Fitted Values</h3>
+<p>After we have estimated the model parameters, we can use the to
+calculate fitted values for <span class="math inline">\(Y\)</span></p>
+<ul>
+<li>Fitted values of <span class="math inline">\(Y\)</span> are
+predictions of <span class="math inline">\(Y\)</span>, given any values
+of <span class="math inline">\(\overrightarrow{X}\)</span></li>
+</ul>
+<p>For linear regression, a fitted value for <span class="math inline">\(Y\)</span> is:</p>
+<p><span class="math display">\[
+\hat{Y} = = \hat{\alpha} + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2 + ... +
+\hat{\beta}_k X_k
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="types-of-models" class="section level3">
+<h3>Types of Models</h3>
+<p>We will learn several different models, that deal with different
+types of <span class="math inline">\(Y\)</span> response variables:</p>
+<ul>
+<li><p>Linear models for interval-level <span class="math inline">\(Y\)</span></p></li>
+<li><p>Binary logistic models for dichotomous/binary <span class="math inline">\(Y\)</span></p></li>
+<li><p>Multinomial and Ordinal logistic models for polytomous
+categorical <span class="math inline">\(Y\)</span></p></li>
+<li><p>Negative binomial and Poisson Regression models for count <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="data-quality" class="section level3">
+<h3>Data Quality</h3>
+<p>For analysis to be useful, our data should be appropriate and of good
+quality</p>
+<ul>
+<li><p>Measurement quality is good - lack of measurement error and
+inaccurate measures of concepts</p></li>
+<li><p>Lack of missing data - which can cause loss of info, possible
+bias</p></li>
+</ul>
+<p>These are important things to keep in mind, even if the course
+assumes that our data is of good quality</p>
+<p><br /></p>
+<hr />
+</div>
+</div>
+<div id="linear-model-basics" class="section level1">
+<h1>Linear Model Basics</h1>
+<div id="response-variables" class="section level3">
+<h3>Response Variables</h3>
+<p>Formally, linear regression requires that <span class="math inline">\(Y\)</span> is a continuous variable (interval or
+ratio level)</p>
+<ul>
+<li>Something that behaves like a “proper number”</li>
+</ul>
+<p>In reality - we do not always stick to this</p>
+<ul>
+<li><p>Linear models are routinely used for counts and ordinal
+variables</p></li>
+<li><p>However, dedicated models for these also exist, and it is better
+to use those than linear regression</p></li>
+</ul>
+<p>Binary variables (True/false, 0/1, yes/no) also exist</p>
+<ul>
+<li><p>Sometimes linear regression models are used</p></li>
+<li><p>But, it is generally recommended to use logit models</p></li>
+</ul>
+<p>Finally, there are <span class="math inline">\(Y\)</span> variables
+which have two un-ordered possible values</p>
+<ul>
+<li>We should not use linear models for them</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="explanatory-variables" class="section level3">
+<h3>Explanatory Variables</h3>
+<p>There are many different kinds of explanatory variables</p>
+<ul>
+<li>Ratio, Categorical, Binary, etc.</li>
+</ul>
+<p>We will cover these later and how they are used in linear
+regression</p>
+<p><br /></p>
+<hr />
+</div>
 </div>
 
 
@@ -2866,7 +3086,7 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = false;
+    options.showAndHide = true;
     options.smoothScroll = true;
 
     // tocify

@@ -5,7 +5,7 @@ output:
     df_print: paged
     toc: yes
     toc_float:
-      collapsed: false
+      collapsed: true
     toc_depth: 4
     theme: lumen
 ---
@@ -32,7 +32,11 @@ Week 1, Applied Regression Analysis
 
 -   Readings:
 
-    1.  
+    1.  Chapter 1, Coursepack
+
+    2.  Section 3.1-3.3, Coursepack
+
+    3.  Chapters 1-3, Gelman et al
 
 <br />
 
@@ -41,3 +45,218 @@ Week 1, Applied Regression Analysis
 [MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
 
 # Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Intro to Regression
+
+### What is Regression?
+
+Situations where we have a response value, and a set of explanatory variable:
+
+-   How do the explanatory variables relate to the response variable
+
+-   Methods for predicting values - given explanatory variable values, what would you predict the response to be
+
+Very important - many other methods build on regression
+
+<br />
+
+Regression can help with the following:
+
+-   Describing relationships and associations between variables
+
+-   Estimating causal effects
+
+-   Prediction of new values of the response variable
+
+<br />
+
+### Learning about Regressions
+
+What does it mean to learn about regressions?
+
+1.  Technical: formal structure - definitions, estimation, formal interpretation, implementation
+2.  Conceptual: how do we use the technical in actual research design
+
+The focus is on technical aspects, but conceptual questions are always in the background
+
+<br />
+
+For different regression models, we want to learn about:
+
+-   Model specification and building
+
+-   Methods of estimation and inference for parameters
+
+-   Using tools to fit and examine models
+
+-   Interpretation of models
+
+-   Criticism of models
+
+<br />
+
+### Conventional Notation
+
+Here are some conventional notations:
+
+-   Response variable notated as $Y$
+
+    -   On this course, only one $Y$ variable, but there can be more
+
+-   Explanatory variables notated as $X$
+
+    -   There are often more than one $X$, so we have $X_1, X_2, ..., X_k$
+
+    -   Sometimes, to denote all $X$ variables together, we will notate it as a vector $\overrightarrow{X} = (X_1, X_2, ..., X_k)$ (can also be bolded)
+
+<br />
+
+------------------------------------------------------------------------
+
+# Regression Models
+
+### Specification of Regression
+
+In formal statistical terminology, a regression model is a specification of the conditional distribution of $Y$ given $\overrightarrow{X}$
+
+-   It states that the distribution of values that $Y$ will have, depends on the value of $\overrightarrow{X}$
+
+-   So that sets of observations with different $\overrightarrow{X}$ will have different distributions of $Y$
+
+<br />
+
+For example, say $X$ is age, $Y$ is attitude towards immigration
+
+-   If $X = 30$, then we are wondering what the conditional distribution of $Y$ given $X=30$ - given a particular age, what is the distribution of their attitudes towards immigration
+
+    -   We focus on the mean of that distribution
+
+-   If $X$ changes (i.e. age changes), the conditional distribution of $Y$ given $X$ also changes
+
+<br />
+
+### Linear Regression Coefficients
+
+We we focus on the linear regression model in the first few weeks:
+
+$$
+E(Y|\overrightarrow{X}) = \alpha + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_k X_k
+$$
+
+These are the features of this linear model:
+
+-   $E(Y|\overrightarrow{X})$ is the expected value of the conditional distribution of $Y$ given some $X$
+
+-   $\beta_1, \beta_2, ... \beta_k$ are the regression coefficients - each attached to a $X$ variable.
+
+    -   We sometimes notate these coefficients as a vector $\overrightarrow{\beta}$
+
+-   Coefficient $\beta_j$ of explanatory variable $X_j$ describes the direction and strength of the relationship of $X_j$ and $Y$, holding other $X$ constant
+
+-   $\alpha$ or $\beta_0$ is the constant or intercept term - when all $X = 0$, what is $Y$
+
+<br />
+
+### Parameter Estimation
+
+We use observed data on our variables, to learn about a model and its parameters
+
+-   Observations are elements with values of all $X$ variables and $Y$ variable: $(\overrightarrow{X}_i, Y_i)$ for $i = 1,...,n$, where $n$ is the number of observations
+
+We then obtain estimates of the regression coefficients
+
+-   Specific values that best match the observed data
+
+-   This is called "fitting the model" to the data
+
+-   We typically put a "hat" on estimated parameters (ex. $\hat{\beta_1}$)
+
+We also carry out statistical inference (significance tests and confidence intervals) for the coefficients
+
+<br />
+
+### Fitted Values
+
+After we have estimated the model parameters, we can use the to calculate fitted values for $Y$
+
+-   Fitted values of $Y$ are predictions of $Y$, given any values of $\overrightarrow{X}$
+
+For linear regression, a fitted value for $Y$ is:
+
+$$
+\hat{Y} = = \hat{\alpha} + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2 + ... + \hat{\beta}_k X_k
+$$
+
+<br />
+
+### Types of Models
+
+We will learn several different models, that deal with different types of $Y$ response variables:
+
+-   Linear models for interval-level $Y$
+
+-   Binary logistic models for dichotomous/binary $Y$
+
+-   Multinomial and Ordinal logistic models for polytomous categorical $Y$
+
+-   Negative binomial and Poisson Regression models for count $Y$
+
+<br />
+
+### Data Quality
+
+For analysis to be useful, our data should be appropriate and of good quality
+
+-   Measurement quality is good - lack of measurement error and inaccurate measures of concepts
+
+-   Lack of missing data - which can cause loss of info, possible bias
+
+These are important things to keep in mind, even if the course assumes that our data is of good quality
+
+<br />
+
+------------------------------------------------------------------------
+
+# Linear Model Basics
+
+### Response Variables
+
+Formally, linear regression requires that $Y$ is a continuous variable (interval or ratio level)
+
+-   Something that behaves like a "proper number"
+
+In reality - we do not always stick to this
+
+-   Linear models are routinely used for counts and ordinal variables
+
+-   However, dedicated models for these also exist, and it is better to use those than linear regression
+
+Binary variables (True/false, 0/1, yes/no) also exist
+
+-   Sometimes linear regression models are used
+
+-   But, it is generally recommended to use logit models
+
+Finally, there are $Y$ variables which have two un-ordered possible values
+
+-   We should not use linear models for them
+
+<br />
+
+### Explanatory Variables
+
+There are many different kinds of explanatory variables
+
+-   Ratio, Categorical, Binary, etc.
+
+We will cover these later and how they are used in linear regression
+
+<br />
+
+------------------------------------------------------------------------
