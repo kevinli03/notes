@@ -24,13 +24,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
 
-**Week 1, GV4C8 Game Theory for Political Science**
+Week 1, GV4C8 Game Theory for Political Science
 
--   **Title**: Political Economy, Game Theory, Aggregation of Preferences
+-   Title: Political Economy, Game Theory, Aggregation of Preferences
 
--   **Topics**: Political Economy, Properties of Game Theory, Difficulty in Aggregating Preferences
+-   Topics: Political Economy, Properties of Game Theory, Difficulty in Aggregating Preferences
 
--   **Readings:**
+-   Readings**:**
 
     1.  Chapter 1, Osborne, M. J. (2004) *An Introduction to Game Theory* (Oxford University Press)
 
@@ -402,7 +402,9 @@ We can construct a cyclic as following:
 
 [GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
 
-# Reading 1: Osborne
+# Reading: Osborne Ch. 1
+
+<br />
 
 ### Key Points
 

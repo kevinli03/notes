@@ -28,15 +28,15 @@ Week 1, Applied Regression Analysis
 
 -   Title: Introduction to Regression Modelling
 
--   Topics:
+-   Topics: Simple Linear Regression
 
 -   Readings:
 
-    1.  Chapter 1, Coursepack
+    1.  Chapter 1, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: Coursepack*
 
-    2.  Section 3.1-3.3, Coursepack
+    2.  Section 3.1-3.3, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: Coursepack*
 
-    3.  Chapters 1-3, Gelman et al
+    3.  Chapters 1-3, Gelman et al (2022) *Regression and Other Stories*
 
 <br />
 
@@ -45,6 +45,50 @@ Week 1, Applied Regression Analysis
 [MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
 
 # Key Points
+
+Here are some [**conventional notation**]{.underline}:
+
+-   Response variable notated as $Y$
+
+    -   On this course, only one $Y$ variable, but there can be more
+
+-   Explanatory variables notated as $X$
+
+    -   There are often more than one $X$, so we have $X_1, X_2, ..., X_k$
+
+    -   Sometimes, to denote all $X$ variables together, we will notate it as a vector $\overrightarrow{X} = (X_1, X_2, ..., X_k)$ (can also be bolded)
+
+<br />
+
+In formal statistical terminology, a regression model is a specification of the conditional distribution of $Y$ given $\overrightarrow{X}$
+
+-   It states that the distribution of values that $Y$ will have, depends on the value of $\overrightarrow{X}$
+
+-   So that sets of observations with different $\overrightarrow{X}$ will have different distributions of $Y$
+
+<br/>
+
+[**Linear Regression Models**]{.underline} take the following form:
+
+$$
+E(Y|\overrightarrow{X}) = \alpha + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_k X_k
+$$
+
+These are the features of this linear model:
+
+-   $E(Y|\overrightarrow{X})$ is the expected value of the conditional distribution of $Y$ given some $X$
+
+-   $\beta_1, \beta_2, ... \beta_k$ are the regression coefficients - each attached to a $X$ variable.
+
+    -   We sometimes notate these coefficients as a vector $\overrightarrow{\beta}$
+
+-   Coefficient $\beta_j$ of explanatory variable $X_j$ describes the direction and strength of the relationship of $X_j$ and $Y$, holding other $X$ constant
+
+-   $\alpha$ or $\beta_0$ is the constant or intercept term - when all $X = 0$, what is $Y$
+
+<br />
+
+Formally, linear regression requires that $Y$ is a continuous variable (interval or ratio level)
 
 <br />
 
@@ -119,6 +163,8 @@ Here are some conventional notations:
 
 ------------------------------------------------------------------------
 
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
 # Regression Models
 
 ### Specification of Regression
@@ -190,7 +236,7 @@ After we have estimated the model parameters, we can use the to calculate fitted
 For linear regression, a fitted value for $Y$ is:
 
 $$
-\hat{Y} = = \hat{\alpha} + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2 + ... + \hat{\beta}_k X_k
+\hat{Y} = \hat{\alpha} + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2 + ... + \hat{\beta}_k X_k
 $$
 
 <br />
@@ -222,6 +268,8 @@ These are important things to keep in mind, even if the course assumes that our 
 <br />
 
 ------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
 
 # Linear Model Basics
 
@@ -260,3 +308,172 @@ We will cover these later and how they are used in linear regression
 <br />
 
 ------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Reading: Coursepack Ch. 1
+
+Chapter 1, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: Coursepack*
+
+<br />
+
+### Key Points
+
+Regression is focused on the associations between variables
+
+-   There is an association between variables, when knowing one variable helps you predict the other variable
+
+<br />
+
+If we know an association, what does that tell us about causality?
+
+-   Not much. Correlation ≠ Causation
+
+<br />
+
+### Data and Variables
+
+Information analysed by statistical methods is a set of data
+
+-   Data consists of variables, or a set of units (observations)
+
+-   Units may be countries, organisations, individuals, etc. - anything we are interested in analysing
+
+-   Variables represent measurements of some characteristics of the units
+
+<br />
+
+Quantitative data is encoded in numbers - however, there are several different types of data based on how they are measured:
+
+-   Nominal variables - where numbers simply represent labels for different categories. These categories cannot be put into any order
+
+    -   Ex. countries - USA, China, EU (these cannot be ordered)
+
+-   Ordinal variables - where numbers simply represent labels for different categories, but these categories can be ordered
+
+    -   Ex. bad, neutral, good (these are ordered categories)
+
+-   Interval scale variables - where the real numbers are meaninful, and the distance between units is equal
+
+    -   Ex. 2-1 = 1, and 5-4 = 1. All units are 1 apart
+
+<br />
+
+There is another distinction we should pay attention to: continuous or discrete
+
+-   Continuous variables can be indefinitely divided into smaller chunks
+
+    -   Ex. between 4 and 5 is 4.5, between 4 and 4.5 is 4.25, ..., and so on
+
+-   Discrete variables are when the unit of measurement cannot be subdivided - you can only have certain values:
+
+    -   Ex. you have 1,2,3,4,5, but 1.5 makes no sense
+
+    -   Nominal and Ordinal variables usually fit into this category
+
+<br />
+
+### Association and Regression
+
+Regression is focused on the associations between variables
+
+-   There is an association between variables, when knowing one variable helps you predict the other variable
+
+-   Association can also be expressed as correlated variables
+
+Sometimes, the two variables are treated on equal footing
+
+-   However, often, it is more natural to think of one as predicting the other
+
+-   The explanatory variable doing the predicting is labelled $X$, and $Y$ is the outcome response variable
+
+<br />
+
+We often look at more than 2 variables
+
+-   We will often include multiple explanatory variable $X$
+
+-   This allows us to examine the association between 2 variables, while controlling/holding constant the other variables
+
+<br />
+
+### Association vs. Causality
+
+If we know an association, what does that tell us about causality?
+
+-   Not much. Correlation ≠ Causation
+
+-   To find causality, you need a counterfactual - what would've happened if the treatment was not assigned
+
+Regression methods estimate associations, but they typically do not estimate causal effects
+
+-   The only way to address causality in a regression model is if every, and I mean every, possible difference is controlled for
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Reading: Coursepack 3.1-3.3
+
+Section 3.1-3.3, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: Coursepack*
+
+<br />
+
+### Key Points
+
+In social science, models take the form as follows:
+
+$$
+Y = \alpha + \beta X + \epsilon
+$$
+
+<br />
+
+All models are wrong because the world and humans are very complex. However, the simplification could allow us to capture the essentials, and leave out the inessentials
+
+<br />
+
+### Statistical models
+
+Models link two measurable quantities $X$ and $Y$ with an equation, based on a set of parameters:
+
+$$
+Y = \alpha + \beta X
+$$
+
+1.  Estimating the parameters $\alpha$ and $\beta$ can be done by looking at data regarding $X$ and $Y$
+2.  Once estimates of the paremters are available, we are able to predict the value of $Y$ given any value of $X$
+
+<br />
+
+### Models in Social Sciences
+
+In social science, models take the form as follows:
+
+$$
+Y = \alpha + \beta X + \epsilon
+$$
+
+Where $\epsilon$ is the error term. Why?
+
+-   Humans are random - they do not behave exactly as mathematics says they will
+
+-   So, this additional term explains the randomness in human actions
+
+Remember - all models are wrong because the world and humans are very complex. However, the simplification could allow us to capture the essentials, and leave out the inessentials
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Reading: Gelman Ch. 1-3
+
+Chapters 1-3, Gelman et al (2022) *Regression and Other Stories*
+
+<br />
+
+### Key Points

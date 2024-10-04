@@ -5,7 +5,7 @@ output:
     df_print: paged
     toc: yes
     toc_float:
-      collapsed: false
+      collapsed: true
     toc_depth: 4
     theme: lumen
 ---
@@ -30,7 +30,11 @@ Week 0, Applied Regression Analysis
 
 -   Topics: Sampling, Central Limit Theorem, Difference in Means, Hypothesis Testing
 
--   Readings: N/A
+-   Readings:
+
+    1.  Chapter 2, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: Coursepack*
+
+    2.  Chapters 4, Gelman et al (2022) *Regression and Other Stories*
 
 -   Note: This lesson draws from both the Review Material provided in MY452A, and Session 1 of DV494 Fundamentals of Applied Econometrics for Economic Development Policy
 
@@ -437,3 +441,29 @@ The p-value tells us the following:
 Hypothesis testing and confidence intervals get the same results when they use the same significance/confidence level:
 
 -   The significance level $\alpha$ is equal to the $(1-\alpha)$% confidence interval
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Reading: Coursepack Ch. 2
+
+Chapter 2, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: Coursepack*
+
+<br />
+
+### Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Reading: Gelman Ch. 4
+
+Chapter 4, Gelman et al (2022) *Regression and Other Stories*
+
+<br />
+
+### Key Points

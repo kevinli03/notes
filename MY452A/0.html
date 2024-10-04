@@ -2744,12 +2744,6 @@ font-size: 0.90em;
 .tocify .list-group-item {
 border-radius: 0px;
 }
-.tocify-subheader {
-display: inline;
-}
-.tocify-subheader .tocify-item {
-font-size: 0.95em;
-}
 </style>
 
 
@@ -2796,7 +2790,13 @@ Homepage</a></p>
 <li><p>Title: Statistical Inference Review</p></li>
 <li><p>Topics: Sampling, Central Limit Theorem, Difference in Means,
 Hypothesis Testing</p></li>
-<li><p>Readings: N/A</p></li>
+<li><p>Readings:</p>
+<ol style="list-style-type: decimal">
+<li><p>Chapter 2, Kuha, J., and Lauderdale, B. (No date) <em>Applied
+Regression Analysis: Coursepack</em></p></li>
+<li><p>Chapters 4, Gelman et al (2022) <em>Regression and Other
+Stories</em></p></li>
+</ol></li>
 <li><p>Note: This lesson draws from both the Review Material provided in
 MY452A, and Session 1 of DV494 Fundamentals of Applied Econometrics for
 Economic Development Policy</p></li>
@@ -3232,6 +3232,31 @@ they use the same significance/confidence level:</p>
 is equal to the <span class="math inline">\((1-\alpha)\)</span>%
 confidence interval</li>
 </ul>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-coursepack-ch.-2" class="section level1">
+<h1>Reading: Coursepack Ch. 2</h1>
+<p>Chapter 2, Kuha, J., and Lauderdale, B. (No date) <em>Applied
+Regression Analysis: Coursepack</em></p>
+<p><br /></p>
+<div id="key-points-1" class="section level3">
+<h3>Key Points</h3>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-gelman-ch.-4" class="section level1">
+<h1>Reading: Gelman Ch. 4</h1>
+<p>Chapter 4, Gelman et al (2022) <em>Regression and Other
+Stories</em></p>
+<p><br /></p>
+<div id="key-points-2" class="section level3">
+<h3>Key Points</h3>
 </div>
 </div>
 
@@ -3293,7 +3318,7 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = false;
+    options.showAndHide = true;
     options.smoothScroll = true;
 
     // tocify

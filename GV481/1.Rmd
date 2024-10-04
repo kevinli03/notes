@@ -304,9 +304,11 @@ $$
 
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
-# Reading 1: Mesquita
+# Reading: Mesquita Ch. 1
 
 Chapter 1, Mesquita et al (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*
+
+<br />
 
 ### Key Points
 
@@ -414,9 +416,11 @@ The goal of this book is to internalise the ways of thinking
 
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
-# Reading 2: Mesquita
+# Reading: Mesquita Ch. 2
 
 Chapter 2, Mesquita et al (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*
+
+<br />
 
 ### Key Points
 

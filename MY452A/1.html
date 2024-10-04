@@ -2788,12 +2788,15 @@ Homepage</a></p>
 <p>Week 1, Applied Regression Analysis</p>
 <ul>
 <li><p>Title: Introduction to Regression Modelling</p></li>
-<li><p>Topics:</p></li>
+<li><p>Topics: Simple Linear Regression</p></li>
 <li><p>Readings:</p>
 <ol style="list-style-type: decimal">
-<li><p>Chapter 1, Coursepack</p></li>
-<li><p>Section 3.1-3.3, Coursepack</p></li>
-<li><p>Chapters 1-3, Gelman et al</p></li>
+<li><p>Chapter 1, Kuha, J., and Lauderdale, B. (No date) <em>Applied
+Regression Analysis: Coursepack</em></p></li>
+<li><p>Section 3.1-3.3, Kuha, J., and Lauderdale, B. (No date)
+<em>Applied Regression Analysis: Coursepack</em></p></li>
+<li><p>Chapters 1-3, Gelman et al (2022) <em>Regression and Other
+Stories</em></p></li>
 </ol></li>
 </ul>
 <p><br /></p>
@@ -2802,6 +2805,56 @@ Homepage</a></p>
 Homepage</a></p>
 <div id="key-points" class="section level1">
 <h1>Key Points</h1>
+<p>Here are some <u><strong>conventional notation</strong></u>:</p>
+<ul>
+<li><p>Response variable notated as <span class="math inline">\(Y\)</span></p>
+<ul>
+<li>On this course, only one <span class="math inline">\(Y\)</span>
+variable, but there can be more</li>
+</ul></li>
+<li><p>Explanatory variables notated as <span class="math inline">\(X\)</span></p>
+<ul>
+<li><p>There are often more than one <span class="math inline">\(X\)</span>, so we have <span class="math inline">\(X_1, X_2, ..., X_k\)</span></p></li>
+<li><p>Sometimes, to denote all <span class="math inline">\(X\)</span>
+variables together, we will notate it as a vector <span class="math inline">\(\overrightarrow{X} = (X_1, X_2, ..., X_k)\)</span>
+(can also be bolded)</p></li>
+</ul></li>
+</ul>
+<p><br /></p>
+<p>In formal statistical terminology, a regression model is a
+specification of the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(\overrightarrow{X}\)</span></p>
+<ul>
+<li><p>It states that the distribution of values that <span class="math inline">\(Y\)</span> will have, depends on the value of
+<span class="math inline">\(\overrightarrow{X}\)</span></p></li>
+<li><p>So that sets of observations with different <span class="math inline">\(\overrightarrow{X}\)</span> will have different
+distributions of <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+<p><u><strong>Linear Regression Models</strong></u> take the following
+form:</p>
+<p><span class="math display">\[
+E(Y|\overrightarrow{X}) = \alpha + \beta_1 X_1 + \beta_2 X_2 + ... +
+\beta_k X_k
+\]</span></p>
+<p>These are the features of this linear model:</p>
+<ul>
+<li><p><span class="math inline">\(E(Y|\overrightarrow{X})\)</span> is
+the expected value of the conditional distribution of <span class="math inline">\(Y\)</span> given some <span class="math inline">\(X\)</span></p></li>
+<li><p><span class="math inline">\(\beta_1, \beta_2, ...
+\beta_k\)</span> are the regression coefficients - each attached to a
+<span class="math inline">\(X\)</span> variable.</p>
+<ul>
+<li>We sometimes notate these coefficients as a vector <span class="math inline">\(\overrightarrow{\beta}\)</span></li>
+</ul></li>
+<li><p>Coefficient <span class="math inline">\(\beta_j\)</span> of
+explanatory variable <span class="math inline">\(X_j\)</span> describes
+the direction and strength of the relationship of <span class="math inline">\(X_j\)</span> and <span class="math inline">\(Y\)</span>, holding other <span class="math inline">\(X\)</span> constant</p></li>
+<li><p><span class="math inline">\(\alpha\)</span> or <span class="math inline">\(\beta_0\)</span> is the constant or intercept term
+- when all <span class="math inline">\(X = 0\)</span>, what is <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>Formally, linear regression requires that <span class="math inline">\(Y\)</span> is a continuous variable (interval or
+ratio level)</p>
 <p><br /></p>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
@@ -2871,6 +2924,8 @@ variables together, we will notate it as a vector <span class="math inline">\(\o
 </ul>
 <p><br /></p>
 <hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
 </div>
 </div>
 <div id="regression-models" class="section level1">
@@ -2953,7 +3008,7 @@ of <span class="math inline">\(\overrightarrow{X}\)</span></li>
 </ul>
 <p>For linear regression, a fitted value for <span class="math inline">\(Y\)</span> is:</p>
 <p><span class="math display">\[
-\hat{Y} = = \hat{\alpha} + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2 + ... +
+\hat{Y} = \hat{\alpha} + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2 + ... +
 \hat{\beta}_k X_k
 \]</span></p>
 <p><br /></p>
@@ -2985,6 +3040,8 @@ bias</p></li>
 assumes that our data is of good quality</p>
 <p><br /></p>
 <hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
 </div>
 </div>
 <div id="linear-model-basics" class="section level1">
@@ -3025,6 +3082,190 @@ which have two un-ordered possible values</p>
 regression</p>
 <p><br /></p>
 <hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-coursepack-ch.-1" class="section level1">
+<h1>Reading: Coursepack Ch. 1</h1>
+<p>Chapter 1, Kuha, J., and Lauderdale, B. (No date) <em>Applied
+Regression Analysis: Coursepack</em></p>
+<p><br /></p>
+<div id="key-points-1" class="section level3">
+<h3>Key Points</h3>
+<p>Regression is focused on the associations between variables</p>
+<ul>
+<li>There is an association between variables, when knowing one variable
+helps you predict the other variable</li>
+</ul>
+<p><br /></p>
+<p>If we know an association, what does that tell us about
+causality?</p>
+<ul>
+<li>Not much. Correlation ≠ Causation</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="data-and-variables" class="section level3">
+<h3>Data and Variables</h3>
+<p>Information analysed by statistical methods is a set of data</p>
+<ul>
+<li><p>Data consists of variables, or a set of units
+(observations)</p></li>
+<li><p>Units may be countries, organisations, individuals, etc. -
+anything we are interested in analysing</p></li>
+<li><p>Variables represent measurements of some characteristics of the
+units</p></li>
+</ul>
+<p><br /></p>
+<p>Quantitative data is encoded in numbers - however, there are several
+different types of data based on how they are measured:</p>
+<ul>
+<li><p>Nominal variables - where numbers simply represent labels for
+different categories. These categories cannot be put into any order</p>
+<ul>
+<li>Ex. countries - USA, China, EU (these cannot be ordered)</li>
+</ul></li>
+<li><p>Ordinal variables - where numbers simply represent labels for
+different categories, but these categories can be ordered</p>
+<ul>
+<li>Ex. bad, neutral, good (these are ordered categories)</li>
+</ul></li>
+<li><p>Interval scale variables - where the real numbers are meaninful,
+and the distance between units is equal</p>
+<ul>
+<li>Ex. 2-1 = 1, and 5-4 = 1. All units are 1 apart</li>
+</ul></li>
+</ul>
+<p><br /></p>
+<p>There is another distinction we should pay attention to: continuous
+or discrete</p>
+<ul>
+<li><p>Continuous variables can be indefinitely divided into smaller
+chunks</p>
+<ul>
+<li>Ex. between 4 and 5 is 4.5, between 4 and 4.5 is 4.25, …, and so
+on</li>
+</ul></li>
+<li><p>Discrete variables are when the unit of measurement cannot be
+subdivided - you can only have certain values:</p>
+<ul>
+<li><p>Ex. you have 1,2,3,4,5, but 1.5 makes no sense</p></li>
+<li><p>Nominal and Ordinal variables usually fit into this
+category</p></li>
+</ul></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="association-and-regression" class="section level3">
+<h3>Association and Regression</h3>
+<p>Regression is focused on the associations between variables</p>
+<ul>
+<li><p>There is an association between variables, when knowing one
+variable helps you predict the other variable</p></li>
+<li><p>Association can also be expressed as correlated
+variables</p></li>
+</ul>
+<p>Sometimes, the two variables are treated on equal footing</p>
+<ul>
+<li><p>However, often, it is more natural to think of one as predicting
+the other</p></li>
+<li><p>The explanatory variable doing the predicting is labelled <span class="math inline">\(X\)</span>, and <span class="math inline">\(Y\)</span> is the outcome response
+variable</p></li>
+</ul>
+<p><br /></p>
+<p>We often look at more than 2 variables</p>
+<ul>
+<li><p>We will often include multiple explanatory variable <span class="math inline">\(X\)</span></p></li>
+<li><p>This allows us to examine the association between 2 variables,
+while controlling/holding constant the other variables</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="association-vs.-causality" class="section level3">
+<h3>Association vs. Causality</h3>
+<p>If we know an association, what does that tell us about
+causality?</p>
+<ul>
+<li><p>Not much. Correlation ≠ Causation</p></li>
+<li><p>To find causality, you need a counterfactual - what would’ve
+happened if the treatment was not assigned</p></li>
+</ul>
+<p>Regression methods estimate associations, but they typically do not
+estimate causal effects</p>
+<ul>
+<li>The only way to address causality in a regression model is if every,
+and I mean every, possible difference is controlled for</li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-coursepack-3.1-3.3" class="section level1">
+<h1>Reading: Coursepack 3.1-3.3</h1>
+<p>Section 3.1-3.3, Kuha, J., and Lauderdale, B. (No date) <em>Applied
+Regression Analysis: Coursepack</em></p>
+<p><br /></p>
+<div id="key-points-2" class="section level3">
+<h3>Key Points</h3>
+<p>In social science, models take the form as follows:</p>
+<p><span class="math display">\[
+Y = \alpha + \beta X + \epsilon
+\]</span></p>
+<p><br /></p>
+<p>All models are wrong because the world and humans are very complex.
+However, the simplification could allow us to capture the essentials,
+and leave out the inessentials</p>
+<p><br /></p>
+</div>
+<div id="statistical-models" class="section level3">
+<h3>Statistical models</h3>
+<p>Models link two measurable quantities <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> with an equation, based on a set of
+parameters:</p>
+<p><span class="math display">\[
+Y = \alpha + \beta X
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Estimating the parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> can be done by looking at data
+regarding <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
+<li>Once estimates of the paremters are available, we are able to
+predict the value of <span class="math inline">\(Y\)</span> given any
+value of <span class="math inline">\(X\)</span></li>
+</ol>
+<p><br /></p>
+</div>
+<div id="models-in-social-sciences" class="section level3">
+<h3>Models in Social Sciences</h3>
+<p>In social science, models take the form as follows:</p>
+<p><span class="math display">\[
+Y = \alpha + \beta X + \epsilon
+\]</span></p>
+<p>Where <span class="math inline">\(\epsilon\)</span> is the error
+term. Why?</p>
+<ul>
+<li><p>Humans are random - they do not behave exactly as mathematics
+says they will</p></li>
+<li><p>So, this additional term explains the randomness in human
+actions</p></li>
+</ul>
+<p>Remember - all models are wrong because the world and humans are very
+complex. However, the simplification could allow us to capture the
+essentials, and leave out the inessentials</p>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-gelman-ch.-1-3" class="section level1">
+<h1>Reading: Gelman Ch. 1-3</h1>
+<p>Chapters 1-3, Gelman et al (2022) <em>Regression and Other
+Stories</em></p>
+<p><br /></p>
+<div id="key-points-3" class="section level3">
+<h3>Key Points</h3>
 </div>
 </div>
 
