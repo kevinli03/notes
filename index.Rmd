@@ -208,43 +208,11 @@ Course Content (Lectures, Readings, and Problems):
 4.  Functions
 5.  Classes
 
-<!-- -->
-
 7.  Testing and Debugging
 8.  R Programming Language
 9.  Algorithms and Order of Growth
 10. Searching and Sorting Algorithms
 11. Tree and Graph Algorithms
-
-<br />
-
-------------------------------------------------------------------------
-
-### DV464 Democracy & Development
-
-**DV464 Democracy & Development**
-
-[Lecturer]{.underline}: Professor Elliot Green
-
-[Summative Assessment]{.underline}: N/A (Auditing)
-
-<br />
-
-Course Content (Lectures, Readings, and Problems):
-
-1.  Democracy and Modernisation Theory
-2.  How Poverty Hinders Democratisation
-3.  How Democracies Promote Development
-4.  Democratisation and Public Service Delivery
-5.  Democratisation, Redistribution, Inequality
-
-<!-- -->
-
-7.  Politics of Social Development: Religion, Ethnicity, Race
-8.  Autocracies and Development
-9.  Democracy and Development in Unequal Countries: Brazil, South Africa
-10. Democracy and Development in India
-11. Democracy and Development in the Future
 
 <br />
 
