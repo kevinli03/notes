@@ -203,16 +203,24 @@ Course Content (Lectures, Readings, and Problems):
 Course Content (Lectures, Readings, and Problems):
 
 1.  [What is Computation](https://kevinli03.github.io/notes/MY470/1.html)
+
 2.  Data Types
+
 3.  Control Flow
+
 4.  Functions
+
 5.  Classes
 
-7.  Testing and Debugging
-8.  R Programming Language
-9.  Algorithms and Order of Growth
-10. Searching and Sorting Algorithms
-11. Tree and Graph Algorithms
+6.  Testing and Debugging
+
+7.  R Programming Language
+
+8.  Algorithms and Order of Growth
+
+9.  Searching and Sorting Algorithms
+
+10. Tree and Graph Algorithms
 
 <br />
 

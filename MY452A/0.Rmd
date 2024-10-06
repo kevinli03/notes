@@ -34,7 +34,7 @@ Week 0, Applied Regression Analysis
 
     1.  Chapter 2, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: Coursepack*
 
-    2.  Chapters 4, Gelman et al (2022) *Regression and Other Stories*
+    2.  Chapters 2-4, Gelman et al (2022) *Regression and Other Stories*
 
 -   Note: This lesson draws from both the Review Material provided in MY452A, and Session 1 of DV494 Fundamentals of Applied Econometrics for Economic Development Policy
 
@@ -455,6 +455,84 @@ Chapter 2, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: 
 ### Key Points
 
 <br />
+
+### Samples and Populations
+
+Statistical inference is used when the observations in the data are a sample from some larger population
+
+-   But, while we only have the sample, we want to draw conclusions regarding the population
+
+-   We can do this if the sample is representative of the population
+
+-   For example, we might have a sample of average weekly working hours from people in the UK and France. There is also some true value of average weekly working hours for all the people in the UK and France (the population)
+
+<br />
+
+We can also have some more "hypothetical" populations
+
+-   For example, let us sample the interview lengths from UK and France
+
+-   The variable has a value for those respondents who were interviewed
+
+-   However, some people don't get an interview
+
+-   So, interview length is a "potential variable", whose value is only realised when an interview actually takes place
+
+-   So, our population is some infinite, hypothetical, conceptual population, where our samples are realisations of this event
+
+<br />
+
+### Models for the Data
+
+Statistical inference is based on a set of assumptions about the distributions of the variables of interest in the population, and the observed samples drawn from them
+
+Let us model our scenario for the weekly working hours in France and the UK example, we have 2 samples:
+
+-   1st sample of the UK: $n_1$ observations of $Y$ (weekly working hours), are a random sample of the population where $Y$ has a normal distribution with mean $\mu_1$ and variance $\sigma ^2$
+
+-   2nd sample of France: $n_2$ observations of $Y$, where the population of $Y$ is normally distributed with mean $\mu_2$ and variance $\sigma^2$
+
+-   We assume that all $Y$ within and between samples are statistically independent - one observation does not affect the value of another
+
+<br />
+
+In the model above, we have 2 parameters for both France and the UK populations: mean $\mu$ and variance $\sigma^2$
+
+-   We have 2 different means, one for the UK $\mu_1$, and one for France $\mu_2$. We could be interested in how these are different
+
+-   In the model above, both UK and France populations have the same variance $\sigma^2$, but this doesn't have to be the case
+
+<br />
+
+### Population Parameters and Estimates
+
+Let us say we are interested in the mean parameters, and how they might differ between the UK and France
+
+-   Mean in UK: $\mu_1$
+
+-   Mean in France: $\mu_2$
+
+    -   but since $\mu_2 = \mu_1 + (\mu_2 - \mu_1)$
+
+    -   We can define $(\mu_2 - \mu_1) = \Delta$ the difference/change between the two means
+
+    -   Thus, we can rewrite $\mu_2 = \mu_1 + \Delta$
+
+The important thing here is $\Delta$, which is the difference between the two means
+
+-   If $\Delta ≠ 0$, then we know that the difference between the means of the two groups is not 0, and thus, there must be a difference between the means
+
+-   If $\Delta = 0$, then there is no difference, and the two group means are the same
+
+<br />
+
+That is cool and all, but how do we get estimates of $\mu_1, \mu_2$? After all, these are from the population
+
+-   Well, we can get them from the samples we took!
+
+The sample means $\bar{Y}_1$ and $\bar{Y}_2$ can be used as a "point estimate" of our true population means
+
+-   Thus, we can estimate $\Delta = \bar{Y}_2 - \bar{Y}_1$
 
 ------------------------------------------------------------------------
 
