@@ -25,7 +25,51 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
 
+Week 1, MY470 Computer Programming
+
+-   Title: Welcome to Computer Programming
+
+-   Topics: Programming Languages, Objects
+
+-   Readings: N/A
+
+<br />
+
 ------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+# Key Points
+
+An [**algorithm**]{.underline} is a procedure - that takes inputs, and produces an output
+
+[Programming Languages]{.underline} is a language used to specify a set of instructions for a computer to execute.
+
+<br />
+
+Programs manipulate [**objects**]{.underline}. Objects have two types:
+
+-   Scalar: indivisible data (can't really find structure within it)
+
+    -   Integers (a positive or negative whole number)
+
+    -   Floating point (decimals)
+
+    -   These are just one object - they can't be further subdivided
+
+-   Non-scalar: with internal structure (multiple elements within)
+
+    -   Lists - an object with multiple elements (ex. [3, 7, "j"] )
+
+    -   Strings (in python) - where each letter/character is an element
+
+Expressions combine objects and operators
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
 
 # Introduction
 

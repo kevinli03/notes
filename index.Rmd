@@ -204,7 +204,7 @@ Course Content (Lectures, Readings, and Problems):
 
 1.  [What is Computation](https://kevinli03.github.io/notes/MY470/1.html)
 
-2.  Data Types
+2.  [Data Types in Python](https://kevinli03.github.io/notes/MY470/2.html)
 
 3.  Control Flow
 

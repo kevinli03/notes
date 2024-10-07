@@ -11,7 +11,7 @@
 
 
 
-<title>Welcome to Computer Programming</title>
+<title>Data Types in Python</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -2744,12 +2744,6 @@ font-size: 0.90em;
 .tocify .list-group-item {
 border-radius: 0px;
 }
-.tocify-subheader {
-display: inline;
-}
-.tocify-subheader .tocify-item {
-font-size: 0.95em;
-}
 </style>
 
 
@@ -2778,8 +2772,8 @@ font-size: 0.95em;
 
 
 
-<h1 class="title toc-ignore">Welcome to Computer Programming</h1>
-<h3 class="subtitle">Session 1, MY470</h3>
+<h1 class="title toc-ignore">Data Types in Python</h1>
+<h3 class="subtitle">Session 2, MY470</h3>
 
 </div>
 
@@ -2792,10 +2786,10 @@ font-size: 12pt;
 </style>
 <p><a href="https://kevinli03.github.io/notes/#MY470_Computer_Programming">MY470
 Homepage</a></p>
-<p>Week 1, MY470 Computer Programming</p>
+<p>Week 2, MY470 Computer Programming</p>
 <ul>
-<li><p>Title: Welcome to Computer Programming</p></li>
-<li><p>Topics: Programming Languages, Objects</p></li>
+<li><p>Title: Data Types, Operators, Methods</p></li>
+<li><p>Topics: Data Types</p></li>
 <li><p>Readings: N/A</p></li>
 </ul>
 <p><br /></p>
@@ -2804,102 +2798,152 @@ Homepage</a></p>
 Homepage</a></p>
 <div id="key-points" class="section level1">
 <h1>Key Points</h1>
-<p>An <u><strong>algorithm</strong></u> is a procedure - that takes
-inputs, and produces an output</p>
-<p><u>Programming Languages</u> is a language used to specify a set of
-instructions for a computer to execute.</p>
+<p><u>Scalar Data Types</u> in Python</p>
+<pre class="python"><code># int - whole numbers
+integer1 = 23
+
+# float - decimals
+float1 = 23.2342
+
+# bool - True/False
+bool1 = True
+bool2 = False
+
+#Empty/nothing data type
+empty = None</code></pre>
 <p><br /></p>
-<p>Programs manipulate <u><strong>objects</strong></u>. Objects have two
-types:</p>
+<p><u><strong>Non-Scalar Data Types</strong></u> in Python</p>
+<pre class="python"><code>
+# lists - ordered and changeable
+list1 = [1,2,3,4]
+
+# tuple - ordered but unchangeable
+tuple1 = (1,2,3,4)
+
+#string - ordered group of characters
+string1 = &#39;Hello World!&#39;
+
+# set - unordered, only unique objects
+set1 = {1, 2, 3, 4}
+
+# dictionary = unordered, unique objects, but with &quot;key&quot; for each
+dict1 = {&#39;key1&#39; : 1, &#39;name2&#39; : 2}</code></pre>
+<p><br /></p>
+<p>We can <u><strong>change</strong></u> data types by using a function
+of that data type on something else. Be aware, data may be
+altered/broken.</p>
+<pre class="python"><code># let us change a string into an integer
+a = int(&#39;452&#39;)
+type(a)</code></pre>
+<pre><code>## &lt;class &#39;int&#39;&gt;</code></pre>
+<p><br /></p>
+<p>Some select <u><strong>operators</strong></u> (most common ones are
+obvious):</p>
+<pre class="python"><code># string concatenate (only works for strings)
+&#39;hel&#39; + &#39;lo!&#39;</code></pre>
+<pre><code>## &#39;hello!&#39;</code></pre>
+<pre class="python"><code># length (for any non-scalar)
+len(&#39;hello!&#39;)</code></pre>
+<pre><code>## 6</code></pre>
+<pre class="python"><code>#in (for any non-scalar)
+&#39;f&#39; in &#39;father&#39;</code></pre>
+<pre><code>## True</code></pre>
+<p><br /></p>
+<p>Objects have <u><strong>methods</strong></u> associated with them</p>
 <ul>
-<li><p>Scalar: indivisible data (can’t really find structure within
-it)</p>
-<ul>
-<li><p>Integers (a positive or negative whole number)</p></li>
-<li><p>Floating point (decimals)</p></li>
-<li><p>These are just one object - they can’t be further
-subdivided</p></li>
-</ul></li>
-<li><p>Non-scalar: with internal structure (multiple elements
-within)</p>
-<ul>
-<li><p>Lists - an object with multiple elements (ex. [3, 7, “j”]
-)</p></li>
-<li><p>Strings (in python) - where each letter/character is an
-element</p></li>
-</ul></li>
+<li><p>A method is something you can do to a particular data type
+(methods are specific to the particular data type)</p></li>
+<li><p>We attach a method to an object by using a . followed by the
+method, both after the object: object.method()</p></li>
 </ul>
-<p>Expressions combine objects and operators</p>
+<p>For example, for string data, you can turn all the characters upper
+case with the method upper()</p>
+<pre class="python"><code>string1 = &#39;hello&#39;
+string1.upper()</code></pre>
+<pre><code>## &#39;HELLO&#39;</code></pre>
+<p><br /></p>
+<p><u><strong>Indexing</strong></u> is possible for
+strings/tuples/lists, and dictionaries.</p>
+<ul>
+<li><p>Strings/tuples/lists are indexed by the element order (start
+counting from 0).</p>
+<ul>
+<li><p>To index from the back, use a “-” sign</p></li>
+<li><p>To index a range of elements, use : between the range.</p></li>
+</ul></li>
+<li><p>Dictionaries indexed by the name of the key</p></li>
+</ul>
+<pre class="python"><code># 3rd element of string/tuple/list
+&#39;London&#39;[2]</code></pre>
+<pre><code>## &#39;n&#39;</code></pre>
+<pre class="python"><code># indexing dictionary using key
+dict2 = {&#39;Kevin&#39;: &#39;politician&#39;, &#39;Daphne&#39;: &#39;Biologist&#39;, &#39;Janice&#39;: &#39;Violinist&#39;}
+dict2[&#39;Daphne&#39;]</code></pre>
+<pre><code>## &#39;Biologist&#39;</code></pre>
 <p><br /></p>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#MY470_Computer_Programming">MY470
 Homepage</a></p>
 </div>
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<div id="use-of-computer-programming" class="section level3">
-<h3>Use of Computer Programming</h3>
-<p>Why do social scientists need computer programming?</p>
+<div id="python" class="section level1">
+<h1>Python</h1>
+<div id="python-programming-language" class="section level3">
+<h3>Python Programming Language</h3>
+<p>Why are we learning python?</p>
 <ul>
-<li><p>Collect data:</p>
-<ul>
-<li><p>Such as crawling websites, using APIs</p></li>
-<li><p>Online surveys and experiments</p></li>
-<li><p>Computational models and simulations</p></li>
-</ul></li>
-<li><p>Manage, analyse, and visualise data</p>
-<ul>
-<li><p>Large data (often too large for Excel and other common
-programmes)</p></li>
-<li><p>Non-rectangular data, like text and networks</p></li>
-</ul></li>
-<li><p>Independence: don’t need others to make software for some
-analysis - we can programme them ourselves</p></li>
-<li><p>Collaborate, as programming allows us to generate and share
-reproducible workflows</p></li>
+<li><p>Python is open source: it is freely available and well
+documented</p></li>
+<li><p>Simple and concise syntax that is intuitive to learn</p></li>
+<li><p>Many useful libraries to install for practical
+applications</p></li>
+<li><p>Widely used in industry and science - it is arguably the most
+widely used language today</p></li>
 </ul>
 <p><br /></p>
 </div>
-<div id="coding-vs.-programming" class="section level3">
-<h3>Coding vs. Programming</h3>
-<p>Coding is only one aspect of programming</p>
-<ul>
-<li>Translating our intentions/problem solving strategies into code that
-machines can understand</li>
-</ul>
-<p>Programming is more than coding:</p>
-<ul>
-<li><p>Problem analysis: if you have a certain problem, how do we solve
-this problem in a way that the computer can understand</p></li>
-<li><p>Algorithm design: we often have resource constraints (storage,
-computing power, etc.), and we have to design our solution in a way that
-meets these constraints, and is efficient</p></li>
-<li><p>Coding: encode the design you have created into syntax the
-machine can understand</p></li>
-<li><p>Testing: make sure that our code is working properly, finding the
-correct results we are interested in. Make sure our solution is
-robust</p></li>
-<li><p>Debugging: find and address bugs and mistakes</p></li>
-</ul>
+<div id="python-syntax" class="section level3">
+<h3>Python Syntax</h3>
+<p>Python has a very simple syntax. For example, for “hello world”,
+python is simply:</p>
+<pre class="python"><code>print(&#39;Hello World!&#39;)</code></pre>
+<pre><code>## Hello World!</code></pre>
+<p><br /></p>
+<p>Compare this to Java, which takes the following syntax:</p>
+<pre class="r"><code>public class HelloWorld {
+  public static void main (String[] args) {
+    System.out.println(&quot;Hello world!&quot;);
+  }
+}</code></pre>
+<p>In comparison, Python’s simple syntax makes it very intuitive to
+learn</p>
 <p><br /></p>
 </div>
-<div id="computational-thinking" class="section level3">
-<h3>Computational Thinking</h3>
-<p>Computational thinking is a thought process:</p>
+<div id="speed-of-python" class="section level3">
+<h3>Speed of Python</h3>
+<p>Python, while simple, is not the fastest language</p>
 <ul>
-<li><p>Formulating a problem</p></li>
-<li><p>Expressing its solution in a way that computer or human can carry
-it out.</p></li>
+<li><p>Languages that are lower level (C, Java) are far more
+faster</p></li>
+<li><p>Python is a much higher language - so more layers between it and
+the hardware</p></li>
 </ul>
-<p>The characteristics of computational thinking are:</p>
+<p>However, compared to R, python is faster</p>
 <ul>
-<li><p>Conceptualising: thinking at multiple levels of abstraction -
-subdividing the problem into small parts, and link it to thinks we know
-how to approach</p></li>
-<li><p>Human thinking: requires cleverness and imagination</p></li>
-<li><p>Combines mathematical and engineering thinking: have to consider
-the constraints of our computers</p></li>
-<li><p>For everyone: just like reading, writing, arithmetic</p></li>
+<li>This is not even including R packages</li>
+</ul>
+<p>While there are many advantages to Python, it is not great if speed
+is your number one priority</p>
+<p><br /></p>
+</div>
+<div id="brief-history-of-python" class="section level3">
+<h3>Brief History of Python</h3>
+<p>Python was started in 1989 by Guido Van Rossum</p>
+<ul>
+<li><p>Python 2.0 was released in 2000, although today, it is not
+common</p></li>
+<li><p>Nowadays, Python 3.0 is the most common version</p></li>
+<li><p>Newer versions are often not backwards compatible with older
+verisions</p></li>
 </ul>
 <p><br /></p>
 <hr />
@@ -2907,188 +2951,502 @@ the constraints of our computers</p></li>
 Homepage</a></p>
 </div>
 </div>
-<div id="programming-languages" class="section level1">
-<h1>Programming Languages</h1>
-<div id="algorithms" class="section level3">
-<h3>Algorithms</h3>
-<p>An algorithm is a procedure - that takes inputs, and produces an
-output</p>
+<div id="scalar-data-types" class="section level1">
+<h1>Scalar Data Types</h1>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>There are several types of scalar (indivisible) data types</p>
 <ul>
-<li>Ex. a Recipe - how to combine ingredients (inputs) into a food
-(output)</li>
+<li><p>Integers - just a whole number, negative or positive</p></li>
+<li><p>Float: similar to integer, but has decimals (distinction due to
+memory storing)</p></li>
+<li><p>Boolean: True/False (With one capital letter)</p></li>
+<li><p>NoneType: defined as “None”, a placeholder to intialise a
+variable and later you can refer to it</p></li>
 </ul>
-<p>Algorithms can be specified in human language and programming
-language</p>
-<ul>
-<li>We often first write “psuedo-code” - writing the steps in english to
-help view the steps of the algorithm</li>
-</ul>
+<p>Note: String is non-scalar in python (also, use single quote marks ’’
+to denote them)</p>
+<p>To check the type of a variable, use the function
+<strong>type()</strong></p>
+<pre class="python"><code>type(2383.34)</code></pre>
+<pre><code>## &lt;class &#39;float&#39;&gt;</code></pre>
 <p><br /></p>
 </div>
-<div id="computers-languages" class="section level3">
-<h3>Computers &amp; Languages</h3>
-<p>Computers are machines that perform calculations, either built-in or
-user defined. They store the result of the calculations</p>
-<p>Markup languages, also called scripting, are used to structure and
-present data</p>
+<div id="converting-between-types" class="section level3">
+<h3>Converting Between Types</h3>
+<p>You can convert between scalar data types</p>
 <ul>
-<li><p>Like HTML, Latex, Markdown</p></li>
-<li><p>They have tags to instruct how to render certain elements in
-order to present it - rendering done through a program (like a
-browser)</p></li>
+<li>For example, store an integer with a float</li>
 </ul>
-<p>Programming languages transform and generate data</p>
+<p>For example, 123 is normally an integer, but using the name of the
+data type, we can make it a float. we can also test others</p>
+<pre class="python"><code>type(float(123))</code></pre>
+<pre><code>## &lt;class &#39;float&#39;&gt;</code></pre>
+<pre class="python"><code>type(bool(123))</code></pre>
+<pre><code>## &lt;class &#39;bool&#39;&gt;</code></pre>
+<pre class="python"><code>type(str(123))</code></pre>
+<pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
+<p>Some notes regarding this:</p>
 <ul>
-<li><p>Like Python, R, C++, Java</p></li>
-<li><p>Usually speaks to the hardware - not through a programme</p></li>
+<li><p>If you change a decimal to an integer, it just drops the
+decimal</p></li>
+<li><p>Every object has a boolean number - every number is true except
+0, and for any string, it is true except for the empty string</p></li>
+</ul>
+<p>Be careful with changing the types - this can result in errors and
+mistakes</p>
+<p><br /></p>
+<p>This is quite useful - let us say you have a dataset</p>
+<ul>
+<li><p>But, some variables, for some reason, are labelled as strings
+even though they are numbers</p></li>
+<li><p>With this, we can quickly make them into flaots</p></li>
 </ul>
 <p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY470_Computer_Programming">MY470
+Homepage</a></p>
 </div>
-<div id="properties-of-languages" class="section level3">
-<h3>Properties of Languages</h3>
-<p>Programming Languages is a language used to specify a set of
-instructions for a computer to execute. The properties of programming
-languages include:</p>
+</div>
+<div id="non-scalar-data-types" class="section level1">
+<h1>Non-Scalar Data Types</h1>
+<div id="list-tuple-and-strings" class="section level3">
+<h3>List, Tuple, and Strings</h3>
+<p><u>List</u>: a mutable ordered sequence of values</p>
+<ul>
+<li><p>Order matters - it is preserved</p></li>
+<li><p>List is able to replace/add items without overriding the previous
+lists (useful for if you want to keep updating by adding
+values)</p></li>
+</ul>
+<p>We can make a list with the square brakets [], as following:</p>
+<pre class="python"><code>a = [1,3,5,7]
+type(a)</code></pre>
+<pre><code>## &lt;class &#39;list&#39;&gt;</code></pre>
+<p><br /></p>
+<p><u>Tuple</u>: a immutable ordered sequence of values</p>
+<ul>
+<li><p>Order matters - it is preserved</p></li>
+<li><p>Tuple - you cannot replace/add items, you have to override (so
+useful for things that aren’t going to change)</p></li>
+<li><p>Then why tuple? It is more memory efficient and faster, and also,
+they can be used for dictionary keys (see below)</p></li>
+</ul>
+<p>We can make a tuple with round brackes (), as following:</p>
+<pre class="python"><code>b = (1,2,3,4)
+type(b)</code></pre>
+<pre><code>## &lt;class &#39;tuple&#39;&gt;</code></pre>
+<p><br /></p>
+</div>
+<div id="strings" class="section level3">
+<h3>Strings</h3>
+<p><u>String</u>: a immutable ordered sequence of characters</p>
+<ul>
+<li><p>Order matters in a string</p></li>
+<li><p>You cannot replace/add items within the string, you have to
+override</p></li>
+</ul>
+<p>We can make a string with single quotes ’’, as following:</p>
+<pre class="python"><code>c = &#39;hello&#39;
+type(c)</code></pre>
+<pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
+<p><br /></p>
+<p>Strings actually can be defined with single quotes ’’, or double
+quotes “”</p>
+<ul>
+<li><p>Normally, this makes no difference</p></li>
+<li><p>But, if we want to embed a certain type of quote within our
+string, we can use the other quote to start/end the string</p></li>
+</ul>
+<p>For example, let us take this example:</p>
+<pre class="python"><code>string = &#39;I am your &quot;father&quot;&#39;
+print(string)</code></pre>
+<pre><code>## I am your &quot;father&quot;</code></pre>
+<p>You could also use the backslash \ to include quotes (and other
+symbols)</p>
+<pre class="python"><code>string = &quot;I am your \&quot;father\&quot;&quot;
+print(string)</code></pre>
+<pre><code>## I am your &quot;father&quot;</code></pre>
+<p><br /></p>
+</div>
+<div id="sets-and-dictionaries" class="section level3">
+<h3>Sets and Dictionaries</h3>
+<p><u>Set:</u> A mutable unordered collection of unique values</p>
+<ul>
+<li><p>Order does not matter</p></li>
+<li><p>It only saves unique values</p></li>
+</ul>
+<p>For example, we can make the string ‘hello’ into a set. Notice how
+the order of a set doesn’t matter, and it gets rid of the duplicate
+“l”.</p>
+<pre class="python"><code>d = set(&#39;hello&#39;)
+print(d)</code></pre>
+<pre><code>## {&#39;l&#39;, &#39;o&#39;, &#39;h&#39;, &#39;e&#39;}</code></pre>
+<p>You can define sets as well with curly brackets {}. Sets can also
+have different data types:</p>
+<pre class="python"><code>e = {3, &#39;f&#39;, None}
+type(e)</code></pre>
+<pre><code>## &lt;class &#39;set&#39;&gt;</code></pre>
+<p><br /></p>
+<p><u>Dictionary</u> is a collection of key/value pairs</p>
+<ul>
+<li><p>For example, a phone book - name and phone number</p></li>
+<li><p>We have a key (ex. a name), and a value</p></li>
+<li><p>It is basically a set, but with a key for each
+value/object</p></li>
+</ul>
+<p>For example, let us create a dictionary with {}, with “:” assigning a
+key to an object:</p>
+<pre class="python"><code>f = {&#39;object1&#39; : 1, &#39;coolobject&#39; : [1,2,3]}
+type(f)</code></pre>
+<pre><code>## &lt;class &#39;dict&#39;&gt;</code></pre>
+<p>We can also create a dictionary as follows:</p>
+<ul>
+<li><p>Basically, within dict(), we have a list [] with 2 elements -
+both being tuples, and each tuple is a key/value combination</p></li>
+<li><p>Keys of a dictionary must be a tuple</p></li>
+</ul>
+<pre class="python"><code>g = dict( [ (&#39;key1&#39;, &#39;value 1&#39;), (&#39;key2&#39;, &#39;value2&#39;) ] )
+print(g)</code></pre>
+<pre><code>## {&#39;key1&#39;: &#39;value 1&#39;, &#39;key2&#39;: &#39;value2&#39;}</code></pre>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY470_Computer_Programming">MY470
+Homepage</a></p>
+</div>
+</div>
+<div id="operators" class="section level1">
+<h1>Operators</h1>
+<div id="arithmetic-operators" class="section level3">
+<h3>Arithmetic Operators</h3>
+<p>Arithmetic operators are used to do mathematical operations to modify
+integers and floats:</p>
+<ul>
+<li><p><span class="math inline">\(+\)</span> addition (note - doing
+this on non-integers/floats will do something else)</p></li>
+<li><p><span class="math inline">\(-\)</span> subtraction</p></li>
+<li><p><span class="math inline">\(*\)</span> multiplication (note -
+doing this on non-integers/floats will do something else)</p></li>
+<li><p><span class="math inline">\(/\)</span> division</p></li>
+<li><p><span class="math inline">\(\%\)</span> modulus (remainder of a
+division problem)\</p></li>
+<li><p><span class="math inline">\(//\)</span> floor division (division
+but getting rid of the decimal in the answer)</p></li>
+<li><p><span class="math inline">\(**\)</span> exponent</p></li>
+</ul>
+<p>For example, we can do the following arithmetic:</p>
+<pre class="python"><code>8339 + 5</code></pre>
+<pre><code>## 8344</code></pre>
+<p><br /></p>
+<p>However, like I mentioned before, some of the operators will function
+differently given a non-interger/float data type.</p>
+<ul>
+<li>For example, if we do the same operation, but make both our number
+strings, it actually concatenates (adds 5 to the end of the string)</li>
+</ul>
+<pre class="python"><code>&#39;8339&#39; + &#39;5&#39;</code></pre>
+<pre><code>## &#39;83395&#39;</code></pre>
+<p><br /></p>
+</div>
+<div id="boolean-operators" class="section level3">
+<h3>Boolean Operators</h3>
+<p>There are 3 main boolean operators:</p>
+<ul>
+<li><p><span class="math inline">\(and\)</span> - when 2 statements both
+have to be met to return a True</p></li>
+<li><p><span class="math inline">\(or\)</span> - when either statement
+has to be met to return a True</p></li>
+<li><p><span class="math inline">\(not\)</span> - basically the
+opposite</p></li>
+</ul>
+<p>For example, the most basic boolean example is:</p>
+<pre class="python"><code>not False</code></pre>
+<pre><code>## True</code></pre>
+<p>These are very useful for conditional if loops</p>
+<p><br /></p>
+</div>
+<div id="comparison-operators" class="section level3">
+<h3>Comparison Operators</h3>
+<p>Comparison operators allows us to compare statements, which will
+return a Boolean value (True/False):</p>
+<ul>
+<li><p><span class="math inline">\(==\)</span>- equals (make sure it is
+double equal sign, since the assignment operator is one equal
+sign)</p></li>
+<li><p><span class="math inline">\(!=\)</span> - does not equal</p></li>
+<li><p><span class="math inline">\(&gt;\)</span> greater than</p></li>
+<li><p><span class="math inline">\(&lt;=\)</span> less than or equal
+to</p></li>
+</ul>
+<p>For example, take this statement:</p>
+<pre class="python"><code>5 == 4</code></pre>
+<pre><code>## False</code></pre>
+<p><br /></p>
+</div>
+<div id="assignment-operators" class="section level3">
+<h3>Assignment Operators</h3>
+<p>Assignment operators allow us to define variables</p>
+<ul>
+<li><p><span class="math inline">\(=\)</span> assigns the right side, to
+the left side</p></li>
+<li><p><span class="math inline">\(+=\)</span> adds right to the left
+side, then assigns it to the left side</p></li>
+<li><p><span class="math inline">\(-=\)</span> subtracts right from left
+side, then assigns to the left side</p></li>
+</ul>
+<p>For example, we can assign a value to a variable:</p>
+<pre class="python"><code>myvar = 3
+
+#now, does 3 = 4?
+myvar == 4</code></pre>
+<pre><code>## False</code></pre>
+<pre class="python"><code>#take 1, add it to myvar, then store in myvar
+myvar += 1
+
+#now, does it equal 4?
+myvar == 4</code></pre>
+<pre><code>## True</code></pre>
+<p><br /></p>
+</div>
+<div id="membership-operator" class="section level3">
+<h3>Membership Operator</h3>
+<p>A membership operator is primarily used in non-scalar objects</p>
+<ul>
+<li><p>it is defined by the syntax <span class="math inline">\(in\)</span></p></li>
+<li><p>Basically, it tells us True/False that a certain element is
+within the non-scalar object</p></li>
+</ul>
+<p>For example, let us ask if the string ‘f’ is in ‘father’. The output
+will be True/False</p>
+<pre class="python"><code>&#39;f&#39; in &#39;father&#39;</code></pre>
+<pre><code>## True</code></pre>
+<p><br /></p>
+</div>
+<div id="length-operator" class="section level3">
+<h3>Length Operator</h3>
+<p>Length operator returns the length of a non-scalar objects</p>
+<ul>
+<li><p>For a string, it will give us how many characters there
+are</p></li>
+<li><p>For a set, it will give how many unique elements it will
+have</p></li>
+<li><p>For a dictionary, it will give how many key/value pairs there
+are</p></li>
+</ul>
+<p>Length is executed with the len() function:</p>
+<pre class="python"><code>len(&#39;father&#39;)</code></pre>
+<pre><code>## 6</code></pre>
+<p><br /></p>
+</div>
+<div id="sequence-operations" class="section level3">
+<h3>Sequence Operations</h3>
+<p>If we use <span class="math inline">\(*\)</span> for
+lists/tuples/strings and a number, it concatenates it a number of times.
+For example:</p>
+<pre class="python"><code>3 * (1,2)</code></pre>
+<pre><code>## (1, 2, 1, 2, 1, 2)</code></pre>
+<p>You can concatenate lists and touples with <span class="math inline">\(+\)</span></p>
+<pre class="python"><code>[1, 2, 3] + [4, 5, 6]</code></pre>
+<pre><code>## [1, 2, 3, 4, 5, 6]</code></pre>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY470_Computer_Programming">MY470
+Homepage</a></p>
+</div>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<div id="introduction-1" class="section level3">
+<h3>Introduction</h3>
+<p>Objects have methods associated with them</p>
+<ul>
+<li><p>A method is something you can do to a particular data type
+(methods are specific to the particular data type)</p></li>
+<li><p>We attach a method to an object by using a . followed by the
+method, both after the object: object.method()</p></li>
+</ul>
+<p>For example, for string data, you can turn all the characters upper
+case with the method upper()</p>
+<pre class="python"><code>string1 = &#39;hello&#39;
+string1.upper()</code></pre>
+<pre><code>## &#39;HELLO&#39;</code></pre>
+<p><br /></p>
+</div>
+<div id="string-methods" class="section level3">
+<h3>String Methods</h3>
+<p>There are 4 most common string methods:</p>
 <ol style="list-style-type: decimal">
-<li>Primitive constructs: basic units in which we store/assign data, and
-basic operations to manipulate it
+<li>S.upper() - change everything to upper case</li>
+<li>S.lower() - change everything to lower case</li>
+<li>S.capitalize() - capitalises the first word</li>
+<li>S.find( <span class="math inline">\(x\)</span> ) - returns the
+“index” of the first instance of the string input <span class="math inline">\(x\)</span></li>
+<li>S.replace( <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>) - finds string <span class="math inline">\(x_1\)</span>, replaces with <span class="math inline">\(x_2\)</span></li>
+<li>S.strip() - will remove any “whitespace character” on the left and
+right, which includes spaces, emojis, latex characters, etc.</li>
+<li>S.split() - splits the string into words by spaces</li>
+<li>S.join( <span class="math inline">\(x\)</span> ) - combines a list
+of strings <span class="math inline">\(x\)</span>, with each different
+string being joined together by the S. string involved</li>
+</ol>
+<p>For example, S.split() and S.join</p>
+<pre class="python"><code>string2 = &#39;hi my name is kevin&#39;
+# split each word into a list
+list2 = string2.split()
+
+# join each word together with &#39;-&#39;
+joinstring = &#39;-&#39;
+joinstring.join(list2)</code></pre>
+<pre><code>## &#39;hi-my-name-is-kevin&#39;</code></pre>
+<p><br /></p>
+</div>
+<div id="set-methods" class="section level3">
+<h3>Set Methods</h3>
+<p>Set methods are very useful, since sets are unordered</p>
+<ol style="list-style-type: decimal">
+<li>S1.union(S2) - all elements of both S1 and S2 combined</li>
+<li>S1.intersection(S2) - elements in both S1 and S2 (overlap)</li>
+<li>S1.difference(S2) - elements in S1 but not in S2</li>
+<li>S1.symmetric_difference(S2) - elements in S1 or S2, but not in
+both</li>
+</ol>
+<p>These reflect set theory operations quite closely</p>
+<p><br /></p>
+<p>For example, what are all the letters in the strings ‘hello’ and
+‘world’?</p>
+<pre class="python"><code>set1 = set(&#39;hello&#39;)
+set2 = set(&#39;world&#39;)
+set1.union(set2)</code></pre>
+<pre><code>## {&#39;r&#39;, &#39;d&#39;, &#39;h&#39;, &#39;e&#39;, &#39;o&#39;, &#39;l&#39;, &#39;w&#39;}</code></pre>
+<p><br /></p>
+</div>
+<div id="dictionary-indexing" class="section level3">
+<h3>Dictionary Indexing</h3>
+<p>Dictionaries are indexed by keys - which each value has</p>
+<p>We can find values, based on the key</p>
+<p>For example, let us have this dictionary - with keys being names, and
+values being professions:</p>
+<pre class="python"><code>mydictionary = {&#39;Kevin&#39;: &#39;politician&#39;, &#39;Daphne&#39;: &#39;Biologist&#39;, &#39;Janice&#39;: &#39;Violinist&#39;}</code></pre>
+<p>We can index using square brackets []. We can find the value
+(profession) of anyone using their key (name):</p>
+<pre class="python"><code>mydictionary[&#39;Daphne&#39;]</code></pre>
+<pre><code>## &#39;Biologist&#39;</code></pre>
+<p><br /></p>
+</div>
+<div id="ordered-sequence-indexing" class="section level3">
+<h3>Ordered Sequence Indexing</h3>
+<p>Ordered objects, such as lists, tuples, and strings, each element has
+an index</p>
 <ul>
-<li>Literals: anything that you can input in the program that will be
-evaluated correctly/understood (ex. a number, a string, a boolean,
-etc.)</li>
-<li>Infix Operators: operations on the literals (ex. add, subtract,
-multiply, powers, concatenating strings, etc.)</li>
-</ul></li>
-<li>Syntax: rules of how these elements come together
+<li>So the first element is index <span class="math inline">\(0\)</span>, 2nd element is index <span class="math inline">\(1\)</span>, 3rd element is index <span class="math inline">\(3\)</span></li>
+</ul>
+<p>We can index with square brackets[]. For example, what is the 3rd
+letter of ‘London’?</p>
+<pre class="python"><code>&#39;London&#39;[2] #2 because we start from 0</code></pre>
+<pre><code>## &#39;n&#39;</code></pre>
+<p>We can also index from the back using a negative sign. For example,
+what is the 2nd to last letter in London? (note, from the back, we start
+counting from -1)</p>
+<pre class="python"><code>&#39;London&#39;[-2]</code></pre>
+<pre><code>## &#39;o&#39;</code></pre>
+<p><br /></p>
+<p>We can also index a few different elements at the same time, using
+“:”. Note, the last index you include is not included.</p>
+<p>For example, what are the first 3 letters of london?</p>
+<pre class="python"><code>&#39;London&#39;[0:3] # index 3 (4th letter) not included</code></pre>
+<pre><code>## &#39;Lon&#39;</code></pre>
+<p>You can also include everything from the start by not putting
+anything before :, and include everything to the end by not putting
+anything after :</p>
+<p>We can also change the “steps” while indexing over a range. For
+example, if I index the first 4 letters of “london”, but I skip one
+letter every other letter (step = 2), we get:</p>
+<pre class="python"><code>&#39;London&#39;[0:4:2]</code></pre>
+<pre><code>## &#39;Ln&#39;</code></pre>
+<p><br /></p>
+</div>
+<div id="list-methods-mutability" class="section level3">
+<h3>List Methods (Mutability)</h3>
+<p>We know that lists and sets and dictionaries are mutable</p>
 <ul>
-<li>What symbols to use, what functions to use, etc.</li>
-<li>The “grammar” of a programming language</li>
-<li>Ex. to add, we use “+”, not any other symbol</li>
-</ul></li>
-<li>Static Semantics: whether the strings of different elements are
-meaningful for a computer
-<ul>
-<li>Rules for forming syntax, that actually makes sense</li>
-<li>Ex, while <em>“kevin” + 1</em> is syntactically correct, that makes
-no sense to the computer - how do you add a string “kevin” with the
-number “1”?</li>
-</ul></li>
-<li>Semantics: the meaning associated with a expression
-<ul>
-<li>What does the operation I just did mean? Is it what I want it to
-mean?</li>
-<li>Difficult to diagnose when it goes wrong - there’s no error
-appearing like the others, it is about interpretation of the result</li>
-</ul></li>
+<li><p>This means we can add into these non-scalar objects</p></li>
+<li><p>For example, if we have a list with 3 objects, we can add a 4th
+object to it while keeping the other objects.</p></li>
+</ul>
+<p>For lists, these methods allow us to use mutability:</p>
+<ol style="list-style-type: decimal">
+<li>L.append( <span class="math inline">\(e\)</span>) - appends a new
+value <span class="math inline">\(e\)</span></li>
+<li>L.insert( <span class="math inline">\(i\)</span>, <span class="math inline">\(e\)</span> ) inserts at index <span class="math inline">\(i\)</span> a new value <span class="math inline">\(e\)</span></li>
+<li>L.remove( <span class="math inline">\(e\)</span> ) removes element
+<span class="math inline">\(e\)</span> (if repeated, will remove the
+first)</li>
+<li>L.extend( <span class="math inline">\(x\)</span> ), extending a list
+with another list <span class="math inline">\(x\)</span></li>
+<li>L.pop( <span class="math inline">\(i\)</span> ) given the index
+<span class="math inline">\(i\)</span>, it will remove that element and
+give you that element’s value</li>
+<li>L.sort() - if it is numerical, goes from small to large, if string,
+alphabetical</li>
+<li>L.reverse() - reverse sort opposite order of above</li>
 </ol>
 <p><br /></p>
-</div>
-<div id="types-of-languages" class="section level3">
-<h3>Types of Languages</h3>
-<p>Low-Level vs. High-Level Languages:</p>
-<ul>
-<li><p>Low-level languages speak directly to the hardware</p></li>
-<li><p>High-level languages speak to lower level languages, who then
-speak to the hardware (more layers)</p></li>
-<li><p>Lower level languages are more efficient, and require less memory
-- however, can be harder to learn and interpret, and are less
-intuitive</p></li>
-</ul>
-<p><br /></p>
-<p>General vs. Application Targeted Languages</p>
-<ul>
-<li><p>Some programming languages are meant for specific tasks, while
-others can do a variety of tasks</p></li>
-<li><p>Python is a general language - you can do almost everything with
-it</p></li>
-<li><p>Some languages are designed for specific tasks - maybe like
-networks, etc.</p></li>
-</ul>
-<p><br /></p>
-<p>Interpreted vs. Compiled Languages</p>
-<ul>
-<li><p>For some languages, you don’t just type the code, and run it
-right away. You need to compile your code into a form that the machine
-can understand before it runs.</p></li>
-<li><p>Python and R do not need to be compiled before running</p></li>
-</ul>
-<p><br /></p>
-</div>
-<div id="computer-programs" class="section level3">
-<h3>Computer Programs</h3>
-<p>Computer Programs are a sequence of definitions and commands, that
-instruct the computer to do something</p>
-<ul>
-<li><p>Programs are executed by the language interpreter (called the
-“shell”)</p></li>
-<li><p>They can be typed directly in the shell, or we can store it in
-the file, and run the file itself</p></li>
-</ul>
-<p><br /></p>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#MY470_Computer_Programming">MY470
 Homepage</a></p>
 </div>
 </div>
-<div id="objects" class="section level1">
-<h1>Objects</h1>
-<div id="data-types" class="section level3">
-<h3>Data Types</h3>
-<p>Programs manipulate objects. Objects have two types:</p>
-<ul>
-<li><p>Scalar: indivisible data (can’t really find structure within
-it)</p>
-<ul>
-<li><p>Integers (a positive or negative whole number)</p></li>
-<li><p>Floating point (decimals)</p></li>
-<li><p>These are just one object - they can’t be further
-subdivided</p></li>
-</ul></li>
-<li><p>Non-scalar: with internal structure (multiple elements
-within)</p>
-<ul>
-<li><p>Lists - an object with multiple elements (ex. [3, 7, “j”]
-)</p></li>
-<li><p>Strings (in python) - where each letter/character is an
-element</p></li>
-</ul></li>
-</ul>
-<p>Expressions combine objects and operators</p>
+<div id="exercises" class="section level1">
+<h1>Exercises</h1>
+<div id="exercise-1" class="section level3">
+<h3>Exercise 1</h3>
+<p>How many unique letters are in the sentence: “jackie will budget for
+the most expensive zoology equipment”</p>
+<p><br /></p>
+<p><strong>Solution</strong>:</p>
+<p>First, let us assign this string to a variable:</p>
+<pre class="python"><code>a = &#39;jackie will budget for the most expensive zoology equipment&#39;</code></pre>
+<p>We know that sets only retain unique elements of a string. So, let us
+convert the variable to a set</p>
+<pre class="python"><code>set(a)</code></pre>
+<pre><code>## {&#39;a&#39;, &#39;n&#39;, &#39;c&#39;, &#39;o&#39;, &#39;l&#39;, &#39;t&#39;, &#39;y&#39;, &#39;j&#39;, &#39;d&#39;, &#39;z&#39;, &#39;i&#39;, &#39;h&#39;, &#39;g&#39;, &#39;v&#39;, &#39;f&#39;, &#39;s&#39;, &#39;b&#39;, &#39;p&#39;, &#39;r&#39;, &#39;k&#39;, &#39;m&#39;, &#39;w&#39;, &#39;x&#39;, &#39;u&#39;, &#39; &#39;, &#39;q&#39;, &#39;e&#39;}</code></pre>
+<p>Notice how we have one space that isn’t a letter. So, let us find the
+length of the set, then minus 1:</p>
+<pre class="python"><code>len(set(a)) - 1</code></pre>
+<pre><code>## 26</code></pre>
 <p><br /></p>
 </div>
-<div id="variables" class="section level3">
-<h3>Variables</h3>
-<p>Often, we want to store our objects, so we can use them later</p>
-<ul>
-<li><p>Variables associate objects with a name</p></li>
-<li><p>In python, you use the equal sign</p></li>
-</ul>
-<p>For example, <span class="math inline">\(a,b,c\)</span> are variables
-(in python, we use <span class="math inline">\(=\)</span> to assign
-variables).</p>
-<pre class="python"><code>a = 3.14
-b = 11.2
-c = a*(b**2) #** means power</code></pre>
+<div id="exercise-2" class="section level3">
+<h3>Exercise 2</h3>
+<p>Reformat this sentence so it is more properly formatted</p>
+<pre class="python"><code>listwords = [ &#39;   ThiS&#39;, &#39;sEnteNce&#39;, &#39;NEEDS&#39;, &#39;betteR!&#39;, &#39;formaTting&#39;]</code></pre>
 <p><br /></p>
-<p>To call a variable, simply type that variable and run. Alternatively,
-you can use the print function:</p>
-<pre class="python"><code># print variable a
-a</code></pre>
-<pre><code>## 3.14</code></pre>
-<pre class="python"><code># another way
-print(a)</code></pre>
-<pre><code>## 3.14</code></pre>
+<p><strong>Solution:</strong></p>
+<p>First, let us join this into one string</p>
+<pre class="python"><code>string3 = &#39; &#39;.join(listwords)
+print(string3)</code></pre>
+<pre><code>##    ThiS sEnteNce NEEDS betteR! formaTting</code></pre>
+<p>Now, let us get rid of initial spaces before ThiS</p>
+<pre class="python"><code>string3 = string3.strip()
+print(string3)</code></pre>
+<pre><code>## ThiS sEnteNce NEEDS betteR! formaTting</code></pre>
+<p>Now, let us make only the first letter of the sentence
+capitalised</p>
+<pre class="python"><code>string3 = string3.capitalize()
+print(string3)</code></pre>
+<pre><code>## This sentence needs better! formatting</code></pre>
+<p>Now, let us get rid of the random ! in the middle:</p>
+<pre class="python"><code>string3 = string3.replace(&#39;!&#39;, &#39;&#39;)
+print(string3)</code></pre>
+<pre><code>## This sentence needs better formatting</code></pre>
+<p>Now, let us add the period:</p>
+<pre class="python"><code>string3 = string3 + &#39;.&#39;
+print(string3)</code></pre>
+<pre><code>## This sentence needs better formatting.</code></pre>
 <p><br /></p>
-<p>Generally, we want to name variables based on what they contain</p>
-<ul>
-<li><p>This makes it legible to humans who are reading the code</p></li>
-<li><p>Helps with debugging and finding issues</p></li>
-<li><p>Also, include comments (with “#”)</p></li>
-</ul>
-<p><br /></p>
-<hr />
-<p><a href="https://kevinli03.github.io/notes/#MY470_Computer_Programming">MY470
-Homepage</a></p>
+<p>We could also solve this in one long command:</p>
+<pre class="python"><code>&#39; &#39;.join(listwords).strip().capitalize().replace(&#39;!&#39;, &#39;&#39;) + &#39;.&#39;</code></pre>
+<pre><code>## &#39;This sentence needs better formatting.&#39;</code></pre>
 </div>
 </div>
 
@@ -3150,7 +3508,7 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = false;
+    options.showAndHide = true;
     options.smoothScroll = true;
 
     // tocify

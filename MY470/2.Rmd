@@ -1,0 +1,809 @@
+---
+title: "Data Types in Python"
+subtitle: "Session 2, MY470"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: true
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+Week 2, MY470 Computer Programming
+
+-   Title: Data Types, Operators, Methods
+
+-   Topics: Data Types
+
+-   Readings: N/A
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+# Key Points
+
+[Scalar Data Types]{.underline} in Python
+
+```{python}
+# int - whole numbers
+integer1 = 23
+
+# float - decimals
+float1 = 23.2342
+
+# bool - True/False
+bool1 = True
+bool2 = False
+
+#Empty/nothing data type
+empty = None
+```
+
+<br />
+
+[**Non-Scalar Data Types**]{.underline} in Python
+
+```{python}
+
+# lists - ordered and changeable
+list1 = [1,2,3,4]
+
+# tuple - ordered but unchangeable
+tuple1 = (1,2,3,4)
+
+#string - ordered group of characters
+string1 = 'Hello World!'
+
+# set - unordered, only unique objects
+set1 = {1, 2, 3, 4}
+
+# dictionary = unordered, unique objects, but with "key" for each
+dict1 = {'key1' : 1, 'name2' : 2}
+```
+
+<br />
+
+We can [**change**]{.underline} data types by using a function of that data type on something else. Be aware, data may be altered/broken.
+
+```{python}
+# let us change a string into an integer
+a = int('452')
+type(a)
+```
+
+<br />
+
+Some select [**operators**]{.underline} (most common ones are obvious):
+
+```{python}
+# string concatenate (only works for strings)
+'hel' + 'lo!'
+
+# length (for any non-scalar)
+len('hello!')
+
+#in (for any non-scalar)
+'f' in 'father'
+```
+
+<br />
+
+Objects have [**methods**]{.underline} associated with them
+
+-   A method is something you can do to a particular data type (methods are specific to the particular data type)
+
+-   We attach a method to an object by using a . followed by the method, both after the object: object.method()
+
+For example, for string data, you can turn all the characters upper case with the method upper()
+
+```{python}
+string1 = 'hello'
+string1.upper()
+```
+
+<br />
+
+[**Indexing**]{.underline} is possible for strings/tuples/lists, and dictionaries.
+
+-   Strings/tuples/lists are indexed by the element order (start counting from 0).
+
+    -   To index from the back, use a "-" sign
+
+    -   To index a range of elements, use : between the range.
+
+-   Dictionaries indexed by the name of the key
+
+```{python}
+# 3rd element of string/tuple/list
+'London'[2]
+
+# indexing dictionary using key
+dict2 = {'Kevin': 'politician', 'Daphne': 'Biologist', 'Janice': 'Violinist'}
+dict2['Daphne']
+```
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+# Python
+
+### Python Programming Language
+
+Why are we learning python?
+
+-   Python is open source: it is freely available and well documented
+
+-   Simple and concise syntax that is intuitive to learn
+
+-   Many useful libraries to install for practical applications
+
+-   Widely used in industry and science - it is arguably the most widely used language today
+
+<br />
+
+### Python Syntax
+
+Python has a very simple syntax. For example, for "hello world", python is simply:
+
+```{python}
+print('Hello World!')
+```
+
+<br />
+
+Compare this to Java, which takes the following syntax:
+
+```{r, eval = FALSE}
+
+public class HelloWorld {
+  public static void main (String[] args) {
+    System.out.println("Hello world!");
+  }
+}
+```
+
+In comparison, Python's simple syntax makes it very intuitive to learn
+
+<br />
+
+### Speed of Python
+
+Python, while simple, is not the fastest language
+
+-   Languages that are lower level (C, Java) are far more faster
+
+-   Python is a much higher language - so more layers between it and the hardware
+
+However, compared to R, python is faster
+
+-   This is not even including R packages
+
+While there are many advantages to Python, it is not great if speed is your number one priority
+
+<br />
+
+### Brief History of Python
+
+Python was started in 1989 by Guido Van Rossum
+
+-   Python 2.0 was released in 2000, although today, it is not common
+
+-   Nowadays, Python 3.0 is the most common version
+
+-   Newer versions are often not backwards compatible with older verisions
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+# Scalar Data Types
+
+### Introduction
+
+There are several types of scalar (indivisible) data types
+
+-   Integers - just a whole number, negative or positive
+
+-   Float: similar to integer, but has decimals (distinction due to memory storing)
+
+-   Boolean: True/False (With one capital letter)
+
+-   NoneType: defined as "None", a placeholder to intialise a variable and later you can refer to it
+
+Note: String is non-scalar in python (also, use single quote marks '' to denote them)
+
+To check the type of a variable, use the function **type()**
+
+```{python}
+type(2383.34)
+```
+
+<br />
+
+### Converting Between Types
+
+You can convert between scalar data types
+
+-   For example, store an integer with a float
+
+For example, 123 is normally an integer, but using the name of the data type, we can make it a float. we can also test others
+
+```{python}
+type(float(123))
+
+type(bool(123))
+
+type(str(123))
+```
+
+Some notes regarding this:
+
+-   If you change a decimal to an integer, it just drops the decimal
+
+-   Every object has a boolean number - every number is true except 0, and for any string, it is true except for the empty string
+
+Be careful with changing the types - this can result in errors and mistakes
+
+<br />
+
+This is quite useful - let us say you have a dataset
+
+-   But, some variables, for some reason, are labelled as strings even though they are numbers
+
+-   With this, we can quickly make them into flaots
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+# Non-Scalar Data Types
+
+### List, Tuple, and Strings
+
+[List]{.underline}: a mutable ordered sequence of values
+
+-   Order matters - it is preserved
+
+-   List is able to replace/add items without overriding the previous lists (useful for if you want to keep updating by adding values)
+
+We can make a list with the square brakets [], as following:
+
+```{python}
+a = [1,3,5,7]
+type(a)
+```
+
+<br />
+
+[Tuple]{.underline}: a immutable ordered sequence of values
+
+-   Order matters - it is preserved
+
+-   Tuple - you cannot replace/add items, you have to override (so useful for things that aren't going to change)
+
+-   Then why tuple? It is more memory efficient and faster, and also, they can be used for dictionary keys (see below)
+
+We can make a tuple with round brackes (), as following:
+
+```{python}
+b = (1,2,3,4)
+type(b)
+```
+
+<br />
+
+### Strings
+
+[String]{.underline}: a immutable ordered sequence of characters
+
+-   Order matters in a string
+
+-   You cannot replace/add items within the string, you have to override
+
+We can make a string with single quotes '', as following:
+
+```{python}
+c = 'hello'
+type(c)
+```
+
+<br />
+
+Strings actually can be defined with single quotes '', or double quotes ""
+
+-   Normally, this makes no difference
+
+-   But, if we want to embed a certain type of quote within our string, we can use the other quote to start/end the string
+
+For example, let us take this example:
+
+```{python}
+string = 'I am your "father"'
+print(string)
+```
+
+You could also use the backslash \\ to include quotes (and other symbols)
+
+```{python}
+string = "I am your \"father\""
+print(string)
+```
+
+<br />
+
+### Sets and Dictionaries
+
+[Set:]{.underline} A mutable unordered collection of unique values
+
+-   Order does not matter
+
+-   It only saves unique values
+
+For example, we can make the string 'hello' into a set. Notice how the order of a set doesn't matter, and it gets rid of the duplicate "l".
+
+```{python}
+d = set('hello')
+print(d)
+```
+
+You can define sets as well with curly brackets {}. Sets can also have different data types:
+
+```{python}
+e = {3, 'f', None}
+type(e)
+```
+
+<br />
+
+[Dictionary]{.underline} is a collection of key/value pairs
+
+-   For example, a phone book - name and phone number
+
+-   We have a key (ex. a name), and a value
+
+-   It is basically a set, but with a key for each value/object
+
+For example, let us create a dictionary with {}, with ":" assigning a key to an object:
+
+```{python}
+f = {'object1' : 1, 'coolobject' : [1,2,3]}
+type(f)
+```
+
+We can also create a dictionary as follows:
+
+-   Basically, within dict(), we have a list [] with 2 elements - both being tuples, and each tuple is a key/value combination
+
+-   Keys of a dictionary must be a tuple
+
+```{python}
+g = dict( [ ('key1', 'value 1'), ('key2', 'value2') ] )
+print(g)
+```
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+# Operators
+
+### Arithmetic Operators
+
+Arithmetic operators are used to do mathematical operations to modify integers and floats:
+
+-   $+$ addition (note - doing this on non-integers/floats will do something else)
+
+-   $-$ subtraction
+
+-   $*$ multiplication (note - doing this on non-integers/floats will do something else)
+
+-   $/$ division
+
+-   $\%$ modulus (remainder of a division problem)\\
+
+-   $//$ floor division (division but getting rid of the decimal in the answer)
+
+-   $**$ exponent
+
+For example, we can do the following arithmetic:
+
+```{python}
+8339 + 5
+```
+
+<br />
+
+However, like I mentioned before, some of the operators will function differently given a non-interger/float data type.
+
+-   For example, if we do the same operation, but make both our number strings, it actually concatenates (adds 5 to the end of the string)
+
+```{python}
+'8339' + '5'
+```
+
+<br />
+
+### Boolean Operators
+
+There are 3 main boolean operators:
+
+-   $and$ - when 2 statements both have to be met to return a True
+
+-   $or$ - when either statement has to be met to return a True
+
+-   $not$ - basically the opposite
+
+For example, the most basic boolean example is:
+
+```{python}
+not False
+```
+
+These are very useful for conditional if loops
+
+<br />
+
+### Comparison Operators
+
+Comparison operators allows us to compare statements, which will return a Boolean value (True/False):
+
+-   $==$- equals (make sure it is double equal sign, since the assignment operator is one equal sign)
+
+-   $!=$ - does not equal
+
+-   $>$ greater than
+
+-   $<=$ less than or equal to
+
+For example, take this statement:
+
+```{python}
+5 == 4
+```
+
+<br />
+
+### Assignment Operators
+
+Assignment operators allow us to define variables
+
+-   $=$ assigns the right side, to the left side
+
+-   $+=$ adds right to the left side, then assigns it to the left side
+
+-   $-=$ subtracts right from left side, then assigns to the left side
+
+For example, we can assign a value to a variable:
+
+```{python}
+myvar = 3
+
+#now, does 3 = 4?
+myvar == 4
+
+#take 1, add it to myvar, then store in myvar
+myvar += 1
+
+#now, does it equal 4?
+myvar == 4
+```
+
+<br />
+
+### Membership Operator
+
+A membership operator is primarily used in non-scalar objects
+
+-   it is defined by the syntax $in$
+
+-   Basically, it tells us True/False that a certain element is within the non-scalar object
+
+For example, let us ask if the string 'f' is in 'father'. The output will be True/False
+
+```{python}
+'f' in 'father'
+```
+
+<br />
+
+### Length Operator
+
+Length operator returns the length of a non-scalar objects
+
+-   For a string, it will give us how many characters there are
+
+-   For a set, it will give how many unique elements it will have
+
+-   For a dictionary, it will give how many key/value pairs there are
+
+Length is executed with the len() function:
+
+```{python}
+len('father')
+```
+
+<br />
+
+### Sequence Operations
+
+If we use $*$ for lists/tuples/strings and a number, it concatenates it a number of times. For example:
+
+```{python}
+3 * (1,2)
+```
+
+You can concatenate lists and touples with $+$
+
+```{python}
+[1, 2, 3] + [4, 5, 6]
+```
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+# Methods
+
+### Introduction
+
+Objects have methods associated with them
+
+-   A method is something you can do to a particular data type (methods are specific to the particular data type)
+
+-   We attach a method to an object by using a . followed by the method, both after the object: object.method()
+
+For example, for string data, you can turn all the characters upper case with the method upper()
+
+```{python}
+string1 = 'hello'
+string1.upper()
+```
+
+<br />
+
+### String Methods
+
+There are 4 most common string methods:
+
+1.  S.upper() - change everything to upper case
+2.  S.lower() - change everything to lower case
+3.  S.capitalize() - capitalises the first word
+4.  S.find( $x$ ) - returns the "index" of the first instance of the string input $x$
+5.  S.replace( $x_1$, $x_2$) - finds string $x_1$, replaces with $x_2$
+6.  S.strip() - will remove any "whitespace character" on the left and right, which includes spaces, emojis, latex characters, etc.
+7.  S.split() - splits the string into words by spaces
+8.  S.join( $x$ ) - combines a list of strings $x$, with each different string being joined together by the S. string involved
+
+For example, S.split() and S.join
+
+```{python}
+string2 = 'hi my name is kevin'
+# split each word into a list
+list2 = string2.split()
+
+# join each word together with '-'
+joinstring = '-'
+joinstring.join(list2)
+```
+
+<br />
+
+### Set Methods
+
+Set methods are very useful, since sets are unordered
+
+1.  S1.union(S2) - all elements of both S1 and S2 combined
+2.  S1.intersection(S2) - elements in both S1 and S2 (overlap)
+3.  S1.difference(S2) - elements in S1 but not in S2
+4.  S1.symmetric_difference(S2) - elements in S1 or S2, but not in both
+
+These reflect set theory operations quite closely
+
+<br />
+
+For example, what are all the letters in the strings 'hello' and 'world'?
+
+```{python}
+set1 = set('hello')
+set2 = set('world')
+set1.union(set2)
+```
+
+<br />
+
+### Dictionary Indexing
+
+Dictionaries are indexed by keys - which each value has
+
+We can find values, based on the key
+
+For example, let us have this dictionary - with keys being names, and values being professions:
+
+```{python}
+mydictionary = {'Kevin': 'politician', 'Daphne': 'Biologist', 'Janice': 'Violinist'}
+```
+
+We can index using square brackets []. We can find the value (profession) of anyone using their key (name):
+
+```{python}
+mydictionary['Daphne']
+```
+
+<br />
+
+### Ordered Sequence Indexing
+
+Ordered objects, such as lists, tuples, and strings, each element has an index
+
+-   So the first element is index $0$, 2nd element is index $1$, 3rd element is index $3$
+
+We can index with square brackets[]. For example, what is the 3rd letter of 'London'?
+
+```{python}
+'London'[2] #2 because we start from 0
+```
+
+We can also index from the back using a negative sign. For example, what is the 2nd to last letter in London? (note, from the back, we start counting from -1)
+
+```{python}
+'London'[-2]
+```
+
+<br />
+
+We can also index a few different elements at the same time, using ":". Note, the last index you include is not included.
+
+For example, what are the first 3 letters of london?
+
+```{python}
+'London'[0:3] # index 3 (4th letter) not included
+```
+
+You can also include everything from the start by not putting anything before :, and include everything to the end by not putting anything after :
+
+We can also change the "steps" while indexing over a range. For example, if I index the first 4 letters of "london", but I skip one letter every other letter (step = 2), we get:
+
+```{python}
+'London'[0:4:2]
+```
+
+<br />
+
+### List Methods (Mutability)
+
+We know that lists and sets and dictionaries are mutable
+
+-   This means we can add into these non-scalar objects
+
+-   For example, if we have a list with 3 objects, we can add a 4th object to it while keeping the other objects.
+
+For lists, these methods allow us to use mutability:
+
+1.  L.append( $e$) - appends a new value $e$
+2.  L.insert( $i$, $e$ ) inserts at index $i$ a new value $e$
+3.  L.remove( $e$ ) removes element $e$ (if repeated, will remove the first)
+4.  L.extend( $x$ ), extending a list with another list $x$
+5.  L.pop( $i$ ) given the index $i$, it will remove that element and give you that element's value
+6.  L.sort() - if it is numerical, goes from small to large, if string, alphabetical
+7.  L.reverse() - reverse sort opposite order of above
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY470 Homepage](https://kevinli03.github.io/notes/#MY470_Computer_Programming)
+
+# Exercises
+
+### Exercise 1
+
+How many unique letters are in the sentence: "jackie will budget for the most expensive zoology equipment"
+
+<br />
+
+**Solution**:
+
+First, let us assign this string to a variable:
+
+```{python}
+a = 'jackie will budget for the most expensive zoology equipment'
+```
+
+We know that sets only retain unique elements of a string. So, let us convert the variable to a set
+
+```{python}
+set(a)
+```
+
+Notice how we have one space that isn't a letter. So, let us find the length of the set, then minus 1:
+
+```{python}
+len(set(a)) - 1
+```
+
+<br />
+
+### Exercise 2
+
+Reformat this sentence so it is more properly formatted
+
+```{python}
+listwords = [ '   ThiS', 'sEnteNce', 'NEEDS', 'betteR!', 'formaTting']
+```
+
+<br />
+
+**Solution:**
+
+First, let us join this into one string
+
+```{python}
+string3 = ' '.join(listwords)
+print(string3)
+```
+
+Now, let us get rid of initial spaces before ThiS
+
+```{python}
+string3 = string3.strip()
+print(string3)
+```
+
+Now, let us make only the first letter of the sentence capitalised
+
+```{python}
+string3 = string3.capitalize()
+print(string3)
+```
+
+Now, let us get rid of the random ! in the middle:
+
+```{python}
+string3 = string3.replace('!', '')
+print(string3)
+```
+
+Now, let us add the period:
+
+```{python}
+string3 = string3 + '.'
+print(string3)
+```
+
+<br />
+
+We could also solve this in one long command:
+
+```{python}
+' '.join(listwords).strip().capitalize().replace('!', '') + '.'
+```
