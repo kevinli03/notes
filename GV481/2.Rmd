@@ -1,0 +1,52 @@
+---
+title: "Single and Multivariate OLS"
+subtitle: "Session 2, GV481"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: true
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+Week 1, Quantitative Analysis for Political Science
+
+-   Title: Single and Multivariate OLS
+
+-   Topics:
+
+-   Readings:
+
+    1.  Chapters 4 and 5, Mesquita et al (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*
+
+    2.  Chapters 2.1-2.14, Cunningham, S. (2021) *Causal Inference: The Mixtape*
+
+    3.  Fowler, A. (2018) 'Do Shark Attacks Influence Presidential Elections', *The Journal of Politics*, 80(4), pp. 1423-1437
+
+    4.  Suryanarayan, P. and Steven, W. (2021) 'Slavery, Reconstruction, and Bureaucratic Capacity in the American South', *The American Political Science Review*, 155(2), pp. 568-584
+
+    5.  Haber, S. and Victor, M. (2011) 'Do Natural Resources Fuel Authoritarianism? A Reappraisal of the Resource Curse', *The American Political Science Review*, 105(1), pp. 1-26.
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Key Points
