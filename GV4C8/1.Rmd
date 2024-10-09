@@ -280,6 +280,10 @@ What is the most likely outcome? Let us assume standard voting
 
 Note: between any 2 options, the group always has a preference. However, there is no transitivity. See the figure below:
 
+-   No transitivity, because transitivity says if $a>b$ and $b>c$, then $a>c$
+
+-   But here, $a<c$, so it is not transitive
+
 ![](figure1.1.png){width="60%"}
 
 <br />
@@ -288,7 +292,8 @@ Note: between any 2 options, the group always has a preference. However, there i
 
 Condorcet's Paradox: group preferences are usually not rational
 
--   This very simple game shows how difficult it is to come up with group decisions
+-   Often, group preferences do not meet the require of transitivity
+-   For example, the cyclical nature shows that $a>b$, $b>c$, yet $c>a$, which isn't transitive
 
 Arrow's Impossibility Theorem: No reasonable (easy, obvious) way to aggregate preferences - to come to joint decisions
 

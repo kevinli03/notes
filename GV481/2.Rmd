@@ -228,9 +228,8 @@ Interpretation of the coefficients is still mostly the same, with a slight chang
 
 -   $\alpha$ tells us the predicted probability of $Y=1$, when $X = 0$
 
-```{=html}
 <!-- -->
-```
+
 -   $\beta$ is now the predicted change in the probability of event $Y=1$, given one unit increase of $X$
 
 -   Once again, we can do the expected standard deviation change in $Y$, given one standard deviation increase in $X$
