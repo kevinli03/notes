@@ -99,6 +99,28 @@ Where $\hat{r}_{i1}$ are the residuals obtained from regressing $X_1$ on $X_2$. 
 
 <br />
 
+To deal with a non-linear relationship, we can use a [**polynomial transformation**]{.underline}.
+
+$$
+\hat{Y} = \alpha + \beta_1 X + \beta_2 X^2 ...
+$$
+
+-   If we want higher degree transformation, we can add another term
+
+-   Higher polynomials may fit the data better, but may overfit, and be hard to interpret
+
+<br />
+
+[**Overfitting**]{.underline} essentially means that within our training data, the model performs amazingly, but with new data on $X$ to predict $Y$, it performs poorly
+
+-   This is because it is fit too closely to our training data, which means it is only good at predicting the existing data, not new data
+
+-   Remember, our training data is just a sample from a population. New data drawn from the population will not be exactly the same. We are interested in predicting $Y$ of the population, not of our specific training sample
+
+In data science, we can avoid overfitting through either making training/testing sets, or cross-validation
+
+<br />
+
 ------------------------------------------------------------------------
 
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
@@ -325,3 +347,271 @@ Linear regression does not always mean a straight line
 <br />
 
 ------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Reading: Mesquita Ch. 4-5
+
+Chapters 4 and 5, Mesquita et al (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*
+
+<br />
+
+### Key Points
+
+If you want to figure out whether two variables are [**correlated**]{.underline}, you have to **observe variation** in both of them
+
+-   Just observing variation in one variable is not enough
+
+If there is no variation, that is just a fact, not a correlation
+
+<br />
+
+A [**regression equation**]{.underline} takes the following form:
+
+$$
+\hat{Y} = \alpha + \beta X
+$$
+
+The regression expresses a linear relationship between a dependent (outcome) $Y$ variable, and a independent (explanatory) $X$ variable
+
+-   The dependent variable $Y$ is the outcome we are trying to describe, predict, or explain
+
+-   The independent variable $X$ is what we are using to explain, describe, or predict $Y$
+
+<br />
+
+$\alpha$ and $\beta$ are [**regression parameters**]{.underline}
+
+-   These parameters define the particular line we are drawing
+
+-   $\alpha$ is called the intercept, the predicted value of $Y$ given $X=0$
+
+-   $\beta$ is the slope - the predicted amount that $Y$ changes for each unit increase of $X$
+
+The line that we get from estimating $\alpha$ and $\beta$ which minimise the sum of squared errors, is the OLS regression line of best fit.
+
+<br />
+
+To deal with a non-linear relationship, we can use a [**polynomial transformation**]{.underline}.
+
+$$
+\hat{Y} = \alpha + \beta_1 X + \beta_2 X^2 ...
+$$
+
+-   If we want higher degree transformation, we can add another term
+
+-   Higher polynomials may fit the data better, but may overfit, and be hard to interpret
+
+<br />
+
+[**Overfitting**]{.underline} essentially means that within our training data, the model performs amazingly, but with new data on $X$ to predict $Y$, it performs poorly
+
+-   This is because it is fit too closely to our training data, which means it is only good at predicting the existing data, not new data
+
+In data science, we can avoid overfitting through either making training/testing sets, or cross-validation
+
+<br />
+
+### Correlation Requires Variation
+
+If you want to figure out whether two variables are correlated, you have to observe variation in both of them
+
+-   Just observing variation in one variable is not enough
+
+If there is no variation, that is just a fact, not a correlation
+
+-   For example, $x$% of students who drop out find school boring is a fact, as there is no variation in the variable "boring"
+
+-   A correlation would be - the more boring a student finds school, the more likely they are to drop out
+
+-   Note the key word - more - which shows variation and comparison
+
+<br />
+
+Dependent variable is the variable you are trying to forecast or explain
+
+-   Dependent because it depends on something else
+
+-   It is the outcome variable we are trying to explain
+
+When selecting the dependent variable, make sure to pay attention to the variation
+
+-   Don't only pick cases where the dependent variable is true, pick cases where there are both true and false values of the dependent variable, so there is variation
+
+<br />
+
+For example, let us identify the following statements as correlation or fact:
+
+-   Most top performing schools have small student bodies (fact)
+
+-   Married people are typically happier than unmarried people (correlation)
+
+-   Among professionals, taller basketball players tend to have lower free-throw percentages than shorter players (correlation)
+
+-   The locations in the US with the highest cancer rates are typically small towns (fact)
+
+-   Order households are more likely to have lead paint than newer ones (correlation)
+
+-   Most colds caught in Cook County are caught on cold days (fact)
+
+<br />
+
+### Regression
+
+Correlation shows us the direction of the relationship between two variables
+
+-   But, sometimes, we want to be more precise
+
+-   How much does change in one variable reflect on the other variable? The "magnitude" of the relationship
+
+The slope of a regression best fit line tells us both the direction of the correlation, and the magnitude of the correlation
+
+<br />
+
+A regression equation takes the following form:
+
+$$
+\hat{Y} = \alpha + \beta X
+$$
+
+The regression expresses a linear relationship between a dependent (outcome) $Y$ variable, and a independent (explanatory) $X$ variable
+
+-   The dependent variable $Y$ is the outcome we are trying to describe, predict, or explain
+
+-   The independent variable $X$ is what we are using to explain, describe, or predict $Y$
+
+<br />
+
+$\alpha$ and $\beta$ are regression parameters
+
+-   These parameters define the particular line we are drawing
+
+-   $\alpha$ is called the intercept, the predicted value of $Y$ given $X=0$
+
+-   $\beta$ is the slope - the predicted amount that $Y$ changes for each unit increase of $X$
+
+<br />
+
+Of course, we don't want to just draw some random line with random $\alpha$ and $\beta$, that won't be very good at matching the data
+
+-   We want to find the line that best fits the data
+
+-   Generally, this means we want to minimise the sum of squared errors
+
+-   Then, we find $\alpha$ and $\beta$ that does minimise the sum of squared errors
+
+The line that we get from estimating $\alpha$ and $\beta$ which minimise the sum of squared errors, is the OLS regression line of best fit.
+
+<br />
+
+Why minimise the sum of squared errors, not the sum of absolute value errors, or sum of fourth power errors?
+
+-   Minimising squared errors provides the best linear approximation to the conditional mean function
+
+    -   Conditional mean function tells us the mean of some variable, conditional of the value of some other variable
+
+    -   Basically, expected value of $Y$ given some $X$ value - $E[Y|X]$
+
+-   Also, it is historical - since squares are easy to work with linear algebra. This was especially important when people used to do this manually
+
+<br />
+
+### Non-Linear Data
+
+What if we want to use linear regression, but our data isn't really linear?
+
+-   We can just use a linear regression, but the error will be larger
+
+-   Or, we can use regression lines, but different lines for different parts of the data (basically split $x$ into chunks, and create regression lines for each chunk)
+
+-   We could also transform our $X$ variables by squaring, cubing, or logging them
+
+-   We could also add more variables to control for, which may improve our predictions
+
+<br />
+
+A square transformation may take the following form
+
+$$
+\hat{Y} = \alpha + \beta_1 X + \beta_2 X^2 ...
+$$
+
+-   If we want higher degree transformation, we can add another term
+
+-   However, we don't necessarily want to add too many of these, even if it does marginally improve our predictive power
+
+    -   We want our model to be simple to analyse, interpret, and communicate
+
+    -   We want to avoid overfitting the data when we are concerned with prediction
+
+-   We want to find the right balance of simplicity and accuracy
+
+<br />
+
+What is overfitting that I just mentioned previously?
+
+-   Basically it means that within our training data, the model performs amazingly, but with new data on $X$ to predict $Y$, it performs poorly
+
+-   This is because it is fit too closely to our training data, which means it is only good at predicting the existing data, not new data
+
+    -   Remember, our training data is just a sample from a population. New data drawn from the population will not be exactly the same. We are interested in predicting $Y$ of the population, not of our specific training sample
+
+In data science, we can avoid overfitting through either making training/testing sets, or cross-validation
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Reading: Cunningham Ch. 2.1-2.14
+
+Chapters 2.1-2.14, Cunningham, S. (2021) *Causal Inference: The Mixtape*
+
+<br />
+
+### Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Reading: Fowler
+
+Fowler, A. (2018) 'Do Shark Attacks Influence Presidential Elections', *The Journal of Politics*, 80(4), pp. 1423-1437
+
+<br />
+
+### Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Reading: Suryanarayan & Steven
+
+Suryanarayan, P. and Steven, W. (2021) 'Slavery, Reconstruction, and Bureaucratic Capacity in the American South', *The American Political Science Review*, 155(2), pp. 568-584
+
+<br />
+
+### Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Reading: Haber & Victor
+
+Haber, S. and Victor, M. (2011) 'Do Natural Resources Fuel Authoritarianism? A Reappraisal of the Resource Curse', *The American Political Science Review*, 105(1), pp. 1-26.
+
+<br />
+
+### Key Points
+
+<br />

@@ -2868,6 +2868,32 @@ estimation formula:</p>
 <p>Where <span class="math inline">\(\hat{r}_{i1}\)</span> are the
 residuals obtained from regressing <span class="math inline">\(X_1\)</span> on <span class="math inline">\(X_2\)</span>. This gives the part of <span class="math inline">\(X_1\)</span> that is uncorrelated with <span class="math inline">\(X_2\)</span></p>
 <p><br /></p>
+<p>To deal with a non-linear relationship, we can use a
+<u><strong>polynomial transformation</strong></u>.</p>
+<p><span class="math display">\[
+\hat{Y} = \alpha + \beta_1 X + \beta_2 X^2 ...
+\]</span></p>
+<ul>
+<li><p>If we want higher degree transformation, we can add another
+term</p></li>
+<li><p>Higher polynomials may fit the data better, but may overfit, and
+be hard to interpret</p></li>
+</ul>
+<p><br /></p>
+<p><u><strong>Overfitting</strong></u> essentially means that within our
+training data, the model performs amazingly, but with new data on <span class="math inline">\(X\)</span> to predict <span class="math inline">\(Y\)</span>, it performs poorly</p>
+<ul>
+<li><p>This is because it is fit too closely to our training data, which
+means it is only good at predicting the existing data, not new
+data</p></li>
+<li><p>Remember, our training data is just a sample from a population.
+New data drawn from the population will not be exactly the same. We are
+interested in predicting <span class="math inline">\(Y\)</span> of the
+population, not of our specific training sample</p></li>
+</ul>
+<p>In data science, we can avoid overfitting through either making
+training/testing sets, or cross-validation</p>
+<p><br /></p>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
 Homepage</a></p>
@@ -3118,6 +3144,302 @@ to powers</p></li>
 </ul>
 <p><br /></p>
 <hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-mesquita-ch.-4-5" class="section level1">
+<h1>Reading: Mesquita Ch. 4-5</h1>
+<p>Chapters 4 and 5, Mesquita et al (2021) <em>Thinking Clearly with
+Data: A Guide to Quantitative Reasoning and Analysis</em></p>
+<p><br /></p>
+<div id="key-points-1" class="section level3">
+<h3>Key Points</h3>
+<p>If you want to figure out whether two variables are
+<u><strong>correlated</strong></u>, you have to <strong>observe
+variation</strong> in both of them</p>
+<ul>
+<li>Just observing variation in one variable is not enough</li>
+</ul>
+<p>If there is no variation, that is just a fact, not a correlation</p>
+<p><br /></p>
+<p>A <u><strong>regression equation</strong></u> takes the following
+form:</p>
+<p><span class="math display">\[
+\hat{Y} = \alpha + \beta X
+\]</span></p>
+<p>The regression expresses a linear relationship between a dependent
+(outcome) <span class="math inline">\(Y\)</span> variable, and a
+independent (explanatory) <span class="math inline">\(X\)</span>
+variable</p>
+<ul>
+<li><p>The dependent variable <span class="math inline">\(Y\)</span> is
+the outcome we are trying to describe, predict, or explain</p></li>
+<li><p>The independent variable <span class="math inline">\(X\)</span>
+is what we are using to explain, describe, or predict <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+<p><span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are <u><strong>regression
+parameters</strong></u></p>
+<ul>
+<li><p>These parameters define the particular line we are
+drawing</p></li>
+<li><p><span class="math inline">\(\alpha\)</span> is called the
+intercept, the predicted value of <span class="math inline">\(Y\)</span>
+given <span class="math inline">\(X=0\)</span></p></li>
+<li><p><span class="math inline">\(\beta\)</span> is the slope - the
+predicted amount that <span class="math inline">\(Y\)</span> changes for
+each unit increase of <span class="math inline">\(X\)</span></p></li>
+</ul>
+<p>The line that we get from estimating <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> which minimise the sum of squared
+errors, is the OLS regression line of best fit.</p>
+<p><br /></p>
+<p>To deal with a non-linear relationship, we can use a
+<u><strong>polynomial transformation</strong></u>.</p>
+<p><span class="math display">\[
+\hat{Y} = \alpha + \beta_1 X + \beta_2 X^2 ...
+\]</span></p>
+<ul>
+<li><p>If we want higher degree transformation, we can add another
+term</p></li>
+<li><p>Higher polynomials may fit the data better, but may overfit, and
+be hard to interpret</p></li>
+</ul>
+<p><br /></p>
+<p><u><strong>Overfitting</strong></u> essentially means that within our
+training data, the model performs amazingly, but with new data on <span class="math inline">\(X\)</span> to predict <span class="math inline">\(Y\)</span>, it performs poorly</p>
+<ul>
+<li>This is because it is fit too closely to our training data, which
+means it is only good at predicting the existing data, not new data</li>
+</ul>
+<p>In data science, we can avoid overfitting through either making
+training/testing sets, or cross-validation</p>
+<p><br /></p>
+</div>
+<div id="correlation-requires-variation" class="section level3">
+<h3>Correlation Requires Variation</h3>
+<p>If you want to figure out whether two variables are correlated, you
+have to observe variation in both of them</p>
+<ul>
+<li>Just observing variation in one variable is not enough</li>
+</ul>
+<p>If there is no variation, that is just a fact, not a correlation</p>
+<ul>
+<li><p>For example, <span class="math inline">\(x\)</span>% of students
+who drop out find school boring is a fact, as there is no variation in
+the variable “boring”</p></li>
+<li><p>A correlation would be - the more boring a student finds school,
+the more likely they are to drop out</p></li>
+<li><p>Note the key word - more - which shows variation and
+comparison</p></li>
+</ul>
+<p><br /></p>
+<p>Dependent variable is the variable you are trying to forecast or
+explain</p>
+<ul>
+<li><p>Dependent because it depends on something else</p></li>
+<li><p>It is the outcome variable we are trying to explain</p></li>
+</ul>
+<p>When selecting the dependent variable, make sure to pay attention to
+the variation</p>
+<ul>
+<li>Don’t only pick cases where the dependent variable is true, pick
+cases where there are both true and false values of the dependent
+variable, so there is variation</li>
+</ul>
+<p><br /></p>
+<p>For example, let us identify the following statements as correlation
+or fact:</p>
+<ul>
+<li><p>Most top performing schools have small student bodies
+(fact)</p></li>
+<li><p>Married people are typically happier than unmarried people
+(correlation)</p></li>
+<li><p>Among professionals, taller basketball players tend to have lower
+free-throw percentages than shorter players (correlation)</p></li>
+<li><p>The locations in the US with the highest cancer rates are
+typically small towns (fact)</p></li>
+<li><p>Order households are more likely to have lead paint than newer
+ones (correlation)</p></li>
+<li><p>Most colds caught in Cook County are caught on cold days
+(fact)</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="regression" class="section level3">
+<h3>Regression</h3>
+<p>Correlation shows us the direction of the relationship between two
+variables</p>
+<ul>
+<li><p>But, sometimes, we want to be more precise</p></li>
+<li><p>How much does change in one variable reflect on the other
+variable? The “magnitude” of the relationship</p></li>
+</ul>
+<p>The slope of a regression best fit line tells us both the direction
+of the correlation, and the magnitude of the correlation</p>
+<p><br /></p>
+<p>A regression equation takes the following form:</p>
+<p><span class="math display">\[
+\hat{Y} = \alpha + \beta X
+\]</span></p>
+<p>The regression expresses a linear relationship between a dependent
+(outcome) <span class="math inline">\(Y\)</span> variable, and a
+independent (explanatory) <span class="math inline">\(X\)</span>
+variable</p>
+<ul>
+<li><p>The dependent variable <span class="math inline">\(Y\)</span> is
+the outcome we are trying to describe, predict, or explain</p></li>
+<li><p>The independent variable <span class="math inline">\(X\)</span>
+is what we are using to explain, describe, or predict <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+<p><span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are regression parameters</p>
+<ul>
+<li><p>These parameters define the particular line we are
+drawing</p></li>
+<li><p><span class="math inline">\(\alpha\)</span> is called the
+intercept, the predicted value of <span class="math inline">\(Y\)</span>
+given <span class="math inline">\(X=0\)</span></p></li>
+<li><p><span class="math inline">\(\beta\)</span> is the slope - the
+predicted amount that <span class="math inline">\(Y\)</span> changes for
+each unit increase of <span class="math inline">\(X\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>Of course, we don’t want to just draw some random line with random
+<span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, that won’t be very good at
+matching the data</p>
+<ul>
+<li><p>We want to find the line that best fits the data</p></li>
+<li><p>Generally, this means we want to minimise the sum of squared
+errors</p></li>
+<li><p>Then, we find <span class="math inline">\(\alpha\)</span> and
+<span class="math inline">\(\beta\)</span> that does minimise the sum of
+squared errors</p></li>
+</ul>
+<p>The line that we get from estimating <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> which minimise the sum of squared
+errors, is the OLS regression line of best fit.</p>
+<p><br /></p>
+<p>Why minimise the sum of squared errors, not the sum of absolute value
+errors, or sum of fourth power errors?</p>
+<ul>
+<li><p>Minimising squared errors provides the best linear approximation
+to the conditional mean function</p>
+<ul>
+<li><p>Conditional mean function tells us the mean of some variable,
+conditional of the value of some other variable</p></li>
+<li><p>Basically, expected value of <span class="math inline">\(Y\)</span> given some <span class="math inline">\(X\)</span> value - <span class="math inline">\(E[Y|X]\)</span></p></li>
+</ul></li>
+<li><p>Also, it is historical - since squares are easy to work with
+linear algebra. This was especially important when people used to do
+this manually</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="non-linear-data" class="section level3">
+<h3>Non-Linear Data</h3>
+<p>What if we want to use linear regression, but our data isn’t really
+linear?</p>
+<ul>
+<li><p>We can just use a linear regression, but the error will be
+larger</p></li>
+<li><p>Or, we can use regression lines, but different lines for
+different parts of the data (basically split <span class="math inline">\(x\)</span> into chunks, and create regression
+lines for each chunk)</p></li>
+<li><p>We could also transform our <span class="math inline">\(X\)</span> variables by squaring, cubing, or
+logging them</p></li>
+<li><p>We could also add more variables to control for, which may
+improve our predictions</p></li>
+</ul>
+<p><br /></p>
+<p>A square transformation may take the following form</p>
+<p><span class="math display">\[
+\hat{Y} = \alpha + \beta_1 X + \beta_2 X^2 ...
+\]</span></p>
+<ul>
+<li><p>If we want higher degree transformation, we can add another
+term</p></li>
+<li><p>However, we don’t necessarily want to add too many of these, even
+if it does marginally improve our predictive power</p>
+<ul>
+<li><p>We want our model to be simple to analyse, interpret, and
+communicate</p></li>
+<li><p>We want to avoid overfitting the data when we are concerned with
+prediction</p></li>
+</ul></li>
+<li><p>We want to find the right balance of simplicity and
+accuracy</p></li>
+</ul>
+<p><br /></p>
+<p>What is overfitting that I just mentioned previously?</p>
+<ul>
+<li><p>Basically it means that within our training data, the model
+performs amazingly, but with new data on <span class="math inline">\(X\)</span> to predict <span class="math inline">\(Y\)</span>, it performs poorly</p></li>
+<li><p>This is because it is fit too closely to our training data, which
+means it is only good at predicting the existing data, not new data</p>
+<ul>
+<li>Remember, our training data is just a sample from a population. New
+data drawn from the population will not be exactly the same. We are
+interested in predicting <span class="math inline">\(Y\)</span> of the
+population, not of our specific training sample</li>
+</ul></li>
+</ul>
+<p>In data science, we can avoid overfitting through either making
+training/testing sets, or cross-validation</p>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-cunningham-ch.-2.1-2.14" class="section level1">
+<h1>Reading: Cunningham Ch. 2.1-2.14</h1>
+<p>Chapters 2.1-2.14, Cunningham, S. (2021) <em>Causal Inference: The
+Mixtape</em></p>
+<p><br /></p>
+<div id="key-points-2" class="section level3">
+<h3>Key Points</h3>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-fowler" class="section level1">
+<h1>Reading: Fowler</h1>
+<p>Fowler, A. (2018) ‘Do Shark Attacks Influence Presidential
+Elections’, <em>The Journal of Politics</em>, 80(4), pp. 1423-1437</p>
+<p><br /></p>
+<div id="key-points-3" class="section level3">
+<h3>Key Points</h3>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-suryanarayan-steven" class="section level1">
+<h1>Reading: Suryanarayan &amp; Steven</h1>
+<p>Suryanarayan, P. and Steven, W. (2021) ‘Slavery, Reconstruction, and
+Bureaucratic Capacity in the American South’, <em>The American Political
+Science Review</em>, 155(2), pp. 568-584</p>
+<p><br /></p>
+<div id="key-points-4" class="section level3">
+<h3>Key Points</h3>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
+Homepage</a></p>
+</div>
+</div>
+<div id="reading-haber-victor" class="section level1">
+<h1>Reading: Haber &amp; Victor</h1>
+<p>Haber, S. and Victor, M. (2011) ‘Do Natural Resources Fuel
+Authoritarianism? A Reappraisal of the Resource Curse’, <em>The American
+Political Science Review</em>, 105(1), pp. 1-26.</p>
+<p><br /></p>
+<div id="key-points-5" class="section level3">
+<h3>Key Points</h3>
+<p><br /></p>
 </div>
 </div>
 
