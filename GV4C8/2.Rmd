@@ -1,0 +1,232 @@
+---
+title: "Nash Equilibrium, Static Games of Complete Information"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: true
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+Week 2, GV4C8 Game Theory for Political Science
+
+-   Title: Nash Equilibrium, Static Games of Complete Information
+
+-   Topics:
+
+-   Readings:
+
+    1.  Chapter 2, Osborne, M. J. (2004) *An Introduction to Game Theory* (Oxford University Press)
+    2.  Chapter 5, McCarty, N. and Meirowitz, A. (2012) *Political Game Theory: An Introduction*
+    3.  Chapter 3, Tadelis, S. (2013) *Game Theory: An Introduction*
+    4.  Chapter 5, Tadelis, S. (2013) *Game Theory: An Introduction*
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# Problem Set
+
+### Problem 1a
+
+Find the Nash Equilibrium:
+
+|            | Left   | Right  |
+|------------|--------|--------|
+| **Top**    | (1, 2) | (2, 0) |
+| **Bottom** | (2, 1) | (0, 3) |
+
+<br />
+
+**Solution:**
+
+### Problem 1b
+
+Find the Nash Equilibrium:
+
+|            | Left   | Right  |
+|------------|--------|--------|
+| **Top**    | (0, 1) | (3, 0) |
+| **Middle** | (1, 4) | (0, 0) |
+| **Bottom** | (2, 2) | (2, 2) |
+
+<br />
+
+**Solution:**
+
+### Problem 1c
+
+Find the Nash Equilibrium:
+
+|       | W      | X      | Y      | Z      |
+|-------|--------|--------|--------|--------|
+| **A** | (0, 1) | (1, 0) | (3, 0) | (2, 2) |
+| **B** | (1, 1) | (3, 2) | (4, 0) | (3, 0) |
+| **C** | (0, 2) | (1, 0) | (2, 3) | (4, 0) |
+| **D** | (1, 2) | (2, 3) | (4, 1) | (2, 1) |
+
+<br />
+
+**Solution:**
+
+### Problem 1d
+
+Find the Nash Equilibrium:
+
+|       | W      | X      | Y      | Z      |
+|-------|--------|--------|--------|--------|
+| **A** | (3, 3) | (0, 1) | (7, 4) | (8, 0) |
+| **B** | (1, 0) | (4, 4) | (3, 1) | (7, 3) |
+| **C** | (0, 7) | (1, 3) | (2, 5) | (8, 2) |
+| **D** | (0, 8) | (3, 7) | (2, 4) | (6, 6) |
+
+<br />
+
+**Solution:**
+
+### Problem 1e
+
+Find the Nash Equilibrium:
+
+|       | W      | X      | Y      | Z      |
+|-------|--------|--------|--------|--------|
+| **A** | (3, 4) | (7, 6) | (4, 7) | (1, 8) |
+| **B** | (6, 5) | (5, 2) | (2, 3) | (3, 1) |
+| **C** | (4, 1) | (8, 3) | (5, 2) | (2, 0) |
+| **D** | (8, 2) | (9, 0) | (1, 4) | (4, 3) |
+
+<br />
+
+**Solution:**
+
+### Problem 1f
+
+Find the Nash Equilibrium:
+
+|            | Left   | Centre | Right  |
+|------------|--------|--------|--------|
+| **Top**    | (3, 1) | (2, 2) | (5, 3) |
+| **Middle** | (4, 5) | (2, 3) | (3, 4) |
+| **Bottom** | (2, 4) | (1, 3) | (4, 1) |
+
+### Problem 1g
+
+Find the Nash Equilibrium:
+
+|            | Left   | Right  |
+|------------|--------|--------|
+| **Top**    | (0, 4) | (0, 0) |
+| **Middle** | (4, 2) | (2, 4) |
+| **Bottom** | (2, 2) | (4, 4) |
+
+<br />
+
+**Solution:**
+
+### Problem 2
+
+Contributing to a public good. Each of n people chooses whether to contribute a fixed amount toward the provision of a public good. The good is provided if and only if at least k people contribute where 2 ≤ k ≤ n; if it is not provided, contributions are not refunded. Each person ranks outcomes from best to worst as follows: (i) any outcome in which the good is provided and she does not contribute; (ii) any outcome in which the good is provided and she contributes; (iii) any outcome in which the good is not provided and she does not contribute; (iv) and outcome in which the good is not provided and she contributes. Formulate this situation as a strategic game and find its Nash equilibria (is there a NE in which more than k people contribute? One in which k people contribute? One in which fewer than k people contribute?)
+
+<br />
+
+**Solution:**
+
+### Problem 3
+
+Recall the Classical Games introduced in the lecture (e.g. slide 13). Can you think of any “political science” situation in which players’ strategic situation is captured by these games? When describing each situation tell us who are the players, which are their actions and explain the payoff achieved by each pair of actions.
+
+<br />
+
+**Solution:**
+
+### Problem 4
+
+Two animals are fighting over some prey. Each can be passive or aggressive. Each prefers to be aggressive if its opponent is passive, and passive if its opponent is aggressive; given its own stance, it prefers the outcome in which its opponent is passive to that in which its opponent is aggressive. Formulate this situation as a strategic game and find its Nash equilibria.
+
+<br />
+
+**Solution:**
+
+### Problem 5
+
+Voter Participation. Two candidates A and B, compete in an election. Of the n citizens, k support A and m (=n-k) support candidate B. Each citizen decides whether to vote, at a cost, for the candidate she supports, or to abstain. A citizen who abstains receives the payoff of 2 if the candidate she supports wins, 1 if this candidate ties for first place, and 0 if this candidate loses. A citizen who votes receives the payoffs 2-c, 1- c, and -c in these three cases, where 0 \< c \< 1.
+
+a\. for k=m=1, is the game as any considered in the lecture?
+
+b\. for k=m find the set of NE.
+
+c\. what is the set of NE for k\<m
+
+<br />
+
+**Solution:**
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# Reading: Osborne
+
+Chapter 2, Osborne, M. J. (2004) *An Introduction to Game Theory* (Oxford University Press)
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# Reading: McCarty & Meirowitz
+
+Chapter 5, McCarty, N. and Meirowitz, A. (2012) *Political Game Theory: An Introduction*
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# Reading: Tadelis Ch. 3
+
+Chapter 3, Tadelis, S. (2013) *Game Theory: An Introduction*
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# Reading: Tadelis Ch. 5
+
+Chapter 5, Tadelis, S. (2013) *Game Theory: An Introduction*
+
+<br />
+
+------------------------------------------------------------------------
