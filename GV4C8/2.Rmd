@@ -516,9 +516,8 @@ Trembling hand equilibrium is the idea that, a player is nervous, and might choo
 
 -   Basically, players tremble, and have a tiny probability of picking the "wrong" action
 
-```{=html}
 <!-- -->
-```
+
 -   Does our Nash Equilibrium survive these shakes? Is it still our expected outcome?
 
 Take this game:
@@ -582,7 +581,9 @@ Key concept is that: is a voter pivotal?
 
 ### Weekly Dominated Strategy
 
-Basically, the action that is weekly dominated is exactly the same as any other action, or worse
+Basically, the action that is weekly dominated is exactly the same as any other action, or worse.
+
+More formally, the strategy $s_i^d$ is weakly dominated, if it is inferior to all other strategy $s_i$, which is never worse and sometimes better. $s_i^d$ is weakly dominated when there exists $s_i$ such that $u_i(s_i^d, s_{-i}) ≤ u_i(s_i, s_{-i})$ for all $s_{-i}$
 
 <br />
 
@@ -619,6 +620,8 @@ Next, what are player 2's best responses, given player 1's actions
 | **Top**    | (1, [**2**]{.underline}) | ([**2**]{.underline}, 0) |
 | **Bottom** | ([**2**]{.underline}, 1) | (0, [**3**]{.underline}) |
 
+Thus, there is no nash equilibria, since none of the strategy combinations are both best responses for player 1 and player 2.
+
 <br />
 
 ### Problem 1b
@@ -635,6 +638,26 @@ Find the Nash Equilibrium:
 
 **Solution:**
 
+First, what are player 1's best responses, given player 2's strategies?
+
+|            | Left                     | Right                    |
+|------------|--------------------------|--------------------------|
+| **Top**    | (0, 1)                   | ([**3**]{.underline}, 0) |
+| **Middle** | (1, 4)                   | (0, 0)                   |
+| **Bottom** | ([**2**]{.underline}, 2) | (2, 2)                   |
+
+Then, what are player 2's best responses, given player 1's strategies?
+
+|            | Left                                       | Right                    |
+|------------|--------------------------------------------|--------------------------|
+| **Top**    | (0, [**1**]{.underline})                   | ([**3**]{.underline}, 0) |
+| **Middle** | (1, [**4**]{.underline})                   | (0, 0)                   |
+| **Bottom** | ([**2**]{.underline}, [**2**]{.underline}) | (2, [**2**]{.underline}) |
+
+Thus, (Bottom, Left) is the sole nash equilibrium, as it is the only strategy profile where both players are playing best responses.
+
+<br />
+
 ### Problem 1c
 
 Find the Nash Equilibrium:
@@ -649,6 +672,28 @@ Find the Nash Equilibrium:
 <br />
 
 **Solution:**
+
+Let us first find Player 1's best responses, given Player 2's strategies:
+
+|       | W                        | X                        | Y                        | Z                        |
+|-------|--------------------------|--------------------------|--------------------------|--------------------------|
+| **A** | (0, 1)                   | (1, 0)                   | (3, 0)                   | (2, 2)                   |
+| **B** | ([**1**]{.underline}, 1) | ([**3**]{.underline}, 2) | ([**4**]{.underline}, 0) | (3, 0)                   |
+| **C** | (0, 2)                   | (1, 0)                   | (2, 3)                   | ([**4**]{.underline}, 0) |
+| **D** | ([**1**]{.underline}, 2) | (2, 3)                   | ([**4**]{.underline}, 1) | (2, 1)                   |
+
+Then, let us find Player 2's best responses, given player 1's strategies:
+
+|       | W                        | X                                          | Y                        | Z                        |
+|-------|--------------------------|--------------------------------------------|--------------------------|--------------------------|
+| **A** | (0, 1)                   | (1, 0)                                     | (3, 0)                   | (2, [**2**]{.underline}) |
+| **B** | ([**1**]{.underline}, 1) | ([**3**]{.underline}, [**2**]{.underline}) | ([**4**]{.underline}, 0) | (3, 0)                   |
+| **C** | (0, 2)                   | (1, 0)                                     | (2, [**3**]{.underline}) | ([**4**]{.underline}, 0) |
+| **D** | ([**1**]{.underline}, 2) | (2, [**3**]{.underline})                   | ([**4**]{.underline}, 1) | (2, 1)                   |
+
+Thus, (B, X) is the sole nash equilibria, as it is the only strategy profile where both players are playing best responses.
+
+<br />
 
 ### Problem 1d
 
@@ -665,6 +710,28 @@ Find the Nash Equilibrium:
 
 **Solution:**
 
+First, let us find player 1's best responses, given player 2's strategies:
+
+|       | W                        | X                        | Y                        | Z                        |
+|-------|--------------------------|--------------------------|--------------------------|--------------------------|
+| **A** | ([**3**]{.underline}, 3) | (0, 1)                   | ([**7**]{.underline}, 4) | ([**8**]{.underline}, 0) |
+| **B** | (1, 0)                   | ([**4**]{.underline}, 4) | (3, 1)                   | (7, 3)                   |
+| **C** | (0, 7)                   | (1, 3)                   | (2, 5)                   | (8, 2)                   |
+| **D** | (0, 8)                   | (3, 7)                   | (2, 4)                   | (6, 6)                   |
+
+Second, let us find player 2's best responses, given player 1's strategies
+
+|       | W                        | X                                          | Y                                          | Z                        |
+|-------|--------------------------|--------------------------------------------|--------------------------------------------|--------------------------|
+| **A** | ([**3**]{.underline}, 3) | (0, 1)                                     | ([**7**]{.underline}, [**4**]{.underline}) | ([**8**]{.underline}, 0) |
+| **B** | (1, 0)                   | ([**4**]{.underline}, [**4**]{.underline}) | (3, 1)                                     | (7, 3)                   |
+| **C** | (0, [**7**]{.underline}) | (1, 3)                                     | (2, 5)                                     | ([**8**]{.underline}, 2) |
+| **D** | (0, [**8**]{.underline}) | (3, 7)                                     | (2, 4)                                     | (6, 6)                   |
+
+Thus, (A, Y) and (B, X) are both nash equilibriums, since they are the two strategy profiles where player 1 and 2 are both playing best responses
+
+<br />
+
 ### Problem 1e
 
 Find the Nash Equilibrium:
@@ -680,6 +747,28 @@ Find the Nash Equilibrium:
 
 **Solution:**
 
+First, let us find Player 1's best responses, given player 2's strategies:
+
+|       | W                        | X                        | Y                        | Z                        |
+|-------|--------------------------|--------------------------|--------------------------|--------------------------|
+| **A** | (3, 4)                   | (7, 6)                   | (4, 7)                   | (1, 8)                   |
+| **B** | (6, 5)                   | (5, 2)                   | (2, 3)                   | (3, 1)                   |
+| **C** | (4, 1)                   | (8, 3)                   | ([**5**]{.underline}, 2) | (2, 0)                   |
+| **D** | ([**8**]{.underline}, 2) | ([**9**]{.underline}, 0) | (1, 4)                   | ([**4**]{.underline}, 3) |
+
+Now, let us find Player 2's best responses, given Player 1's strategies:
+
+|       | W                        | X                        | Y                        | Z                        |
+|-------|--------------------------|--------------------------|--------------------------|--------------------------|
+| **A** | (3, 4)                   | (7, 6)                   | (4, 7)                   | (1, [**8**]{.underline}) |
+| **B** | (6, [**5**]{.underline}) | (5, 2)                   | (2, 3)                   | (3, 1)                   |
+| **C** | (4, 1)                   | (8, [**3**]{.underline}) | ([**5**]{.underline}, 2) | (2, 0)                   |
+| **D** | ([**8**]{.underline}, 2) | ([**9**]{.underline}, 0) | (1, [**4**]{.underline}) | ([**4**]{.underline}, 3) |
+
+Thus, there are no nash equilibria, since no strategy profile has both players playing best responses.
+
+<br />
+
 ### Problem 1f
 
 Find the Nash Equilibrium:
@@ -689,6 +778,30 @@ Find the Nash Equilibrium:
 | **Top**    | (3, 1) | (2, 2) | (5, 3) |
 | **Middle** | (4, 5) | (2, 3) | (3, 4) |
 | **Bottom** | (2, 4) | (1, 3) | (4, 1) |
+
+<br />
+
+**Solution:**
+
+First, let us find Player 1's best responses, given Player 2's strategies:
+
+|            | Left                     | Centre                   | Right                    |
+|------------|--------------------------|--------------------------|--------------------------|
+| **Top**    | (3, 1)                   | ([**2**]{.underline}, 2) | ([**5**]{.underline}, 3) |
+| **Middle** | ([**4**]{.underline}, 5) | ([**2**]{.underline}, 3) | (3, 4)                   |
+| **Bottom** | (2, 4)                   | (1, 3)                   | (4, 1)                   |
+
+Then, let us find Player 2's best responses, given Player 1's strategies:
+
+|            | Left                                       | Centre                   | Right                                      |
+|------------|--------------------------------------------|--------------------------|--------------------------------------------|
+| **Top**    | (3, 1)                                     | ([**2**]{.underline}, 2) | ([**5**]{.underline}, [**3**]{.underline}) |
+| **Middle** | ([**4**]{.underline}, [**5**]{.underline}) | ([**2**]{.underline}, 3) | (3, 4)                                     |
+| **Bottom** | (2, [**4**]{.underline})                   | (1, 3)                   | (4, 1)                                     |
+
+Thus, (Top, Centre) and (Middle, Left) are Nash Equilibria
+
+<br />
 
 ### Problem 1g
 
@@ -703,6 +816,26 @@ Find the Nash Equilibrium:
 <br />
 
 **Solution:**
+
+First, let us find the best responses of Player 1, given player 2's strategies:
+
+|            | Left                     | Right                    |
+|------------|--------------------------|--------------------------|
+| **Top**    | (0, 4)                   | (0, 0)                   |
+| **Middle** | ([**4**]{.underline}, 2) | (2, 4)                   |
+| **Bottom** | (2, 2)                   | ([**4**]{.underline}, 4) |
+
+Then, let us find Player 2's best responses, given player 1's strategies:
+
+|            | Left                     | Right                                      |
+|------------|--------------------------|--------------------------------------------|
+| **Top**    | (0, [**4**]{.underline}) | (0, 0)                                     |
+| **Middle** | ([**4**]{.underline}, 2) | (2, [**4**]{.underline})                   |
+| **Bottom** | (2, 2)                   | ([**4**]{.underline}, [**4**]{.underline}) |
+
+Thus, (Bottom, Right) is a nash equilibrium
+
+<br />
 
 ### Problem 2
 
@@ -751,6 +884,221 @@ c\. what is the set of NE for k\<m
 # Reading: Osborne
 
 Chapter 2, Osborne, M. J. (2004) *An Introduction to Game Theory* (Oxford University Press)
+
+### Key Points
+
+A [**strategic game**]{.underline} is a model of interacting decision makers
+
+-   There are players
+
+-   Each player has a set of possible actions
+
+-   Interaction between the players - each player is affected by the actions of all players, not just their own
+
+-   Each player has a set of preferences over their possible actions
+
+<br />
+
+[**Common games**]{.underline}:
+
+-   Prisoner's dilemma and associated games
+
+-   Battle of the Sexes/Bach and Shostakovich/Assurance/Stag and Hunt with multiple equilibria
+
+-   Matching Pennies game with no equilibria
+
+<br />
+
+A [**nash equilibrium**]{.underline} is where no player can do better by choosing an action different than the one they are playing, given the other player holds their chosen strategy
+
+-   Basically, a nash equilibria is when both players are playing a best response to their opponents strategy
+
+<br />
+
+An action [**weakly dominates**]{.underline} another action, if the first action is at least as good as the second action, no matter what the other players do
+
+-   Basically, it is equal or higher payoff than the other action no matter the strategy chosen by the opponent
+
+<br />
+
+A [**symmetric game**]{.underline} is when the 2 players both have the same set of actions, and their payoffs are the same for the combinations of actions
+
+-   Or in other words, $u_1(a_1, a_2) = u_2(a_2,a_1)$
+
+-   A symmetric nash equilibria is where both players play the same strategy in a nash equilibria
+
+<br />
+
+### Strategic Games
+
+A strategic game is a model of interacting decision makers
+
+-   There are players
+
+-   Each player has a set of possible actions
+
+-   Interaction between the players - each player is affected by the actions of all players, not just their own
+
+-   Each player has a set of preferences over their possible actions
+
+<br />
+
+For the preferences, we often use payoff functions
+
+-   Payoffs are often ordinal - the number shows order, but not magnitude
+
+    -   i.e. 3\>2\>1, but the difference between payoffs 3 and 2, might not be the same as 2 and 1
+
+For static games, players move simultaneously
+
+-   This doesn't neccesarily mean at the exact same moment
+
+-   Instead, this means that players move, without knowledge or the ability to observe how other players have move
+
+-   Thus, players cannot read and react, they have to anticipate what the others will do.
+
+<br />
+
+### Prisoner's Dilemma Games
+
+I'm not gonna spend too much time on prisoner dilemma games, we already know much about them. Just know
+
+-   The key characteristic of a Prisoner's dilemma, is that they players are encouraged to defect, rather than cooperate, even though the outcome (cooperate, cooperate) is pareto efficient
+
+-   Thus, prisoner's dilemma models model the idea of "free riding" or defecting
+
+<br />
+
+Prisoner's dilemma games take the following form:
+
+|               | **Cooperate** | Defect |
+|---------------|---------------|--------|
+| **Cooperate** | 2, 2          | 0, 3   |
+| **Defect**    | 3, 0          | 1, 1   |
+
+Note the dominant strategy equilibria (Defect, Defect)
+
+<br />
+
+Many situations can be modelled on the prisoner's dilemma:
+
+-   A group project - it might be more profitable to defect and "goof off", rather than work hard
+
+-   Duopolies: cooperating and charging high prices might be pareto-efficient, but the threat of defection and undercutting your opponent makes the dominant strategy to price low and defect
+
+-   Common property: prisoner's dillema shows how people free-ride and over-consume resources, while under-contributing to their upkeep. This is because defect is the dominant strategy
+
+<br />
+
+### Multiple Equilibria
+
+In the Prisoner's Dilemma, the main issue is if the players will choose to cooperate. There is another form of game, where both players want to cooperate, but they disagree on the outcome.
+
+<br />
+
+The classic layout of the game is as follows:
+
+-   Two players want to go out together
+
+-   They can either go to a Bach concert, or a Stravinsky concert. One player prefers Bach, the other prefers Stravinsky, but both would rather go to any concert together than not be together
+
+-   Thus, both Bach and Stravinsky are equilibrium solutions, but it is not clear which one the two should pick
+
+<br />
+
+We can model it as follows:
+
+|                | **Bach** | Stravinsky |
+|----------------|----------|------------|
+| **Bach**       | 2, 1     | 0, 0       |
+| **Stravinsky** | 0, 0     | 1, 2       |
+
+Note the two equilibria: (Bach, Bach), and (Stravinsky, Stravinsky)
+
+<br />
+
+This layout can be used to map a variety of situations
+
+-   For example, two officials of a political party, who each have their own idea on policy. The party would be better off if they worked together, but they can't decide who should join the other's policy
+
+-   For example, two merging firms with different IT services - who should be required to switch?
+
+<br />
+
+### No Equilibria Game
+
+In the past two games, there are both conflict and cooperation.
+
+Matching Pennies game is purely conflict:
+
+-   Two people choose whether to show the head or tail of a coin
+
+-   If they show the same side, p2 pays p1 a dollar
+
+-   If they show different sides, p1 pays p2 a dollar
+
+-   Both players only care about the money they receive
+
+Basically, player 1 wants to be like player 2, while player 2 wants to not be the same as player 1
+
+<br />
+
+The game can be modelled as follows
+
+|           | **Heads** | Tails  |
+|-----------|-----------|--------|
+| **Heads** | 1, -1     | -1, 1  |
+| **Tails** | -1, 1     | 1, -1  |
+
+There is no pure-strategy nash equilibria in this game
+
+<br />
+
+### Nash Equilibria
+
+We assume, as rational decision makers, players will choose the best available action
+
+-   They will also take into account what the other player will do - so they will have a belief of what the other player will play
+
+A nash equilibria is where no player can do better by choosing an action different than the one they are playing, given the other player holds their chosen strategy
+
+-   Basically, a nash equilibria is when both players are playing a best response to their opponents strategy
+
+<br />
+
+Nash equilibrium is designed to be a self-enforcing and stable equilibrium
+
+-   Since both players are playing a best response to their opponents chosen action, neither wants to deviate, so they will not deviate
+
+<br />
+
+### Weak Domination
+
+An action weakly dominates another action, if the first action is at least as good as the second action, no matter what the other players do
+
+-   Basically, it is equal or higher payoff than the other action no matter the strategy chosen by the opponent
+
+-   Basically strict dominance, but instead of greater than, it is greater than and equal to
+
+<br />
+
+### Symmetric Games
+
+A symmetric game is when the 2 players both have the same set of actions, and their payoffs are the same for the combinations of actions
+
+-   Or in other words, $u_1(a_1, a_2) = u_2(a_2,a_1)$
+
+Many of the games we have covered so far are symmetric, including the prisoner's dilemma, bach and shostakovic, etc.
+
+When players are in a symmetric game, nothing actually distinguishes the players
+
+-   We might label them player 1 and player 2 for convenience
+
+-   But we could switch the player labels and nothing would happen
+
+<br />
+
+A symmetric nash equilibrium is a nash equilibrium where both players take the same action
 
 <br />
 
