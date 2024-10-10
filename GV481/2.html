@@ -2851,6 +2851,14 @@ terms of standard deviation, with one standard deviation increase in
 <li><p>Anything more than 0.31 standard deviation change in <span class="math inline">\(Y\)</span> is considered quite large</p></li>
 </ul>
 <p><br /></p>
+<p><u><strong>Properties of the OLS Model</strong></u>:</p>
+<ul>
+<li><p>All the residuals should add up to 0. Mathematically: <span class="math inline">\(\sum[y_i-(\hat{\beta}_0 + \hat{\beta}_1 x_i)] =
+0\)</span></p></li>
+<li><p>We can predict the sample mean of <span class="math inline">\(y\)</span> as follows: <span class="math inline">\(\bar{y} = \hat{\beta}_0 + \hat{\beta}_1
+\bar{x}\)</span></p></li>
+</ul>
+<p><br /></p>
 <p><u><strong>Multivariate models</strong></u> take the following
 form:</p>
 <p><span class="math display">\[
@@ -3148,8 +3156,8 @@ to powers</p></li>
 Homepage</a></p>
 </div>
 </div>
-<div id="reading-mesquita-ch.-4-5" class="section level1">
-<h1>Reading: Mesquita Ch. 4-5</h1>
+<div id="reading-mesquita-et-al" class="section level1">
+<h1>Reading: Mesquita et al</h1>
 <p>Chapters 4 and 5, Mesquita et al (2021) <em>Thinking Clearly with
 Data: A Guide to Quantitative Reasoning and Analysis</em></p>
 <p><br /></p>
@@ -3391,26 +3399,352 @@ training/testing sets, or cross-validation</p>
 Homepage</a></p>
 </div>
 </div>
-<div id="reading-cunningham-ch.-2.1-2.14" class="section level1">
-<h1>Reading: Cunningham Ch. 2.1-2.14</h1>
+<div id="reading-cunningham" class="section level1">
+<h1>Reading: Cunningham</h1>
 <p>Chapters 2.1-2.14, Cunningham, S. (2021) <em>Causal Inference: The
 Mixtape</em></p>
 <p><br /></p>
 <div id="key-points-2" class="section level3">
 <h3>Key Points</h3>
+<p><u><strong>Bayes Rule</strong></u>:</p>
+<ul>
+<li><p><span class="math inline">\(P(A|B) = \frac{P(B|A) \times
+P(A)}{P(B)}\)</span></p></li>
+<li><p>Or decomposed: <span class="math inline">\(P(A|B) = \frac{P(B|A)
+\times P(A)}{P(B|A)P(A) + P(B|A^c)P(A^c)}\)</span></p>
+<ul>
+<li>That denominator is just derived from the law of total
+probability</li>
+</ul></li>
+</ul>
+<p><br /></p>
+<p><u><strong>Expected Value and Variance</strong></u></p>
+<ul>
+<li><p><span class="math inline">\(E[X] = x_i f(x_i)\)</span>, where
+<span class="math inline">\(x_i\)</span> is a potential outcome, and
+<span class="math inline">\(f(x_i)\)</span> is the probability of that
+potential outcome</p></li>
+<li><p>Variance <span class="math inline">\(\sigma^2 = E[ (X-E[X])^2] =
+\frac{1}{n}\sum(x_i - E[X])^2\)</span></p></li>
+</ul>
+<p><br /></p>
+<p><u><strong>Covariance</strong></u> measures the amount of linear
+dependence between two random variables</p>
+<ul>
+<li><p>Positive covariance means <span class="math inline">\(X\)</span>
+and <span class="math inline">\(Y\)</span> move in same direction,
+negative means opposite direction, 0 means no linear
+relationship</p></li>
+<li><p>Covariance <span class="math inline">\(\sigma_{XY}=\frac{1}{n}  \sum(x_i - \bar{x})(y_i -
+\bar{y})\)</span></p></li>
+<li><p>We know that <span class="math inline">\(\sum(x_i - \bar{x})(y_i
+- \bar{y}) = \sum x_i y_i - n(\overline{xy})\)</span> from
+above</p></li>
+<li><p>Thus, covariance is also also <span class="math inline">\(\sigma_{XY} =E[XY] - E[X] - E[Y]\)</span></p></li>
+</ul>
+<p>Covariance cannot be measured for magnitude. Let us use
+<u><strong>correlation regression</strong></u>:</p>
+<ul>
+<li><p>Correlation <span class="math inline">\(r = \rho =
+\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\)</span></p></li>
+<li><p>We can rewrite as <span class="math inline">\(\rho =
+\frac{\sigma_{XY}}{\sigma_X \sigma_Y}\)</span></p></li>
+<li><p>Correlation coefficient always between -1 and 1</p></li>
+</ul>
+<p><br /></p>
+<p>Properties of the <u><strong>OLS Model</strong></u> <span class="math inline">\(Y = \hat{\beta}_0 + \hat{\beta}_1 X\)</span></p>
+<ul>
+<li><p>All the residuals should add up to 0. Mathematically: <span class="math inline">\(\sum[y_i-(\hat{\beta}_0 + \hat{\beta}_1 x_i)] =
+0\)</span></p></li>
+<li><p>We can predict the sample mean of <span class="math inline">\(y\)</span> as follows: <span class="math inline">\(\bar{y} = \hat{\beta}_0 + \hat{\beta}_1
+\bar{x}\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="probability-theory" class="section level3">
+<h3>Probability Theory</h3>
+<p>For detailed notes on probabiltiy, see my notes in GV4L8 or my notes
+in politicalscience.github.io</p>
+<p>There are two types of random variables - discrete and continuous</p>
+<ul>
+<li><p>Discrete - countable number of distinct outcomes: this can
+include both several categories of outcomes, as well as integer-only
+outcomes</p>
+<ul>
+<li><p>Ex. 12-sided die, it has 12 distinct outcomes, 1-12</p></li>
+<li><p>Ex. a Coin, it has 2 distinct outcomes, heads or tails</p></li>
+<li><p>Deck of cards - it has 52 distinct outcomes - each card</p></li>
+</ul></li>
+<li><p>Continuous - infinite number of outcomes - basically, not only
+integers, but also decimals between each integer</p>
+<ul>
+<li>Ex. Gas Prices - it has an infinite number of outcomes - 0, 0.01,
+0.012, 0.013… ∞</li>
+</ul></li>
+</ul>
+<p><br /></p>
+<p>Statistical independence is when the probability of one event, is not
+affected by another occurring</p>
+<ul>
+<li><p>Sampling with replacement makes each draw independent</p></li>
+<li><p>Sampling without replacement makes each subsequent draw more
+likely, thus not independent</p></li>
+</ul>
+<p>If we have two independent events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the probability of getting both events
+is <span class="math inline">\(P(A) \times P(B)\)</span></p>
+<p><br /></p>
+<p>For detailed set theory, see my notes in GV4L8 or my notes in
+politicalscience.github.io</p>
+<ul>
+<li><p>Basically, Complement of <span class="math inline">\(A\)</span>,
+notated as one of<span class="math inline">\(~A,A&#39;,A^c\)</span>, is
+everything not in <span class="math inline">\(A\)</span>, but within the
+universal set <span class="math inline">\(U\)</span></p>
+<ul>
+<li>Thus, <span class="math inline">\(A + A&#39; = U\)</span></li>
+</ul></li>
+<li><p>Intersection of sets <span class="math inline">\(A \cap
+B\)</span> mean A and B - basically, only the elements that are both
+within <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span></p></li>
+<li><p>Union of sets <span class="math inline">\(A \cup B\)</span> means
+A or B - basically the combination of all elements that appear in either
+<span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, or in both sets</p></li>
+</ul>
+<pre><code>-   $A \cup B = A + B + A \cap B$</code></pre>
+<p><br /></p>
+<p>Conditional probability is the probability that one event occurs,
+given another has already occurred:</p>
+<ul>
+<li><p>For example, probability of <span class="math inline">\(A\)</span>, given <span class="math inline">\(B\)</span> has occurred, is <span class="math inline">\(P(A|B)\)</span></p></li>
+<li><p><span class="math inline">\(P(A|B) = P(A)\)</span> if the events
+<span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent</p></li>
+<li><p><span class="math inline">\(P(A|B) = P(A \cap B) /
+P(B)\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>Bayes Rule: (see notes GV4L8 for derivation of Bayes’ rule:</p>
+<ul>
+<li><p><span class="math inline">\(P(A|B) = \frac{P(B|A) \times
+P(A)}{P(B)}\)</span></p></li>
+<li><p>Or decomposed: <span class="math inline">\(P(A|B) = \frac{P(B|A)
+\times P(A)}{P(B|A)P(A) + P(B|A^c)P(A^c)}\)</span></p>
+<ul>
+<li>That denominator is just derived from the law of total
+probability</li>
+</ul></li>
+</ul>
+<p><br /></p>
+<p>For expanded notes on summation and product notation, see
+politicalscience.github.io</p>
+<ul>
+<li><p>Mean <span class="math inline">\(\mu_X = \frac{1}{n} \sum
+x_i\)</span></p></li>
+<li><p>Useful result: <span class="math inline">\(\sum(x_i - \bar{x})^2
+= \sum x_i^2 - n(\bar{x})^2\)</span></p>
+<ul>
+<li>Pretty obvious - just decompose sum into 2 parts</li>
+</ul></li>
+<li><p>We can apply that to two variables: <span class="math inline">\(\sum(x_i - \bar{x})(y_i - \bar{y}) = \sum x_i y_i
+- n(\overline{xy})\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="expected-value-and-variance" class="section level3">
+<h3>Expected Value and Variance</h3>
+<p>For expanded notes on expected value and variance, see
+politicalscience.github.io or GV4L8</p>
+<ul>
+<li><p><span class="math inline">\(E[X] = x_i f(x_i)\)</span>, where
+<span class="math inline">\(x_i\)</span> is a potential outcome, and
+<span class="math inline">\(f(x_i)\)</span> is the probability of that
+potential outcome</p></li>
+<li><p>Variance <span class="math inline">\(\sigma^2 = E[ (X-E[X])^2] =
+\frac{1}{n}\sum(x_i - E[X])^2\)</span></p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="covariance-and-correlation" class="section level3">
+<h3>Covariance and Correlation</h3>
+<p>Covariance measures the amount of linear dependence between two
+random variables</p>
+<ul>
+<li><p>Positive covariance means <span class="math inline">\(X\)</span>
+and <span class="math inline">\(Y\)</span> move in same direction,
+negative means opposite direction, 0 means no linear
+relationship</p></li>
+<li><p>Covariance <span class="math inline">\(\sigma_{XY}=\frac{1}{n}  \sum(x_i - \bar{x})(y_i -
+\bar{y})\)</span></p></li>
+<li><p>We know that <span class="math inline">\(\sum(x_i - \bar{x})(y_i
+- \bar{y}) = \sum x_i y_i - n(\overline{xy})\)</span> from
+above</p></li>
+<li><p>Thus, covariance is also also <span class="math inline">\(\sigma_{XY} =E[XY] - E[X] - E[Y]\)</span></p></li>
+</ul>
+<p>Covariance cannot be measured for magnitude. Let us use correlation
+coefficient:</p>
+<ul>
+<li><p>Correlation <span class="math inline">\(r = \rho =
+\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\)</span></p></li>
+<li><p>We can rewrite as <span class="math inline">\(\rho =
+\frac{\sigma_{XY}}{\sigma_X \sigma_Y}\)</span></p></li>
+<li><p>Correlation coefficient always between -1 and 1</p></li>
+</ul>
+<p><br /></p>
+<p>Model of the relationship between two variables <span class="math inline">\(y = \beta_0 + \beta_1x + \epsilon\)</span></p>
+<ul>
+<li>Let us not worry too much about the error term <span class="math inline">\(\epsilon\)</span></li>
+</ul>
+<p>Intuitively, the line gives the expected value of <span class="math inline">\(Y\)</span>, given any value of <span class="math inline">\(X\)</span>: <span class="math inline">\(E[Y|X]\)</span></p>
+<ul>
+<li><p>This is because obviously, <span class="math inline">\(Y\)</span>
+will have a variation of potential outcomes - our <span class="math inline">\(X\)</span> is not a perfect linear predictor of
+<span class="math inline">\(Y\)</span></p></li>
+<li><p>So our equation outputs the expected value of <span class="math inline">\(Y\)</span> given any value of <span class="math inline">\(X\)</span></p></li>
+</ul>
+<p><span class="math inline">\(\beta_1\)</span> is selected by reducing
+the sum of squared errors. After some complex math not essential to this
+course, we get an estimate for the paremter:</p>
+<p><span class="math display">\[
+\hat{\beta}_1 = \frac{\sum (x_i - E[X]) (y_i - E[Y])}{\sum(x_i -
+E[X])^2}
+\]</span></p>
+<p><span class="math display">\[
+\hat{\beta}_1 = \frac{ \text{sample } Cov(x_i, y_i)}{\text{Sample}
+Var(x_i)}
+\]</span></p>
+<p>We usually let the computer do all this.</p>
+<p><br /></p>
+<p>Properties of the OLS Model:</p>
+<ul>
+<li><p>All the residuals should add up to 0. Mathematically: <span class="math inline">\(\sum[y_i-(\hat{\beta}_0 + \hat{\beta}_1 x_i)] =
+0\)</span></p></li>
+<li><p>We can predict the sample mean of <span class="math inline">\(y\)</span> as follows: <span class="math inline">\(\bar{y} = \hat{\beta}_0 + \hat{\beta}_1
+\bar{x}\)</span></p></li>
+</ul>
 <p><br /></p>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
 Homepage</a></p>
 </div>
 </div>
-<div id="reading-fowler" class="section level1">
-<h1>Reading: Fowler</h1>
-<p>Fowler, A. (2018) ‘Do Shark Attacks Influence Presidential
-Elections’, <em>The Journal of Politics</em>, 80(4), pp. 1423-1437</p>
+<div id="reading-fowler-hall" class="section level1">
+<h1>Reading: Fowler &amp; Hall</h1>
+<p>Fowler, A. and Hall, A. B. (2018) ‘Do Shark Attacks Influence
+Presidential Elections’, <em>The Journal of Politics</em>, 80(4),
+pp. 1423-1437</p>
 <p><br /></p>
 <div id="key-points-3" class="section level3">
 <h3>Key Points</h3>
+<p>There is a prominent claim made in 1916, that shark attacks influence
+presidential elections</p>
+<ul>
+<li>This paper studies this claim made by Achen (2002) and Bartels
+(2016)</li>
+</ul>
+<p>Conclusions</p>
+<ol style="list-style-type: decimal">
+<li>Finds no evidence of this relationship</li>
+<li>Achen and Bartels’s couty-level findings become much weaker under
+different specifications</li>
+<li>Town-level findings of those 2 significantly shrinks when we correct
+errors, and does not hold for other beach counties</li>
+<li>Implementing placebo counterfactual tests show that their result was
+likely to arise, even if shark attacks do not influence elections</li>
+</ol>
+<p><br /></p>
+</div>
+<div id="summary" class="section level3">
+<h3>Summary</h3>
+<p>Aachen and Bartels (2002, 2016) found a relationship between shark
+attacks and voter behaviour in the 1916 US presidential election in new
+jersey</p>
+<ul>
+<li><p>This has been repeated by many scholars, and entered public
+media</p></li>
+<li><p>This claim has key implications on the rationality of voters</p>
+<ul>
+<li><p>The literature shows that voters appear politically
+ignorant</p></li>
+<li><p>However, in aggregate, voters do tend to respond reasonably to
+government performance and candidate ideology and quality</p></li>
+</ul></li>
+<li><p>Achen and Bartels themselves say that their finding shows voters
+are irrational, and thus, our conventional view of democratic
+accountability may be severely undermined</p></li>
+<li><p>However, all this debate relies on one key assumption - that the
+claim Achen and Bartels made is correct</p></li>
+<li><p>There is evidence that this link between shark attacks and voter
+decisions is not strong enough to generate these types of
+discussion</p></li>
+</ul>
+<p><br /></p>
+<p>Paper proceeds in four parts</p>
+<ol style="list-style-type: decimal">
+<li>Assemble data on fatal shark attacks and county-level vote returns
+between 1872 and 2012 (for presidential elections). They find very small
+relationship with no significance
+<ul>
+<li>Implement differences in differences approach with state-election
+and county-period fixed effects. Fixed effects accounts for maybe, the
+fact, that beach counties are related and have similar support for a
+certain political group. The periods account for fluctuations between
+political parties that naturally occur</li>
+<li>Result finds no statistical significance from Attacks on voter
+decision, and effect is tiny</li>
+<li>Even when we change attacks from yes/no to number of attacks, there
+is still no statistically significant result (and effect is tiny)</li>
+<li>Even when we only consider shark attacks in election years (myopic
+voters), there is still no statistically significant result (and effect
+is tiny)</li>
+<li>Even when we only consider shark attacks in election years where the
+incumbent seeks re-election, we get no statistically significant result
+(and effect is tiny)</li>
+</ul></li>
+<li>Assess the robustness of Achen and Bartel’s countylevel results from
+New Jersey - and shows how their result reflects more about the 1912
+election which they used as a control, rather than the 1916 election
+with shark attacks (1912 is an outlier)
+<ul>
+<li>Achen and Bartel exlclude essex county, but this does not affect
+results much</li>
+<li>Achen and Bartels hypothesise effects of shark attacks only appear
+in beach counties on the jersey shore. This makes sense. But we could
+also only focus on the two counties with shark attacks. When doing the
+second approach, there is no statistical significance</li>
+<li>If we include all counties that border the coast (not just jersey
+coast), we also have a non-statistically significant effect</li>
+<li>Achen and Bartels control for a few counties, which they claim have
+political machines which would alter the results. However, if we use an
+alternative index of political machines, we get a statistically
+insignificant results</li>
+<li>Basically, unless the exact decision choices and data was used as
+Achen and Bartels did, the result is not replicated, suggesting that
+this result is not robust</li>
+</ul></li>
+<li>Achen and Bartels’s town level result from Ocean County does not
+hold for other beach counties of New Jersey
+<ul>
+<li>Achen and Bartels explored Ocean County specifically, dividing the
+towns into beach and not beach, and seeing if the effect was different.
+They found that beach towns experienced more effect of attacks -&gt;
+voting.</li>
+<li>However, they make a few mistake with the boundaries at the time, If
+we correct the mistake and change all the town boundaries to the
+original boundaries, the results are no longer statistically
+significant</li>
+<li>If there claims are correct in Ocean County, we should expect this
+pattern in other beach counties. However, we do not find significant
+evidence of this.</li>
+</ul></li>
+<li>Demonstrate that the standard errors of Achen and Bartel’s empriical
+strategy considerably overstates the level of statistical confidence
+<ul>
+<li>The paper only finds an estimate as large as the New Jersey estimate
+in 32% of cases</li>
+<li>An only 27% cases are statistically significant</li>
+<li>Thus, we cannot be confident this relationship is not just
+statistical random variation.</li>
+</ul></li>
+</ol>
 <p><br /></p>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481

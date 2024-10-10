@@ -81,6 +81,14 @@ If one of the measurements is not very meaningful (ex. a 0-100 scale of democrac
 
 <br />
 
+[**Properties of the OLS Model**]{.underline}:
+
+-   All the residuals should add up to 0. Mathematically: $\sum[y_i-(\hat{\beta}_0 + \hat{\beta}_1 x_i)] = 0$
+
+-   We can predict the sample mean of $y$ as follows: $\bar{y} = \hat{\beta}_0 + \hat{\beta}_1 \bar{x}$
+
+<br />
+
 [**Multivariate models**]{.underline} take the following form:
 
 $$
@@ -350,7 +358,7 @@ Linear regression does not always mean a straight line
 
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
-# Reading: Mesquita Ch. 4-5
+# Reading: Mesquita et al
 
 Chapters 4 and 5, Mesquita et al (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*
 
@@ -564,7 +572,7 @@ In data science, we can avoid overfitting through either making training/testing
 
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
-# Reading: Cunningham Ch. 2.1-2.14
+# Reading: Cunningham
 
 Chapters 2.1-2.14, Cunningham, S. (2021) *Causal Inference: The Mixtape*
 
@@ -572,19 +580,259 @@ Chapters 2.1-2.14, Cunningham, S. (2021) *Causal Inference: The Mixtape*
 
 ### Key Points
 
+[**Bayes Rule**]{.underline}:
+
+-   $P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}$
+
+-   Or decomposed: $P(A|B) = \frac{P(B|A) \times P(A)}{P(B|A)P(A) + P(B|A^c)P(A^c)}$
+
+    -   That denominator is just derived from the law of total probability
+
+<br />
+
+[**Expected Value and Variance**]{.underline}
+
+-   $E[X] = x_i f(x_i)$, where $x_i$ is a potential outcome, and $f(x_i)$ is the probability of that potential outcome
+
+-   Variance $\sigma^2 = E[ (X-E[X])^2] = \frac{1}{n}\sum(x_i - E[X])^2$
+
+<br />
+
+[**Covariance**]{.underline} measures the amount of linear dependence between two random variables
+
+-   Positive covariance means $X$ and $Y$ move in same direction, negative means opposite direction, 0 means no linear relationship
+
+-   Covariance $\sigma_{XY}=\frac{1}{n}  \sum(x_i - \bar{x})(y_i - \bar{y})$
+
+-   We know that $\sum(x_i - \bar{x})(y_i - \bar{y}) = \sum x_i y_i - n(\overline{xy})$ from above
+
+-   Thus, covariance is also also $\sigma_{XY} =E[XY] - E[X] - E[Y]$
+
+Covariance cannot be measured for magnitude. Let us use [**correlation regression**]{.underline}:
+
+-   Correlation $r = \rho = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$
+
+-   We can rewrite as $\rho = \frac{\sigma_{XY}}{\sigma_X \sigma_Y}$
+
+-   Correlation coefficient always between -1 and 1
+
+<br />
+
+Properties of the [**OLS Model**]{.underline} $Y = \hat{\beta}_0 + \hat{\beta}_1 X$
+
+-   All the residuals should add up to 0. Mathematically: $\sum[y_i-(\hat{\beta}_0 + \hat{\beta}_1 x_i)] = 0$
+
+-   We can predict the sample mean of $y$ as follows: $\bar{y} = \hat{\beta}_0 + \hat{\beta}_1 \bar{x}$
+
+<br />
+
+### Probability Theory
+
+For detailed notes on probabiltiy, see my notes in GV4L8 or my notes in politicalscience.github.io
+
+There are two types of random variables - discrete and continuous
+
+-   Discrete - countable number of distinct outcomes: this can include both several categories of outcomes, as well as integer-only outcomes
+
+    -   Ex. 12-sided die, it has 12 distinct outcomes, 1-12
+
+    -   Ex. a Coin, it has 2 distinct outcomes, heads or tails
+
+    -   Deck of cards - it has 52 distinct outcomes - each card
+
+-   Continuous - infinite number of outcomes - basically, not only integers, but also decimals between each integer
+
+    -   Ex. Gas Prices - it has an infinite number of outcomes - 0, 0.01, 0.012, 0.013... ∞
+
+<br />
+
+Statistical independence is when the probability of one event, is not affected by another occurring
+
+-   Sampling with replacement makes each draw independent
+
+-   Sampling without replacement makes each subsequent draw more likely, thus not independent
+
+If we have two independent events $A$ and $B$, the probability of getting both events is $P(A) \times P(B)$
+
+<br />
+
+For detailed set theory, see my notes in GV4L8 or my notes in politicalscience.github.io
+
+-   Basically, Complement of $A$, notated as one of$~A,A',A^c$, is everything not in $A$, but within the universal set $U$
+
+    -   Thus, $A + A' = U$
+
+-   Intersection of sets $A \cap B$ mean A and B - basically, only the elements that are both within $A$ and $B$
+
+-    Union of sets $A \cup B$ means A or B - basically the combination of all elements that appear in either $A$, $B$, or in both sets
+
+    -   $A \cup B = A + B + A \cap B$
+
+<br />
+
+Conditional probability is the probability that one event occurs, given another has already occurred:
+
+-   For example, probability of $A$, given $B$ has occurred, is $P(A|B)$
+
+-   $P(A|B) = P(A)$ if the events $A$ and $B$ are independent
+
+-   $P(A|B) = P(A \cap B) / P(B)$
+
+<br />
+
+Bayes Rule: (see notes GV4L8 for derivation of Bayes' rule:
+
+-   $P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}$
+
+-   Or decomposed: $P(A|B) = \frac{P(B|A) \times P(A)}{P(B|A)P(A) + P(B|A^c)P(A^c)}$
+
+    -   That denominator is just derived from the law of total probability
+
+<br />
+
+For expanded notes on summation and product notation, see politicalscience.github.io
+
+-   Mean $\mu_X = \frac{1}{n} \sum x_i$
+
+-   Useful result: $\sum(x_i - \bar{x})^2 = \sum x_i^2 - n(\bar{x})^2$
+
+    -   Pretty obvious - just decompose sum into 2 parts
+
+-   We can apply that to two variables: $\sum(x_i - \bar{x})(y_i - \bar{y}) = \sum x_i y_i - n(\overline{xy})$
+
+<br />
+
+### Expected Value and Variance
+
+For expanded notes on expected value and variance, see politicalscience.github.io or GV4L8
+
+-   $E[X] = x_i f(x_i)$, where $x_i$ is a potential outcome, and $f(x_i)$ is the probability of that potential outcome
+
+-   Variance $\sigma^2 = E[ (X-E[X])^2] = \frac{1}{n}\sum(x_i - E[X])^2$
+
+<br />
+
+### Covariance and Correlation
+
+Covariance measures the amount of linear dependence between two random variables
+
+-   Positive covariance means $X$ and $Y$ move in same direction, negative means opposite direction, 0 means no linear relationship
+
+-   Covariance $\sigma_{XY}=\frac{1}{n}  \sum(x_i - \bar{x})(y_i - \bar{y})$
+
+-   We know that $\sum(x_i - \bar{x})(y_i - \bar{y}) = \sum x_i y_i - n(\overline{xy})$ from above
+
+-   Thus, covariance is also also $\sigma_{XY} =E[XY] - E[X] - E[Y]$
+
+Covariance cannot be measured for magnitude. Let us use correlation coefficient:
+
+-   Correlation $r = \rho = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$
+
+-   We can rewrite as $\rho = \frac{\sigma_{XY}}{\sigma_X \sigma_Y}$
+
+-   Correlation coefficient always between -1 and 1
+
+<br />
+
+Model of the relationship between two variables $y = \beta_0 + \beta_1x + \epsilon$
+
+-   Let us not worry too much about the error term $\epsilon$
+
+Intuitively, the line gives the expected value of $Y$, given any value of $X$: $E[Y|X]$
+
+-   This is because obviously, $Y$ will have a variation of potential outcomes - our $X$ is not a perfect linear predictor of $Y$
+
+-   So our equation outputs the expected value of $Y$ given any value of $X$
+
+$\beta_1$ is selected by reducing the sum of squared errors. After some complex math not essential to this course, we get an estimate for the paremter:
+
+$$
+\hat{\beta}_1 = \frac{\sum (x_i - E[X]) (y_i - E[Y])}{\sum(x_i - E[X])^2}
+$$
+
+$$
+\hat{\beta}_1 = \frac{ \text{sample } Cov(x_i, y_i)}{\text{Sample} Var(x_i)}
+$$
+
+We usually let the computer do all this.
+
+<br />
+
+Properties of the OLS Model:
+
+-   All the residuals should add up to 0. Mathematically: $\sum[y_i-(\hat{\beta}_0 + \hat{\beta}_1 x_i)] = 0$
+
+-   We can predict the sample mean of $y$ as follows: $\bar{y} = \hat{\beta}_0 + \hat{\beta}_1 \bar{x}$
+
 <br />
 
 ------------------------------------------------------------------------
 
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
-# Reading: Fowler
+# Reading: Fowler & Hall
 
-Fowler, A. (2018) 'Do Shark Attacks Influence Presidential Elections', *The Journal of Politics*, 80(4), pp. 1423-1437
+Fowler, A. and Hall, A. B. (2018) 'Do Shark Attacks Influence Presidential Elections', *The Journal of Politics*, 80(4), pp. 1423-1437
 
 <br />
 
 ### Key Points
+
+There is a prominent claim made in 1916, that shark attacks influence presidential elections
+
+-   This paper studies this claim made by Achen (2002) and Bartels (2016)
+
+Conclusions
+
+1.  Finds no evidence of this relationship
+2.  Achen and Bartels's couty-level findings become much weaker under different specifications
+3.  Town-level findings of those 2 significantly shrinks when we correct errors, and does not hold for other beach counties
+4.  Implementing placebo counterfactual tests show that their result was likely to arise, even if shark attacks do not influence elections
+
+<br />
+
+### Summary
+
+Aachen and Bartels (2002, 2016) found a relationship between shark attacks and voter behaviour in the 1916 US presidential election in new jersey
+
+-   This has been repeated by many scholars, and entered public media
+
+-   This claim has key implications on the rationality of voters
+
+    -   The literature shows that voters appear politically ignorant
+
+    -   However, in aggregate, voters do tend to respond reasonably to government performance and candidate ideology and quality
+
+-   Achen and Bartels themselves say that their finding shows voters are irrational, and thus, our conventional view of democratic accountability may be severely undermined
+
+-   However, all this debate relies on one key assumption - that the claim Achen and Bartels made is correct
+
+-   There is evidence that this link between shark attacks and voter decisions is not strong enough to generate these types of discussion
+
+<br />
+
+Paper proceeds in four parts
+
+1.  Assemble data on fatal shark attacks and county-level vote returns between 1872 and 2012 (for presidential elections). They find very small relationship with no significance
+    -   Implement differences in differences approach with state-election and county-period fixed effects. Fixed effects accounts for maybe, the fact, that beach counties are related and have similar support for a certain political group. The periods account for fluctuations between political parties that naturally occur
+    -   Result finds no statistical significance from Attacks on voter decision, and effect is tiny
+    -   Even when we change attacks from yes/no to number of attacks, there is still no statistically significant result (and effect is tiny)
+    -   Even when we only consider shark attacks in election years (myopic voters), there is still no statistically significant result (and effect is tiny)
+    -   Even when we only consider shark attacks in election years where the incumbent seeks re-election, we get no statistically significant result (and effect is tiny)
+2.  Assess the robustness of Achen and Bartel's countylevel results from New Jersey - and shows how their result reflects more about the 1912 election which they used as a control, rather than the 1916 election with shark attacks (1912 is an outlier)
+    -   Achen and Bartel exlclude essex county, but this does not affect results much
+    -   Achen and Bartels hypothesise effects of shark attacks only appear in beach counties on the jersey shore. This makes sense. But we could also only focus on the two counties with shark attacks. When doing the second approach, there is no statistical significance
+    -   If we include all counties that border the coast (not just jersey coast), we also have a non-statistically significant effect
+    -   Achen and Bartels control for a few counties, which they claim have political machines which would alter the results. However, if we use an alternative index of political machines, we get a statistically insignificant results
+    -   Basically, unless the exact decision choices and data was used as Achen and Bartels did, the result is not replicated, suggesting that this result is not robust
+3.  Achen and Bartels's town level result from Ocean County does not hold for other beach counties of New Jersey
+    -   Achen and Bartels explored Ocean County specifically, dividing the towns into beach and not beach, and seeing if the effect was different. They found that beach towns experienced more effect of attacks -\> voting.
+    -   However, they make a few mistake with the boundaries at the time, If we correct the mistake and change all the town boundaries to the original boundaries, the results are no longer statistically significant
+    -   If there claims are correct in Ocean County, we should expect this pattern in other beach counties. However, we do not find significant evidence of this.
+4.  Demonstrate that the standard errors of Achen and Bartel's empriical strategy considerably overstates the level of statistical confidence
+    -   The paper only finds an estimate as large as the New Jersey estimate in 32% of cases
+    -   An only 27% cases are statistically significant
+    -   Thus, we cannot be confident this relationship is not just statistical random variation.
 
 <br />
 
