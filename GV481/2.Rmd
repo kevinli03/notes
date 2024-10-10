@@ -664,9 +664,11 @@ For detailed set theory, see my notes in GV4L8 or my notes in politicalscience.g
 
 -   Intersection of sets $A \cap B$ mean A and B - basically, only the elements that are both within $A$ and $B$
 
--    Union of sets $A \cup B$ means A or B - basically the combination of all elements that appear in either $A$, $B$, or in both sets
+-   Union of sets $A \cup B$ means A or B - basically the combination of all elements that appear in either $A$, $B$, or in both sets
 
-    -   $A \cup B = A + B + A \cap B$
+```         
+-   $A \cup B = A + B + A \cap B$
+```
 
 <br />
 

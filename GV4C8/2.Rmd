@@ -66,6 +66,22 @@ Find the Nash Equilibrium:
 
 **Solution:**
 
+First, what are player 1's best responses, given player 2's actions?
+
+|            | Left                     | Right                    |
+|------------|--------------------------|--------------------------|
+| **Top**    | (1, 2)                   | ([**2**]{.underline}, 0) |
+| **Bottom** | ([**2**]{.underline}, 1) | (0, 3)                   |
+
+Next, what are player 2's best responses, given player 1's actions
+
+|            | Left                     | Right                    |
+|------------|--------------------------|--------------------------|
+| **Top**    | (1, [**2**]{.underline}) | ([**2**]{.underline}, 0) |
+| **Bottom** | ([**2**]{.underline}, 1) | (0, [**3**]{.underline}) |
+
+<br />
+
 ### Problem 1b
 
 Find the Nash Equilibrium:
