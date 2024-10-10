@@ -29,7 +29,7 @@ Week 2, MY470 Computer Programming
 
 -   Title: Data Types, Operators, Methods
 
--   Topics: Data Types
+-   Topics: Data Types, Operators, Methods, Indexing
 
 -   Readings: N/A
 

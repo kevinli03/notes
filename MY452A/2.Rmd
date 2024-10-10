@@ -1,0 +1,47 @@
+---
+title: "Linear Regression I: Basic Elements"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: true
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+Week 2, MY452A Applied Regression Analysis
+
+-   Title: Linear Regression I: Basic Elements
+
+-   Topics:
+
+-   Readings:
+
+    1.  Section 3.4, 4.1-4.5, Kuha, J., and Lauderdale, B. (No date) *Applied Regression Analysis: Coursepack*
+
+    2.  Chapters 6-7, Gelman et al (2022) *Regression and Other Stories*
+
+    3.  Section 8.1, 10.1-10.2, Gelman et al (2022) *Regression and Other Stories*
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Key Points

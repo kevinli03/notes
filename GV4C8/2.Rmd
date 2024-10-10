@@ -28,7 +28,7 @@ Week 2, GV4C8 Game Theory for Political Science
 
 -   Title: Nash Equilibrium, Static Games of Complete Information
 
--   Topics:
+-   Topics: Notation, Dominant Strategy, Nash Equilibrium, Trembling Hand Perfect Equilibrium
 
 -   Readings:
 
@@ -649,7 +649,7 @@ First, what are player 1's best responses, given player 2's strategies?
 Then, what are player 2's best responses, given player 1's strategies?
 
 |            | Left                                       | Right                    |
-|------------|--------------------------------------------|--------------------------|
+|----------------|------------------------------------|---------------------|
 | **Top**    | (0, [**1**]{.underline})                   | ([**3**]{.underline}, 0) |
 | **Middle** | (1, [**4**]{.underline})                   | (0, 0)                   |
 | **Bottom** | ([**2**]{.underline}, [**2**]{.underline}) | (2, [**2**]{.underline}) |
@@ -676,7 +676,7 @@ Find the Nash Equilibrium:
 Let us first find Player 1's best responses, given Player 2's strategies:
 
 |       | W                        | X                        | Y                        | Z                        |
-|-------|--------------------------|--------------------------|--------------------------|--------------------------|
+|---------------|---------------|---------------|---------------|---------------|
 | **A** | (0, 1)                   | (1, 0)                   | (3, 0)                   | (2, 2)                   |
 | **B** | ([**1**]{.underline}, 1) | ([**3**]{.underline}, 2) | ([**4**]{.underline}, 0) | (3, 0)                   |
 | **C** | (0, 2)                   | (1, 0)                   | (2, 3)                   | ([**4**]{.underline}, 0) |
@@ -685,7 +685,7 @@ Let us first find Player 1's best responses, given Player 2's strategies:
 Then, let us find Player 2's best responses, given player 1's strategies:
 
 |       | W                        | X                                          | Y                        | Z                        |
-|-------|--------------------------|--------------------------------------------|--------------------------|--------------------------|
+|-------------|-------------|-------------------|-------------|-------------|
 | **A** | (0, 1)                   | (1, 0)                                     | (3, 0)                   | (2, [**2**]{.underline}) |
 | **B** | ([**1**]{.underline}, 1) | ([**3**]{.underline}, [**2**]{.underline}) | ([**4**]{.underline}, 0) | (3, 0)                   |
 | **C** | (0, 2)                   | (1, 0)                                     | (2, [**3**]{.underline}) | ([**4**]{.underline}, 0) |
@@ -713,7 +713,7 @@ Find the Nash Equilibrium:
 First, let us find player 1's best responses, given player 2's strategies:
 
 |       | W                        | X                        | Y                        | Z                        |
-|-------|--------------------------|--------------------------|--------------------------|--------------------------|
+|---------------|---------------|---------------|---------------|---------------|
 | **A** | ([**3**]{.underline}, 3) | (0, 1)                   | ([**7**]{.underline}, 4) | ([**8**]{.underline}, 0) |
 | **B** | (1, 0)                   | ([**4**]{.underline}, 4) | (3, 1)                   | (7, 3)                   |
 | **C** | (0, 7)                   | (1, 3)                   | (2, 5)                   | (8, 2)                   |
@@ -722,7 +722,7 @@ First, let us find player 1's best responses, given player 2's strategies:
 Second, let us find player 2's best responses, given player 1's strategies
 
 |       | W                        | X                                          | Y                                          | Z                        |
-|-------|--------------------------|--------------------------------------------|--------------------------------------------|--------------------------|
+|-------------|-------------|-----------------|-----------------|-------------|
 | **A** | ([**3**]{.underline}, 3) | (0, 1)                                     | ([**7**]{.underline}, [**4**]{.underline}) | ([**8**]{.underline}, 0) |
 | **B** | (1, 0)                   | ([**4**]{.underline}, [**4**]{.underline}) | (3, 1)                                     | (7, 3)                   |
 | **C** | (0, [**7**]{.underline}) | (1, 3)                                     | (2, 5)                                     | ([**8**]{.underline}, 2) |
@@ -750,7 +750,7 @@ Find the Nash Equilibrium:
 First, let us find Player 1's best responses, given player 2's strategies:
 
 |       | W                        | X                        | Y                        | Z                        |
-|-------|--------------------------|--------------------------|--------------------------|--------------------------|
+|---------------|---------------|---------------|---------------|---------------|
 | **A** | (3, 4)                   | (7, 6)                   | (4, 7)                   | (1, 8)                   |
 | **B** | (6, 5)                   | (5, 2)                   | (2, 3)                   | (3, 1)                   |
 | **C** | (4, 1)                   | (8, 3)                   | ([**5**]{.underline}, 2) | (2, 0)                   |
@@ -759,7 +759,7 @@ First, let us find Player 1's best responses, given player 2's strategies:
 Now, let us find Player 2's best responses, given Player 1's strategies:
 
 |       | W                        | X                        | Y                        | Z                        |
-|-------|--------------------------|--------------------------|--------------------------|--------------------------|
+|---------------|---------------|---------------|---------------|---------------|
 | **A** | (3, 4)                   | (7, 6)                   | (4, 7)                   | (1, [**8**]{.underline}) |
 | **B** | (6, [**5**]{.underline}) | (5, 2)                   | (2, 3)                   | (3, 1)                   |
 | **C** | (4, 1)                   | (8, [**3**]{.underline}) | ([**5**]{.underline}, 2) | (2, 0)                   |
@@ -786,7 +786,7 @@ Find the Nash Equilibrium:
 First, let us find Player 1's best responses, given Player 2's strategies:
 
 |            | Left                     | Centre                   | Right                    |
-|------------|--------------------------|--------------------------|--------------------------|
+|----------------|-------------------|-------------------|-------------------|
 | **Top**    | (3, 1)                   | ([**2**]{.underline}, 2) | ([**5**]{.underline}, 3) |
 | **Middle** | ([**4**]{.underline}, 5) | ([**2**]{.underline}, 3) | (3, 4)                   |
 | **Bottom** | (2, 4)                   | (1, 3)                   | (4, 1)                   |
@@ -794,7 +794,7 @@ First, let us find Player 1's best responses, given Player 2's strategies:
 Then, let us find Player 2's best responses, given Player 1's strategies:
 
 |            | Left                                       | Centre                   | Right                                      |
-|------------|--------------------------------------------|--------------------------|--------------------------------------------|
+|---------------|----------------------|---------------|----------------------|
 | **Top**    | (3, 1)                                     | ([**2**]{.underline}, 2) | ([**5**]{.underline}, [**3**]{.underline}) |
 | **Middle** | ([**4**]{.underline}, [**5**]{.underline}) | ([**2**]{.underline}, 3) | (3, 4)                                     |
 | **Bottom** | (2, [**4**]{.underline})                   | (1, 3)                   | (4, 1)                                     |
@@ -828,7 +828,7 @@ First, let us find the best responses of Player 1, given player 2's strategies:
 Then, let us find Player 2's best responses, given player 1's strategies:
 
 |            | Left                     | Right                                      |
-|------------|--------------------------|--------------------------------------------|
+|----------------|---------------------|------------------------------------|
 | **Top**    | (0, [**4**]{.underline}) | (0, 0)                                     |
 | **Middle** | ([**4**]{.underline}, 2) | (2, [**4**]{.underline})                   |
 | **Bottom** | (2, 2)                   | ([**4**]{.underline}, [**4**]{.underline}) |
@@ -1045,10 +1045,10 @@ Basically, player 1 wants to be like player 2, while player 2 wants to not be th
 
 The game can be modelled as follows
 
-|           | **Heads** | Tails  |
-|-----------|-----------|--------|
-| **Heads** | 1, -1     | -1, 1  |
-| **Tails** | -1, 1     | 1, -1  |
+|           | **Heads** | Tails |
+|-----------|-----------|-------|
+| **Heads** | 1, -1     | -1, 1 |
+| **Tails** | -1, 1     | 1, -1 |
 
 There is no pure-strategy nash equilibria in this game
 

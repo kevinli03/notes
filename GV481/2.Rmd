@@ -29,7 +29,7 @@ Week 1, Quantitative Analysis for Political Science
 
 -   Title: Bivariate and Multivariate OLS
 
--   Topics:
+-   Topics: Simple Linear Regression, Multivariate Linear Regression
 
 -   Readings:
 

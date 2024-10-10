@@ -173,7 +173,7 @@ Course Content (Lectures, Readings, and Problems):
 
 0.  [Statistical Inference Review](https://kevinli03.github.io/notes/MY452A/0.html)
 1.  [Introduction to Regression Modelling](https://kevinli03.github.io/notes/MY452A/1.html)
-2.  Linear Regression I: Basic Elements
+2.  [Linear Regression I: Basic Elements](https://kevinli03.github.io/notes/MY452A/2.html)
 3.  Linear Regression II: Different Types of Explanatory Variables
 4.  Linear Regression III: Broader Conceptual Questions
 5.  Linear Regression IV: Models for Longitudinal and Clustered Data

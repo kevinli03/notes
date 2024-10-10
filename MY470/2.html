@@ -2789,7 +2789,7 @@ Homepage</a></p>
 <p>Week 2, MY470 Computer Programming</p>
 <ul>
 <li><p>Title: Data Types, Operators, Methods</p></li>
-<li><p>Topics: Data Types</p></li>
+<li><p>Topics: Data Types, Operators, Methods, Indexing</p></li>
 <li><p>Readings: N/A</p></li>
 </ul>
 <p><br /></p>
@@ -3081,7 +3081,7 @@ the order of a set doesn’t matter, and it gets rid of the duplicate
 “l”.</p>
 <pre class="python"><code>d = set(&#39;hello&#39;)
 print(d)</code></pre>
-<pre><code>## {&#39;l&#39;, &#39;o&#39;, &#39;h&#39;, &#39;e&#39;}</code></pre>
+<pre><code>## {&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;o&#39;}</code></pre>
 <p>You can define sets as well with curly brackets {}. Sets can also
 have different data types:</p>
 <pre class="python"><code>e = {3, &#39;f&#39;, None}
@@ -3317,7 +3317,7 @@ both</li>
 <pre class="python"><code>set1 = set(&#39;hello&#39;)
 set2 = set(&#39;world&#39;)
 set1.union(set2)</code></pre>
-<pre><code>## {&#39;r&#39;, &#39;d&#39;, &#39;h&#39;, &#39;e&#39;, &#39;o&#39;, &#39;l&#39;, &#39;w&#39;}</code></pre>
+<pre><code>## {&#39;w&#39;, &#39;l&#39;, &#39;o&#39;, &#39;e&#39;, &#39;h&#39;, &#39;r&#39;, &#39;d&#39;}</code></pre>
 <p><br /></p>
 </div>
 <div id="dictionary-indexing" class="section level3">
@@ -3409,7 +3409,7 @@ the most expensive zoology equipment”</p>
 <p>We know that sets only retain unique elements of a string. So, let us
 convert the variable to a set</p>
 <pre class="python"><code>set(a)</code></pre>
-<pre><code>## {&#39;a&#39;, &#39;n&#39;, &#39;c&#39;, &#39;o&#39;, &#39;l&#39;, &#39;t&#39;, &#39;y&#39;, &#39;j&#39;, &#39;d&#39;, &#39;z&#39;, &#39;i&#39;, &#39;h&#39;, &#39;g&#39;, &#39;v&#39;, &#39;f&#39;, &#39;s&#39;, &#39;b&#39;, &#39;p&#39;, &#39;r&#39;, &#39;k&#39;, &#39;m&#39;, &#39;w&#39;, &#39;x&#39;, &#39;u&#39;, &#39; &#39;, &#39;q&#39;, &#39;e&#39;}</code></pre>
+<pre><code>## {&#39;y&#39;, &#39;l&#39;, &#39;a&#39;, &#39;z&#39;, &#39;t&#39;, &#39;k&#39;, &#39;g&#39;, &#39;h&#39;, &#39;w&#39;, &#39;u&#39;, &#39;s&#39;, &#39;j&#39;, &#39;p&#39;, &#39;e&#39;, &#39;b&#39;, &#39;f&#39;, &#39;v&#39;, &#39;o&#39;, &#39;i&#39;, &#39;r&#39;, &#39;d&#39;, &#39;q&#39;, &#39;x&#39;, &#39;m&#39;, &#39;n&#39;, &#39;c&#39;, &#39; &#39;}</code></pre>
 <p>Notice how we have one space that isn’t a letter. So, let us find the
 length of the set, then minus 1:</p>
 <pre class="python"><code>len(set(a)) - 1</code></pre>
