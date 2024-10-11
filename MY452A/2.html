@@ -2805,6 +2805,98 @@ Other Stories</em></p></li>
 Homepage</a></p>
 <div id="key-points" class="section level1">
 <h1>Key Points</h1>
+<p>The <u><strong>linear regression model</strong></u> shows the process
+that generated the values of <span class="math inline">\(Y\)</span> - or
+more specifically, the conditional distribution of <span class="math inline">\(Y_i\)</span> given <span class="math inline">\(X_i\)</span></p>
+<p>The expected value (mean) of the conditional distribution is our
+model:</p>
+<p><span class="math display">\[
+E(Y_i | X_i) = \alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki}
+\]</span></p>
+<p>With a conditional variance <span class="math inline">\(Var(Y_i|X_i)
+= \sigma^2\)</span>. The parameters of the model are <span class="math inline">\(\overrightarrow{\beta} = (\alpha, \beta_1, ...,
+\beta_k)\)</span></p>
+<p><br /></p>
+<p>An alternative way of writing the model is, when regarding a specific
+point <span class="math inline">\(Y_i\)</span> in the data:</p>
+<p><span class="math display">\[
+Y_i = \alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki} + \epsilon_i
+\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(\epsilon_i\)</span> is the error
+term function - that determines the error for each point. It is normally
+distributed given <span class="math inline">\(\epsilon_i \sim N(0,
+\sigma^2)\)</span></li>
+</ul>
+<p><br /></p>
+<p><u><strong>Interpretation of the coefficients</strong></u> is as
+follows:</p>
+<ul>
+<li><p>In a simple linear regression <span class="math inline">\(\beta\)</span> is the expected change in <span class="math inline">\(Y\)</span>, corresponding to a one unit increase
+in <span class="math inline">\(X\)</span></p></li>
+<li><p>In a multiple linear regression, <span class="math inline">\(\beta_k\)</span> is the expected change in <span class="math inline">\(Y\)</span>, corresponding to a one unit increase
+in <span class="math inline">\(X_k\)</span>, controlling for other
+explanatory variables in the model.</p></li>
+<li><p>In all linear regressions, when all explanatory variables <span class="math inline">\(X\)</span> are 0, the expected value of <span class="math inline">\(Y\)</span> is <span class="math inline">\(\alpha\)</span></p></li>
+<li><p>The Residual standard deviation describes the variance of the
+error term is (how spread out the distribution of <span class="math inline">\(Y\)</span> is given <span class="math inline">\(X\)</span>).</p></li>
+</ul>
+<p><br /></p>
+<p><u><strong>Estimation</strong></u> of the parameters is as
+follows:</p>
+<ul>
+<li><p>Let <span class="math inline">\(\tilde{\beta} = (\tilde{\alpha},
+\tilde{\beta}_1, ... \tilde{\beta}_k)\)</span> be a bunch of proposed
+values of the coefficients that we want to. test</p></li>
+<li><p>Thus, our prediction line with these proposed values is: <span class="math inline">\(\hat{Y}_i (\tilde{\beta}) = \tilde{\alpha} +
+\tilde{\beta}_1 X_{1i} + ... + \tilde{\beta}_k X_{ki}\)</span></p></li>
+<li><p>The residuals <span class="math inline">\(e_i\)</span> of our
+model using the proposed coefficient values is the actual data value of
+<span class="math inline">\(Y\)</span> minus our predicted <span class="math inline">\(Y\)</span> as follows: <span class="math inline">\(e_i(\tilde{\beta}) = Y_i -
+\hat{Y}_i(\tilde{\beta})\)</span></p></li>
+<li><p>The sum of squared errors SSE is all residuals for each
+observation squared, then all of the squares summed: <span class="math inline">\(SSE(\tilde{\beta}) = \sum Y_i -
+\hat{Y}_i(\tilde{\beta})\)</span></p></li>
+</ul>
+<p>We want to find the proposed coefficients <span class="math inline">\(\tilde{\beta}\)</span> that <u>minimise the sum of
+squared errors</u>. OLS estimates this - you can find it through
+calculus for a simple linear regression.</p>
+<p><br /></p>
+<p>The total sample variation in <span class="math inline">\(Y\)</span>
+can be summarised by the <u><strong>total sum of
+squares</strong></u></p>
+<p><span class="math display">\[
+TSS = \sum(Y_i - \bar{Y})^2 = (n-1)s^2_y
+\]</span></p>
+<p>where <span class="math inline">\(s^2_y\)</span> is the sample
+variance of <span class="math inline">\(Y_i\)</span></p>
+<p><br /></p>
+<p><u><strong>R-squared</strong></u> is a measure of the size of
+residual variance <span class="math inline">\(\hat{\sigma}^2\)</span>,
+relative to the overall variance <span class="math inline">\(s^2_y\)</span> of <span class="math inline">\(Y\)</span></p>
+<p><span class="math display">\[
+R^2 = \frac{SSM}{TSS} = \frac{\sum(\hat{Y}_i - \bar{Y})^2}{\sum(Y_i -
+\bar{Y})^2}
+\]</span></p>
+<p>It is interpreted as the proportion of total variation in <span class="math inline">\(Y\)</span> that can be accounted for (or
+explained) by the explanatory variables <span class="math inline">\(\overrightarrow{X}\)</span> in the model.</p>
+<p><br /></p>
+<p>A <u><strong>confidence interval</strong></u> for <span class="math inline">\(\beta_j\)</span> with confidence level <span class="math inline">\(1 - \alpha\)</span> is:</p>
+<p><span class="math display">\[
+\hat{\beta}_j ± t^{n-k-1}_{1-\alpha/2} \times \hat{se}(\hat{\beta}_j)
+\]</span></p>
+<p>The <span class="math inline">\(t\)</span> represents the
+t-distribution statistic - with the higher script indicating degrees of
+freedom, and bottom representing the confidence interval. <span class="math inline">\(\alpha\)</span> is the significance level.</p>
+<p><br /></p>
+<p>To carry out the <u><strong>hypothesis test</strong></u>, we need a
+t-test statistic:</p>
+<p><span class="math display">\[
+t = \frac{\hat{\beta}_j}{\hat{se}(\hat{\beta}_j)}
+\]</span></p>
+<p>Then, we use a table to find the <u><strong>p-value</strong></u> that
+is associated with a t-statistic and its <u><strong>degrees of
+freedom</strong></u> <span class="math inline">\(n-k-1\)</span></p>
 <p><br /></p>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
@@ -2826,7 +2918,8 @@ observations</p>
 <span class="math inline">\(Y\)</span> - or more specifically, the
 conditional distribution of <span class="math inline">\(Y_i\)</span>
 given <span class="math inline">\(X_i\)</span></p>
-<p>The conditional mean of the distribution is our model:</p>
+<p>The expected value (mean) of the conditional distribution is our
+model:</p>
 <p><span class="math display">\[
 E(Y_i | X_i) = \alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki}
 \]</span></p>
@@ -2845,7 +2938,7 @@ Y_i = \alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki} + \epsilon_i
 \]</span></p>
 <ul>
 <li><p>Where <span class="math inline">\(\epsilon_i\)</span> is the
-error term function - that determins the error for each point. It is
+error term function - that determines the error for each point. It is
 normally distributed given <span class="math inline">\(\epsilon_i \sim
 N(0, \sigma^2)\)</span></p></li>
 <li><p>Basically, this distribution of <span class="math inline">\(\epsilon_i\)</span> is reflected in the earlier

@@ -46,6 +46,92 @@ Week 2, MY452A Applied Regression Analysis
 
 # Key Points
 
+The [**linear regression model**]{.underline} shows the process that generated the values of $Y$ - or more specifically, the conditional distribution of $Y_i$ given $X_i$
+
+The expected value (mean) of the conditional distribution is our model:
+
+$$
+E(Y_i | X_i) = \alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki}
+$$
+
+With a conditional variance $Var(Y_i|X_i) = \sigma^2$. The parameters of the model are $\overrightarrow{\beta} = (\alpha, \beta_1, ..., \beta_k)$
+
+<br />
+
+An alternative way of writing the model is, when regarding a specific point $Y_i$ in the data:
+
+$$
+Y_i = \alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki} + \epsilon_i
+$$
+
+-   Where $\epsilon_i$ is the error term function - that determines the error for each point. It is normally distributed given $\epsilon_i \sim N(0, \sigma^2)$
+
+<br />
+
+[**Interpretation of the coefficients**]{.underline} is as follows:
+
+-   In a simple linear regression $\beta$ is the expected change in $Y$, corresponding to a one unit increase in $X$
+
+-   In a multiple linear regression, $\beta_k$ is the expected change in $Y$, corresponding to a one unit increase in $X_k$, controlling for other explanatory variables in the model.
+
+-   In all linear regressions, when all explanatory variables $X$ are 0, the expected value of $Y$ is $\alpha$
+
+-   The Residual standard deviation describes the variance of the error term is (how spread out the distribution of $Y$ is given $X$).
+
+<br />
+
+[**Estimation**]{.underline} of the parameters is as follows:
+
+-   Let $\tilde{\beta} = (\tilde{\alpha}, \tilde{\beta}_1, ... \tilde{\beta}_k)$ be a bunch of proposed values of the coefficients that we want to. test
+
+-   Thus, our prediction line with these proposed values is: $\hat{Y}_i (\tilde{\beta}) = \tilde{\alpha} + \tilde{\beta}_1 X_{1i} + ... + \tilde{\beta}_k X_{ki}$
+
+-   The residuals $e_i$ of our model using the proposed coefficient values is the actual data value of $Y$ minus our predicted $Y$ as follows: $e_i(\tilde{\beta}) = Y_i - \hat{Y}_i(\tilde{\beta})$
+
+-   The sum of squared errors SSE is all residuals for each observation squared, then all of the squares summed: $SSE(\tilde{\beta}) = \sum Y_i - \hat{Y}_i(\tilde{\beta})$
+
+We want to find the proposed coefficients $\tilde{\beta}$ that [minimise the sum of squared errors]{.underline}. OLS estimates this - you can find it through calculus for a simple linear regression.
+
+<br />
+
+The total sample variation in $Y$ can be summarised by the [**total sum of squares**]{.underline}
+
+$$
+TSS = \sum(Y_i - \bar{Y})^2 = (n-1)s^2_y
+$$
+
+where $s^2_y$ is the sample variance of $Y_i$
+
+<br />
+
+[**R-squared**]{.underline} is a measure of the size of residual variance $\hat{\sigma}^2$, relative to the overall variance $s^2_y$ of $Y$
+
+$$
+R^2 = \frac{SSM}{TSS} = \frac{\sum(\hat{Y}_i - \bar{Y})^2}{\sum(Y_i - \bar{Y})^2}
+$$
+
+It is interpreted as the proportion of total variation in $Y$ that can be accounted for (or explained) by the explanatory variables $\overrightarrow{X}$ in the model.
+
+<br />
+
+A [**confidence interval**]{.underline} for $\beta_j$ with confidence level $1 - \alpha$ is:
+
+$$
+\hat{\beta}_j ± t^{n-k-1}_{1-\alpha/2} \times \hat{se}(\hat{\beta}_j)
+$$
+
+The $t$ represents the t-distribution statistic - with the higher script indicating degrees of freedom, and bottom representing the confidence interval. $\alpha$ is the significance level.
+
+<br />
+
+To carry out the [**hypothesis test**]{.underline}, we need a t-test statistic:
+
+$$
+t = \frac{\hat{\beta}_j}{\hat{se}(\hat{\beta}_j)}
+$$
+
+Then, we use a table to find the [**p-value**]{.underline} that is associated with a t-statistic and its [**degrees of freedom**]{.underline} $n-k-1$
+
 <br />
 
 ------------------------------------------------------------------------
@@ -64,7 +150,7 @@ Suppose we have observed data on the response variable $Y$, and a number of $X$ 
 
 The regression model shows the process that generated the values of $Y$ - or more specifically, the conditional distribution of $Y_i$ given $X_i$
 
-The conditional mean of the distribution is our model:
+The expected value (mean) of the conditional distribution is our model:
 
 $$
 E(Y_i | X_i) = \alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki}
@@ -84,7 +170,7 @@ $$
 Y_i = \alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki} + \epsilon_i
 $$
 
--   Where $\epsilon_i$ is the error term function - that determins the error for each point. It is normally distributed given $\epsilon_i \sim N(0, \sigma^2)$
+-   Where $\epsilon_i$ is the error term function - that determines the error for each point. It is normally distributed given $\epsilon_i \sim N(0, \sigma^2)$
 
 -   Basically, this distribution of $\epsilon_i$ is reflected in the earlier model by the distribution of $Y_i|X_i$
 
@@ -104,7 +190,7 @@ The model is an approximation of the real world. Thus, this means that there are
 2.  $Var(Y_i|X_i) = \sigma^2$, which means that the conditional variance of $Y$ (or the error term $\epsilon$ does not depend on any $X$. This is known as the assumption of homoscedasticity
     -   Basically, errors don't change in spread based on $X$, they are similar across all $X$
 3.  Distribution of $Y_i$ given any $\overrightarrow{X}_i$ is normally distributed (i.e., the errors $\epsilon_i$ are normally distributed).
-4.   Observations $i$ are statistically independent of each other
+4.  Observations $i$ are statistically independent of each other
 
 <br />
 
