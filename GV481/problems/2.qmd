@@ -1,0 +1,272 @@
+---
+title: "Problem Set 1"
+subtitle: "Week 2, GV481 Quantitative Analysis for Political Science"
+format:
+    pdf:
+        papersize: A4
+        linestretch: 1.25
+        include-in-header: 
+            text: |
+                \usepackage{fvextra}
+                \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+include-before-body:
+  text: |
+    \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+      showspaces = false,
+      showtabs = false,
+      breaksymbolleft={},
+      breaklines
+      % Note: setting commandchars=\\\{\} here will cause an error 
+    }
+---
+
+Before we start, let us load tidyverse and set the working directory
+
+```{r, message = FALSE}
+
+library("tidyverse")
+setwd("/Users/kevinli/Documents/GitHub/notes/GV481/problems")
+```
+
+Let us also load the dataset for the questions
+
+```{r, message = FALSE}
+df <- read_csv("haber.csv")
+```
+
+As instructed, save only the data needed and rename column names
+
+```{r}
+df <- df %>%
+    select(cnamehabmen, year, Fiscal_Reliance, polity_2, Total_Oil_Income_PC, Regime)
+
+colnames(df) <- c("country", "year", "fiscalreliance", "democracy", "oilincome", "autocracy")
+```
+
+{{< pagebreak >}}
+
+# Question 1
+
+**The first step of data analysis is to describe the data**
+
+**1a) Let’s describe the scope of the dataset. What is the range of the variable year? What is the number of countries included in the dataset?**
+
+Let us find the range of variable year:
+
+```{r}
+summary(df$year)
+
+2008 - 1800
+```
+
+The range of the variable year is 208
+
+How many countries? Let us use function unique()
+
+```{r}
+unique_countries <- unique(df$country)
+# length function to find how long unique vector is
+
+length(unique_countries)
+```
+
+Thus, 169 unique countries included.
+
+**b) Let’s now turn to describing the dependent and independent variables. In this problem, you will use two different measures of oil reliance and two different measures of democracy. Generate a dummy (binary) variable called democraticcountry which is equal to 1 if the country is democratic and 0 otherwise. To do this, use the vari- able autocracy which is equal to 1 if the country is autocratic and 0 otherwise.**
+
+There are two ways to do this - a simple math way, and using the recode() function. I am going to be lazy.
+
+```{r}
+df$democraticcountry <- 1 - df$autocracy
+```
+
+**c) Put together a summary statistics table for the following variables: democracy, democraticcountry, fiscalreliance, oilincome. Your table should include the mean, the standard deviation, the number of observations, the minimum and the maximum value for each of these variables.**
+
+We could use a package psych and function describe()
+
+```{r, message = FALSE}
+library(psych)
+```
+
+```{r}
+summary_variables <- df %>%
+  select(democracy, democraticcountry, fiscalreliance, oilincome)
+
+describe(summary_variables)
+```
+
+{{< pagebreak >}}
+
+**d) Provide an histogram or a bar graph for the variables democracy, democraticcountry, fiscalreliance, oilincome. What do you notice?**
+
+```{r}
+par.orig <- par(mfrow = c(2,2), mar = c(5, 6, 0.5, 0.5)) # arranging plots
+hist(df$democracy, main = "")
+hist(df$democraticcountry, main = "")
+hist(df$fiscalreliance, main = "")
+hist(df$oilincome, main = "")
+
+```
+
+I notice that democraticcountry is binary, fiscalreliance and oilincome are very right skewed.
+
+{{< pagebreak >}}
+
+**e) For highly skewed variables, it is standard to transform the variable using the log transformation. Generate a new variable equal to the log of oilincome using the function log. What do you notice?**
+
+```{r}
+df$log_oilincome <- log(df$oilincome)
+
+# reset par parameter from before
+par.orig <- par(mfrow = c(1,1))
+hist(df$log_oilincome, main = "")
+```
+
+**f) Provide a graph showing the proportion of countries who are democratic over time, and another to show the average oil income per capita over time. What do you notice?**
+
+I will use ggplot for this
+```{r}
+# graph of proportion of democracy over time
+# Let us group_by() year to find mean
+dem_mean <- df %>%
+  group_by(year) %>%
+  summarise(prop_democracy = mean(democraticcountry, na.rm = TRUE), .groups = 'drop')
+
+# now ggplot
+
+ggplot(dem_mean, aes(x = year, y = prop_democracy)) +
+  geom_point() +
+  geom_smooth()
+
+# graph of average oil income over time
+# group_by() year to find mean
+
+oil_mean <- df %>%
+  group_by(year) %>%
+  summarise(avg_oil = mean(oilincome, na.rm = TRUE), .groups = 'drop')
+
+# now ggplot
+
+ggplot(oil_mean, aes(x = year, y = avg_oil)) +
+  geom_point() +
+  geom_smooth()
+
+```
+
+{{< pagebreak >}}
+
+# Question 2
+**Estimate the covariance, the correlation coefficient, and the slope of the line of best fit between democracy and oilincome. What do you conclude about the relationship between democracy and oilincome? Describe the one unit change in the dependent variable for a one unit change in the independent variable and describe the standard deviation change in the dependent variable for a one standard deviation change in the independent variable.**
+
+Let us do covariance first.
+
+```{r}
+cov(df$democracy, df$oilincome, use = "complete.obs")
+
+```
+
+Now, let us find correlation coefficient
+
+```{r}
+cor(df$democracy, df$oilincome, use = "complete.obs")
+
+```
+
+Now, let us find linear line of best fit:
+
+```{r}
+model1 <- lm(democracy ~ oilincome, data = df)
+summary(model1)
+
+```
+
+The relationship is negative. For every one unit increase in oil income, there is a predicted 0.00002652 decrease in democracy
+
+In terms of standard deviations:
+
+```{r}
+(sd(df$oilincome, na.rm = TRUE) * -2.652e-04) / sd(df$democracy, na.rm = TRUE)
+```
+
+Thus, for every one standard deviation increase in oil income, there is a predicted 0.1 standard deviation decrease in democracy
+
+{{< pagebreak >}}
+
+# Question 3
+**Next, you will explore correlation in oil and democracy over time.**
+
+**a) Regress democracy on oilincome using data for year 1800 only. What is happening here? Which estimates do you recover here?**
+
+```{r}
+# let us first filter for 1800
+df_1800 <- df %>%
+  filter(year == 1800)
+
+model2 <- lm(democracy ~ oilincome, data = df_1800)
+summary(model1)
+
+```
+
+**Now, regress democracy on oilincome separately for the years 1900, 1950, 2000, 2006. What do you notice here? Interpret the coefficients**
+
+1900
+```{r}
+df_1900 <- df %>%
+  filter(year == 1900)
+
+model3 <- lm(democracy ~ oilincome, data = df_1900)
+summary(model3)
+```
+
+1950
+```{r}
+df_1950 <- df %>%
+  filter(year == 1950)
+
+model4 <- lm(democracy ~ oilincome, data = df_1950)
+summary(model4)
+```
+
+2000
+```{r}
+df_2000 <- df %>%
+  filter(year == 2000)
+
+model5 <- lm(democracy ~ oilincome, data = df_2000)
+summary(model5)
+```
+
+2006
+```{r}
+df_2006 <- df %>%
+  filter(year == 2006)
+
+model6 <- lm(democracy ~ oilincome, data = df_2006)
+summary(model6)
+```
+
+The coefficients go more and more negative, and more significant
+
+I don't feel like interpreting every coefficient, fight me.
+
+{{< pagebreak >}}
+
+# Question 4
+**Let’s now turn to examine the correlation between democracy and oil within country.**
+
+**a) Start by regressing democracy on oilincome for Burundi. What is happening? Which estimates do you recover?**
+
+burundi
+```{r}
+df_burundi <- df %>%
+  filter(country == "Burundi")
+
+model7 <- lm(democracy ~ oilincome, data = df_burundi)
+summary(model7)
+```
+
+No esimtates
+
+**b) We want to restrict our data to countries for which there is variation in both democracy and oilincome. Here is a strategy to do this. Run the following code and provide a scatter plot for democracy and oilincome for the remaining countries (here we mean a different graph for each country, look up the graph combine function to combine several graphs into one). What do you conclude about the correlation between oil and democracy within country.**
+
+??

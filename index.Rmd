@@ -111,7 +111,7 @@ Course Content (Lectures, Readings, and Problems):
 Course Content (Lectures, Readings, and Problems):
 
 1.  [Quantitative Thinking and Correlations](https://kevinli03.github.io/notes/GV481/1.html)
-2.  [Bivariate and Multivariate OLS](https://kevinli03.github.io/notes/GV481/2.html)
+2.  [Bivariate and Multivariate OLS](https://kevinli03.github.io/notes/GV481/2.html) \| [Problem Set 1](https://kevinli03.github.io/notes/GV481/problems/2.pdf)
 3.  Uncertainty and Hypothesis Testing
 4.  Causal Inference
 5.  Randomised Experiments
