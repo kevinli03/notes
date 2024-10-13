@@ -43,6 +43,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br />
 
+### Other Notes
+
+1.  [Introduction to Political Economy](https://kevinli03.github.io/politicaleconomy.pdf)
+2.  [Introductory Econometrics for Political Economy](https://kevinli03.github.io/econometrics.pdf)
+3.  [Advanced Econometrics for Political Economy](https://kevinli03.github.io/advanced.pdf)
+
+-   [Essential Mathematics for Political Economy](https://kevinli03.github.io/maths.pdf)
+
 ------------------------------------------------------------------------
 
 # Introductory Courses

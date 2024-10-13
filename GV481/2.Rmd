@@ -179,7 +179,7 @@ One way to estimate this with much less effort but strong accuracy is the ordina
 The formula for the $\beta$ in OLS is as follows:
 
 $$
-\hat{\beta} = \frac{\sum (x_i - \bar{y}) (x_i - \bar{x}) }{\sum (x_i - x)^2}
+\hat{\beta} = \frac{\sum (y_i - \bar{y}) (x_i - \bar{x}) }{\sum (x_i - x)^2}
 $$
 
 <br />
