@@ -302,6 +302,10 @@ There is a Nash Equilibria when less than $k$ people contributing. why?
 
 **Recall the Classical Games introduced in the lecture (e.g. slide 13). Can you think of any “political science” situation in which players’ strategic situation is captured by these games? When describing each situation tell us who are the players, which are their actions and explain the payoff achieved by each pair of actions.**
 
+You could say that the chicken game is an example of trying to avoid scheduling political conventions at the same time.
+
+You could argue that the coordination game is something like a politician trying to match their constituents interests (to gain votes), and the constituents want to match the ideas of their politician
+
 {{< pagebreak >}}
 
 # Question 4:
@@ -424,6 +428,6 @@ Why NOT 1 larger:
 
 -   Well, that means any person who supports $B$ who isn't voting has a profitable deviation. They can switch to voting, and cause a tie, increasing their payoff from 0 to $1-c$.
 
-Why NOTE more than 2 larger:
+Why NOT more than 2 larger:
 
 -   Well, that means a player who supports $A$ who is voting has a profitable deviation. They can switch to not voting, and get rid of the cost of voting $-c$
