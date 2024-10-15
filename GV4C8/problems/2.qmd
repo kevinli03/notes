@@ -1,0 +1,429 @@
+---
+title: "Problem Set Week 2"
+subtitle: "GV4C8 Game Theory for Political Science"
+author: "Kevin Lingfeng Li"
+format:
+    pdf:
+        documentclass: article
+        papersize: A4
+        geometry:
+            - width=150mm
+            - height=238mm
+            - top=27mm
+        linestretch: 1.25
+---
+
+# Question 1:
+
+**Find the Nash Equilibria of the following static games:**
+
+## Part A:
+
+|            |          |           |
+|------------|:--------:|:---------:|
+|            | **Left** | **Right** |
+| **Top**    |  (1, 2)  |  (2, 0)   |
+| **Bottom** |  (2, 1)  |  (0, 3)   |
+
+**Though Process**:
+
+First, let us find player 1's best responses to player 2's chosen strategies:
+
+|            |                |                |
+|------------|:--------------:|:--------------:|
+|            |    **Left**    |   **Right**    |
+| **Top**    |     (1, 2)     | (**\[2\]**, 0) |
+| **Bottom** | (**\[2\]**, 1) |     (0, 3)     |
+
+Now, let us find player 2's best response to player 1's chosen strategies:
+
+|            |                |                |
+|------------|:--------------:|:--------------:|
+|            |    **Left**    |   **Right**    |
+| **Top**    | (1, **\[2\]**) | (**\[2\]**, 0) |
+| **Bottom** | (**\[2\]**, 1) | (0, **\[3\]**) |
+
+Thus, there are no Nash Equilibria, since there is no strategy profile where both players are playing best responses.
+
+{{< pagebreak >}}
+
+## Part B:
+
+|            |          |           |
+|:-----------|:--------:|:---------:|
+|            | **Left** | **Right** |
+| **Top**    |  (0, 1)  |  (3, 0)   |
+| **Middle** |  (1, 4)  |  (0, 0)   |
+| **Bottom** |  (2, 2)  |  (2, 2)   |
+
+**Thought Process:**
+
+First, let us find player 1's best responses to player 2's chosen strategies:
+
+|            |                |                |
+|:-----------|:--------------:|:--------------:|
+|            |    **Left**    |   **Right**    |
+| **Top**    |     (0, 1)     | (**\[3\]**, 0) |
+| **Middle** |     (1, 4)     |     (0, 0)     |
+| **Bottom** | (**\[2\]**, 2) |     (2, 2)     |
+
+Now, let us find player 2's best response to player 1's chosen strategies:
+
+|            |                        |                |
+|:-----------|:----------------------:|:--------------:|
+|            |        **Left**        |   **Right**    |
+| **Top**    |     (0, **\[1\]**)     |   (**3**, 0)   |
+| **Middle** |     (1, **\[4\]**)     |     (0, 0)     |
+| **Bottom** | (**\[2\]**, **\[2\]**) | (2, **\[2\]**) |
+
+Thus, **(Bottom, Left)** is the sole Nash Equilibrium in this game.
+
+{{< pagebreak >}}
+
+## Part C:
+
+|       |        |        |        |        |
+|-------|--------|--------|--------|--------|
+|       | **W**  | **X**  | **Y**  | **Z**  |
+| **A** | (0, 1) | (1, 0) | (3, 0) | (2, 2) |
+| **B** | (1, 1) | (3, 2) | (4, 0) | (3, 0) |
+| **C** | (0, 2) | (1, 0) | (2, 3) | (4, 0) |
+| **D** | (1, 2) | (2, 3) | (4, 1) | (2, 1) |
+
+**Thought Process:**
+
+First, let us find player 1's best responses to player 2's chosen strategies:
+
+|       |                |                |                |                |
+|-------|----------------|----------------|----------------|----------------|
+|       | **W**          | **X**          | **Y**          | **Z**          |
+| **A** | (0, 1)         | (1, 0)         | (3, 0)         | (2, 2)         |
+| **B** | (**\[1\]**, 1) | (**\[3\]**, 2) | (**\[4\]**, 0) | (3, 0)         |
+| **C** | (0, 2)         | (1, 0)         | (2, 3)         | (**\[4\]**, 0) |
+| **D** | (**\[1\]**, 2) | (2, 3)         | (**\[4\]**, 1) | (2, 1)         |
+
+Now, let us find player 2's best response to player 1's chosen strategies:
+
+|       |                |                        |                |                |
+|---------------|---------------|---------------|---------------|---------------|
+|       | **W**          | **X**                  | **Y**          | **Z**          |
+| **A** | (0, 1)         | (1, 0)                 | (3, 0)         | (2, **\[2\]**) |
+| **B** | (**\[1\]**, 1) | (**\[3\]**, **\[2\]**) | (**\[4\]**, 0) | (3, 0)         |
+| **C** | (0, 2)         | (1, 0)                 | (2, **\[3\]**) | (**\[4\]**, 0) |
+| **D** | (**\[1\]**, 2) | (2, **\[3\]**)         | (**\[4\]**, 1) | (2, 1)         |
+
+Thus, **(B, X)** is the sole Nash Equilibrium in this game.
+
+{{< pagebreak >}}
+
+## Part D:
+
+|       |        |        |        |        |
+|-------|--------|--------|--------|--------|
+|       | **W**  | **X**  | **Y**  | **Z**  |
+| **A** | (3, 3) | (0, 1) | (7, 4) | (8, 0) |
+| **B** | (1, 0) | (4, 4) | (3, 1) | (7, 3) |
+| **C** | (0, 7) | (1, 3) | (2, 5) | (8, 2) |
+| **D** | (0, 8) | (3, 7) | (2, 4) | (6, 6) |
+
+**Thought Process:**
+
+First, let us find player 1's best responses to player 2's chosen strategies:
+
+|       |                |                |                |                |
+|-------|----------------|----------------|----------------|----------------|
+|       | **W**          | **X**          | **Y**          | **Z**          |
+| **A** | (**\[3\]**, 3) | (0, 1)         | (**\[7\]**, 4) | (**\[8\]**, 0) |
+| **B** | (1, 0)         | (**\[4\]**, 4) | (3, 1)         | (7, 3)         |
+| **C** | (0, 7)         | (1, 3)         | (2, 5)         | (**\[8\]**, 2) |
+| **D** | (0, 8)         | (3, 7)         | (2, 4)         | (6, 6)         |
+
+Now, let us find player 2's best response to player 1's chosen strategies:
+
+|  |  |  |  |  |
+|---------------|---------------|---------------|---------------|---------------|
+|  | **W** | **X** | **Y** | **Z** |
+| **A** | (**\[3\]**, 3) | (0, 1) | (**\[7\]**, **\[4\]**) | (**\[8\]**, 0) |
+| **B** | (1, 0) | (**\[4\]**, **\[4\]**) | (3, 1) | (7, 3) |
+| **C** | (0, **\[7\]**) | (1, 3) | (2, 5) | (**\[8\]**, 2) |
+| **D** | (0, **\[8\]**) | (3, 7) | (2, 4) | (6, 6) |
+
+Thus, **(A, Y)** and **(B, X)** are the Nash Equilibrium in this game.
+
+{{< pagebreak >}}
+
+## Part E:
+
+|       |        |        |        |        |
+|-------|--------|--------|--------|--------|
+|       | **W**  | **X**  | **Y**  | **Z**  |
+| **A** | (3, 4) | (7, 6) | (4, 7) | (1, 8) |
+| **B** | (6, 5) | (5, 2) | (2, 3) | (3, 1) |
+| **C** | (4, 1) | (8, 3) | (5, 2) | (2, 0) |
+| **D** | (8, 2) | (9, 0) | (1, 4) | (4, 3) |
+
+**Thought Process:**
+
+First, let us find player 1's best responses to player 2's chosen strategies:
+
+|       |                |                |                |                |
+|-------|----------------|----------------|----------------|----------------|
+|       | **W**          | **X**          | **Y**          | **Z**          |
+| **A** | (3, 4)         | (7, 6)         | (4, 7)         | (1, 8)         |
+| **B** | (6, 5)         | (5, 2)         | (2, 3)         | (3, 1)         |
+| **C** | (4, 1)         | (8, 3)         | (**\[5\]**, 2) | (2, 0)         |
+| **D** | (**\[8\]**, 2) | (**\[9\]**, 0) | (1, 4)         | (**\[4\]**, 3) |
+
+Now, let us find player 2's best response to player 1's chosen strategies:
+
+|       |                |                |                |                |
+|-------|----------------|----------------|----------------|----------------|
+|       | **W**          | **X**          | **Y**          | **Z**          |
+| **A** | (3, 4)         | (7, 6)         | (4, 7)         | (1, **\[8\]**) |
+| **B** | (6, **\[5\]**) | (5, 2)         | (2, 3)         | (3, 1)         |
+| **C** | (4, 1)         | (8, **\[3\]**) | (**\[5\]**, 2) | (2, 0)         |
+| **D** | (**\[8\]**, 2) | (**\[9\]**, 0) | (1, **\[4\]**) | (**\[4\]**, 3) |
+
+Thus, there are no Nash Equilibria, since there is no strategy profile where both players are playing best responses.
+
+{{< pagebreak >}}
+
+## Part F:
+
+|            |          |            |           |
+|:-----------|:--------:|:----------:|:---------:|
+|            | **Left** | **Centre** | **Right** |
+| **Top**    |  (3, 1)  |   (2, 2)   |  (5, 3)   |
+| **Middle** |  (4, 5)  |   (2, 3)   |  (3, 4)   |
+| **Bottom** |  (2, 4)  |   (1, 3)   |  (4, 1)   |
+
+**Thought Process:**
+
+First, let us find player 1's best responses to player 2's chosen strategies:
+
+|            |                |                |                |
+|:-----------|:--------------:|:--------------:|:--------------:|
+|            |    **Left**    |   **Centre**   |   **Right**    |
+| **Top**    |     (3, 1)     | (**\[2\]**, 2) | (**\[5\]**, 3) |
+| **Middle** | (**\[4\]**, 5) | (**\[2\]**, 3) |     (3, 4)     |
+| **Bottom** |     (2, 4)     |     (1, 3)     |     (4, 1)     |
+
+Now, let us find player 2's best response to player 1's chosen strategies:
+
+|            |                        |                |                        |
+|:-----------------|:----------------:|:----------------:|:----------------:|
+|            |        **Left**        |   **Centre**   |       **Right**        |
+| **Top**    |         (3, 1)         | (**\[2\]**, 2) | (**\[5\]**, **\[3\]**) |
+| **Middle** | (**\[4\]**, **\[5\]**) | (**\[2\]**, 3) |         (3, 4)         |
+| **Bottom** |     (2, **\[4\]**)     |     (1, 3)     |         (4, 1)         |
+
+Thus, **(Top, Right)** and **(Left, Middle)** are the Nash Equilibrium in this game.
+
+{{< pagebreak >}}
+
+## Part G:
+
+|            |          |           |
+|:-----------|:--------:|:---------:|
+|            | **Left** | **Right** |
+| **Top**    |  (0, 4)  |  (0, 0)   |
+| **Middle** |  (4, 2)  |  (2, 4)   |
+| **Bottom** |  (2, 2)  |  (4, 4)   |
+
+**Thought Process:**
+
+First, let us find player 1's best responses to player 2's chosen strategies:
+
+|            |                |                |
+|:-----------|:--------------:|:--------------:|
+|            |    **Left**    |   **Right**    |
+| **Top**    |     (0, 4)     |     (0, 0)     |
+| **Middle** | (**\[4\]**, 2) |     (2, 4)     |
+| **Bottom** |     (2, 2)     | (**\[4\]**, 4) |
+
+Now, let us find player 2's best response to player 1's chosen strategies:
+
+|            |                |                        |
+|:-----------|:--------------:|:----------------------:|
+|            |    **Left**    |       **Right**        |
+| **Top**    | (0, **\[4\]**) |         (0, 0)         |
+| **Middle** | (**\[4\]**, 2) |     (2, **\[4\]**)     |
+| **Bottom** |     (2, 2)     | (**\[4\]**, **\[4\]**) |
+
+Thus, **(Bottom, Right)** is the sole Nash Equilibrium in this game.
+
+{{< pagebreak >}}
+
+# Question 2:
+
+**Contributing to a public good: Each of n people chooses whether to contribute a fixed amount toward the provision of a public good. The good is provided if and only if at least** $k$ **people contribute where** $2 ≤ k ≤ n$**; if it is not provided, contributions are not refunded. Each person ranks outcomes from best to worst as follows:**
+
+-   **(i) any outcome in which the good is provided and she does not contribute;**
+
+-   **(ii) any outcome in which the good is provided and she contributes;**
+
+-   **(iii) any outcome in which the good is not provided and she does not contribute;**
+
+-   **(iv) and outcome in which the good is not provided and she contributes.**
+
+**Formulate this situation as a strategic game and find its Nash equilibria (is there a NE in which more than k people contribute? One in which k people contribute? One in which fewer than k people contribute?)**
+
+There is no Nash Equilibria in which more than $k$ people contribute. Why?
+
+-   Take player $i$, who let us assume, is contributing. If only $k$ people need to contribute to get the payoff, and there are more than $k$ people contributing, player $i$ can defect and refuse to contribute, while the public good is still being provided.
+
+-   For example, if there are $k+1$ people contributing, that $+1$ dude can decide not to contribute, and we would still meet the threshold $k$, and the good would still be provided. Thus, that $+1$ has a profitable deviation.
+
+-   Thus, player $i$ has a profitable deviation in this scenario, which means there is no nash equilibria
+
+There is a Nash Equilibria when $k$ people contribute. Why?
+
+-   Let us take player $i$, who let us assume, is contributing.
+
+-   If any single player decides to stop contributing, the good is no longer provided in this scenario.
+
+-   Since player $i$ prefers to have the good even if they are contributing, over having no good when they are not contributing, player $i$ is worse off by switching strategies.
+
+-   Thus, player $i$ does not have a profitable deviation in this scenario, meaning the outcome is a Nash Equilibrium
+
+There is a Nash Equilibria when less than $k$ people contributing. why?
+
+-   Let us assume that currently, 0 people are contributing.
+
+-   Player $i$ has the option to change and contribute. However, that only brings the number of contributed up to 1, which is not enough to get the public good provided
+
+-   However, by contributing and not getting the public good, player $i$ is worse off than before.
+
+-   Thus, player $i$ does not have a profitable deviation, and thus, 0 people contributing is a Nash Equilibrium.
+
+{{< pagebreak >}}
+
+# Question 3:
+
+**Recall the Classical Games introduced in the lecture (e.g. slide 13). Can you think of any “political science” situation in which players’ strategic situation is captured by these games? When describing each situation tell us who are the players, which are their actions and explain the payoff achieved by each pair of actions.**
+
+{{< pagebreak >}}
+
+# Question 4:
+
+**Two animals are fighting over some prey. Each can be passive or aggressive. Each prefers to be aggressive if its opponent is passive, and passive if its opponent is aggressive; given its own stance, it prefers the outcome in which its opponent is passive to that in which its opponent is aggressive. Formulate this situation as a strategic game and find its Nash equilibria.**
+
+Let us first define the characteristics of the game:
+
+-   There are two players, both animals
+
+-   Each player has two strategies: passive ( $P$ ) or aggressive ( $A$ )
+
+-   Preferences: Best is if they are aggressive and opponent is passive. Then, passive if their opponents are aggressive:
+
+Let us define the ordinal payoffs:
+
+-   $u_1(a_1 =A, a_2 = P) = u_2 (a_2 = A, a_1 = P)= 3$ (utility of player 1, when they are aggressive, and opponent is passive; and utility of player 2, when they are aggressive, and opponent is passive.)
+
+-   $u_1 (a_1 = P, a_2 = A) = u_2 (a_2 = P, a_1 = A) = 1$ (utility of player 1, when they are passive, and the opponent is aggressive; and utility of player 2, when they are passive, and opponent is aggressive
+
+-   $u_1(a_1 = P, a_2 = P) = u_2(a_2 = P, a_1 = P) = 2$ (utility of player 1, when both are passive; and utility of player 2, when both are passive).
+
+    -   Question says "*it prefers the outcome in which its opponent is passive to that in which its opponent is aggressive*".
+
+-   $u_1(a_1 = A, a_2 = A) = u_2 (a_2 = A, a_1 = A) = 0$ (utility of player 1, when both are aggressive; and utility of player 2, when both are aggressive)
+
+    -   I distinguish between both being aggressive and both being passive because the question says "*it prefers the outcome in which its opponent is passive to that in which its opponent is aggressive*".
+
+Now, let us put this in matrix form:
+
+|                     |                     |                  |
+|---------------------|:-------------------:|:----------------:|
+|                     | **Aggressive (P2)** | **Passive (P2)** |
+| **Aggressive (P1)** |       (0, 0)        |      (3, 1)      |
+| **Passive (P1)**    |       (1, 3)        |      (2, 2)      |
+
+Now, let us solve for the Nash Equilibria:
+
+First, let us find player 1's best responses to player 2's chosen strategies:
+
+|                     |                     |                  |
+|---------------------|:-------------------:|:----------------:|
+|                     | **Aggressive (P2)** | **Passive (P2)** |
+| **Aggressive (P1)** |       (0, 0)        |  (**\[3\]**, 1)  |
+| **Passive (P1)**    |   (**\[1\]**, 3)    |      (1, 1)      |
+
+Now, let us find player 2's best response to player 1's chosen strategies:
+
+|                     |                        |                        |
+|---------------------|:----------------------:|:----------------------:|
+|                     |  **Aggressive (P2)**   |    **Passive (P2)**    |
+| **Aggressive (P1)** |         (0, 0)         | (**\[3\]**, **\[1\]**) |
+| **Passive (P1)**    | (**\[1\]**, **\[3\]**) |         (1, 1)         |
+
+Thus, **(Aggresive, Passive)** and **(Passive, Aggressive)** are the Nash Equilibria of the game.
+
+{{< pagebreak >}}
+
+# Question 5:
+
+**Voter Participation. Two candidates A and B, compete in an election. Of the** $n$ **citizens,** $k$ **support A and** $m =n-k$ **support candidate B. Each citizen decides whether to vote, at a cost, for the candidate she supports, or to abstain. A citizen who abstains receives the payoff of 2 if the candidate she supports wins, 1 if this candidate ties for first place, and 0 if this candidate loses. A citizen who votes receives the payoffs** $2-c$**,** $1-c$**, and** $-c$ **in these three cases, where** $0 < c < 1$**.**
+
+-   **a. for** $k=m=1$**, is the game as any considered in the lecture?**
+
+-   **b. for** $k=m$ **find the set of NE.**
+
+-   **c. what is the set of NE for** $k<m$
+
+## Part A:
+
+**For** $k=m=1$**, is the game as any considered in the lecture?**
+
+This essentially means 1 citizen supports A, and 1 citizen supports B.
+
+-   Each citizen has the following strategies: abstain or vote
+
+-   Preferences:
+
+    -   If citizen choses abstain, then if party wins (2), if party ties(1), and if party looses (0)
+
+    -   If citizen chooses vote, then if party wins (2-c), if party ties (1-c), and if party looses (-c)
+
+Let us put this in a matrix:
+
+|  |  |  |
+|------------------------|:----------------------:|:----------------------:|
+|  | **Abstain (P2)** | **Vote (P2)** |
+| **Abstain (P1)** | Both candidates tie for first place with 0 votes, thus payoff is **(1, 1)** | Player 2's candidate wins, but he gets a penalty for voting. Player 1's candidate loses. Payoff is **(0, 2-c)** |
+| **Vote (P1)** | Player 1's candidate wins, but he gets a penalty for voting. Player 2's candidate loses. Payoff is: **(2-c, 0)** | Both candidates tie for first place with 1 vote. But, both get penalty for voting. Payoff is **(1-c, 1-c)** |
+
+Thus, the normal form looks like\
+
+|                  |                  |               |
+|------------------|:----------------:|:-------------:|
+|                  | **Abstain (P2)** | **Vote (P2)** |
+| **Abstain (P1)** |      (1, 1)      |   (0, 2-c)    |
+| **Vote (P1)**    |     (2-c, 0)     |  (1-c, 1-c)   |
+
+This is a **prisoner's dilemma game**: both players have a dominant strategy of voting, yet that results in a pareto-inefficient outcome of (vote, vote).
+
+## Part B:
+
+**For** $k=m$ **find the set of NE.**
+
+We basically already did this before. There is a dominant strategy of voting, because if you don't vote, you allow the other team to win, getting you a terrible payoff of 0. Even though the end result is a draw (plus the $-c$ voting penalty), it is still better than 0.
+
+## Part C:
+
+**What is the set of NE for** $k<m$
+
+Any solution where the number of people voting for $A$ is 2 larger (exactly) than the number of people voting for $B$.
+
+-   Why?
+
+-   That means any person who supports $A$ does not have a profitable deviation, since player $i$ that supports A, if he isn't voting, does not want to switch to vote since that incurs a cost $-c$ when their candidate is already winning, so no profitable deviation. They also don't want to switch to +1 (see below)
+
+-   That means any person who supports $B$ does not have a profitable deviation, since player $i$ who supports B, if he isn't voting, does not want to switch to vote since that incurs a cost $-c$ when their candidate is already losing, so no profitable deviation.
+
+Why NOT 1 larger:
+
+-   Well, that means any person who supports $B$ who isn't voting has a profitable deviation. They can switch to voting, and cause a tie, increasing their payoff from 0 to $1-c$.
+
+Why NOTE more than 2 larger:
+
+-   Well, that means a player who supports $A$ who is voting has a profitable deviation. They can switch to not voting, and get rid of the cost of voting $-c$
