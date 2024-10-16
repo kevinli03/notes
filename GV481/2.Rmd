@@ -1,6 +1,5 @@
 ---
 title: "Bivariate and Multivariate OLS"
-subtitle: "Session 2, GV481"
 output:
   html_document:
     df_print: paged
@@ -25,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
-Week 1, Quantitative Analysis for Political Science
+**Week 2, GV481 Quantitative Analysis for Political Science**
 
 -   Title: Bivariate and Multivariate OLS
 
@@ -835,34 +834,6 @@ Paper proceeds in four parts
     -   The paper only finds an estimate as large as the New Jersey estimate in 32% of cases
     -   An only 27% cases are statistically significant
     -   Thus, we cannot be confident this relationship is not just statistical random variation.
-
-<br />
-
-------------------------------------------------------------------------
-
-[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
-
-# Reading: Suryanarayan & Steven
-
-Suryanarayan, P. and Steven, W. (2021) 'Slavery, Reconstruction, and Bureaucratic Capacity in the American South', *The American Political Science Review*, 155(2), pp. 568-584
-
-<br />
-
-### Key Points
-
-<br />
-
-------------------------------------------------------------------------
-
-[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
-
-# Reading: Haber & Victor
-
-Haber, S. and Victor, M. (2011) 'Do Natural Resources Fuel Authoritarianism? A Reappraisal of the Resource Curse', *The American Political Science Review*, 105(1), pp. 1-26.
-
-<br />
-
-### Key Points
 
 <br />
 
