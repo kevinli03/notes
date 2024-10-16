@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
-Week 1, Quantitative Analysis for Political Science
+**Week 1, GV481 Quantitative Analysis for Political Science**
 
 -   Title: Quantitative Thinking and Correlations
 

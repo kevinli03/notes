@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Title: Uncertainty and Hypothesis Testing
 
--   Topics:
+-   Topics: Bias and Variance, Sampling Distribution, Confidence Intervals, Hypothesis Testing
 
 -   Readings:
 

@@ -45,11 +45,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Other Notes
 
-1.  [Introduction to Political Economy](https://kevinli03.github.io/politicaleconomy.pdf)
-2.  [Introductory Econometrics for Political Economy](https://kevinli03.github.io/econometrics.pdf)
-3.  [Advanced Econometrics for Political Economy](https://kevinli03.github.io/advanced.pdf)
+**An Introduction to Political Economy**
 
--   [Essential Mathematics for Political Economy](https://kevinli03.github.io/maths.pdf)
+-   [Volume I: Formal Mathematical Modelling](https://kevinli03.github.io/politicaleconomy/1.pdf)
+
+-   [Volume II: Economic Models of Politics](https://kevinli03.github.io/politicaleconomy/2.pdf)
+
+**Empirical Political Economy**
+
+-   [Volume I: Econometric Methods](https://kevinli03.github.io/econometrics/1.pdf)
+
+-   [Volume II: Further Econometric Methods](https://kevinli03.github.io/econometrics/2.pdf)
+
+-   [Volume III: Machine Learning Methods](https://kevinli03.github.io/econometrics/3.pdf)
 
 ------------------------------------------------------------------------
 
@@ -156,7 +164,7 @@ Course Content (Lectures, Readings, Problems):
 
 1.  [Political Economy, Game Theory, Aggregation of Preferences](https://kevinli03.github.io/notes/GV4C8/1.html)
 2.  [Nash Equilibrium, Static Games of Complete Information](https://kevinli03.github.io/notes/GV4C8/2.html) \| [Problem Set Week 2](https://kevinli03.github.io/notes/GV4C8/problems/2.pdf)
-3.  Downsian Models of Electoral Competition
+3.  [Downsian Models of Electoral Competition](https://kevinli03.github.io/notes/GV4C8/3.html) \| Problem Set Week 3
 4.  Mixed Strategies, Strategic Foresight
 5.  Dynamic Games of Complete Information, Legislative Bargaining
 

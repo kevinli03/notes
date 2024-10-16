@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
 
-Week 1, GV4C8 Game Theory for Political Science
+**Week 1, GV4C8 Game Theory for Political Science**
 
 -   Title: Political Economy, Game Theory, Aggregation of Preferences
 

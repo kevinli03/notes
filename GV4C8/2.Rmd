@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
 
-Week 2, GV4C8 Game Theory for Political Science
+**Week 2, GV4C8 Game Theory for Political Science**
 
 -   Title: Nash Equilibrium, Static Games of Complete Information
 
@@ -33,9 +33,6 @@ Week 2, GV4C8 Game Theory for Political Science
 -   Readings:
 
     1.  Chapter 2, Osborne, M. J. (2004) *An Introduction to Game Theory* (Oxford University Press)
-    2.  Chapter 5, McCarty, N. and Meirowitz, A. (2012) *Political Game Theory: An Introduction*
-    3.  Chapter 3, Tadelis, S. (2013) *Game Theory: An Introduction*
-    4.  Chapter 5, Tadelis, S. (2013) *Game Theory: An Introduction*
 
 <br />
 
@@ -45,7 +42,7 @@ Week 2, GV4C8 Game Theory for Political Science
 
 # Key Points
 
-A strategic game consists of:
+A strategic [**game**]{.underline} consists of:
 
 -   A set of **players**
 
@@ -815,31 +812,3 @@ A symmetric nash equilibrium is a nash equilibrium where both players take the s
 ------------------------------------------------------------------------
 
 [GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
-
-# Reading: McCarty & Meirowitz
-
-Chapter 5, McCarty, N. and Meirowitz, A. (2012) *Political Game Theory: An Introduction*
-
-<br />
-
-------------------------------------------------------------------------
-
-[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
-
-# Reading: Tadelis Ch. 3
-
-Chapter 3, Tadelis, S. (2013) *Game Theory: An Introduction*
-
-<br />
-
-------------------------------------------------------------------------
-
-[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
-
-# Reading: Tadelis Ch. 5
-
-Chapter 5, Tadelis, S. (2013) *Game Theory: An Introduction*
-
-<br />
-
-------------------------------------------------------------------------
