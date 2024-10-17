@@ -53,7 +53,7 @@ These are a few books that I am working on to summarise my education in Politica
 4.  [**Advanced Statistical Methods**: Further Regression, Time Series, and Latent Variables](https://kevinli03.github.io/politicaleconomy/4.pdf)
 5.  [**Social Data Science**: Using Machine Learning for Political Science and Political Economy](https://kevinli03.github.io/politicaleconomy/5.pdf)
 
-Finally, a companion book: [Essential Mathematics for Political Economy](https://kevinli03.github.io/politicaleconomy/maths.pdf)
+Finally, a companion book: [Mathematics for Political Economy](https://kevinli03.github.io/politicaleconomy/maths.pdf)
 
 ------------------------------------------------------------------------
 
@@ -190,7 +190,7 @@ Course Content (Lectures, Readings, and Problems):
 0.  [Statistical Inference Review](https://kevinli03.github.io/notes/MY452A/0.html)
 1.  [Introduction to Regression Modelling](https://kevinli03.github.io/notes/MY452A/1.html)
 2.  [Linear Regression I: Basic Elements](https://kevinli03.github.io/notes/MY452A/2.html)
-3.  Linear Regression II: Different Types of Explanatory Variables
+3.  [Linear Regression II: Different Types of Explanatory Variables](https://kevinli03.github.io/notes/MY452A/3.html)
 4.  Linear Regression III: Broader Conceptual Questions
 5.  Linear Regression IV: Models for Longitudinal and Clustered Data
 
