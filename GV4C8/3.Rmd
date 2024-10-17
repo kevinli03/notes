@@ -42,6 +42,58 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Key Points
 
+The [**Downsian Model**]{.underline} is a model of electoral competition, with the following characteristics.
+
+-   We have two political parties that want to win an election
+-   The only "tool" at their disposal to win votes, is to chose where to position their party on the left-right spectrum (from -1 to 1)
+-   There is a continuum of citizens, each with a favorite position on the left-right spectrum. Let us first assume that these positions are uniformly distributed on the left-right spectrum (from -1 to 1). The median voter is at position $m$
+-   We assume that citizens vote for the party that offers the position on the spectrum closest to their preference.
+-   The party that obtains the most votes win.
+-   Indifferent votes vote for each party with equal probability, and when parties tie, then win the election with equal probability
+
+The [**Nash Equilibrium**]{.underline} is strategy profile $(m, m)$ - both party converging to the median voter.
+
+-   Why? If you need 50% or more of the votes, and the median voter (by definition) is the 50th percentile, winning the median voter makes you win the election.
+
+<br />
+
+When we analyse a model, we do not evaluate the results - just because you do not like the results, you cannot reject the model. [You have to look at the assumptions that are driving the model]{.underline}.
+
+<br />
+
+[**Relaxing Assumptions**]{.underline} of the Downsian Model to see how outcomes change:
+
+1.  Assumption: Bounded [-1, 1] and unidimensional. When we unbound (preferences from negative infinity to infinity), the Nash Equilibrium is still at $(m, m)$. However, in multiple dimensions, there is no Nash Equilibria (due to divide the dollar game, see first lecture)
+2.  Assumption: uniform distribution. We can relax this, and use any possible distribution of voters, and the Nash Equilibrium is still $(m, m)$, as by definition, the median voter is the 50th percentile, no matter the distribution.
+3.  Assumption: Voter preferences are symmetric - only the distance matters. When we relax this assumption, and get asymmetric preferences, as long as they are single peaked, the Nash Equilibrium is still $(m, m)$
+4.  Assumption: No cost of voting and no abstaining. When we relax this assumption, the Nash Equilibrium no longer is at $(m, m)$, since that means both parties offer the same policies, so no rational voter would endure the cost of voting if they could not impact anything. There will be some Nash Equilibrium, with a force pushing parties towards the median, but still far enough out to be distinct enough to encourage people to vote.
+5.  Assumption: only 2 parties. When we add another party, the Nash Equilibrium is no longer at $(m, m)$. However, there is still a Nash Equilibrium, just not at the median voter.
+6.  Assumption: Parties only care about winning. If we add a parameter for parties caring about the actual policies, we still find the Nash Equilibrium is $(m, m)$, since if you care about your policies, you would hate your opponents, so you would still want to win the election.
+
+<br />
+
+Final assumption is that parties can make any promises that they keep, and the public believes they will keep. This is essential, since if a party will not keep a promise, then the actual positioning of the party in Median Voter Theory doesn't mean anything.
+
+There is a new strategic game going on here ([**Citizen-Candidate Game**]{.underline}):
+
+-   Players: Continuum of citizens, that are both potential candidates and voters
+
+-   Preferences: utility of a player is how close the preferences of the candidate is from their own preferences.
+
+-   Actions: Citizens simultaneously decide who will run for office. Citizens vote for candidate closest to their preferences, and the candidate who wins implements preferred policy
+
+-   When no candidate enters the race, policy $\hat{p}$ is implemented
+
+-   We assume there is a cost $\delta > 0$ of participating in the election
+
+-   We assume preferred policy of median citizen is at $m=0$
+
+Nash Equilibrium of this game:
+
+-   If the median voter runs as a candidate (there needs to be some conditions for this to happen), then the model does indeed converge at $m$
+
+-   However, if 2 candidates run (there needs to be some conditions for this to happen), then the model no longer converges at $(m, m)$. This is because candidates will only run, if they hate their opponents policies more than the cost of participating $\delta$. If both candidates are too close/similar, like at $(m, m)$, there is no incentive to take the cost of participating $\delta$.
+
 <br />
 
 ------------------------------------------------------------------------
@@ -71,18 +123,10 @@ Hotelling shows that in competitive activity, there are incentives to locate in 
 The Downsian model is a model of electoral competition, with the following characteristics.
 
 -   We have two political parties that want to win an election
-
-```{=html}
-<!-- -->
-```
 -   The only "tool" at their disposal to win votes, is to chose where to position their party on the left-right spectrum (from -1 to 1)
-
--   There is a continuum of citizens, each with a favorite position on the left-right spectrum. Let us first assume that these positions are uniformly distributed on the left-right spectrum (from -1 to 1)
-
+-   There is a continuum of citizens, each with a favorite position on the left-right spectrum. Let us first assume that these positions are uniformly distributed on the left-right spectrum (from -1 to 1). The median voter is at position $m$
 -   We assume that citizens vote for the party that offers the position on the spectrum closest to their preference.
-
 -   The party that obtains the most votes win.
-
 -   Indifferent votes vote for each party with equal probability, and when parties tie, then win the election with equal probability
 
 <br />
@@ -384,7 +428,7 @@ When are we going to have a median, when only the median voter enters the electi
 
     -   Median voter wins the election against anyone else not at the median (median voter theory). So, others will incur a cost of $\delta$ without any chance of winning
 
-    -    Another voter at the median does not run, since they will need to incur a cost of $\delta$, when the policy outcome will be the same as if the median voter ran.
+    -   Another voter at the median does not run, since they will need to incur a cost of $\delta$, when the policy outcome will be the same as if the median voter ran.
 
 Can there be an equilibrium with 2 candidates?
 
