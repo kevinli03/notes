@@ -242,6 +242,35 @@ Course Content (Lectures, Readings, and Problems):
 
 ------------------------------------------------------------------------
 
+### DV490 Economic Development Policy I
+
+**DV490 Economic Development Policy I: Applied Policy Analysis for Macroeconomic Development (Autumn Term)**
+
+[Lecturer]{.underline}: Dr. Diana Weinhold
+
+[Summative Assessment]{.underline}: N/A (Auditing)
+
+Course Content (note: I did not take formal notes, but here are some resources):
+
+1.  [Introduction to Long Run Macroeconomic Growth and Development](https://kevinli03.github.io/notes/DV490/1.html)
+2.  Basics of Economic Growth and Growth Theory
+3.  New Directions in Growth Theory
+4.  History and Long Run Growth
+5.  Globalisation and Trade
+
+```{=html}
+<!-- -->
+```
+7.  Inequality, Globalisation, and Growth
+8.  Financial Crises Old and New
+9.  Odious Debt and Original Sin
+10. International Aid and External Finance
+11. Industrial Policy
+
+<br />
+
+------------------------------------------------------------------------
+
 # Winter Term
 
 ### GV482 Current Issues
