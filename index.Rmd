@@ -242,7 +242,7 @@ Course Content (Lectures, Readings, and Problems):
 
 ------------------------------------------------------------------------
 
-### DV490 Economic Development Policy I
+### DV490 Economic Development I
 
 **DV490 Economic Development Policy I: Applied Policy Analysis for Macroeconomic Development (Autumn Term)**
 
@@ -258,9 +258,8 @@ Course Content (note: I did not take formal notes, but here are some resources):
 4.  History and Long Run Growth
 5.  Globalisation and Trade
 
-```{=html}
 <!-- -->
-```
+
 7.  Inequality, Globalisation, and Growth
 8.  Financial Crises Old and New
 9.  Odious Debt and Original Sin
