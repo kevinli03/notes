@@ -523,8 +523,14 @@ The $t$ represents the t-distribution statistic - with the higher script indicat
 In an exam, you can use the 95% confidence interval based on a standard normal distribution. Thus, just use 1.96.
 
 $$
-\hat{\beta}_j ≠ 1.96 \times \hat{se}(\hat{\beta}_j)
+\hat{\beta}_j ± 1.96 \times \hat{se}(\hat{\beta}_j)
 $$
+
+<br />
+
+We can also do confidence intervals for fitted values $\hat{Y}$. This is calculated in a similar way to confidence intervals of $\beta_j$, simply: $\hat{Y} ± t \times \hat{se} (\hat{Y})$
+
+-   The confidence intervals may range in size depending on $X$ values.
 
 <br />
 
@@ -569,3 +575,45 @@ In R, the t-value and the p-value are show here:
 ------------------------------------------------------------------------
 
 [MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# F-Tests
+
+### Introduction
+
+The idea of a F-test is to compare models estimated under the null hypothesis, and the alternative hypothesis.
+
+-   In other words, it can compare models.
+
+For example, we will have a null model, and a alternate model:
+
+-   $M_0:E[Y] = \alpha + \beta_1 X_1 + ... + \beta_gX_g$
+
+-   $M_a : E[Y] = \alpha + \beta_1X_1 + ... + \beta_gX_g + \beta_{g+1} X_{g+1} + ... + \beta_k X_k$
+
+Essentially, our null hypothesis is a simple smaller model, and our alternate hypothesis is a larger model that contains all of the smaller model, but with more terms and variables.
+
+-   This can help us determine if we should add other variables/parameters into our model - does it significantly out perform the null model.
+
+-   For example, if $M_a$ adds a new $X$ variable $X_1$, we can determine how important that new $X_1$ variable, and if it makes the model significantly better.
+
+<br />
+
+### F-Test Statistic
+
+The F-test statistic $F$, is basically a scaled version of the difference between the $R^2$ values of both models.
+
+-   A lower difference in \$R\^2\$ means significant difference between the predictive power of the model $M_a$ compared to $M-0$, thus lower p-value.
+
+-   A lower difference in $R^2$ means not a huge significant difference between the predictive power of the model $M_a$ compared to $M-0$, thus higher p-value.
+
+<br />
+
+### F-Test of a Coefficient
+
+To test a coefficient, we do the following:
+
+-   Create a model with at least one explanatory variable, without the one we want to test. This will be the null model $M_0$
+
+-   Now create another model with the coefficient we want to test, as well as the original variable included in the null model. This new model is $M_a$
+
+Now, we run a $F$-test to see if the new coefficient made a significant difference in the predictive power of our model.

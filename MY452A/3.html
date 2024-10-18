@@ -2799,6 +2799,376 @@ Variables</p></li>
 Homepage</a></p>
 <div id="key-points" class="section level1">
 <h1>Key Points</h1>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+<div id="polynomial-regression" class="section level1">
+<h1>Polynomial Regression</h1>
+<div id="non-linear-relationships" class="section level3">
+<h3>Non-Linear Relationships</h3>
+<p>Sometimes, a linear (straight-line) fit is a poor description of a
+relationship. For example, the relationship between two variables could
+be curved.</p>
+<ul>
+<li><p>More flexible relationships can be modelled by including
+transformations of <span class="math inline">\(X\)</span> as explanatory
+variables.</p></li>
+<li><p>Common transformations include polynomials (quadratic, cubic,
+etc.) and logarithms.</p></li>
+<li><p>We will start with quadratic transformations.</p></li>
+</ul>
+<p>Note: “Linear” regression does not mean the relationship between
+<span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> must be linear. It refers to the
+linearity of parameters.</p>
+<p><br /></p>
+</div>
+<div id="quadratic-transformations" class="section level3">
+<h3>Quadratic Transformations</h3>
+<p>A quadratic model with one <span class="math inline">\(X\)</span>
+takes the following form:</p>
+<p><span class="math display">\[
+E[Y] = \alpha + \beta_1X + \beta_2X^2
+\]</span></p>
+<p>Important notes about quadratic transformations:</p>
+<ul>
+<li><p>Here, <span class="math inline">\(X^2\)</span> is the second
+power of <span class="math inline">\(X\)</span> (a quadratic, a
+parabola)</p></li>
+<li><p>If the model includes <span class="math inline">\(X^2\)</span>,
+it should also include <span class="math inline">\(X\)</span></p></li>
+<li><p>You can include other explanatory variables after, just like any
+other regression.</p></li>
+</ul>
+<p>Quadratic transformations are good for modelling data that takes a
+shape of a parabola.</p>
+<ul>
+<li><p>Note, a true parabola goes from -∞ to ∞. However, for our model,
+it does not have to do this - it only is used for the range of plausible
+<span class="math inline">\(X\)</span> values given our explanatory
+variable (ex. age, a negative number would make no sense).</p></li>
+<li><p>Because the parabola can go outside our plausible range of <span class="math inline">\(X\)</span> values, we might not see the “turn” of
+the parabola within our data.</p></li>
+</ul>
+<p>We fit the model just as normal - minimise the sum of squared
+errors.</p>
+<p><br /></p>
+</div>
+<div id="quadratic-model-interpretation" class="section level3">
+<h3>Quadratic Model Interpretation</h3>
+<p>When we run the quadratic transformation in R, we will get two
+coefficients (as seen in the equation above), one for the term <span class="math inline">\(X\)</span>, and one for the term <span class="math inline">\(X^2\)</span></p>
+<p>How do we interpret these coefficients:</p>
+<ul>
+<li><p>The p-value of <span class="math inline">\(X^2\)</span> indicates
+evidence <strong>against</strong> the null hypothesis of a linear
+relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li><p>So, if this is statistically significant, then we can reject a
+linear relationship between <span class="math inline">\(X\)</span> and
+<span class="math inline">\(Y\)</span></p></li>
+<li><p>Why? If <span class="math inline">\(\beta_2 = 0\)</span>, then,
+we are left with a linear equation since that cancels out <span class="math inline">\(X^2\)</span>. Thus, if we are confidence <span class="math inline">\(\beta_2 ≠ 0\)</span>, then, we can reject the idea
+that the relationship is linear.</p></li>
+</ul></li>
+<li><p>If <span class="math inline">\(X^2\)</span> coefficient is
+positive, then it opens upward, and if <span class="math inline">\(X^2\)</span> coefficient is negative, then the
+curve opens downward</p></li>
+<li><p>The coefficients of <span class="math inline">\(X\)</span> and
+<span class="math inline">\(X^2\)</span> can no longer be interpreted
+directly. This is because, changing <span class="math inline">\(X\)</span> also changes <span class="math inline">\(X^2\)</span>, so you cannot hold one constant and
+interpret the other.</p></li>
+<li><p>If we do want to interpret this model, we are better off to
+predict values of <span class="math inline">\(Y\)</span> using our
+model.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="turning-point-of-quadratic" class="section level3">
+<h3>Turning Point of Quadratic</h3>
+<p>The “turning point” of a quadratic of our model is at value <span class="math inline">\(X = -\hat{\beta}_1/(2 \hat{\beta}_2)\)</span></p>
+<p>Why? Take the derivative and set equal to 0</p>
+<p><span class="math display">\[
+Y = \hat{\alpha} + \hat{\beta}_1X + \hat{\beta}_2X^2
+\]</span></p>
+<p><span class="math display">\[
+\frac{dy}{dx} = 0 + \hat{\beta}_1 + 2\hat{\beta}_2X
+\]</span></p>
+<p><span class="math display">\[
+0 = \hat{\beta}_1 + 2 \hat{\beta}_2X
+\]</span></p>
+<p><span class="math display">\[
+-\hat{\beta}_1 = 2 \hat{\beta}_2 X
+\]</span></p>
+<p><span class="math display">\[
+X = -\hat{\beta}_1/(2 \hat{\beta}_2)
+\]</span></p>
+<p>Interpretation of the Turning Point:</p>
+<ul>
+<li><p>This does not need to be within the observed range of <span class="math inline">\(X\)</span></p></li>
+<li><p>The turning point can indicate either a maximum or negative <span class="math inline">\(Y\)</span> value, given a certain <span class="math inline">\(X\)</span> value. This can be useful for
+interpretation.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="general-polynomial-models" class="section level3">
+<h3>General Polynomial Models</h3>
+<p>You can continue adding powers to our model:</p>
+<ul>
+<li><p>Cubic: <span class="math inline">\(E[Y] = \alpha + \beta_1 X +
+\beta_2 X^2 + \beta_3 x^3\)</span></p></li>
+<li><p>Quartic: <span class="math inline">\(E[Y] = \alpha + \beta_1 X +
+\beta_2 X^2 + \beta_3 X^3 + \beta_4 X^4\)</span></p></li>
+<li><p>And so on…</p></li>
+</ul>
+<p>Each higher order coefficient, if statistical significant, says that
+the relationship between <span class="math inline">\(X\)</span> and
+<span class="math inline">\(Y\)</span> is not the previous order.</p>
+<ul>
+<li>Ex. if the cubic term is statistically significant, we can reject a
+quadratic relationship between <span class="math inline">\(X\)</span>
+and <span class="math inline">\(Y\)</span>.</li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="logarithmic-transformation" class="section level1">
+<h1>Logarithmic Transformation</h1>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>Logarithmic transformations are another form of non-linear
+transformations:</p>
+<ul>
+<li><p>Logarithmic relationships are commonly used for skewed variables,
+such as when <span class="math inline">\(X\)</span> is a amount of
+money: income, wealth, turnover, etc.</p></li>
+<li><p>In such situations, <span class="math inline">\(X\)</span> is
+replaced with <span class="math inline">\(\log(X)\)</span> in the
+explanatory variable.</p></li>
+<li><p>Note: <span class="math inline">\(\log(X) = \ln(X)\)</span> in
+statistics - we use natural logs.</p></li>
+</ul>
+<p>Thus, the model takes the form:</p>
+<p><span class="math display">\[
+E(Y) = \alpha + \beta\log(X)
+\]</span></p>
+<p>One difference is that in polynomial models, we input the polynomials
+within the <em>lm()</em> function, while for logs, we frequently first
+log our data, then run a normal regression.</p>
+<p><br /></p>
+</div>
+<div id="logarithmic-transformations-interpretation" class="section level3">
+<h3>Logarithmic Transformations Interpretation</h3>
+<p>The logic of the association with a logarithmic transformation, is
+that it is not additive, but multiplicative factors that matter.</p>
+<ul>
+<li><p>We could interpret it as, given a one unit increase in the log of
+<span class="math inline">\(X\)</span>, there is a expected <span class="math inline">\(\beta\)</span> change in <span class="math inline">\(Y\)</span>.</p></li>
+<li><p>This is the same interpretation as a normal linear model,
+however, this is not particularly informative.</p></li>
+</ul>
+<p>We can do another form of interpretation. Based on log rules, we
+know:</p>
+<p><span class="math display">\[
+\log(X) + A = \log(X) + \log(e^A) = \log(e^A \times X)
+\]</span></p>
+<p>Thus, we can also interpret it as:</p>
+<ul>
+<li><p>Multiplying <span class="math inline">\(X\)</span> by <span class="math inline">\(e^A\)</span> is associated with an increase of
+<span class="math inline">\(A \times \beta\)</span> units in <span class="math inline">\(Y\)</span>.</p></li>
+<li><p>We can change <span class="math inline">\(A\)</span> for more
+convenient interpretation. For example, when <span class="math inline">\(A = 0.095\)</span>, then <span class="math inline">\(e^A \approx 1.1\)</span>, which when multiplied,
+is equivalent to a 10% increase.</p></li>
+<li><p>Thus, increasing <span class="math inline">\(X\)</span> by 10% is
+associated with an expected change of <span class="math inline">\(0.095
+\times \beta\)</span> units in <span class="math inline">\(Y\)</span></p></li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="categorical-x-variables" class="section level1">
+<h1>Categorical <span class="math inline">\(X\)</span> Variables</h1>
+<div id="introduction-1" class="section level3">
+<h3>Introduction</h3>
+<p>Often, our explanatory variables are categorical, rather than
+continuous. This means they will only have a small number of distinct
+possible values, and no more.</p>
+<p>There are two types of categorical variables:</p>
+<ul>
+<li><p>Binary (Dichotomous) or Dummy variables: only 2 categories. For
+example, treatment vs. control in an experiment, yes/no, true/false,
+etc.</p></li>
+<li><p>Polytomous variables, with 3 or more values. For example,
+resident of England, Scotland, Wales, or Northern Ireland.</p></li>
+</ul>
+<p>Note: if the polytomous variables are ordinal (with a meaningful
+order), we can often treat them as continuous. The below will focus on
+non-ordinal categories.</p>
+<p><br /></p>
+</div>
+<div id="binary-explanatory-variable" class="section level3">
+<h3>Binary Explanatory Variable</h3>
+<p>Let us define <span class="math inline">\(X\)</span> as a variable
+with 2 categories: <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(X = 1\)</span></p>
+<ul>
+<li><p>Consider the simple linear regression mode: <span class="math inline">\(E[Y] = \alpha + \beta X\)</span></p></li>
+<li><p>The coefficient <span class="math inline">\(\beta\)</span> is the
+expected difference in <span class="math inline">\(Y\)</span>, between
+category <span class="math inline">\(X=1\)</span> and category <span class="math inline">\(X=0\)</span></p></li>
+</ul>
+<p>Why? Let us plug in <span class="math inline">\(X = 0\)</span> and
+<span class="math inline">\(X = 1\)</span>:</p>
+<p><span class="math display">\[
+E[Y|X = 1] = \alpha + \beta(1) = \alpha + \beta
+\]</span></p>
+<p><span class="math display">\[
+E[Y|X=0] = \alpha + \beta(0) = \alpha
+\]</span></p>
+<p><span class="math display">\[
+E[Y|X=1] - E[Y|X=0] = (\alpha + \beta) - \alpha = \beta
+\]</span></p>
+<p>Thus, the expected difference between the two categories is <span class="math inline">\(\beta\)</span></p>
+<p><br /></p>
+</div>
+<div id="binary-x-estimation-and-inference" class="section level3">
+<h3>Binary <span class="math inline">\(X\)</span> Estimation and
+Inference</h3>
+<p>The least squares estimates of the parameters of a binary <span class="math inline">\(X\)</span> value is:</p>
+<ul>
+<li><p>coefficient <span class="math inline">\(\alpha\)</span> is
+estimated as <span class="math inline">\(\hat{\alpha} =
+\bar{Y}_0\)</span></p></li>
+<li><p>Coefficient <span class="math inline">\(\beta\)</span> is
+estimated as <span class="math inline">\(\hat{\beta} = \bar{Y}_1 -
+\bar{Y}_0\)</span></p></li>
+</ul>
+<p>Where <span class="math inline">\(\bar{Y}_1\)</span> is the sample
+mean of <span class="math inline">\(Y\)</span> for observations in
+category <span class="math inline">\(Y=1\)</span>, and <span class="math inline">\(\hat{Y}_0\)</span> is the sample mean of <span class="math inline">\(Y\)</span> for observations in category <span class="math inline">\(Y = 0\)</span></p>
+<p>The t-test of the null hypothesis <span class="math inline">\(h_0 :
+\beta = 0\)</span> in this linear regression is now a t-test difference
+of means (that we have seen in intro to statistics)</p>
+<p><br /></p>
+</div>
+<div id="polytomous-explanatory-variables" class="section level3">
+<h3>Polytomous Explanatory Variables</h3>
+<p>A categorical variable with 3 or more categories can be converted
+into a set of binary dummy variables (indicator variables).</p>
+<ul>
+<li><p>Dummy variables are created for all but one of the categories in
+our variable</p></li>
+<li><p>The category without a dummy, is the reference (baseline)
+category</p></li>
+<li><p>The coefficient of the dummy variable of a category, is the
+expected difference in <span class="math inline">\(Y\)</span> between
+that category, and the reference/baseline category, controlling for all
+other explanatory variables.</p></li>
+<li><p>The choice of a baseline category is arbitrary, the model is the
+same regardless of the choice.</p></li>
+</ul>
+<p><br /></p>
+<p>For example, the World Bank classified country into an income
+variable. The income variable contains: high, middle, and low.</p>
+<p>Then, we could define low as our reference (baseline) category. Thus,
+we can represent this model with 2 dummy variables:</p>
+<ul>
+<li><p>Dummy variable 1: <span class="math inline">\(X_M\)</span>, where
+<span class="math inline">\(X_M = 1\)</span> when a country is in the
+middle income category, and <span class="math inline">\(X_M = 0\)</span>
+when a country is not in that category</p></li>
+<li><p>Dummy variable 2: <span class="math inline">\(X_H\)</span>, where
+<span class="math inline">\(X_H = 1\)</span> when a country is in the
+high category, and <span class="math inline">\(X_H = 0\)</span> when a
+country is not in that category</p></li>
+<li><p>We do not have a dummy for our reference category of low income,
+because we know if both <span class="math inline">\(X_M\)</span> and
+<span class="math inline">\(X_H\)</span> are equal to <span class="math inline">\(0\)</span>, then that refers to our reference
+category</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="interpretation" class="section level3">
+<h3>Interpretation</h3>
+<p>With our 3 category explanatory variable, we have created 2 dummy
+variables (as above). Thus, our regression takes the form:</p>
+<p><span class="math display">\[
+E[Y] = \alpha + \beta_{M1} X_M + \beta_{H1} X_H
+\]</span></p>
+<p>The coefficient interpretations are as following:</p>
+<ul>
+<li><p><span class="math inline">\(\hat{\beta}_{M1}\)</span> is the
+expected difference in <span class="math inline">\(Y\)</span> between
+the category <span class="math inline">\(M\)</span> (middle income) and
+the baseline category (low income).</p></li>
+<li><p><span class="math inline">\(\hat{\beta}_{H1}\)</span> is the
+expected difference in <span class="math inline">\(Y\)</span> between
+the category <span class="math inline">\(H\)</span> (high income) and
+the baseline category (low income)</p></li>
+<li><p>These coefficients p-value estimate if there is a significant
+difference between the categories in question (difference of means
+test).</p></li>
+</ul>
+<p>We can calculate the expected value of each category</p>
+<ul>
+<li><p><span class="math inline">\(\hat{\alpha}\)</span> is the expected
+value of <span class="math inline">\(Y\)</span> of the reference
+category (low income)</p></li>
+<li><p><span class="math inline">\(\hat{\alpha} +
+\hat{\beta}_{M1}\)</span> is the expected value of <span class="math inline">\(Y\)</span> of the category <span class="math inline">\(M\)</span> (middle income)</p></li>
+<li><p><span class="math inline">\(\hat{\alpha} +
+\hat{\beta}_{H1}\)</span> is the expected value of <span class="math inline">\(Y\)</span> of the category <span class="math inline">\(H\)</span> (middle income)</p></li>
+</ul>
+<p>Notice that the individual p-values mean if there is any significant
+difference between the categories. But, what about the association with
+<span class="math inline">\(Y\)</span>?</p>
+<ul>
+<li>This can be tested using a <span class="math inline">\(F\)</span>-Test, which compares our entire model
+to the null model of all <span class="math inline">\(\beta_j\)</span>’s
+equaling 0.</li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="interaction-effects" class="section level1">
+<h1>Interaction Effects</h1>
+<div id="introduction-2" class="section level3">
+<h3>Introduction</h3>
+<p>Interactions, or moderating effects, means that the effect of one
+variable may be larger on <span class="math inline">\(Y\)</span> given
+another variable.</p>
+<ul>
+<li>For example, <span class="math inline">\(X_1\)</span> is poor
+visibility, which is associated with <span class="math inline">\(Y\)</span> severity of car crashes. We might
+imagine that another variable, poor visibility <span class="math inline">\(X_2\)</span>, might exacerbate the impact of <span class="math inline">\(X_1\)</span> on <span class="math inline">\(Y\)</span>. Essentially, the magnitude of the
+effect of <span class="math inline">\(X_1\)</span> on <span class="math inline">\(Y\)</span> increases as <span class="math inline">\(X_2\)</span> increases as well.</li>
+</ul>
+<p>An interaction, in a linear model, is including the product of two
+explanatory variables, as an additional explanatory variable in the
+model:</p>
+<p><span class="math display">\[
+E[Y] = \alpha + \beta_1 X_1 + \beta_2 X_2 + \beta_{1,2}(X_1 X_2)
+\]</span></p>
+<p>Or, we can rewrite this as:</p>
+<p><span class="math display">\[
+E[Y] = (\alpha + \beta_1 X_1) + (\beta_2 + \beta_{1,2} X_1)X_2
+\]</span></p>
+<p>Here, we can see the coefficient of <span class="math inline">\(X_2\)</span> is <span class="math inline">\((\beta_2 + \beta_{1,2}X_1)\)</span>.</p>
+<ul>
+<li><p>This coefficient is not constant - it depends on the value of
+<span class="math inline">\(X_1\)</span></p></li>
+<li><p>We could also rearrange this to show the coefficient of <span class="math inline">\(X_1\)</span></p></li>
+</ul>
+</div>
 </div>
 
 

@@ -39,3 +39,317 @@ knitr::opts_chunk$set(echo = TRUE)
 [MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
 
 # Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Polynomial Regression
+
+### Non-Linear Relationships
+
+Sometimes, a linear (straight-line) fit is a poor description of a relationship. For example, the relationship between two variables could be curved.
+
+-   More flexible relationships can be modelled by including transformations of $X$ as explanatory variables.
+
+-   Common transformations include polynomials (quadratic, cubic, etc.) and logarithms.
+
+-   We will start with quadratic transformations.
+
+Note: "Linear" regression does not mean the relationship between $Y$ and $X$ must be linear. It refers to the linearity of parameters.
+
+<br />
+
+### Quadratic Transformations
+
+A quadratic model with one $X$ takes the following form:
+
+$$
+E[Y] = \alpha + \beta_1X + \beta_2X^2
+$$
+
+Important notes about quadratic transformations:
+
+-   Here, $X^2$ is the second power of $X$ (a quadratic, a parabola)
+
+-   If the model includes $X^2$, it should also include $X$
+
+-   You can include other explanatory variables after, just like any other regression.
+
+Quadratic transformations are good for modelling data that takes a shape of a parabola.
+
+-   Note, a true parabola goes from -∞ to ∞. However, for our model, it does not have to do this - it only is used for the range of plausible $X$ values given our explanatory variable (ex. age, a negative number would make no sense).
+
+-   Because the parabola can go outside our plausible range of $X$ values, we might not see the "turn" of the parabola within our data.
+
+We fit the model just as normal - minimise the sum of squared errors.
+
+<br />
+
+### Quadratic Model Interpretation
+
+When we run the quadratic transformation in R, we will get two coefficients (as seen in the equation above), one for the term $X$, and one for the term $X^2$
+
+How do we interpret these coefficients:
+
+-   The p-value of $X^2$ indicates evidence **against** the null hypothesis of a linear relationship between $X$ and $Y$.
+
+    -   So, if this is statistically significant, then we can reject a linear relationship between $X$ and $Y$
+
+    -   Why? If $\beta_2 = 0$, then, we are left with a linear equation since that cancels out $X^2$. Thus, if we are confidence $\beta_2 ≠ 0$, then, we can reject the idea that the relationship is linear.
+
+-   If $X^2$ coefficient is positive, then it opens upward, and if $X^2$ coefficient is negative, then the curve opens downward
+
+-   The coefficients of $X$ and $X^2$ can no longer be interpreted directly. This is because, changing $X$ also changes $X^2$, so you cannot hold one constant and interpret the other.
+
+-   If we do want to interpret this model, we are better off to predict values of $Y$ using our model.
+
+<br />
+
+### Turning Point of Quadratic
+
+The "turning point" of a quadratic of our model is at value $X = -\hat{\beta}_1/(2 \hat{\beta}_2)$
+
+Why? Take the derivative and set equal to 0
+
+$$
+Y = \hat{\alpha} + \hat{\beta}_1X + \hat{\beta}_2X^2
+$$
+
+$$
+\frac{dy}{dx} = 0 + \hat{\beta}_1 + 2\hat{\beta}_2X
+$$
+
+$$
+0 = \hat{\beta}_1 + 2 \hat{\beta}_2X
+$$
+
+$$
+-\hat{\beta}_1 = 2 \hat{\beta}_2 X
+$$
+
+$$
+X = -\hat{\beta}_1/(2 \hat{\beta}_2)
+$$
+
+Interpretation of the Turning Point:
+
+-   This does not need to be within the observed range of $X$
+
+-   The turning point can indicate either a maximum or negative $Y$ value, given a certain $X$ value. This can be useful for interpretation.
+
+<br />
+
+### General Polynomial Models
+
+You can continue adding powers to our model:
+
+-   Cubic: $E[Y] = \alpha + \beta_1 X + \beta_2 X^2 + \beta_3 x^3$
+
+-   Quartic: $E[Y] = \alpha + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \beta_4 X^4$
+
+-   And so on...
+
+Each higher order coefficient, if statistical significant, says that the relationship between $X$ and $Y$ is not the previous order.
+
+-   Ex. if the cubic term is statistically significant, we can reject a quadratic relationship between $X$ and $Y$.
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Logarithmic Transformation
+
+### Introduction
+
+Logarithmic transformations are another form of non-linear transformations:
+
+-   Logarithmic relationships are commonly used for skewed variables, such as when $X$ is a amount of money: income, wealth, turnover, etc.
+
+-   In such situations, $X$ is replaced with $\log(X)$ in the explanatory variable.
+
+-   Note: $\log(X) = \ln(X)$ in statistics - we use natural logs.
+
+Thus, the model takes the form:
+
+$$
+E(Y) = \alpha + \beta\log(X)
+$$
+
+One difference is that in polynomial models, we input the polynomials within the *lm()* function, while for logs, we frequently first log our data, then run a normal regression.
+
+<br />
+
+### Logarithmic Transformations Interpretation
+
+The logic of the association with a logarithmic transformation, is that it is not additive, but multiplicative factors that matter.
+
+-   We could interpret it as, given a one unit increase in the log of $X$, there is a expected $\beta$ change in $Y$.
+
+-   This is the same interpretation as a normal linear model, however, this is not particularly informative.
+
+We can do another form of interpretation. Based on log rules, we know:
+
+$$
+\log(X) + A = \log(X) + \log(e^A) = \log(e^A \times X)
+$$
+
+Thus, we can also interpret it as:
+
+-   Multiplying $X$ by $e^A$ is associated with an increase of $A \times \beta$ units in $Y$.
+
+-   We can change $A$ for more convenient interpretation. For example, when $A = 0.095$, then $e^A \approx 1.1$, which when multiplied, is equivalent to a 10% increase.
+
+-   Thus, increasing $X$ by 10% is associated with an expected change of $0.095 \times \beta$ units in $Y$
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Categorical $X$ Variables
+
+### Introduction
+
+Often, our explanatory variables are categorical, rather than continuous. This means they will only have a small number of distinct possible values, and no more.
+
+There are two types of categorical variables:
+
+-   Binary (Dichotomous) or Dummy variables: only 2 categories. For example, treatment vs. control in an experiment, yes/no, true/false, etc.
+
+-   Polytomous variables, with 3 or more values. For example, resident of England, Scotland, Wales, or Northern Ireland.
+
+Note: if the polytomous variables are ordinal (with a meaningful order), we can often treat them as continuous. The below will focus on non-ordinal categories.
+
+<br />
+
+### Binary Explanatory Variable
+
+Let us define $X$ as a variable with 2 categories: $X = 0$ and $X = 1$
+
+-   Consider the simple linear regression mode: $E[Y] = \alpha + \beta X$
+
+-   The coefficient $\beta$ is the expected difference in $Y$, between category $X=1$ and category $X=0$
+
+Why? Let us plug in $X = 0$ and $X = 1$:
+
+$$
+E[Y|X = 1] = \alpha + \beta(1) = \alpha + \beta
+$$
+
+$$
+E[Y|X=0] = \alpha + \beta(0) = \alpha
+$$
+
+$$
+E[Y|X=1] - E[Y|X=0] = (\alpha + \beta) - \alpha = \beta 
+$$
+
+Thus, the expected difference between the two categories is $\beta$
+
+<br />
+
+### Binary $X$ Estimation and Inference
+
+The least squares estimates of the parameters of a binary $X$ value is:
+
+-   coefficient $\alpha$ is estimated as $\hat{\alpha} = \bar{Y}_0$
+
+-   Coefficient $\beta$ is estimated as $\hat{\beta} = \bar{Y}_1 - \bar{Y}_0$
+
+Where $\bar{Y}_1$ is the sample mean of $Y$ for observations in category $Y=1$, and $\hat{Y}_0$ is the sample mean of $Y$ for observations in category $Y = 0$
+
+The t-test of the null hypothesis $h_0 : \beta = 0$ in this linear regression is now a t-test difference of means (that we have seen in intro to statistics)
+
+<br />
+
+### Polytomous Explanatory Variables
+
+A categorical variable with 3 or more categories can be converted into a set of binary dummy variables (indicator variables).
+
+-   Dummy variables are created for all but one of the categories in our variable
+
+-   The category without a dummy, is the reference (baseline) category
+
+-   The coefficient of the dummy variable of a category, is the expected difference in $Y$ between that category, and the reference/baseline category, controlling for all other explanatory variables.
+
+-   The choice of a baseline category is arbitrary, the model is the same regardless of the choice.
+
+<br />
+
+For example, the World Bank classified country into an income variable. The income variable contains: high, middle, and low.
+
+Then, we could define low as our reference (baseline) category. Thus, we can represent this model with 2 dummy variables:
+
+-   Dummy variable 1: $X_M$, where $X_M = 1$ when a country is in the middle income category, and $X_M = 0$ when a country is not in that category
+
+-   Dummy variable 2: $X_H$, where $X_H = 1$ when a country is in the high category, and $X_H = 0$ when a country is not in that category
+
+-   We do not have a dummy for our reference category of low income, because we know if both $X_M$ and $X_H$ are equal to $0$, then that refers to our reference category
+
+<br />
+
+### Interpretation
+
+With our 3 category explanatory variable, we have created 2 dummy variables (as above). Thus, our regression takes the form:
+
+$$
+E[Y] = \alpha + \beta_{M1} X_M + \beta_{H1} X_H
+$$
+
+The coefficient interpretations are as following:
+
+-   $\hat{\beta}_{M1}$ is the expected difference in $Y$ between the category $M$ (middle income) and the baseline category (low income).
+
+-   $\hat{\beta}_{H1}$ is the expected difference in $Y$ between the category $H$ (high income) and the baseline category (low income)
+
+-   These coefficients p-value estimate if there is a significant difference between the categories in question (difference of means test).
+
+We can calculate the expected value of each category
+
+-   $\hat{\alpha}$ is the expected value of $Y$ of the reference category (low income)
+
+-   $\hat{\alpha} + \hat{\beta}_{M1}$ is the expected value of $Y$ of the category $M$ (middle income)
+
+-   $\hat{\alpha} + \hat{\beta}_{H1}$ is the expected value of $Y$ of the category $H$ (middle income)
+
+Notice that the individual p-values mean if there is any significant difference between the categories. But, what about the association with $Y$?
+
+-   This can be tested using a $F$-Test, which compares our entire model to the null model of all $\beta_j$'s equaling 0.
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Interaction Effects
+
+### Introduction
+
+Interactions, or moderating effects, means that the effect of one variable may be larger on $Y$ given another variable.
+
+-   For example, $X_1$ is poor visibility, which is associated with $Y$ severity of car crashes. We might imagine that another variable, poor visibility $X_2$, might exacerbate the impact of $X_1$ on $Y$. Essentially, the magnitude of the effect of $X_1$ on $Y$ increases as $X_2$ increases as well.
+
+An interaction, in a linear model, is including the product of two explanatory variables, as an additional explanatory variable in the model:
+
+$$
+E[Y] = \alpha + \beta_1 X_1 + \beta_2 X_2 + \beta_{1,2}(X_1 X_2)
+$$
+
+Or, we can rewrite this as:
+
+$$
+E[Y] = (\alpha + \beta_1 X_1) + (\beta_2 + \beta_{1,2} X_1)X_2
+$$
+
+Here, we can see the coefficient of $X_2$ is $(\beta_2 + \beta_{1,2}X_1)$.
+
+-   This coefficient is not constant - it depends on the value of $X_1$
+
+-   We could also rearrange this to show the coefficient of $X_1$

@@ -3327,8 +3327,14 @@ freedom, and bottom representing the confidence interval. <span class="math inli
 <p>In an exam, you can use the 95% confidence interval based on a
 standard normal distribution. Thus, just use 1.96.</p>
 <p><span class="math display">\[
-\hat{\beta}_j ≠ 1.96 \times \hat{se}(\hat{\beta}_j)
+\hat{\beta}_j ± 1.96 \times \hat{se}(\hat{\beta}_j)
 \]</span></p>
+<p><br /></p>
+<p>We can also do confidence intervals for fitted values <span class="math inline">\(\hat{Y}\)</span>. This is calculated in a similar
+way to confidence intervals of <span class="math inline">\(\beta_j\)</span>, simply: <span class="math inline">\(\hat{Y} ± t \times \hat{se} (\hat{Y})\)</span></p>
+<ul>
+<li>The confidence intervals may range in size depending on <span class="math inline">\(X\)</span> values.</li>
+</ul>
 <p><br /></p>
 </div>
 <div id="significance-testing" class="section level3">
@@ -3377,6 +3383,65 @@ conclusions.</p>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
 Homepage</a></p>
+</div>
+</div>
+<div id="f-tests" class="section level1">
+<h1>F-Tests</h1>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>The idea of a F-test is to compare models estimated under the null
+hypothesis, and the alternative hypothesis.</p>
+<ul>
+<li>In other words, it can compare models.</li>
+</ul>
+<p>For example, we will have a null model, and a alternate model:</p>
+<ul>
+<li><p><span class="math inline">\(M_0:E[Y] = \alpha + \beta_1 X_1 + ...
++ \beta_gX_g\)</span></p></li>
+<li><p><span class="math inline">\(M_a : E[Y] = \alpha + \beta_1X_1 +
+... + \beta_gX_g + \beta_{g+1} X_{g+1} + ... + \beta_k
+X_k\)</span></p></li>
+</ul>
+<p>Essentially, our null hypothesis is a simple smaller model, and our
+alternate hypothesis is a larger model that contains all of the smaller
+model, but with more terms and variables.</p>
+<ul>
+<li><p>This can help us determine if we should add other
+variables/parameters into our model - does it significantly out perform
+the null model.</p></li>
+<li><p>For example, if <span class="math inline">\(M_a\)</span> adds a
+new <span class="math inline">\(X\)</span> variable <span class="math inline">\(X_1\)</span>, we can determine how important that
+new <span class="math inline">\(X_1\)</span> variable, and if it makes
+the model significantly better.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="f-test-statistic" class="section level3">
+<h3>F-Test Statistic</h3>
+<p>The F-test statistic <span class="math inline">\(F\)</span>, is
+basically a scaled version of the difference between the <span class="math inline">\(R^2\)</span> values of both models.</p>
+<ul>
+<li><p>A lower difference in $R^2$ means significant difference between
+the predictive power of the model <span class="math inline">\(M_a\)</span> compared to <span class="math inline">\(M-0\)</span>, thus lower p-value.</p></li>
+<li><p>A lower difference in <span class="math inline">\(R^2\)</span>
+means not a huge significant difference between the predictive power of
+the model <span class="math inline">\(M_a\)</span> compared to <span class="math inline">\(M-0\)</span>, thus higher p-value.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="f-test-of-a-coefficient" class="section level3">
+<h3>F-Test of a Coefficient</h3>
+<p>To test a coefficient, we do the following:</p>
+<ul>
+<li><p>Create a model with at least one explanatory variable, without
+the one we want to test. This will be the null model <span class="math inline">\(M_0\)</span></p></li>
+<li><p>Now create another model with the coefficient we want to test, as
+well as the original variable included in the null model. This new model
+is <span class="math inline">\(M_a\)</span></p></li>
+</ul>
+<p>Now, we run a <span class="math inline">\(F\)</span>-test to see if
+the new coefficient made a significant difference in the predictive
+power of our model.</p>
 </div>
 </div>
 
