@@ -416,18 +416,14 @@ We basically already did this before. There is a dominant strategy of voting, be
 
 **What is the set of NE for** $k<m$
 
-Any solution where the number of people voting for $A$ is 2 larger (exactly) than the number of people voting for $B$.
+There is no nash equilibrium. Why? For example, let us pretend $k = 7$, $m = 9$
 
--   Why?
+-   If everyone votes, then $m$ wins. So, why should $k$ vote and bear the cost of voting? So, all $k$ have profitable deviation to not vote.
 
--   That means any person who supports $A$ does not have a profitable deviation, since player $i$ that supports A, if he isn't voting, does not want to switch to vote since that incurs a cost $-c$ when their candidate is already winning, so no profitable deviation. They also don't want to switch to +1 (see below)
+-   But now, with all $k$ dropping out, then $m$ also doesn't have incentive to stay in, since they could win with only 1 vote, so why bear the cost of voting? So all $m$ but one drop out and abstain
 
--   That means any person who supports $B$ does not have a profitable deviation, since player $i$ who supports B, if he isn't voting, does not want to switch to vote since that incurs a cost $-c$ when their candidate is already losing, so no profitable deviation.
+-   But then, with only one $m$ voting, the $k$ people can force a tie with just one person joining in, thus another profitable deviation. Then another $k$ could join and win. So in response, all $m$ have to vote again.
 
-Why NOT 1 larger:
+-   Then we return to $k=7$, $m=9$ where everyone votes, and the cycle repeats.
 
--   Well, that means any person who supports $B$ who isn't voting has a profitable deviation. They can switch to voting, and cause a tie, increasing their payoff from 0 to $1-c$.
-
-Why NOT more than 2 larger:
-
--   Well, that means a player who supports $A$ who is voting has a profitable deviation. They can switch to not voting, and get rid of the cost of voting $-c$
+Thus, there is no strategy that has no profitable deviations.
