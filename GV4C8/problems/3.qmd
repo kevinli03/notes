@@ -81,7 +81,7 @@ So no, the candidates do not converge at the median. But where would they conver
 
 ### Definitions
 
-Let us define the three parties as party $A, B, C$, who choose some position $p_A, p_B, p_C \in [-1, 1]$. Let us define $m$ as the position of the median voter in the spectrum $[-1, 1]$
+Let us define the three parties as party $A, B, C$, who choose some position $p_A, p_B, p_C \in [0, 1]$. Let us define $m$ as the position of the median voter in the spectrum $[0, 1]$
 
 ### Payoffs if Everyone was at Median
 
@@ -103,51 +103,49 @@ Let us see if strategy profile $(m, m, m)$ is a Nash Equilibrium through seeing 
 
 Let us say any party $i$ deviates from the median by some value $\epsilon$, so it has a new position of $m + \epsilon$:
 
-![](figures/3.1.png)
+![](figures/3.3.png)
 
-Now, let us look at the first round. If any party wins over 50% of first place votes, they outright win. If no party does that, the party with the least first place votes loses. Since the distribution is uniformly distributed, we can just look at the distance each party wins on the number line, since that is proportional to the total number of votes.
+Now, let us look at the first round and how the voting will turn out. Since the distribution is uniformly distributed, we can just look at the distance each party wins on the number line, since that is proportional to the total number of votes.
 
-Party $i$ that deviates will win the distance $1 - \frac{1}{2} |\epsilon|$
+Party $i$ that deviates will win the distance $\frac{1}{2} - \frac{1}{2} |\epsilon|$
 
-The other two parties will win distance $1 + |\epsilon| / 2$, however, they will split the votes between themselves as they are equidistant between all the voters here, so each party gets $\frac{1+|\epsilon|/2}{2} = \frac{1}{2} + \frac{0.5|\epsilon|}{2} =\frac{1}{2} + \frac{1}{4} |\epsilon|$
+The other two parties will win distance $1/2 + |\epsilon| / 2$, however, they will split the votes between themselves as they are equidistant between all the voters here, so each party gets $\frac{1/2+|\epsilon|/2}{2} = \frac{1}{4} + \frac{0.5|\epsilon|}{2} =\frac{1}{4} + \frac{1}{4} |\epsilon|$
 
-Why? See figure:
+Why? See figure above
 
-![](figures/3.2.png)
+Important thing is that 50% of votes (which would outright win the first round) would only be possible if a party won more than 50% of the distance between $[0, 1]$, which is a distance of $1/2$.
 
-Important thing is that 50% of votes (which would outright win the first round) would only be possible if a party won more than 50% of the distance between $[-1, 1]$, which is a distance of $1$.
+-   Party $i$ that deviated cannot win a majority, since they will win distance $\frac{1}{2} - \frac{1}{2} |\epsilon|$, which cannot be greater that $1/2$ when $|\epsilon| < 0$. Thus, party $i$ has no chance of winning outright.
 
--   Party $i$ that deviated cannot win a majority, since they will win distance $1 - \frac{1}{2} |\epsilon|$, which cannot be greater that $1$ when $|\epsilon| < 0$. Thus, party $i$ has no chance of winning outright.
+-   The other two parties win $\frac{1}{4} + \frac{1}{4} |\epsilon|$, and that can only be a majority of the first round (i.e. greater than $1/2$ ) if $|\epsilon| > 1$. But, since $\epsilon$ is the deviation of party $i$ in one direction, it cannot possibly exceed 0.5. Thus, there is no case where the other two parties outright win the election in the first round.
 
--   The other two parties win $\frac{1}{2} + \frac{1}{4} |\epsilon|$, and that can only be a majority of the first round (i.e. greater than $1$ ) if $|\epsilon| > 2$. But, since $\epsilon$ is the deviation of party $i$ in one direction, it cannot possibly exceed 1. Thus, there is no case where the other two parties outright win the election in the first round.
-
-Then, that means one party with the lowest votes will be eliminated? Which party will be eliminated? That depends on $\epsilon$. Party $i$ will survive, if it has a higher proportion of vote than the other two parties - see the inequality: $1- \frac{1}{2} |\epsilon| > \frac{1}{2} + \frac{1}{4}|\epsilon|$
+Then, that means one party with the lowest votes will be eliminated? Which party will be eliminated? That depends on $\epsilon$. Party $i$ will survive, if it has a higher proportion of vote than the other two parties - see the inequality: $\frac{1}{2}- \frac{1}{2} |\epsilon| > \frac{1}{4} + \frac{1}{4}|\epsilon|$
 
 $$
-1-\frac{1}{2} > \frac{1}{4}|\epsilon| + \frac{1}{2}|\epsilon|
+\frac{1}{2} - \frac{1}{4} > \frac{1}{2} |\epsilon| + \frac{1}{4} |\epsilon|
 $$
 
 $$
-\frac{1}{2} > \frac{3}{4} |\epsilon|
+\frac{1}{4} > \frac{3}{4} |\epsilon|
 $$
 
 $$
-|\epsilon| < \frac{1}{2} \times \frac{4}{3}
+\epsilon < \frac{1}{4} \times \frac{4}{3}
 $$
 
 $$
-|\epsilon|< 2/3
+\epsilon < \frac{1}{3}
 $$
 
-Thus:
+Thus, the following scenarios can occur
 
--   [If $|\epsilon|$ deviation distance of party $i$ is greater than 2/3, then they lose the first round, and thus have a 0 percent chance of winning the election, thus, that is not a profitable deviation.]{.underline}
-
--   [When $|\epsilon|$ deviation distance is less than 2/3, party $i$ will survive to the second round, and one of the other two parties will be eliminated.]{.underline}
+1.  [If $|\epsilon|$ deviation distance of party $i$ is greater than 1/3, then they lose the first round, and thus have a 0 percent chance of winning the election, thus, that is not a profitable deviation.]{.underline}
+2.  [If $|\epsilon|$ deviation distane of party $i$ is exactly $1/3$, then they have a $1/3$ chance of getting to the second round (since they will be tied with the other two parties)]{.underline}
+3.  [When $|\epsilon|$ deviation distance is less than 1/3, party $i$ will survive to the second round, and one of the other two parties will be eliminated.]{.underline}
 
 ### Looking for Profitable Deviation: Second Round
 
-In the second scenario, we are onto the second round - a two party battle between party $i$ at position $m+\epsilon$, and the other party at $m$
+In the second and third scenario, we are onto the second round - a two party battle between party $i$ at position $m+\epsilon$, and the other party at $m$
 
 -   This is just a downsian model game!
 
@@ -156,6 +154,12 @@ In the second scenario, we are onto the second round - a two party battle betwee
 -   So, party $i$ that deviated will lose the second round to the party at the median
 
 [Thus, party $i$ will have 0% chance of winning the second round, which is lower than the 33% chance they had originally at $m$, so there is no profitable deviation.]{.underline}
+
+We could also think of it in another way:
+
+-   If one of the other 2 parties votes are eliminated, those voters will just jump to the one who was not eliminated (since both had same policy position $m$ )
+
+-   Thus, team $i$ would win $\frac{1}{2} - \frac{1}{2} |\epsilon|$ of the distance (as seen above), and the median team would win $\frac{1}{2} + \frac{1}{2} |\epsilon|$ (basically, the original distance not split between the two median teams). By simple math, the median team always has the higher vote share.
 
 ### Summary
 
