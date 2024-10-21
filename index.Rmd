@@ -80,27 +80,28 @@ Course Content (Lectures, Readings, and Problems):
 
 ------------------------------------------------------------------------
 
-### EU409 Basic Economics
+### EC1P1 Economic Reasoning
 
-**EU409 Basic Economics Concepts for Political Economy**
+**EC1P1 Economic Reasoning**
 
-[Lecturer]{.underline}: LSE European Institute
+[Lecturer]{.underline}: Prof. Ricardo Reis
 
 [Summative Assessment]{.underline}: N/A (Pre-Sessional)
 
 <br />
 
-Course Content (Lectures, Readings, and Problems):
+Course Content (Lectures):
 
-1.  [Introduction to Economics, Supply & Demand](https://kevinli03.github.io/notes/EU409/1.html)
-2.  [Macro I: Supply-Side and Unemployment](https://kevinli03.github.io/notes/EU409/2.html)
-3.  Macro II: Aggregate Demand and Macro-Economic Equilibrium
-4.  Micro I: Household Decisions
-5.  Micro II: Economic Choices of the Firm
-6.  Micro III: Market Structure and Imperfections
-7.  Welfare Economics: Social Welfare and Government
-8.  Open Economy Macroeconomics
-9.  Unemployment and the Labour Market
+1.  [Well-Being of Nations: Utility over Goods](https://kevinli03.github.io/notes/EC1P1/1.html)
+2.  The Future and Climate: Utility over Periods
+3.  Inequality and Poverty: Utility over People
+4.  Discrimination and Immigration: Production Use of Factors
+5.  Patents and Innovation: Production with Fixed Costs
+6.  Competition and Market Power: Production with Pricing
+7.  Financial Markets and Prices: Markets for Risk
+8.  Looking for a Job: Markets with Search
+9.  Looking for a Partner: Markets with 2-Sided Matching
+10. Rationally Biased: Behavioural and Political Economics
 
 <br />
 
