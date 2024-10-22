@@ -161,7 +161,7 @@ Course Content (Lectures, Readings, Problems):
 
 1.  [Political Economy, Game Theory, Aggregation of Preferences](https://kevinli03.github.io/notes/GV4C8/1.html)
 2.  [Nash Equilibrium, Static Games of Complete Information](https://kevinli03.github.io/notes/GV4C8/2.html) \| [Problem Set Week 2](https://kevinli03.github.io/notes/GV4C8/problems/2.pdf)
-3.  [Downsian Models of Electoral Competition](https://kevinli03.github.io/notes/GV4C8/3.html) \| Problem Set Week 3
+3.  [Downsian Models of Electoral Competition](https://kevinli03.github.io/notes/GV4C8/3.html) \| [Problem Set Week 3](https://kevinli03.github.io/notes/GV4C8/problems/3.pdf)
 4.  Mixed Strategies, Strategic Foresight
 5.  Dynamic Games of Complete Information, Legislative Bargaining
 
