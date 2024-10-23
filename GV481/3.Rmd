@@ -105,6 +105,8 @@ If the p-value is greater than 0.05, then we cannot reject the null
 
 ------------------------------------------------------------------------
 
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
 # Bias and Precision
 
 ### Key Definitions
@@ -193,6 +195,8 @@ Sampling Variability: Even if you random sample, you will get slightly different
 
 ------------------------------------------------------------------------
 
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
 # Statistical Inference
 
 ### Sampling Distribution
@@ -270,6 +274,8 @@ We are 95% confident that the true population $\beta_1$ will lie within this con
 <br />
 
 ------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
 # Hypothesis Testing
 
