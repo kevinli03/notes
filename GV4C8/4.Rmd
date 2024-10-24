@@ -1,0 +1,39 @@
+---
+title: "Redistributive Politics, Mixed Strategies, Valence Politics"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: true
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+**Week 3, GV4C8 Game Theory for Political Science**
+
+-   Title: Redistributive Politics, Mixed Strategies, Valence Politics
+
+-   Topics: 
+
+-   Readings:
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)

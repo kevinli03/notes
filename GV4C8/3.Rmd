@@ -5,7 +5,7 @@ output:
     df_print: paged
     toc: yes
     toc_float:
-      collapsed: true
+      collapsed: false
     toc_depth: 4
     theme: lumen
 ---
@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Title: Downsian Models of Electoral Competition
 
--   Topics:
+-   Topics: Median Voter Theory
 
 -   Readings:
 

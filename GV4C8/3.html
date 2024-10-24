@@ -2744,6 +2744,12 @@ font-size: 0.90em;
 .tocify .list-group-item {
 border-radius: 0px;
 }
+.tocify-subheader {
+display: inline;
+}
+.tocify-subheader .tocify-item {
+font-size: 0.95em;
+}
 </style>
 
 
@@ -2789,7 +2795,7 @@ Homepage</a></p>
 <p><strong>Week 3, GV4C8 Game Theory for Political Science</strong></p>
 <ul>
 <li><p>Title: Downsian Models of Electoral Competition</p></li>
-<li><p>Topics:</p></li>
+<li><p>Topics: Median Voter Theory</p></li>
 <li><p>Readings:</p>
 <ol style="list-style-type: decimal">
 <li>Section 3.3, Osborne, M. J. (2004) <em>An Introduction to Game
@@ -3393,7 +3399,7 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = true;
+    options.showAndHide = false;
     options.smoothScroll = true;
 
     // tocify

@@ -45,15 +45,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Other Notes
 
-These are a few books that I am working on to summarise my education in Political Science and Political Economy. **NOTE: THESE ARE IN PROGRESS** - they are being continuously updated, and are not final
+Kevin's Guides to Political Science (Summarising everything I have learned)
 
-1.  [**Econometrics for Political Science**: Using Statistics for Causal Inference](https://kevinli03.github.io/politicaleconomy/1.pdf)
-2.  [**Political Game Theory**: Introduction to Formal Mathematical Models](https://kevinli03.github.io/politicaleconomy/2.pdf)
-3.  [**Political Economy**: Using Economic Models to Study Politics](https://kevinli03.github.io/politicaleconomy/3.pdf)
-4.  [**Advanced Statistical Methods**: Further Regression, Time Series, and Latent Variables](https://kevinli03.github.io/politicaleconomy/4.pdf)
-5.  [**Social Data Science**: Using Machine Learning for Political Science and Political Economy](https://kevinli03.github.io/politicaleconomy/5.pdf)
+1.  [Quantitative Methods and Analysis](https://kevinli03.github.io/politicaleconomy/1.pdf)
+2.  [Game Theory and Formal Models](https://kevinli03.github.io/politicaleconomy/2.pdf)
+3.  [Empirical Political Economy](https://kevinli03.github.io/politicaleconomy/3.pdf)
+4.  [Advanced Quantitative Methods](https://kevinli03.github.io/politicaleconomy/4.pdf)
+5.  [Data Science and Political Analysis](https://kevinli03.github.io/politicaleconomy/5.pdf)
 
-Finally, a companion book: [Mathematics for Political Economy](https://kevinli03.github.io/politicaleconomy/maths.pdf)
+Finally, a companion book: [Mathematical Methods for Political Science](https://kevinli03.github.io/politicaleconomy/maths.pdf)
 
 ------------------------------------------------------------------------
 
@@ -75,33 +75,6 @@ Course Content (Lectures, Readings, and Problems):
 2.  [Vectors, Matrices, Continuity, Limits](https://kevinli03.github.io/notes/GV4L8/2.html)
 3.  [Derivatives, Optimisation, Integrals](https://kevinli03.github.io/notes/GV4L8/3.html)
 4.  [Counting, Probability, Random Variables](https://kevinli03.github.io/notes/GV4L8/4.html)
-
-<br />
-
-------------------------------------------------------------------------
-
-### EC1P1 Economic Reasoning
-
-**EC1P1 Economic Reasoning**
-
-[Lecturer]{.underline}: Prof. Ricardo Reis
-
-[Summative Assessment]{.underline}: N/A (Pre-Sessional)
-
-<br />
-
-Course Content (Lectures):
-
-1.  [Well-Being of Nations: Utility over Goods](https://kevinli03.github.io/notes/EC1P1/1.html)
-2.  The Future and Climate: Utility over Periods
-3.  Inequality and Poverty: Utility over People
-4.  Discrimination and Immigration: Production Use of Factors
-5.  Patents and Innovation: Production with Fixed Costs
-6.  Competition and Market Power: Production with Pricing
-7.  Financial Markets and Prices: Markets for Risk
-8.  Looking for a Job: Markets with Search
-9.  Looking for a Partner: Markets with 2-Sided Matching
-10. Rationally Biased: Behavioural and Political Economics
 
 <br />
 
@@ -162,7 +135,7 @@ Course Content (Lectures, Readings, Problems):
 1.  [Political Economy, Game Theory, Aggregation of Preferences](https://kevinli03.github.io/notes/GV4C8/1.html)
 2.  [Nash Equilibrium, Static Games of Complete Information](https://kevinli03.github.io/notes/GV4C8/2.html) \| [Problem Set Week 2](https://kevinli03.github.io/notes/GV4C8/problems/2.pdf)
 3.  [Downsian Models of Electoral Competition](https://kevinli03.github.io/notes/GV4C8/3.html) \| [Problem Set Week 3](https://kevinli03.github.io/notes/GV4C8/problems/3.pdf)
-4.  Mixed Strategies, Strategic Foresight
+4.  [Redistributive Politics, Mixed Strategies, Valence Politics](https://kevinli03.github.io/notes/GV4C8/4.html)
 5.  Dynamic Games of Complete Information, Legislative Bargaining
 
 <!-- -->
