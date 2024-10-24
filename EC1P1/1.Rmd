@@ -1,0 +1,265 @@
+---
+title: "Well-Being of Nations: Utility Over Goods"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: true
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[EC1P1 Homepage](https://kevinli03.github.io/notes/#EC1P1_Economic_Reasoning)
+
+**Week 1, EC1P1 Economic Reasoning**
+
+-   Title: Well-Being of Nations: Utility Over Goods
+
+-   Topics:
+
+<br />
+
+------------------------------------------------------------------------
+
+[EC1P1 Homepage](https://kevinli03.github.io/notes/#EC1P1_Economic_Reasoning)
+
+# Key Points
+
+[**Revealed preference**]{.underline}: If people choose alternative $A$ instead of $B$, it is because they preferred it. Their well being was higher with $A$ than $B$. By observing one's choices, you learn about one's preferences.
+
+<br />
+
+A [**utility function**]{.underline} is a function of the enjoyment of goods. It takes an input of a good, and maps it into some measure of well-being.
+
+-   If you prefer blue to yellow shirts, the utility of blue shirts is greater than the utility of yellow shirts for you.
+
+<br />
+
+For a utility function for a good, $u(c, o)$, where $c$ is the good input, and $o$ is the other factors, increasing $c$ (having more of a good) while holding other factors constant, always produces an equal or better utility.
+
+-   Essentially, you will generally prefer more than less, and never prefer less than more of a good.
+
+<br />
+
+[**Gross Domestic Product (GDP)**]{.underline}, is the market value of all goods produced within a country, during a period of time.
+
+-   GDP measures total expenditure = total income = total production.
+
+-   More GDP is better, because GDP is in the input of goods in the utility function $u(c, o)$, and we have already established that more of $c$ is better.
+
+-   Thus, GDP is often used to compare country's wellbeing, since more is better.
+
+<br />
+
+[**Omitted Variables in GDP and Utility**:]{.underline}
+
+-   GDP is often used a way to approximate the utility of countries.
+
+-   However, GDP only considers $c$ in the utility function $u(c,o)$, not $o$. If $o$ falls when GDP rises, then utility could drop. How do we overcome this?
+
+-   We can account for $o$ if GDP is positively correlated with these other factors
+
+-   Indeed, GDP is positively associated with life expectancy, life satisfaction, schooling, electricity at night, human rights, lower poverty, nutrition.
+
+<br />
+
+------------------------------------------------------------------------
+
+[EC1P1 Homepage](https://kevinli03.github.io/notes/#EC1P1_Economic_Reasoning)
+
+# Preferences and Utility
+
+### Revealed Preference
+
+Economics is the study of choices - people make choices. You chose to undertake a degree. You chose what clothes you were wearing today.
+
+-   Economics is not concerned with what is the "right choice", which choice is the "correct" or "better" than another. That is more philosophy.
+
+-   Economics is considering how you could have been made happier, given your own preferences.
+
+<br />
+
+Revealed Preference is a common topic in Economics:
+
+-   I do not know what shirt colour that someone else likes. Yellow, blue?
+
+-   You could ask them, but they could lie, be untruthful, peer pressure, etc.
+
+-   However, we could observe what choice you made. If you wore a blue shirt today, you chose the blue alternative over the other colour shirts.
+
+Revealed preference: If people choose alternative $A$ instead of $B$, it is because they preferred it. Their well being was higher with $A$ than $B$. [By observing one's choices, you learn about one's preferences]{.underline}.
+
+<br />
+
+### Utility Functions
+
+A utility function is a function of the enjoyment of goods. It takes an input of a good, and maps it into some measure of well-being.
+
+-   If you prefer blue to yellow shirts, the utility of blue shirts is greater than the utility of yellow shirts for you.
+
+-   Essentially, if the utility of one choice is higher than another, you prefer the choice with the higher utility.
+
+-   You could also be indifferent between two goods.
+
+Utility functions are used to map preferences of individuals into a mathematical function.
+
+<br />
+
+### Utility from Goods
+
+Consider two inputs into a utility function: $u(c, o) : \mathbb{R}^2 \rightarrow \mathbb{R}$
+
+-   $c$ is the consumption of some good(s)
+
+-   $o$ are the other factors affecting well-being.
+
+For most people, they like having more goods than having less. For example, you prefer 2 TV's to one TV.
+
+-   In more mathematical terms, if we keep $o$ (other factors) constant, and increase $c$, we would expect the utility output to increase.
+
+-   In economics, we generally assume that more is better. This makes sense - even if you get too much of something, you could always sell it/give it away.
+
+-   More specifically, utility never decreases. If you have too much of something, you can just throw it away. So, even if you don't need 100 pizzas, you could just throw them out, so more is never worse than less.
+
+<br />
+
+For example, let us take a specific utility function $u(c,o) = c^\theta o^{1-\theta}$ (this function is chosen simply because it is easy to solve, but applies to all utility functions). Let us find the partial derivative in respect to $c$, to see that more is always better:
+
+$$
+u(c,o) = c^\theta o^{1-\theta}, \space \theta \in (0, 1)
+$$
+
+$$
+\frac{\partial u(c,o)}{\partial c} = o^{1-\theta}\theta c^{\theta-1}
+$$
+
+$$
+\frac{\partial u(c,o)}{\partial c} = o^{1-\theta}\theta c^{-1 + \theta}
+$$
+
+$$
+\frac{\partial u(c,o)}{\partial c} = o^{1 - \theta} \theta c^{-(1-\theta)}
+$$
+
+$$
+\frac{\partial u(c,o)}{\partial c} = \theta \frac{o^{1-\theta}}{c^{1 - \theta}}
+$$
+
+$$
+\frac{\partial u(c,o)}{\partial c} = \theta \left( \frac{o}{c} \right)^{1-\theta} ≥ 0
+$$
+
+Since the partial derivative with respect to $c$ is always above 0, this means that utility is always increasing as $c$ goes up.
+
+<br />
+
+### Cardinal vs. Ordinal
+
+Cardinal measures are ones that we can compare in scale. For example, for input $c$, 6 apples is twice as many apples than 3 apples.
+
+However, we cannot do the same with the output of our utility function $u(c,o)$, which are in units of utils.
+
+Utils mean ordinal. Higher amounts of utility means better off, but we cannot determine the magnitude of how much better off. For example, 6 utils versus 3 utils does not necessarily mean twice better off, it only means better off.
+
+<br />
+
+You can convert from ordinal to cardinal. Take the utility function $u(c,o)$.
+
+If I was to give you $\lambda$ factor more chicken, how much $\lambda$ factor more would I have to give you, for you to be indifferent between some bundle of goods $u(c,o)$ and another bundle $u(c', o')$.
+
+Or mathematically, solve for the $\lambda$ that solves this equation:
+
+$$
+u(\lambda c, o) = u(c', o')
+$$
+
+This $\lambda$ shows us how much better off in a new point, compared to a reference point. For example, if $\lambda = 0.7$, that means you are 30% worse off. If $\lambda = 1.5$, you are 50% better off with the new bundle.
+
+<br />
+
+------------------------------------------------------------------------
+
+[EC1P1 Homepage](https://kevinli03.github.io/notes/#EC1P1_Economic_Reasoning)
+
+# GDP and Well-Being
+
+### Gross Domestic Product
+
+Gross Domestic Product, is the market value of all goods produced within a country, during a period of time.
+
+-   We often call it **output**
+
+GDP per capita is GDP divided by the country's population. We have seen a vast increase (although unequally) of GDP per capita over the last century.
+
+<br />
+
+In an economy, firms produce goods, they sell it to households.
+
+-   So we can measure GDP either by what is produced, and what is bought.
+
+So what is sold, is what is produced, and the sold goods go to the business, which is then used to pay wages for households, who then buy goods.
+
+-   So essentially, total expenditure = total income = total production.
+
+-   Or in other words, Gross Domestic Product = Gross Domestic Income = Gross Domestic Expenditure
+
+So GDP is not just a measure of income, but a measure of consumption.
+
+<br />
+
+Why is GDP growth good?
+
+-   Well remember our utility function $u(c, o)$
+
+-   $c$ is the goods we have in our utility function.
+
+-   Remember, more is better (from the previous section)
+
+-   Thus, growing GDP grows $c$, and more is better, so utility is higher.
+
+Thus, GDP is often used to compare country's wellbeing, since more is better.
+
+<br />
+
+### Omitted Variable Problem
+
+So far, we have focused on the $c$ in the utility function $u(c, o)$ with GDP. But, as we can clearly see with the utility function, $o$ also impacts utility, which is not measured by GDP. What is $o$?
+
+-   Ceteris Paribus means keeping all else equal (holding other factors constant). We established, that ceteris paribus, increasing $c$ increases $u(c,o)$.
+
+<br />
+
+[However, if we are not holding $o$ constant, if $c$ increases but $o$ decreases, it is possible our overall utility $u(c,o)$ may be lower, even though $c$ increased.]{.underline}
+
+-   You might think this problem is easy to solve - just find out what $o$ is. However, $o$ can be hundreds of millions of factors. It is literally everything else that affects welfare and well-being outside of the goods we consume.
+
+-   It is possible that increasing $c$ might decrease $o$, leading to an inconclusive change in $u(c,o)$. For example, if you want to increase GDP but end up polluting the country crazily, $c$ will go up but $o$ will go down.
+
+<br />
+
+However, if $c$ and $o$ are positively correlated (such that a rise in $c$ is associated with a rise in $o$), we might be able to get accurate ordinal utilities $u(c,o)$
+
+So, if other factors that affect well-being are positively correlated with GDP, then comparing GDP will give accurate estimates of well-being in an ordinal sense
+
+-   i.e., we might not get the exact difference between countries, but we should get the right order of utility of countries based on GDP, given if GDP is positively correlated with $o$.
+
+Empirical Evidence of this is quite strong:
+
+-   GDP is positively associated with life expectancy, life satisfaction, schooling, electricity at night, human rights, lower poverty, nutrition.
+
+Since GDP is positively correlated with these other factors, we can be quite confident that GDP is a good measure of utility of countries overall.
+
+<br />

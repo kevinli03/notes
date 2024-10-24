@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Title: Introduction to Causal Inference
 
--   Topics:
+-   Topics: Causal States, Potential Outcomes Framework, Average Treatment Effect, Selection Bias
 
 -   Readings:
 
@@ -338,11 +338,11 @@ The reason we make this assumption is that without SUTVA, there are many problem
 
     -   $i$ exposed, $j$ exposed;
 
-    -    $i$ exposed, $j$ not exposed;
+    -   $i$ exposed, $j$ not exposed;
 
-    -    $i$ not exposed, $j$ exposed;
+    -   $i$ not exposed, $j$ exposed;
 
-    -    $i$ not exposed, $j$ not exposed
+    -   $i$ not exposed, $j$ not exposed
 
 -   With more individuals $k, l, ...$, this can become very very messy.
 
