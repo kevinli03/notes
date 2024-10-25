@@ -1,0 +1,503 @@
+---
+title: "Linear Regression III: Model Selection and Research Design"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+**Week 4, MY452A Applied Regression Analysis**
+
+-   Title: Linear Regression III: Model Selection and Research Design
+
+-   Topics:
+
+-   Readings:
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Goals of Regression**
+
+### Introduction
+
+There are three types of questions that regression can help answer:
+
+-   Descriptive/Population inference: What is the true association of $X$ and $Y$ in the population? For example, how are individual's attitudes to immigration associated with education levels in Europe?
+
+-   Causal Inference: What does changing $X$ cause $Y$ to do? Does watching a specific TV programme cause an increase in a child's number recognition ability?
+
+-   Predictive Inference: Given some values of $X$, what are there predicted $Y$ values? Given data on someone's education and credit rating, can we predict their likely credit card debt?
+
+Some studies can use multiple of these at the same time.
+
+<br />
+
+Why do we split regression into these three types of questions?
+
+-   This is because the way we interpret results, and the model selection we use, will differ.
+
+<br />
+
+### Predictive Inference
+
+The structure of the prediction task is as follows:
+
+-   We have data of $n$ observations where we know both $Y$ and $\overrightarrow{X}$ (training data).
+
+-   Then, train our model on this data. We get the coefficients of linear model.
+
+-   Now, we have test data - new observations with $\overrightarrow{X}$ values, but we do not know the corresponding $Y$ values.
+
+-   We can predict the unkown $Y$ values by plugging $\overrightarrow{X}$ values we have into our regression equation:
+
+$$
+\hat{Y}_j = \hat{\alpha} + \hat{\beta}_1X_{1j} + ... + \hat{\beta}_k X_{kj}
+$$
+
+Our goal of predictive inference is that our predicted values $\hat{Y}_j$ should be as close to actual value $Y_j$ as possible.
+
+In prediction, the actual coefficient values $\overrightarrow{\hat{\beta}}$ do not actually matter - they are a means to an end to make predictions, not the focus of our interest.
+
+<br />
+
+### Descriptive Inference
+
+Consider a sample data with $Y$ and $\overrightarrow{X}$ values, which are drawn from some population.
+
+-   Using our sample data, calculate regression coefficients $\overrightarrow{\hat{\beta}}$
+
+Our goal is that our estimates $\overrightarrow{\hat{\beta}}$ are as close to the real population $\overrightarrow{\beta}$ as possible.
+
+-   We can use confidence intervals and significance tests to expand descriptive inference.
+
+<br />
+
+### Causal Inference
+
+Let $Y$ be the outcome of interest, and $X$ as a predictor of interest (only one $X$, the other variables play a different role).
+
+Consider two values of $X$, denoted $x_1$ and $x_0$. If $X$ is continuous, these can be any two values of it.
+
+-   Essentially, a comparison between two settings of $X$. For simplicity, we will use binary notation ( $X = 0, X = 1$ ) for our notation.
+
+<br />
+
+In the potential outcomes framework, there are two different worlds. What would happen if $X=0$, versus what would happen if $X=1$.
+
+-   Both could have happened, and what would be the difference in $Y$ between the two?
+
+-   $Y_i(0)$ is the value that $Y$ would have if $X = 0$ for unit $i$
+
+-   $Y_i(1)$ is the value that $Y$ would have if $X = 1$ for unit $i$
+
+-   The "individual" causal effect would be $Y_i(1) - Y_i(0)$, but this is impossible to estimate (Fundmental Problem of Causal Inference).
+
+The aggregate causal effect is the comparison between the distributions of $Y_i(0)$ and $Y_i(1)$ for $i = 1,...,n$.
+
+The most common way is to use the expected value/mean of these distributions. Thus, the average treatment effect (ATE) is:
+
+$$
+E[\tau_i] = \bar{Y}(1) - \bar{Y}(0)
+$$
+
+<br />
+
+Our goal is to obtain some estimate $\hat{E[\tau_i]}$ that is as close to the actual $E[\tau_i]$ as possible.
+
+-   Challenge - $E[\tau_i]$ cannot be computed directly, since we never observe both $Y_i(0)$ and $Y_i(1)$ for the same unit $i$ (we can't see both potential worlds).
+
+-   We only observe the category each unit $i$ is assigned into.
+
+We can use regression to estimate $E[\tau_i]$, but this requires sometimes regression modelling, and sometimes, other special techniques.
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Goals of Multiple Regression**
+
+### Predictive Inference
+
+Why do we use multiple regression, rather than single regression?
+
+For predictive inference, it is quite obvious. Using multiple predictors together gives, in general, better predictions.
+
+-   For example, if we are predicting credit card debt.
+
+-   Not just one factor affects credit card debt - many things, such as age, education, income, credit rating, credit limit, etc.
+
+-   So, if you only include one thing, like age, your prediction won't be that accurate
+
+-   But if you include more predictors, this makes our predictions more accurate.
+
+However, it is important to note that adding more and more predictors will not always improve prediction.
+
+<br />
+
+In descriptive inference, we are interested in describing the association between $X_1$ and $Y$ in a population.
+
+Let us consider a simple linear regression model:
+
+$$
+E[Y|X] = \alpha + \beta_1X
+$$
+
+-   Pretty clearly, $\beta_1$ is the relationship between $X_1$ and $Y$ in the population
+
+But what if $\beta_1$ was in a multiple regression model:
+
+$$
+E[Y|X] = \alpha + \beta_1 X_1 + \beta_2X_2 + ... + \beta_k X_k
+$$
+
+-   Now, $\beta_1$ is the relationship between $X_1$ and $Y$, controlling for other explanatory variables in the model.
+
+<br />
+
+### Partial Associations
+
+What does controlling for other explanatory variables mean? Let us first consider that all control variables are dummies.
+
+-   That means that $\beta_1$ is the association between $X_1$ and $Y$, calculated seperately within every subset of units which belong to the same categorical variables. Then, we do a weighted average of each $\beta_1$ in each category, to get final $\beta_1$
+
+More intuitively, assume only 2 variables $X_1$ being income inequality, and $X_2$ being the country income group (low, high).
+
+-   We calculate 2 sets of the relationship $X_1$ and $Y$, or 2 $\beta_1$'s, one within each category of $X_2$.
+
+    -   So calculate $\beta_1$ in $X_2 = 0$ category, and $\beta_1$ in $X_2 = 1$ category
+
+-   Now, weighted average of the coefficients is the final $\beta_1$
+
+<br />
+
+For a single continuous control variable, it is more complicated. It is hard to imagine to divide a continuous $X_2$ into infinitely many small categories, each calculating $\beta_1$.
+
+-   Although technically, this is still the case. $\beta_1$ is the association between $X_1$ and $Y$ within each subset units $i$ in the population, that have the same values of all of $X_2... X_k$.
+
+Instead, think of $\beta_1$ as the association between $X_1$ and $Y$, in the population, if we "filtered out" the contributions from associations involving $X_2$
+
+-   For example, a model with $X_1, X_2, Y$.
+
+-   $X_1$ and $X_2$ are correlated with $Y$. However, $X_1$ and $X_2$ are also correlated with each other. Thus, some of $X_1$'s relationship with $Y$ is actually a result of $X_2$.
+
+-   We filter out the correlation between $X_1$ and $X_2$, so we are left with the correlation between $X_1$ and $Y$.
+
+<br />
+
+### Interactions
+
+Above with controlling variables, we mentioned how $\beta_1$ is the association between $X_1$ and $Y$ in different categories/values of $X_2, ... ,X_k$. But generally, we say that $\beta_1$ is relatively constant between all these categories.
+
+Interactions say that $\beta_1$, or the relationship between $X_1$ and $Y$, changes based on what category it is.
+
+For example this model:
+
+$$
+E[Y|X] = \alpha + \beta_1 X_1 + \beta_2 X_2 + \beta_3 (X_1 X_2)
+$$
+
+So, $\beta_1$ depends on the value of $X_2$, so it differs based on the category/value of $X_2$
+
+<br />
+
+### Causal Inference
+
+Suppose we are interested in a causal effect of $X_1$ on $Y$
+
+-   Other variables that are associated with both $X_1$ and $Y$ are known as confounding variables.
+
+-   For example, if $X_2$ is associated with $X_1$ and $Y$, then $X_2$ is a confounding variable.
+
+We need to control for confounding variables. This is because if we do not, the estimated effects of $X_1$ on $Y$ will contain some of the association between $X_2$ on $Y$. So, we need to control for $X_2$.
+
+<br />
+
+So, if we have a linear regression with including confounding variables (other possible causes of $Y$ that are also correlated with $X_1$ ), our $\beta_1$ coefficient will be our causal effect.
+
+-   Or in other words, causal effects can be estimated from observed data using regression, as long as we appropriately control for all confounding variables.
+
+-   However, this is very difficult, since all confounders is both a large and unknown set of variables.
+
+Thus, we need a research design, where as many of the correlations between the explanatory variables are eliminated as possible (eliminating correlations between $X_1$ and $X_2$ ).
+
+<br />
+
+One way to eliminate correlations with $X_1$ is randomisation of treatments.
+
+-   If they are randomly assigned to $X_1$, there is no correlation between $X_1$ and any other confounders since it is random.
+
+-   For non-random assignment, there might be correlation with other variables $X_1$.
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Selecting Explanatory Variables**
+
+### Selection of Explanatory Variables
+
+How many, and what explanatory variables should we include in our model?
+
+-   Causal inference: clearly, we should include confounders (see above)
+
+-   Prediction: all variables that improve accuracy of prediction.
+
+-   Descriptive: this is less obvious, see section below
+
+The difficulty is figuring out which variables fit these criteria.
+
+<br />
+
+### Descriptive Inference
+
+When the goal is population description, the answer of what explanatory variables to include is less obvious.
+
+-   Suppose our goal is the association between $X_1$ and $Y$. What variables should we control for?
+
+-   No choice is inherently wrong - it depends on what we are interested in.
+
+-   Bivariate associations between $X_1$ and $Y$, with no controls, can be very meaningful - it is the relationship between the two in the real world. These are also very meaningful.
+
+-   More control variables are harder to interpret descriptively, especially if they are conditional on many other $X$-variables. However, they could give a more "truer" picture of the relationship.
+
+<br />
+
+Often, the distinction between causal and descriptive goals of modelling are not often very clear.
+
+-   Many papers aim to establish causal inference, but the research design is not robust enough for a causal claim.
+
+-   Thus, conclusions from studies only make very tentative claims regarding causality.
+
+<br />
+
+For example, there are often analysis of "robust dependence".
+
+-   i.e. does the association between $X_1$ and $Y$ remain substantial and significant even when we control for other important predictors.
+
+-   This is not a proof of a causal effect. But it can strengthen the hypothesis that there is such an effect.
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Population and Inference**
+
+### Introduction
+
+Tools of statistical inference (hypothesis tests and confidence intervals) are motivated by fundamental ideas:
+
+-   Population of interest
+
+-   Sampling: selecting a sample that we observe
+
+-   Repetition of sampling hypothetically, so we imagine what would happen if we had a different sample.
+
+What do these mean for regression modelling?
+
+<br />
+
+### Descriptive Inference
+
+Descriptive inference is the most straight forward way of inferring to the population. This is usually covered in introductory statistics.
+
+-   Population is a collection of $N$ units, and we are interested in the population paramter $\beta$ for those $N$ units
+
+-   Sample is $n$ units drawn from the population, and estimate $\hat{\beta}$ is calculated from this sample.
+
+-   Inference is about using hypothetical samples $n$, and how much $\hat{\beta}$ would vary between them.
+
+<br />
+
+For our conclusions about the population parameters to be correct, we need solid sample procedure.
+
+-   This cannot only be done with regression and statistical techniques.
+
+Our samples should be relatively representative of the population.
+
+-   Generally, we do random sampling to achieve this.
+
+<br />
+
+If we do not have a random sample, we can use sampling weights (survey weights).
+
+-   This allows us to account for how some populations have different groups, some which are more likely to be sampled, some less.
+
+-   We can include these weights into regression models.
+
+<br />
+
+In many applications, this basis for inference is in practice unclear, or unexplained.
+
+-   The population may be ambiguous or undefined
+
+-   Sampling mechanism may be undefined, or clearly not random sampling
+
+-   It is often not clearly states whether the real goal, is population description or causal inference.
+
+<br />
+
+Importantly, many datasets involve no sampling - the data is the whole population:
+
+-   For example, data on all countries in the world.
+
+-   If we have the whole population, we do not need inference - just calculate the $\beta$, and that is the $\beta$ of the population. No confidence intervals needed.
+
+<br />
+
+### Causal Inference
+
+Remember the potential outcomes framework $Y_i(0)$ and $Y_i(1)$
+
+-   Our goal is $\bar{Y}(1) - \bar{Y}(0)$
+
+-   We can calculate confidence intervals for this, as well as tests
+
+But what is the population that these confidence intervals are for?
+
+<br />
+
+Importantly, causal inference is not about a larger population $N$.
+
+-   Instead, we are interested in the full set of potential outcomes $Y_i(0)$ and $Y_i(1)$
+
+-   We only have a sample of the potential outcomes - for each $i$, we have either $Y_i(1)$ or $Y_i(0)$, not both.
+
+-   The "sampling" is the treatment assignment. This is also why we like random assignment.
+
+-   The inference is regarding different treatment assignments. What if we did another random treatment, what would the difference in results be?
+
+<br />
+
+So, when we conclude, we say that $X$ has a significant causal effect on $Y$, this only means **among the units of our data**.
+
+-   Statistical significance in causal inference DOES NOT mean external validity - we are not learning about the greater population of the world, only our internal assignment mechanism.
+
+-   External validity can only be established that the actual units $i$ in our study are representative of the greater population.
+
+<br />
+
+As we discussed before, the best design for causal inference is an experiment where treatments are assigned randomly to the units in the study.
+
+-   Essentially, a randomised experiment, is also a random sample of potential outcomes.
+
+<br />
+
+### Inference for Prediction
+
+The population for predictive inference is somewhat indeterminate and open-ended: the population is those units for which we will want to predict new values of $Y$.
+
+-   For example, we might want to predict credit card debt of future customers.
+
+-   Our inference would be regarding a confidence interval of a fitted value - or in other words, a prediction interval for value of $Y$.
+
+The estimates and standard errors that are used to calculate prediction intervals comes from our observed data (the training data).
+
+-   Thus, for our predictions to be accurate, our training data should be representative of the prediction population.
+
+-   Or else, if the training data is not representative of the prediction population, our predictions will not be very accurate.
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Model Selection**
+
+### Descriptive Inference
+
+What explanatory variables should you include in your model? Let us consider description and causal questions first:
+
+-   Some variables $X$, often just one, are the focus of interest of our research question. We will always include this variable, no matter what.
+
+-   Other variables (control variables) $Z$ that we may want to include in the variable.
+
+Obviously, we are not going to drop $X$, that is the focus of our study. But, $Z$ is subject to selection - we can decide to include some, remove some, etc.
+
+<br />
+
+We can use significance tests to determine what to include:
+
+-   If a control variable (or polynomial term, moderating effect) is not significant, then it might not need to be in the model.
+
+-   This may involve a sequence of different tests, adding and dropping variables, before settling on the final model.
+
+We can also use theoretical/discipline related reasons to include ones.
+
+<br />
+
+Our goal is to finish with a model that is big enough for its purposes, but no bigger than it needs to be.
+
+-   Common rule is that the final model should not include any explanatory variables whose coefficients are not significant.
+
+-   THIS IS ONLY FOR DESCRIPTIVE INFERENCE - see below for others.
+
+<br />
+
+### Causal Inference
+
+Here, the control variables we include are confounding variables.
+
+-   The logic of causal inference indicates that we should include all such confounders if we want to estimate the causal effect
+
+-   In model selection - we are much more willing to include a large number of control variables, including non-significant variables.
+
+This is because we want to be cautious - we do not want to leave out any possible confounding variables. So we include anything that could plausibly be a confounder.
+
+It is often impossible to include all confounders - that is why we resort to randomisation (which eliminates confounders), or other statistical methods.
+
+<br />
+
+### Predictive Inference
+
+There are no key predictors in predictive inference (none that we are focused on interpreting). Thus, every variable is possible to be eliminated or included.
+
+The goal is simple, select the variables that give the best predictions of new values of $Y$.
+
+<br />
+
+The key is **new values of** $Y$. We are not trying to predict existing values of $Y$.
+
+-   This is the fear of overfitting
+
+-   If we overfit a model, it predicts our current observations extremely accurately, but cannot predict new values very accurate, since it has picked up on the "noise" within our training data.
+
+-   Models selected through significance testing are often overfitted, especially if the training data is large.
+
+<br />
+
+We can use other methods to do this:
+
+-   Cross-validation: split training data into one part of training, and one part for testing. Make sure our model on the training data performs well on the testing data.
+
+-   Other statistics also approximate the results of cross-validation without actually doing it, such as $AIC$, $BIC$, $C_p$, and adjusted $R^2$.
+
+<br />

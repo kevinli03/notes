@@ -11,7 +11,7 @@
 
 
 
-<title>Linear Regression II: Different Types of Explanatory Variables</title>
+<title>Linear Regression III: Model Selection and Research Design</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -2778,8 +2778,8 @@ font-size: 0.95em;
 
 
 
-<h1 class="title toc-ignore">Linear Regression II: Different Types of
-Explanatory Variables</h1>
+<h1 class="title toc-ignore">Linear Regression III: Model Selection and
+Research Design</h1>
 
 </div>
 
@@ -2792,10 +2792,10 @@ font-size: 12pt;
 </style>
 <p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
 Homepage</a></p>
-<p><strong>Week 3, MY452A Applied Regression Analysis</strong></p>
+<p><strong>Week 4, MY452A Applied Regression Analysis</strong></p>
 <ul>
-<li><p>Title: Linear Regression II: Different Types of Explanatory
-Variables</p></li>
+<li><p>Title: Linear Regression III: Model Selection and Research
+Design</p></li>
 <li><p>Topics:</p></li>
 <li><p>Readings:</p></li>
 </ul>
@@ -2803,195 +2803,267 @@ Variables</p></li>
 <hr />
 <p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
 Homepage</a></p>
-<div id="key-points" class="section level1">
-<h1><strong>Key Points</strong></h1>
-<p><br /></p>
-<hr />
-<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
-Homepage</a></p>
-</div>
-<div id="polynomial-regression" class="section level1">
-<h1><strong>Polynomial Regression</strong></h1>
-<div id="non-linear-relationships" class="section level3">
-<h3>Non-Linear Relationships</h3>
-<p>Sometimes, a linear (straight-line) fit is a poor description of a
-relationship. For example, the relationship between two variables could
-be curved.</p>
-<ul>
-<li><p>More flexible relationships can be modelled by including
-transformations of <span class="math inline">\(X\)</span> as explanatory
-variables.</p></li>
-<li><p>Common transformations include polynomials (quadratic, cubic,
-etc.) and logarithms.</p></li>
-<li><p>We will start with quadratic transformations.</p></li>
-</ul>
-<p>Note: “Linear” regression does not mean the relationship between
-<span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> must be linear. It refers to the
-linearity of parameters.</p>
-<p><br /></p>
-</div>
-<div id="quadratic-transformations" class="section level3">
-<h3>Quadratic Transformations</h3>
-<p>A quadratic model with one <span class="math inline">\(X\)</span>
-takes the following form:</p>
-<p><span class="math display">\[
-E[Y] = \alpha + \beta_1X + \beta_2X^2
-\]</span></p>
-<p>Important notes about quadratic transformations:</p>
-<ul>
-<li><p>Here, <span class="math inline">\(X^2\)</span> is the second
-power of <span class="math inline">\(X\)</span> (a quadratic, a
-parabola)</p></li>
-<li><p>If the model includes <span class="math inline">\(X^2\)</span>,
-it should also include <span class="math inline">\(X\)</span></p></li>
-<li><p>You can include other explanatory variables after, just like any
-other regression.</p></li>
-</ul>
-<p>Quadratic transformations are good for modelling data that takes a
-shape of a parabola.</p>
-<ul>
-<li><p>Note, a true parabola goes from -∞ to ∞. However, for our model,
-it does not have to do this - it only is used for the range of plausible
-<span class="math inline">\(X\)</span> values given our explanatory
-variable (ex. age, a negative number would make no sense).</p></li>
-<li><p>Because the parabola can go outside our plausible range of <span class="math inline">\(X\)</span> values, we might not see the “turn” of
-the parabola within our data.</p></li>
-</ul>
-<p>We fit the model just as normal - minimise the sum of squared
-errors.</p>
-<p><br /></p>
-</div>
-<div id="quadratic-model-interpretation" class="section level3">
-<h3>Quadratic Model Interpretation</h3>
-<p>When we run the quadratic transformation in R, we will get two
-coefficients (as seen in the equation above), one for the term <span class="math inline">\(X\)</span>, and one for the term <span class="math inline">\(X^2\)</span></p>
-<p>How do we interpret these coefficients:</p>
-<ul>
-<li><p>The p-value of <span class="math inline">\(X^2\)</span> indicates
-evidence <strong>against</strong> the null hypothesis of a linear
-relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
-<ul>
-<li><p>So, if this is statistically significant, then we can reject a
-linear relationship between <span class="math inline">\(X\)</span> and
-<span class="math inline">\(Y\)</span></p></li>
-<li><p>Why? If <span class="math inline">\(\beta_2 = 0\)</span>, then,
-we are left with a linear equation since that cancels out <span class="math inline">\(X^2\)</span>. Thus, if we are confidence <span class="math inline">\(\beta_2 ≠ 0\)</span>, then, we can reject the idea
-that the relationship is linear.</p></li>
-</ul></li>
-<li><p>If <span class="math inline">\(X^2\)</span> coefficient is
-positive, then it opens upward, and if <span class="math inline">\(X^2\)</span> coefficient is negative, then the
-curve opens downward</p></li>
-<li><p>The coefficients of <span class="math inline">\(X\)</span> and
-<span class="math inline">\(X^2\)</span> can no longer be interpreted
-directly. This is because, changing <span class="math inline">\(X\)</span> also changes <span class="math inline">\(X^2\)</span>, so you cannot hold one constant and
-interpret the other.</p></li>
-<li><p>If we do want to interpret this model, we are better off to
-predict values of <span class="math inline">\(Y\)</span> using our
-model.</p></li>
-</ul>
-<p><br /></p>
-</div>
-<div id="turning-point-of-quadratic" class="section level3">
-<h3>Turning Point of Quadratic</h3>
-<p>The “turning point” of a quadratic of our model is at value <span class="math inline">\(X = -\hat{\beta}_1/(2 \hat{\beta}_2)\)</span></p>
-<p>Why? Take the derivative and set equal to 0</p>
-<p><span class="math display">\[
-Y = \hat{\alpha} + \hat{\beta}_1X + \hat{\beta}_2X^2
-\]</span></p>
-<p><span class="math display">\[
-\frac{dy}{dx} = 0 + \hat{\beta}_1 + 2\hat{\beta}_2X
-\]</span></p>
-<p><span class="math display">\[
-0 = \hat{\beta}_1 + 2 \hat{\beta}_2X
-\]</span></p>
-<p><span class="math display">\[
--\hat{\beta}_1 = 2 \hat{\beta}_2 X
-\]</span></p>
-<p><span class="math display">\[
-X = -\hat{\beta}_1/(2 \hat{\beta}_2)
-\]</span></p>
-<p>Interpretation of the Turning Point:</p>
-<ul>
-<li><p>This does not need to be within the observed range of <span class="math inline">\(X\)</span></p></li>
-<li><p>The turning point can indicate either a maximum or negative <span class="math inline">\(Y\)</span> value, given a certain <span class="math inline">\(X\)</span> value. This can be useful for
-interpretation.</p></li>
-</ul>
-<p><br /></p>
-</div>
-<div id="general-polynomial-models" class="section level3">
-<h3>General Polynomial Models</h3>
-<p>You can continue adding powers to our model:</p>
-<ul>
-<li><p>Cubic: <span class="math inline">\(E[Y] = \alpha + \beta_1 X +
-\beta_2 X^2 + \beta_3 x^3\)</span></p></li>
-<li><p>Quartic: <span class="math inline">\(E[Y] = \alpha + \beta_1 X +
-\beta_2 X^2 + \beta_3 X^3 + \beta_4 X^4\)</span></p></li>
-<li><p>And so on…</p></li>
-</ul>
-<p>Each higher order coefficient, if statistical significant, says that
-the relationship between <span class="math inline">\(X\)</span> and
-<span class="math inline">\(Y\)</span> is not the previous order.</p>
-<ul>
-<li>Ex. if the cubic term is statistically significant, we can reject a
-quadratic relationship between <span class="math inline">\(X\)</span>
-and <span class="math inline">\(Y\)</span>.</li>
-</ul>
-<p><br /></p>
-<hr />
-<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
-Homepage</a></p>
-</div>
-</div>
-<div id="logarithmic-transformation" class="section level1">
-<h1><strong>Logarithmic Transformation</strong></h1>
+<div id="goals-of-regression" class="section level1">
+<h1><strong>Goals of Regression</strong></h1>
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
-<p>Logarithmic transformations are another form of non-linear
-transformations:</p>
+<p>There are three types of questions that regression can help
+answer:</p>
 <ul>
-<li><p>Logarithmic relationships are commonly used for skewed variables,
-such as when <span class="math inline">\(X\)</span> is a amount of
-money: income, wealth, turnover, etc.</p></li>
-<li><p>In such situations, <span class="math inline">\(X\)</span> is
-replaced with <span class="math inline">\(\log(X)\)</span> in the
-explanatory variable.</p></li>
-<li><p>Note: <span class="math inline">\(\log(X) = \ln(X)\)</span> in
-statistics - we use natural logs.</p></li>
+<li><p>Descriptive/Population inference: What is the true association of
+<span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> in the population? For example, how are
+individual’s attitudes to immigration associated with education levels
+in Europe?</p></li>
+<li><p>Causal Inference: What does changing <span class="math inline">\(X\)</span> cause <span class="math inline">\(Y\)</span> to do? Does watching a specific TV
+programme cause an increase in a child’s number recognition
+ability?</p></li>
+<li><p>Predictive Inference: Given some values of <span class="math inline">\(X\)</span>, what are there predicted <span class="math inline">\(Y\)</span> values? Given data on someone’s
+education and credit rating, can we predict their likely credit card
+debt?</p></li>
 </ul>
-<p>Thus, the model takes the form:</p>
-<p><span class="math display">\[
-E(Y) = \alpha + \beta\log(X)
-\]</span></p>
-<p>One difference is that in polynomial models, we input the polynomials
-within the <em>lm()</em> function, while for logs, we frequently first
-log our data, then run a normal regression.</p>
+<p>Some studies can use multiple of these at the same time.</p>
+<p><br /></p>
+<p>Why do we split regression into these three types of questions?</p>
+<ul>
+<li>This is because the way we interpret results, and the model
+selection we use, will differ.</li>
+</ul>
 <p><br /></p>
 </div>
-<div id="interpretation" class="section level3">
-<h3>Interpretation</h3>
-<p>The logic of the association with a logarithmic transformation, is
-that it is not additive, but multiplicative factors that matter.</p>
+<div id="predictive-inference" class="section level3">
+<h3>Predictive Inference</h3>
+<p>The structure of the prediction task is as follows:</p>
 <ul>
-<li><p>We could interpret it as, given a one unit increase in the log of
-<span class="math inline">\(X\)</span>, there is a expected <span class="math inline">\(\beta\)</span> change in <span class="math inline">\(Y\)</span>.</p></li>
-<li><p>This is the same interpretation as a normal linear model,
-however, this is not particularly informative.</p></li>
+<li><p>We have data of <span class="math inline">\(n\)</span>
+observations where we know both <span class="math inline">\(Y\)</span>
+and <span class="math inline">\(\overrightarrow{X}\)</span> (training
+data).</p></li>
+<li><p>Then, train our model on this data. We get the coefficients of
+linear model.</p></li>
+<li><p>Now, we have test data - new observations with <span class="math inline">\(\overrightarrow{X}\)</span> values, but we do not
+know the corresponding <span class="math inline">\(Y\)</span>
+values.</p></li>
+<li><p>We can predict the unkown <span class="math inline">\(Y\)</span>
+values by plugging <span class="math inline">\(\overrightarrow{X}\)</span> values we have into
+our regression equation:</p></li>
 </ul>
-<p>We can do another form of interpretation. Based on log rules, we
-know:</p>
 <p><span class="math display">\[
-\log(X) + A = \log(X) + \log(e^A) = \log(e^A \times X)
+\hat{Y}_j = \hat{\alpha} + \hat{\beta}_1X_{1j} + ... + \hat{\beta}_k
+X_{kj}
 \]</span></p>
-<p>Thus, we can also interpret it as:</p>
+<p>Our goal of predictive inference is that our predicted values <span class="math inline">\(\hat{Y}_j\)</span> should be as close to actual
+value <span class="math inline">\(Y_j\)</span> as possible.</p>
+<p>In prediction, the actual coefficient values <span class="math inline">\(\overrightarrow{\hat{\beta}}\)</span> do not
+actually matter - they are a means to an end to make predictions, not
+the focus of our interest.</p>
+<p><br /></p>
+</div>
+<div id="descriptive-inference" class="section level3">
+<h3>Descriptive Inference</h3>
+<p>Consider a sample data with <span class="math inline">\(Y\)</span>
+and <span class="math inline">\(\overrightarrow{X}\)</span> values,
+which are drawn from some population.</p>
 <ul>
-<li><p>Multiplying <span class="math inline">\(X\)</span> by <span class="math inline">\(e^A\)</span> is associated with an increase of
-<span class="math inline">\(A \times \beta\)</span> units in <span class="math inline">\(Y\)</span>.</p></li>
-<li><p>We can change <span class="math inline">\(A\)</span> for more
-convenient interpretation. For example, when <span class="math inline">\(A = 0.095\)</span>, then <span class="math inline">\(e^A \approx 1.1\)</span>, which when multiplied,
-is equivalent to a 10% increase.</p></li>
-<li><p>Thus, increasing <span class="math inline">\(X\)</span> by 10% is
-associated with an expected change of <span class="math inline">\(0.095
-\times \beta\)</span> units in <span class="math inline">\(Y\)</span></p></li>
+<li>Using our sample data, calculate regression coefficients <span class="math inline">\(\overrightarrow{\hat{\beta}}\)</span></li>
+</ul>
+<p>Our goal is that our estimates <span class="math inline">\(\overrightarrow{\hat{\beta}}\)</span> are as close
+to the real population <span class="math inline">\(\overrightarrow{\beta}\)</span> as possible.</p>
+<ul>
+<li>We can use confidence intervals and significance tests to expand
+descriptive inference.</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="causal-inference" class="section level3">
+<h3>Causal Inference</h3>
+<p>Let <span class="math inline">\(Y\)</span> be the outcome of
+interest, and <span class="math inline">\(X\)</span> as a predictor of
+interest (only one <span class="math inline">\(X\)</span>, the other
+variables play a different role).</p>
+<p>Consider two values of <span class="math inline">\(X\)</span>,
+denoted <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_0\)</span>. If <span class="math inline">\(X\)</span> is continuous, these can be any two
+values of it.</p>
+<ul>
+<li>Essentially, a comparison between two settings of <span class="math inline">\(X\)</span>. For simplicity, we will use binary
+notation ( <span class="math inline">\(X = 0, X = 1\)</span> ) for our
+notation.</li>
+</ul>
+<p><br /></p>
+<p>In the potential outcomes framework, there are two different worlds.
+What would happen if <span class="math inline">\(X=0\)</span>, versus
+what would happen if <span class="math inline">\(X=1\)</span>.</p>
+<ul>
+<li><p>Both could have happened, and what would be the difference in
+<span class="math inline">\(Y\)</span> between the two?</p></li>
+<li><p><span class="math inline">\(Y_i(0)\)</span> is the value that
+<span class="math inline">\(Y\)</span> would have if <span class="math inline">\(X = 0\)</span> for unit <span class="math inline">\(i\)</span></p></li>
+<li><p><span class="math inline">\(Y_i(1)\)</span> is the value that
+<span class="math inline">\(Y\)</span> would have if <span class="math inline">\(X = 1\)</span> for unit <span class="math inline">\(i\)</span></p></li>
+<li><p>The “individual” causal effect would be <span class="math inline">\(Y_i(1) - Y_i(0)\)</span>, but this is impossible
+to estimate (Fundmental Problem of Causal Inference).</p></li>
+</ul>
+<p>The aggregate causal effect is the comparison between the
+distributions of <span class="math inline">\(Y_i(0)\)</span> and <span class="math inline">\(Y_i(1)\)</span> for <span class="math inline">\(i
+= 1,...,n\)</span>.</p>
+<p>The most common way is to use the expected value/mean of these
+distributions. Thus, the average treatment effect (ATE) is:</p>
+<p><span class="math display">\[
+E[\tau_i] = \bar{Y}(1) - \bar{Y}(0)
+\]</span></p>
+<p><br /></p>
+<p>Our goal is to obtain some estimate <span class="math inline">\(\hat{E[\tau_i]}\)</span> that is as close to the
+actual <span class="math inline">\(E[\tau_i]\)</span> as possible.</p>
+<ul>
+<li><p>Challenge - <span class="math inline">\(E[\tau_i]\)</span> cannot
+be computed directly, since we never observe both <span class="math inline">\(Y_i(0)\)</span> and <span class="math inline">\(Y_i(1)\)</span> for the same unit <span class="math inline">\(i\)</span> (we can’t see both potential
+worlds).</p></li>
+<li><p>We only observe the category each unit <span class="math inline">\(i\)</span> is assigned into.</p></li>
+</ul>
+<p>We can use regression to estimate <span class="math inline">\(E[\tau_i]\)</span>, but this requires sometimes
+regression modelling, and sometimes, other special techniques.</p>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="goals-of-multiple-regression" class="section level1">
+<h1><strong>Goals of Multiple Regression</strong></h1>
+<div id="predictive-inference-1" class="section level3">
+<h3>Predictive Inference</h3>
+<p>Why do we use multiple regression, rather than single regression?</p>
+<p>For predictive inference, it is quite obvious. Using multiple
+predictors together gives, in general, better predictions.</p>
+<ul>
+<li><p>For example, if we are predicting credit card debt.</p></li>
+<li><p>Not just one factor affects credit card debt - many things, such
+as age, education, income, credit rating, credit limit, etc.</p></li>
+<li><p>So, if you only include one thing, like age, your prediction
+won’t be that accurate</p></li>
+<li><p>But if you include more predictors, this makes our predictions
+more accurate.</p></li>
+</ul>
+<p>However, it is important to note that adding more and more predictors
+will not always improve prediction.</p>
+<p><br /></p>
+<p>In descriptive inference, we are interested in describing the
+association between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> in a population.</p>
+<p>Let us consider a simple linear regression model:</p>
+<p><span class="math display">\[
+E[Y|X] = \alpha + \beta_1X
+\]</span></p>
+<ul>
+<li>Pretty clearly, <span class="math inline">\(\beta_1\)</span> is the
+relationship between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> in the population</li>
+</ul>
+<p>But what if <span class="math inline">\(\beta_1\)</span> was in a
+multiple regression model:</p>
+<p><span class="math display">\[
+E[Y|X] = \alpha + \beta_1 X_1 + \beta_2X_2 + ... + \beta_k X_k
+\]</span></p>
+<ul>
+<li>Now, <span class="math inline">\(\beta_1\)</span> is the
+relationship between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>, controlling for other explanatory
+variables in the model.</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="partial-associations" class="section level3">
+<h3>Partial Associations</h3>
+<p>What does controlling for other explanatory variables mean? Let us
+first consider that all control variables are dummies.</p>
+<ul>
+<li>That means that <span class="math inline">\(\beta_1\)</span> is the
+association between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>, calculated seperately within every
+subset of units which belong to the same categorical variables. Then, we
+do a weighted average of each <span class="math inline">\(\beta_1\)</span> in each category, to get final
+<span class="math inline">\(\beta_1\)</span></li>
+</ul>
+<p>More intuitively, assume only 2 variables <span class="math inline">\(X_1\)</span> being income inequality, and <span class="math inline">\(X_2\)</span> being the country income group (low,
+high).</p>
+<ul>
+<li><p>We calculate 2 sets of the relationship <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>, or 2 <span class="math inline">\(\beta_1\)</span>’s, one within each category of
+<span class="math inline">\(X_2\)</span>.</p>
+<ul>
+<li>So calculate <span class="math inline">\(\beta_1\)</span> in <span class="math inline">\(X_2 = 0\)</span> category, and <span class="math inline">\(\beta_1\)</span> in <span class="math inline">\(X_2 = 1\)</span> category</li>
+</ul></li>
+<li><p>Now, weighted average of the coefficients is the final <span class="math inline">\(\beta_1\)</span></p></li>
+</ul>
+<p><br /></p>
+<p>For a single continuous control variable, it is more complicated. It
+is hard to imagine to divide a continuous <span class="math inline">\(X_2\)</span> into infinitely many small
+categories, each calculating <span class="math inline">\(\beta_1\)</span>.</p>
+<ul>
+<li>Although technically, this is still the case. <span class="math inline">\(\beta_1\)</span> is the association between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> within each subset units <span class="math inline">\(i\)</span> in the population, that have the same
+values of all of <span class="math inline">\(X_2... X_k\)</span>.</li>
+</ul>
+<p>Instead, think of <span class="math inline">\(\beta_1\)</span> as the
+association between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>, in the population, if we “filtered
+out” the contributions from associations involving <span class="math inline">\(X_2\)</span></p>
+<ul>
+<li><p>For example, a model with <span class="math inline">\(X_1, X_2,
+Y\)</span>.</p></li>
+<li><p><span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are correlated with <span class="math inline">\(Y\)</span>. However, <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are also correlated with each other.
+Thus, some of <span class="math inline">\(X_1\)</span>’s relationship
+with <span class="math inline">\(Y\)</span> is actually a result of
+<span class="math inline">\(X_2\)</span>.</p></li>
+<li><p>We filter out the correlation between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>, so we are left with the correlation
+between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="interactions" class="section level3">
+<h3>Interactions</h3>
+<p>Above with controlling variables, we mentioned how <span class="math inline">\(\beta_1\)</span> is the association between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> in different categories/values of <span class="math inline">\(X_2, ... ,X_k\)</span>. But generally, we say that
+<span class="math inline">\(\beta_1\)</span> is relatively constant
+between all these categories.</p>
+<p>Interactions say that <span class="math inline">\(\beta_1\)</span>,
+or the relationship between <span class="math inline">\(X_1\)</span> and
+<span class="math inline">\(Y\)</span>, changes based on what category
+it is.</p>
+<p>For example this model:</p>
+<p><span class="math display">\[
+E[Y|X] = \alpha + \beta_1 X_1 + \beta_2 X_2 + \beta_3 (X_1 X_2)
+\]</span></p>
+<p>So, <span class="math inline">\(\beta_1\)</span> depends on the value
+of <span class="math inline">\(X_2\)</span>, so it differs based on the
+category/value of <span class="math inline">\(X_2\)</span></p>
+<p><br /></p>
+</div>
+<div id="causal-inference-1" class="section level3">
+<h3>Causal Inference</h3>
+<p>Suppose we are interested in a causal effect of <span class="math inline">\(X_1\)</span> on <span class="math inline">\(Y\)</span></p>
+<ul>
+<li><p>Other variables that are associated with both <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> are known as confounding
+variables.</p></li>
+<li><p>For example, if <span class="math inline">\(X_2\)</span> is
+associated with <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>, then <span class="math inline">\(X_2\)</span> is a confounding variable.</p></li>
+</ul>
+<p>We need to control for confounding variables. This is because if we
+do not, the estimated effects of <span class="math inline">\(X_1\)</span> on <span class="math inline">\(Y\)</span> will contain some of the association
+between <span class="math inline">\(X_2\)</span> on <span class="math inline">\(Y\)</span>. So, we need to control for <span class="math inline">\(X_2\)</span>.</p>
+<p><br /></p>
+<p>So, if we have a linear regression with including confounding
+variables (other possible causes of <span class="math inline">\(Y\)</span> that are also correlated with <span class="math inline">\(X_1\)</span> ), our <span class="math inline">\(\beta_1\)</span> coefficient will be our causal
+effect.</p>
+<ul>
+<li><p>Or in other words, causal effects can be estimated from observed
+data using regression, as long as we appropriately control for all
+confounding variables.</p></li>
+<li><p>However, this is very difficult, since all confounders is both a
+large and unknown set of variables.</p></li>
+</ul>
+<p>Thus, we need a research design, where as many of the correlations
+between the explanatory variables are eliminated as possible
+(eliminating correlations between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> ).</p>
+<p><br /></p>
+<p>One way to eliminate correlations with <span class="math inline">\(X_1\)</span> is randomisation of treatments.</p>
+<ul>
+<li><p>If they are randomly assigned to <span class="math inline">\(X_1\)</span>, there is no correlation between
+<span class="math inline">\(X_1\)</span> and any other confounders since
+it is random.</p></li>
+<li><p>For non-random assignment, there might be correlation with other
+variables <span class="math inline">\(X_1\)</span>.</p></li>
 </ul>
 <p><br /></p>
 <hr />
@@ -2999,146 +3071,200 @@ associated with an expected change of <span class="math inline">\(0.095
 Homepage</a></p>
 </div>
 </div>
-<div id="categorical-x-variables" class="section level1">
-<h1><strong>Categorical</strong> <span class="math inline">\(X\)</span>
-<strong>Variables</strong></h1>
+<div id="selecting-explanatory-variables" class="section level1">
+<h1><strong>Selecting Explanatory Variables</strong></h1>
+<div id="selection-of-explanatory-variables" class="section level3">
+<h3>Selection of Explanatory Variables</h3>
+<p>How many, and what explanatory variables should we include in our
+model?</p>
+<ul>
+<li><p>Causal inference: clearly, we should include confounders (see
+above)</p></li>
+<li><p>Prediction: all variables that improve accuracy of
+prediction.</p></li>
+<li><p>Descriptive: this is less obvious, see section below</p></li>
+</ul>
+<p>The difficulty is figuring out which variables fit these
+criteria.</p>
+<p><br /></p>
+</div>
+<div id="descriptive-inference-1" class="section level3">
+<h3>Descriptive Inference</h3>
+<p>When the goal is population description, the answer of what
+explanatory variables to include is less obvious.</p>
+<ul>
+<li><p>Suppose our goal is the association between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>. What variables should we control
+for?</p></li>
+<li><p>No choice is inherently wrong - it depends on what we are
+interested in.</p></li>
+<li><p>Bivariate associations between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>, with no controls, can be very
+meaningful - it is the relationship between the two in the real world.
+These are also very meaningful.</p></li>
+<li><p>More control variables are harder to interpret descriptively,
+especially if they are conditional on many other <span class="math inline">\(X\)</span>-variables. However, they could give a
+more “truer” picture of the relationship.</p></li>
+</ul>
+<p><br /></p>
+<p>Often, the distinction between causal and descriptive goals of
+modelling are not often very clear.</p>
+<ul>
+<li><p>Many papers aim to establish causal inference, but the research
+design is not robust enough for a causal claim.</p></li>
+<li><p>Thus, conclusions from studies only make very tentative claims
+regarding causality.</p></li>
+</ul>
+<p><br /></p>
+<p>For example, there are often analysis of “robust dependence”.</p>
+<ul>
+<li><p>i.e. does the association between <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> remain substantial and significant even
+when we control for other important predictors.</p></li>
+<li><p>This is not a proof of a causal effect. But it can strengthen the
+hypothesis that there is such an effect.</p></li>
+</ul>
+<p><br /></p>
+<hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+</div>
+</div>
+<div id="population-and-inference" class="section level1">
+<h1><strong>Population and Inference</strong></h1>
 <div id="introduction-1" class="section level3">
 <h3>Introduction</h3>
-<p>Often, our explanatory variables are categorical, rather than
-continuous. This means they will only have a small number of distinct
-possible values, and no more.</p>
-<p>There are two types of categorical variables:</p>
+<p>Tools of statistical inference (hypothesis tests and confidence
+intervals) are motivated by fundamental ideas:</p>
 <ul>
-<li><p>Binary (Dichotomous) or Dummy variables: only 2 categories. For
-example, treatment vs. control in an experiment, yes/no, true/false,
-etc.</p></li>
-<li><p>Polytomous variables, with 3 or more values. For example,
-resident of England, Scotland, Wales, or Northern Ireland.</p></li>
+<li><p>Population of interest</p></li>
+<li><p>Sampling: selecting a sample that we observe</p></li>
+<li><p>Repetition of sampling hypothetically, so we imagine what would
+happen if we had a different sample.</p></li>
 </ul>
-<p>Note: if the polytomous variables are ordinal (with a meaningful
-order), we can often treat them as continuous. The below will focus on
-non-ordinal categories.</p>
+<p>What do these mean for regression modelling?</p>
 <p><br /></p>
 </div>
-<div id="binary-explanatory-variable" class="section level3">
-<h3>Binary Explanatory Variable</h3>
-<p>Let us define <span class="math inline">\(X\)</span> as a variable
-with 2 categories: <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(X = 1\)</span></p>
+<div id="descriptive-inference-2" class="section level3">
+<h3>Descriptive Inference</h3>
+<p>Descriptive inference is the most straight forward way of inferring
+to the population. This is usually covered in introductory
+statistics.</p>
 <ul>
-<li><p>Consider the simple linear regression mode: <span class="math inline">\(E[Y] = \alpha + \beta X\)</span></p></li>
-<li><p>The coefficient <span class="math inline">\(\beta\)</span> is the
-expected difference in <span class="math inline">\(Y\)</span>, between
-category <span class="math inline">\(X=1\)</span> and category <span class="math inline">\(X=0\)</span></p></li>
-</ul>
-<p>Why? Let us plug in <span class="math inline">\(X = 0\)</span> and
-<span class="math inline">\(X = 1\)</span>:</p>
-<p><span class="math display">\[
-E[Y|X = 1] = \alpha + \beta(1) = \alpha + \beta
-\]</span></p>
-<p><span class="math display">\[
-E[Y|X=0] = \alpha + \beta(0) = \alpha
-\]</span></p>
-<p><span class="math display">\[
-E[Y|X=1] - E[Y|X=0] = (\alpha + \beta) - \alpha = \beta
-\]</span></p>
-<p>Thus, the expected difference between the two categories is <span class="math inline">\(\beta\)</span></p>
-<p><br /></p>
-</div>
-<div id="binary-x-estimation-and-inference" class="section level3">
-<h3>Binary <span class="math inline">\(X\)</span> Estimation and
-Inference</h3>
-<p>The least squares estimates of the parameters of a binary <span class="math inline">\(X\)</span> value is:</p>
-<ul>
-<li><p>coefficient <span class="math inline">\(\alpha\)</span> is
-estimated as <span class="math inline">\(\hat{\alpha} =
-\bar{Y}_0\)</span></p></li>
-<li><p>Coefficient <span class="math inline">\(\beta\)</span> is
-estimated as <span class="math inline">\(\hat{\beta} = \bar{Y}_1 -
-\bar{Y}_0\)</span></p></li>
-</ul>
-<p>Where <span class="math inline">\(\bar{Y}_1\)</span> is the sample
-mean of <span class="math inline">\(Y\)</span> for observations in
-category <span class="math inline">\(Y=1\)</span>, and <span class="math inline">\(\hat{Y}_0\)</span> is the sample mean of <span class="math inline">\(Y\)</span> for observations in category <span class="math inline">\(Y = 0\)</span></p>
-<p>The t-test of the null hypothesis <span class="math inline">\(h_0 :
-\beta = 0\)</span> in this linear regression is now a t-test difference
-of means (that we have seen in intro to statistics)</p>
-<p><br /></p>
-</div>
-<div id="polytomous-explanatory-variables" class="section level3">
-<h3>Polytomous Explanatory Variables</h3>
-<p>A categorical variable with 3 or more categories can be converted
-into a set of binary dummy variables (indicator variables).</p>
-<ul>
-<li><p>Dummy variables are created for all but one of the categories in
-our variable</p></li>
-<li><p>The category without a dummy, is the reference (baseline)
-category</p></li>
-<li><p>The coefficient of the dummy variable of a category, is the
-expected difference in <span class="math inline">\(Y\)</span> between
-that category, and the reference/baseline category, controlling for all
-other explanatory variables.</p></li>
-<li><p>The choice of a baseline category is arbitrary, the model is the
-same regardless of the choice.</p></li>
+<li><p>Population is a collection of <span class="math inline">\(N\)</span> units, and we are interested in the
+population paramter <span class="math inline">\(\beta\)</span> for those
+<span class="math inline">\(N\)</span> units</p></li>
+<li><p>Sample is <span class="math inline">\(n\)</span> units drawn from
+the population, and estimate <span class="math inline">\(\hat{\beta}\)</span> is calculated from this
+sample.</p></li>
+<li><p>Inference is about using hypothetical samples <span class="math inline">\(n\)</span>, and how much <span class="math inline">\(\hat{\beta}\)</span> would vary between
+them.</p></li>
 </ul>
 <p><br /></p>
-<p>For example, the World Bank classified country into an income
-variable. The income variable contains: high, middle, and low.</p>
-<p>Then, we could define low as our reference (baseline) category. Thus,
-we can represent this model with 2 dummy variables:</p>
+<p>For our conclusions about the population parameters to be correct, we
+need solid sample procedure.</p>
 <ul>
-<li><p>Dummy variable 1: <span class="math inline">\(X_M\)</span>, where
-<span class="math inline">\(X_M = 1\)</span> when a country is in the
-middle income category, and <span class="math inline">\(X_M = 0\)</span>
-when a country is not in that category</p></li>
-<li><p>Dummy variable 2: <span class="math inline">\(X_H\)</span>, where
-<span class="math inline">\(X_H = 1\)</span> when a country is in the
-high category, and <span class="math inline">\(X_H = 0\)</span> when a
-country is not in that category</p></li>
-<li><p>We do not have a dummy for our reference category of low income,
-because we know if both <span class="math inline">\(X_M\)</span> and
-<span class="math inline">\(X_H\)</span> are equal to <span class="math inline">\(0\)</span>, then that refers to our reference
-category</p></li>
+<li>This cannot only be done with regression and statistical
+techniques.</li>
+</ul>
+<p>Our samples should be relatively representative of the
+population.</p>
+<ul>
+<li>Generally, we do random sampling to achieve this.</li>
+</ul>
+<p><br /></p>
+<p>If we do not have a random sample, we can use sampling weights
+(survey weights).</p>
+<ul>
+<li><p>This allows us to account for how some populations have different
+groups, some which are more likely to be sampled, some less.</p></li>
+<li><p>We can include these weights into regression models.</p></li>
+</ul>
+<p><br /></p>
+<p>In many applications, this basis for inference is in practice
+unclear, or unexplained.</p>
+<ul>
+<li><p>The population may be ambiguous or undefined</p></li>
+<li><p>Sampling mechanism may be undefined, or clearly not random
+sampling</p></li>
+<li><p>It is often not clearly states whether the real goal, is
+population description or causal inference.</p></li>
+</ul>
+<p><br /></p>
+<p>Importantly, many datasets involve no sampling - the data is the
+whole population:</p>
+<ul>
+<li><p>For example, data on all countries in the world.</p></li>
+<li><p>If we have the whole population, we do not need inference - just
+calculate the <span class="math inline">\(\beta\)</span>, and that is
+the <span class="math inline">\(\beta\)</span> of the population. No
+confidence intervals needed.</p></li>
 </ul>
 <p><br /></p>
 </div>
-<div id="interpretation-1" class="section level3">
-<h3>Interpretation</h3>
-<p>With our 3 category explanatory variable, we have created 2 dummy
-variables (as above). Thus, our regression takes the form:</p>
-<p><span class="math display">\[
-E[Y] = \alpha + \beta_{M1} X_M + \beta_{H1} X_H
-\]</span></p>
-<p>The coefficient interpretations are as following:</p>
+<div id="causal-inference-2" class="section level3">
+<h3>Causal Inference</h3>
+<p>Remember the potential outcomes framework <span class="math inline">\(Y_i(0)\)</span> and <span class="math inline">\(Y_i(1)\)</span></p>
 <ul>
-<li><p><span class="math inline">\(\hat{\beta}_{M1}\)</span> is the
-expected difference in <span class="math inline">\(Y\)</span> between
-the category <span class="math inline">\(M\)</span> (middle income) and
-the baseline category (low income).</p></li>
-<li><p><span class="math inline">\(\hat{\beta}_{H1}\)</span> is the
-expected difference in <span class="math inline">\(Y\)</span> between
-the category <span class="math inline">\(H\)</span> (high income) and
-the baseline category (low income)</p></li>
-<li><p>These coefficients p-value estimate if there is a significant
-difference between the categories in question (difference of means
-test).</p></li>
+<li><p>Our goal is <span class="math inline">\(\bar{Y}(1) -
+\bar{Y}(0)\)</span></p></li>
+<li><p>We can calculate confidence intervals for this, as well as
+tests</p></li>
 </ul>
-<p>We can calculate the expected value of each category</p>
+<p>But what is the population that these confidence intervals are
+for?</p>
+<p><br /></p>
+<p>Importantly, causal inference is not about a larger population <span class="math inline">\(N\)</span>.</p>
 <ul>
-<li><p><span class="math inline">\(\hat{\alpha}\)</span> is the expected
-value of <span class="math inline">\(Y\)</span> of the reference
-category (low income)</p></li>
-<li><p><span class="math inline">\(\hat{\alpha} +
-\hat{\beta}_{M1}\)</span> is the expected value of <span class="math inline">\(Y\)</span> of the category <span class="math inline">\(M\)</span> (middle income)</p></li>
-<li><p><span class="math inline">\(\hat{\alpha} +
-\hat{\beta}_{H1}\)</span> is the expected value of <span class="math inline">\(Y\)</span> of the category <span class="math inline">\(H\)</span> (middle income)</p></li>
+<li><p>Instead, we are interested in the full set of potential outcomes
+<span class="math inline">\(Y_i(0)\)</span> and <span class="math inline">\(Y_i(1)\)</span></p></li>
+<li><p>We only have a sample of the potential outcomes - for each <span class="math inline">\(i\)</span>, we have either <span class="math inline">\(Y_i(1)\)</span> or <span class="math inline">\(Y_i(0)\)</span>, not both.</p></li>
+<li><p>The “sampling” is the treatment assignment. This is also why we
+like random assignment.</p></li>
+<li><p>The inference is regarding different treatment assignments. What
+if we did another random treatment, what would the difference in results
+be?</p></li>
 </ul>
-<p>Notice that the individual p-values mean if there is any significant
-difference between the categories. But, what about the association with
-<span class="math inline">\(Y\)</span>?</p>
+<p><br /></p>
+<p>So, when we conclude, we say that <span class="math inline">\(X\)</span> has a significant causal effect on
+<span class="math inline">\(Y\)</span>, this only means <strong>among
+the units of our data</strong>.</p>
 <ul>
-<li>This can be tested using a <span class="math inline">\(F\)</span>-Test, which compares our entire model
-to the null model of all <span class="math inline">\(\beta_j\)</span>’s
-equaling 0.</li>
+<li><p>Statistical significance in causal inference DOES NOT mean
+external validity - we are not learning about the greater population of
+the world, only our internal assignment mechanism.</p></li>
+<li><p>External validity can only be established that the actual units
+<span class="math inline">\(i\)</span> in our study are representative
+of the greater population.</p></li>
+</ul>
+<p><br /></p>
+<p>As we discussed before, the best design for causal inference is an
+experiment where treatments are assigned randomly to the units in the
+study.</p>
+<ul>
+<li>Essentially, a randomised experiment, is also a random sample of
+potential outcomes.</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="inference-for-prediction" class="section level3">
+<h3>Inference for Prediction</h3>
+<p>The population for predictive inference is somewhat indeterminate and
+open-ended: the population is those units for which we will want to
+predict new values of <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li><p>For example, we might want to predict credit card debt of future
+customers.</p></li>
+<li><p>Our inference would be regarding a confidence interval of a
+fitted value - or in other words, a prediction interval for value of
+<span class="math inline">\(Y\)</span>.</p></li>
+</ul>
+<p>The estimates and standard errors that are used to calculate
+prediction intervals comes from our observed data (the training
+data).</p>
+<ul>
+<li><p>Thus, for our predictions to be accurate, our training data
+should be representative of the prediction population.</p></li>
+<li><p>Or else, if the training data is not representative of the
+prediction population, our predictions will not be very
+accurate.</p></li>
 </ul>
 <p><br /></p>
 <hr />
@@ -3146,35 +3272,89 @@ equaling 0.</li>
 Homepage</a></p>
 </div>
 </div>
-<div id="interaction-effects" class="section level1">
-<h1><strong>Interaction Effects</strong></h1>
-<div id="introduction-2" class="section level3">
-<h3>Introduction</h3>
-<p>Interactions, or moderating effects, means that the effect of one
-variable may be larger on <span class="math inline">\(Y\)</span> given
-another variable.</p>
+<div id="model-selection" class="section level1">
+<h1><strong>Model Selection</strong></h1>
+<div id="descriptive-inference-3" class="section level3">
+<h3>Descriptive Inference</h3>
+<p>What explanatory variables should you include in your model? Let us
+consider description and causal questions first:</p>
 <ul>
-<li>For example, <span class="math inline">\(X_1\)</span> is poor
-visibility, which is associated with <span class="math inline">\(Y\)</span> severity of car crashes. We might
-imagine that another variable, poor visibility <span class="math inline">\(X_2\)</span>, might exacerbate the impact of <span class="math inline">\(X_1\)</span> on <span class="math inline">\(Y\)</span>. Essentially, the magnitude of the
-effect of <span class="math inline">\(X_1\)</span> on <span class="math inline">\(Y\)</span> increases as <span class="math inline">\(X_2\)</span> increases as well.</li>
+<li><p>Some variables <span class="math inline">\(X\)</span>, often just
+one, are the focus of interest of our research question. We will always
+include this variable, no matter what.</p></li>
+<li><p>Other variables (control variables) <span class="math inline">\(Z\)</span> that we may want to include in the
+variable.</p></li>
 </ul>
-<p>An interaction, in a linear model, is including the product of two
-explanatory variables, as an additional explanatory variable in the
-model:</p>
-<p><span class="math display">\[
-E[Y] = \alpha + \beta_1 X_1 + \beta_2 X_2 + \beta_{1,2}(X_1 X_2)
-\]</span></p>
-<p>Or, we can rewrite this as:</p>
-<p><span class="math display">\[
-E[Y] = (\alpha + \beta_1 X_1) + (\beta_2 + \beta_{1,2} X_1)X_2
-\]</span></p>
-<p>Here, we can see the coefficient of <span class="math inline">\(X_2\)</span> is <span class="math inline">\((\beta_2 + \beta_{1,2}X_1)\)</span>.</p>
+<p>Obviously, we are not going to drop <span class="math inline">\(X\)</span>, that is the focus of our study. But,
+<span class="math inline">\(Z\)</span> is subject to selection - we can
+decide to include some, remove some, etc.</p>
+<p><br /></p>
+<p>We can use significance tests to determine what to include:</p>
 <ul>
-<li><p>This coefficient is not constant - it depends on the value of
-<span class="math inline">\(X_1\)</span></p></li>
-<li><p>We could also rearrange this to show the coefficient of <span class="math inline">\(X_1\)</span></p></li>
+<li><p>If a control variable (or polynomial term, moderating effect) is
+not significant, then it might not need to be in the model.</p></li>
+<li><p>This may involve a sequence of different tests, adding and
+dropping variables, before settling on the final model.</p></li>
 </ul>
+<p>We can also use theoretical/discipline related reasons to include
+ones.</p>
+<p><br /></p>
+<p>Our goal is to finish with a model that is big enough for its
+purposes, but no bigger than it needs to be.</p>
+<ul>
+<li><p>Common rule is that the final model should not include any
+explanatory variables whose coefficients are not significant.</p></li>
+<li><p>THIS IS ONLY FOR DESCRIPTIVE INFERENCE - see below for
+others.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="causal-inference-3" class="section level3">
+<h3>Causal Inference</h3>
+<p>Here, the control variables we include are confounding variables.</p>
+<ul>
+<li><p>The logic of causal inference indicates that we should include
+all such confounders if we want to estimate the causal effect</p></li>
+<li><p>In model selection - we are much more willing to include a large
+number of control variables, including non-significant
+variables.</p></li>
+</ul>
+<p>This is because we want to be cautious - we do not want to leave out
+any possible confounding variables. So we include anything that could
+plausibly be a confounder.</p>
+<p>It is often impossible to include all confounders - that is why we
+resort to randomisation (which eliminates confounders), or other
+statistical methods.</p>
+<p><br /></p>
+</div>
+<div id="predictive-inference-2" class="section level3">
+<h3>Predictive Inference</h3>
+<p>There are no key predictors in predictive inference (none that we are
+focused on interpreting). Thus, every variable is possible to be
+eliminated or included.</p>
+<p>The goal is simple, select the variables that give the best
+predictions of new values of <span class="math inline">\(Y\)</span>.</p>
+<p><br /></p>
+<p>The key is <strong>new values of</strong> <span class="math inline">\(Y\)</span>. We are not trying to predict existing
+values of <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li><p>This is the fear of overfitting</p></li>
+<li><p>If we overfit a model, it predicts our current observations
+extremely accurately, but cannot predict new values very accurate, since
+it has picked up on the “noise” within our training data.</p></li>
+<li><p>Models selected through significance testing are often
+overfitted, especially if the training data is large.</p></li>
+</ul>
+<p><br /></p>
+<p>We can use other methods to do this:</p>
+<ul>
+<li><p>Cross-validation: split training data into one part of training,
+and one part for testing. Make sure our model on the training data
+performs well on the testing data.</p></li>
+<li><p>Other statistics also approximate the results of cross-validation
+without actually doing it, such as <span class="math inline">\(AIC\)</span>, <span class="math inline">\(BIC\)</span>, <span class="math inline">\(C_p\)</span>, and adjusted <span class="math inline">\(R^2\)</span>.</p></li>
+</ul>
+<p><br /></p>
 </div>
 </div>
 
