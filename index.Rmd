@@ -41,19 +41,9 @@ knitr::opts_chunk$set(echo = TRUE)
 | -   [Undergrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm)                                                                                                                       | -   [Postgrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm)                                                                                                                                                                         |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+<https://kevinli03.github.io>
+
 <br />
-
-### Other Notes
-
-Kevin's Guides to Political Science (Summarising everything I have learned)
-
-1.  [Quantitative Methods and Analysis](https://kevinli03.github.io/politicaleconomy/1.pdf)
-2.  [Game Theory and Formal Models](https://kevinli03.github.io/politicaleconomy/2.pdf)
-3.  [Empirical Political Economy](https://kevinli03.github.io/politicaleconomy/3.pdf)
-4.  [Advanced Quantitative Methods](https://kevinli03.github.io/politicaleconomy/4.pdf)
-5.  [Data Science and Political Analysis](https://kevinli03.github.io/politicaleconomy/5.pdf)
-
-Finally, a companion book: [Mathematical Methods for Political Science](https://kevinli03.github.io/politicaleconomy/maths.pdf)
 
 ------------------------------------------------------------------------
 
@@ -135,7 +125,7 @@ Course Content (Lectures, Readings, Problems):
 1.  [Political Economy, Game Theory, Aggregation of Preferences](https://kevinli03.github.io/notes/GV4C8/1.html)
 2.  [Nash Equilibrium, Static Games of Complete Information](https://kevinli03.github.io/notes/GV4C8/2.html) \| [Problem Set Week 2](https://kevinli03.github.io/notes/GV4C8/problems/2.pdf)
 3.  [Downsian Models of Electoral Competition](https://kevinli03.github.io/notes/GV4C8/3.html) \| [Problem Set Week 3](https://kevinli03.github.io/notes/GV4C8/problems/3.pdf)
-4.  [Redistributive Politics, Mixed Strategies, Valence Politics](https://kevinli03.github.io/notes/GV4C8/4.html)
+4.  [Redistributive Politics, Mixed Strategies, Valence Politics](https://kevinli03.github.io/notes/GV4C8/4.html) \| [Problem Set Week 4](https://kevinli03.github.io/notes/GV4C8/problems/4.pdf)
 5.  Dynamic Games of Complete Information, Legislative Bargaining
 
 <!-- -->

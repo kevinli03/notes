@@ -1,5 +1,5 @@
 ---
-title: "Problem Set Week 2"
+title: "Problem Set Week 3"
 subtitle: "GV4C8 Game Theory for Political Science"
 author: "Kevin Lingfeng Li"
 format:

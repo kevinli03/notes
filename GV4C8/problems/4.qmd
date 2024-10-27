@@ -1,0 +1,336 @@
+---
+title: "Problem Set Week 4"
+subtitle: "GV4C8 Game Theory for Political Science"
+author: "Kevin Lingfeng Li"
+format:
+    pdf:
+        documentclass: article
+        papersize: A4
+        geometry:
+            - width=150mm
+            - height=238mm
+            - top=27mm
+        linestretch: 1.25
+---
+
+# Question 1
+
+Find the mixed strategy equilibria of the following static games:
+
+## 1a:
+
+|     |          |          |
+|-----|----------|----------|
+|     | L        | R        |
+| T   | 1, **2** | **2**, 0 |
+| B   | **2**, 1 | 0, **3** |
+
+We can pretty quickly see there are no Nash Equilibria. Now, let us define $p$ and $q$ as the following:
+
+-   $p$ is probability player 1 plays $T$, $1-p$ is probability plays $B$. Let us call this strategy $\sigma_1$.
+
+-   $q$ is probability player 2 plays $L$, $1-q$ is probability plays $R$ . Let us call this strategy $\sigma_2$.
+
+-   $\sigma_i(s_k)$ denotes the probability that player $i$ plays strategy $s_k$
+
+What are **player 1's** expected utilities when playing either strategy?
+
+-   $u_1 (T, \sigma_2) = \sigma_2(s_L)u_1(T, L) + \sigma_2(S_R) u_1(T, R) = (q)1 + (1-q)2$
+
+-   $u_1 (B, \sigma_2) = \sigma_2(s_L) u_1(B,L) + \sigma_2(s_R) u_1(B,R)  = (q)2 + (1-q)0$
+
+For mixed strategy equilibrium to exist, by definition, players must be indifferent to both strategies:
+
+$$
+\begin{split}
+u_1 (T, \sigma_2) & = u_1 (B, \sigma_2) \\
+(q)1 + (1-q)2 & = (q)2 + (1-q)0 \\
+q + 2 - 2q & = 2q \\
+-q + 2 & = 2q \\
+3q & = 2 \\
+q & = 2/3
+\end{split}
+$$
+
+What are **player 2's** expected utilities when playing either strategy?
+
+-   $u_2( \sigma_1, L) = \sigma_1(s_T)u_2(T, L) + \sigma_1(s_B)u_2(B, L) = (p)2 + (1-p)1$
+
+-   $u_2(\sigma_1, R) = \sigma_1(s_T)u_2(T, R) + \sigma_1(s_B)u_2(B, R) = (p)0 + (1-p)3$
+
+For mixed strategy equilibrium to exist, by definition, players must be indifferent to both strategies:
+
+$$
+\begin{split}
+u_2(\sigma_1, L) & = u_2(\sigma_1, R) \\
+(p)2 + (1-p)1 & = (p)0 + (1-p)3 \\
+2p + 1 - p & = 3 - 3p \\
+p + 1 & = 3 - 3p \\
+4p & = 2 \\
+p & = 1/2
+\end{split}
+$$
+
+Thus, there is a Mixed Strategy Nash Equilibria where:
+
+$$
+(\sigma_1^*, \sigma_2^*) = \left((\frac{1}{2}, \frac{1}{2} ), (\frac{2}{3}, \frac{1}{3} ) \right)
+$$
+
+{{< pagebreak >}}
+
+## 1b:
+
+|     |          |          |
+|-----|----------|----------|
+|     | L        | R        |
+| T   | **6**, 0 | 0, **6** |
+| B   | 3, **4** | **6**, 0 |
+
+We can pretty quickly see there are no Nash Equilibria. Now, let us define $p$ and $q$ as the following:
+
+-   $p$ is probability player 1 plays $T$, $1-p$ is probability plays $B$. Let us call this strategy $\sigma_1$.
+
+-   $q$ is probability player 2 plays $L$, $1-q$ is probability plays $R$ . Let us call this strategy $\sigma_2$.
+
+-   $\sigma_i(s_k)$ denotes the probability that player $i$ plays strategy $s_k$
+
+What are **player 1's** expected utilities when playing either strategy?
+
+-   $u_1 (T, \sigma_2) = \sigma_2(s_L)u_1(T, L) + \sigma_2(S_R) u_1(T, R) = (q)6 + (1-q)0$
+
+-   $u_1 (B, \sigma_2) = \sigma_2(s_L) u_1(B,L) + \sigma_2(s_R) u_1(B,R) = (q)3 + (1-q)6$
+
+For mixed strategy equilibrium to exist, by definition, players must be indifferent to both strategies:
+
+$$
+\begin{split}
+u_1 (T, \sigma_2) & = u_1 (B, \sigma_2) \\
+(q)6 + (1-q)0 & = (q)3 + (1-q)6 \\
+6q & = 3q + 6 - 6q \\
+6q & = -3q + 6 \\
+9q & = 6 \\
+q & = 2/3
+\end{split}
+$$
+
+What are **player 2's** expected utilities when playing either strategy?
+
+-   $u_2( \sigma_1, L) = \sigma_1(s_T)u_2(T, L) + \sigma_1(s_B)u_2(B, L) = (p)0 + (1-p)4$
+
+-   $u_2(\sigma_1, R) = \sigma_1(s_T)u_2(T, R) + \sigma_1(s_B)u_2(B, R) = (p)6 + (1-p)0$
+
+For mixed strategy equilibrium to exist, by definition, players must be indifferent to both strategies:
+
+$$
+\begin{split}
+u_2(\sigma_1, L) & = u_2(\sigma_1, R) \\
+(p)0 + (1-p)4 & = (p)6 + (1-p)0 \\
+4 - 4p & = 6p \\
+10p & = 4 \\
+p & = 2/5
+\end{split}
+$$
+
+Thus, there is a Mixed Strategy Nash Equilibria where:
+
+$$
+(\sigma_1^*, \sigma_2^*) = \left((\frac{2}{5}, \frac{3}{5} ), (\frac{2}{3}, \frac{1}{3} ) \right)
+$$
+
+{{< pagebreak >}}
+
+## 1c:
+
+|     |              |              |
+|-----|--------------|--------------|
+|     | L            | R            |
+| T   | 0, 1         | **0**, **2** |
+| B   | **2**, **2** | **0**, 1     |
+
+We can pretty quickly see there are two Nash Equilibria, one involving each player playing another strategy. Now, let us define $p$ and $q$ as the following:
+
+-   $p$ is probability player 1 plays $T$, $1-p$ is probability plays $B$. Let us call this strategy $\sigma_1$.
+
+-   $q$ is probability player 2 plays $L$, $1-q$ is probability plays $R$ . Let us call this strategy $\sigma_2$.
+
+-   $\sigma_i(s_k)$ denotes the probability that player $i$ plays strategy $s_k$
+
+What are **player 1's** expected utilities when playing either strategy?
+
+-   $u_1 (T, \sigma_2) = \sigma_2(s_L)u_1(T, L) + \sigma_2(S_R) u_1(T, R) = (q)0 + (1-q)0$
+
+-   $u_1 (B, \sigma_2) = \sigma_2(s_L) u_1(B,L) + \sigma_2(s_R) u_1(B,R) = (q)2 + (1-q)0$
+
+For mixed strategy equilibrium to exist, by definition, players must be indifferent to both strategies:
+
+$$
+\begin{split}
+u_1 (T, \sigma_2) & = u_1 (B, \sigma_2) \\
+(q)0 + (1-q)0 & = (q)(2) + (1-q)0 \\
+0 & = 2q \\
+q & = 0
+\end{split}
+$$
+
+What are **player 2's** expected utilities when playing either strategy?
+
+-   $u_2( \sigma_1, L) = \sigma_1(s_T)u_2(T, L) + \sigma_1(s_B)u_2(B, L) = (p)1 + (1-p)2$
+
+-   $u_2(\sigma_1, R) = \sigma_1(s_T)u_2(T, R) + \sigma_1(s_B)u_2(B, R) = (p)2 + (1-p)1$
+
+For mixed strategy equilibrium to exist, by definition, players must be indifferent to both strategies:
+
+$$
+\begin{split}
+u_2(\sigma_1, L) & = u_2(\sigma_1, R) \\
+(p)1 + (1-p)2 & = (p)2 + (1-p)1 \\
+p + 2 - 2p & = 2p + 1 - p \\
+-p + 2 & = p + 1 \\
+1 & = 2p \\
+p & = 1/2
+\end{split}
+$$
+
+Thus, there is a Mixed Strategy Nash Equilibria where:
+
+$$
+(\sigma_1^*, \sigma_2^*) = \left((\frac{1}{2}, \frac{1}{2} ), (0, 1 ) \right)
+$$
+
+{{< pagebreak >}}
+
+## 1d:
+
+|     |              |              |          |
+|-----|--------------|--------------|----------|
+|     | A2           | B2           | C2       |
+| A1  | 0, 0         | **2**, **3** | **7**, 0 |
+| B1  | **3**, **2** | 0, 0         | 0, 0     |
+| C1  | 0, **7**     | 0, 0         | 6, 6     |
+
+: For player 1, strategy $C^1$ is strictly dominanted. They will never play that strategy. We know that will not be a part of the mixed strategy nash equilibrium.
+
+For player 2, strategy $C^2$ is strictly dominated. They will never play that strategy. We know that will not be a part of the mixed strategy nash equilibrium.
+
+Thus, we can simplify the matrix to:
+
+|     |              |              |
+|-----|--------------|--------------|
+|     | A2           | B2           |
+| A1  | 0, 0         | **2**, **3** |
+| B1  | **3**, **2** | 0, 0         |
+
+Now, let us find the mixed strategy nash equilibriums. Let us define $p$ and $q$ as the following:
+
+-   $p$ is probability player 1 plays $T$, $1-p$ is probability plays $B$. Let us call this strategy $\sigma_1$.
+
+-   $q$ is probability player 2 plays $L$, $1-q$ is probability plays $R$ . Let us call this strategy $\sigma_2$.
+
+-   $\sigma_i(s_k)$ denotes the probability that player $i$ plays strategy $s_k$
+
+What are **player 1's** expected utilities when playing either strategy?
+
+-   $u_1 (A^1, \sigma_2) = \sigma_2(s_{A^2})u_1(A^1, A^2) + \sigma_2(S_{B^2}) u_1(A^1, B^2) = (q)0 + (1-q)2$
+
+-   $u_1 (B^1, \sigma_2) = \sigma_2(s_{A^2}) u_1(B^1,A^2) + \sigma_2(s_{B^2}) u_1(B^1,B^2) = (q)3 + (1-q)0$
+
+For mixed strategy equilibrium to exist, by definition, players must be indifferent to both strategies:
+
+$$
+\begin{split}
+u_1 (A^1, \sigma_2) & = u_1 (B^1, \sigma_2) \\
+(q)0 + (1-q)2 & = (q)3 + (1-q)0 \\
+2 - 2q & = 3q \\
+2 & = 5q \\
+q & = 2/5
+\end{split}
+$$
+
+What are **player 2's** expected utilities when playing either strategy?
+
+-   $u_2(\sigma_1, A^2) = \sigma_1(s_{A^1}) u_2(A^1, A^2)+ \sigma_1(s_{B^1})u_2(B^1, A^2) = (p)0 + (1-p)2$
+
+-   $u_2(\sigma_1, B^2) = \sigma_1(s_{A^1}) u_2(A^1, B^2) + \sigma_1(s_{B^1})u_2(B^1, B^2) = (p)3 + (1-p)0$
+
+{{< pagebreak >}}
+
+For mixed strategy equilibrium to exist, by definition, players must be indifferent to both strategies:
+
+$$
+\begin{split}
+u_2(\sigma_1 A^2) & = u_2(\sigma_1, B^2) \\
+(p)0 + (1-p)2 & = (p)3 + (1-p) 0 \\
+2 - 2p & = 3p \\
+2 & = 5p \\
+p & = 2/5
+\end{split}
+$$
+
+Thus, there is a Mixed Strategy Nash Equilibria where:
+
+$$
+(\sigma_1^*, \sigma_2^*) = \left((\frac{2}{5}, \frac{3}{5}, 0 ), (\frac{2}{5}, \frac{3}{5}, 0 ) \right)
+$$
+
+Since the third strategy is strictly dominated for both so it is 0 probability.
+
+{{< pagebreak >}}
+
+# Question 2
+
+**Consider the following Battle of the Sexes Game:**
+
+|      |      |      |
+|------|------|------|
+|      | Cafe | Pub  |
+| Cafe | 4, 3 | 1, 1 |
+| Pub  | 0, 0 | 3, 4 |
+
+-   **a) find all pure strategy NE**
+
+-   **b) compute best responses to any mixed strategy of the opponent**
+
+-   **c) display the best responses in a two dimensional graph**
+
+-   **d) describe mutual best responses**
+
+{{< pagebreak >}}
+
+# Question 3
+
+**Consider the following Hawk-Dove game:**
+
+|      |      |      |
+|------|------|------|
+|      | Cafe | Pub  |
+| Cafe | 4, 3 | 1, 1 |
+| Pub  | 0, 0 | 3, 4 |
+
+-   **a) find all pure strategy NE**
+
+-   **b) compute best responses to any mixed strategy of the opponent**
+
+-   **c) display the best responses in a two dimensional graph**
+
+-   **d) describe mutual best responses**
+
+{{< pagebreak >}}
+
+# Question 4
+
+**Coordination game. Two people can perform a task if and only if they both exert effort.**
+
+-   **They are both better off if they both exert effort and perform the task, than if neither exerts effort (and nothing is accomplished);**
+
+-   **the worst outcome for each person is that she exerts effort and the other person does not (in which case again nothing is accomplished).**
+
+-   **Specifically, the players’ preferences are represented by the expected value of the payoff functions below where c is a positive number less than 1 that can be interpreted as the cost of exerting effort.**
+
+**Find all the mixed strategy Nash equilibria of this game. How do the equilibria change as c increases? Explain the reasons for the changes.**
+
+|           |           |          |
+|-----------|-----------|----------|
+|           | No Effort | Effort   |
+| No Effort | 0, 0      | 0, -c    |
+| Effort    | -c, 0     | 1-c, 1-c |
