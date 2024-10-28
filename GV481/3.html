@@ -2744,6 +2744,12 @@ font-size: 0.90em;
 .tocify .list-group-item {
 border-radius: 0px;
 }
+.tocify-subheader {
+display: inline;
+}
+.tocify-subheader .tocify-item {
+font-size: 0.95em;
+}
 </style>
 
 
@@ -3147,8 +3153,8 @@ hypothesis, and conclude <span class="math inline">\(\beta_1 ≠
 </ol>
 <p><br /></p>
 </div>
-<div id="test-statistic-and-reference-distribution" class="section level3">
-<h3>Test Statistic and Reference Distribution</h3>
+<div id="test-statistic-and-distribution" class="section level3">
+<h3>Test Statistic and Distribution</h3>
 <p>A test statistic is a function of observed data, that can be used to
 test the null hypothesis</p>
 <ul>
@@ -3209,24 +3215,7 @@ no relationship between <span class="math inline">\(X_1\)</span> and
 </ul>
 <p><br /></p>
 <hr />
-<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
-Homepage</a></p>
 </div>
-</div>
-<div id="reading-mesquita-et-al" class="section level1">
-<h1>Reading: Mesquita et al</h1>
-<p>Chapter 6, Mesquita et al (2021) <em>Thinking Clearly with Data: A
-Guide to Quantitative Reasoning and Analysis</em></p>
-<p><br /></p>
-<hr />
-<p><a href="https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis">GV481
-Homepage</a></p>
-</div>
-<div id="reading-cunningham" class="section level1">
-<h1>Reading: Cunningham</h1>
-<p>Chapters 2.15-2.27, Cunningham, S. (2021) <em>Causal Inference: The
-Mixtape</em></p>
-<p><br /></p>
 </div>
 
 
@@ -3287,7 +3276,7 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = true;
+    options.showAndHide = false;
     options.smoothScroll = true;
 
     // tocify

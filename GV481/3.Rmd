@@ -5,7 +5,7 @@ output:
     df_print: paged
     toc: yes
     toc_float:
-      collapsed: true
+      collapsed: false
     toc_depth: 4
     theme: lumen
 ---
@@ -306,7 +306,7 @@ For example, let us take the example where our sample produces $\hat{\beta}_1 = 
 
 <br />
 
-### Test Statistic and Reference Distribution
+### Test Statistic and Distribution
 
 A test statistic is a function of observed data, that can be used to test the null hypothesis
 
@@ -355,21 +355,3 @@ If the p-value is greater than 0.05, then we cannot reject the null
 <br />
 
 ------------------------------------------------------------------------
-
-[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
-
-# Reading: Mesquita et al
-
-Chapter 6, Mesquita et al (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*
-
-<br />
-
-------------------------------------------------------------------------
-
-[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
-
-# Reading: Cunningham
-
-Chapters 2.15-2.27, Cunningham, S. (2021) *Causal Inference: The Mixtape*
-
-<br />
