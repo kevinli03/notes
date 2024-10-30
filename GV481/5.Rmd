@@ -1,0 +1,422 @@
+---
+title: "Randomised Controlled Trials"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+**Week 5, GV481 Quantitative Analysis for Political Science**
+
+-   Title: Randomised Controlled Trials
+
+-   Topics:
+
+-   Readings:
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Key Points
+
+In [**randomised experiments**]{.underline}, units are randomly assigned to either the treatment or control group.
+
+-   Randomisation prevents selection into the treatment. Everyone has an equal likelihood under randomisation to either be treatment or control.
+
+-   Because everyone has an equal liklihood to either be treatment or control, the treatment and control groups should be similar, and the potential outcomes are independent of treatment.
+
+-   More mathematically, we assume that on average, $E[Y_{1i}|D_i = 1] \approx E[Y_{1i} | D_i = 0]$, and $E[Y_{0i}|D_i = 1] \approx E[Y_{0i} | D_i = 0]$
+
+-   So, our naive estimator under randomisation will have no selection bias.
+
+<br />
+
+Under this assumption, we can estimate the [**treatment effect**]{.underline}:
+
+$$
+\begin{split}
+& E[Y_i |D_i = 1] =  E[Y_{1i}] \\
+& E[Y_i | D_i = 0] = E[Y_{0i}]
+\end{split}
+$$
+
+Now that we have $E[Y_{1i}]$ and $E[Y_{0i}]$, we can calculate the average treatment effect:
+
+$$
+E[\tau_i] = E[Y_{1i} - Y_{0i}] = E[Y_{1i}] - E [Y_{0i}]
+$$
+
+This is just the difference of means:
+
+-   Estimate the mean of $Y$ in the treatment group $\bar{Y}_t$, and the mean of $Y$ in the control group $\bar{Y}_c$, and find the difference $\bar{Y}_t - \bar{Y}_c$
+
+<br />
+
+[**Blocking/Stratified Randomised Experiments**]{.underline}:
+
+Before the randomisation, you desperate your sample of $N$ units, into $J$ subgroups.
+
+-   For example, you could split our above outcome into two groups, the 1st being $\{2, 2\}$ and the second being $\{8, 8\}$
+
+Then, within each group, randomly assign units to treatment and control group
+
+-   Essentially, smaller randomised experiments in smaller subgroups.
+
+Estimation within blocking:
+
+$$
+\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_{{ATE}_j}
+$$
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Randomised Experiments
+
+### Assignment Mechanism
+
+The assignment mechanism how we decide who recieves the treatment.
+
+-   We talked about the issue of self-selection and how that results in selection bias.
+
+-   In randomised experiments, the selection is solely in the hands of the researcher. They can choose who gets what assignment (based on some randomising mechanism).
+
+-   There are also other forms of assignment mechanism, such as Natural Experiments, which depends on non-researcher random assignment (such as policy makers, teachers, etc.), and Selection on Observables - where we select based on observable characteristics.
+
+<br />
+
+### Randomised Designs
+
+In randomised experiments, units are randomly assigned to either the treatment or control group.
+
+-   Randomisation prevents selection into the treatment. Everyone has an equal likelihood under randomisation to either be treatment or control.
+
+-   Because everyone has an equal liklihood to either be treatment or control, the treatment and control groups should be similar, and the potential outcomes are independent of treatment.
+
+-   More mathematically, we assume that on average, $E[Y_{1i}|D_i = 1] \approx E[Y_{1i} | D_i = 0]$, and $E[Y_{0i}|D_i = 1] \approx E[Y_{0i} | D_i = 0]$
+
+-   So, our naive estimator under randomisation will have no selection bias.
+
+<br />
+
+### Example: Migration & Tolerance
+
+For example, research into migrants, and how migration changes people's tolerance towards other cultures
+
+-   Issue: people self-select into migration - some people choose to, some people do not. There is likely differences between the treatment and control group.
+
+<br />
+
+Our design is as follows:
+
+-   Treatment $D$ is Migrating
+
+-   Outcome $Y$ is tolerance towards others
+
+-   Potential outcome $Y_{1i}$ is tolerance if migrated, $Y_{0i}$ is tolerance if not migrated
+
+-   We cannot compare observed outcomes, since people who self-select into migration may already by more tolerant, so this would muddy our causal effect.
+
+<br />
+
+Research design:
+
+-   Recruit 400 individuals who are interested in migration
+
+-   Survey them (baseline survey)
+
+-   Randomly assign them into treatment and control group. Treatment group gets a job training and recruitment programme, and invited to interview for jobs in the persian gulf, and they can migrate if they want to. Control gets none of this.
+
+-   Survey participants after 2 years.
+
+This is an encouragement design - since forcing people can be unethical. For simplicity, assume everyone takes the encouragement and migrates.
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Estimation
+
+### Identification of Causal Effect
+
+Under random assignment, the treatment is independent of the potential outcomes.
+
+-   In other words, knowing about your treatment/control group status tells us nothing about your potential outcomes.
+
+-   Or in other words: $(Y_0, Y_1) \bot D$
+
+<br />
+
+Under this assumption, we can estimate the treatment effect:
+
+$$
+\begin{split}
+& E[Y_i |D_i = 1] =  E[Y_{1i}] \\
+& E[Y_i | D_i = 0] = E[Y_{0i}]
+\end{split}
+$$
+
+Or in other words, since no difference between treatment $D_i = 1$ and control $D_i = 0$, the conditional statement makes no difference.
+
+Now that we have $E[Y_{1i}]$ and $E[Y_{0i}]$, we can calculate the average treatment effect:
+
+$$
+E[\tau_i] = E[Y_{1i} - Y_{0i}] = E[Y_{1i}] - E [Y_{0i}]
+$$
+
+<br />
+
+### Difference of Means
+
+The causal effect that we have above:
+
+$$
+E[\tau_i] = E[Y_{1i} - Y_{0i}] = E[Y_{1i}] - E [Y_{0i}]
+$$
+
+Is just a difference of means of $Y$ between treatment group $D = 1$ and control group $D = 0$
+
+We can do this with a few ways:
+
+-   Estimate the mean of $Y$ in the treatment group $\bar{Y}_t$, and the mean of $Y$ in the control group $\bar{Y}_c$, and find the difference $\bar{Y}_t - \bar{Y}_c$
+
+```{=html}
+<!-- -->
+```
+-   Or we can use a regression, or with a t-test difference of means. When $D$ is a binary explanatory variable, a OLS estimator is a t-test difference of means.
+
+<br />
+
+### Balance Tables
+
+The key assumption of randomisation is that the treatment and control group are very similar.
+
+-   So, we want to make sure this is actually the case.
+
+-   If this isn't true, we cannot do the above estimation.
+
+<br />
+
+We can do this with a pre-treatment difference of means test, where our outcome variables are key covariates/confounding variables, and the explanatory variable is the treatment.
+
+-   We want to make sure our randomised treatment/control groups are actually the same (so we use the assignment to try to predict outcome variables age, income, other covariates, etc.)
+
+```{=html}
+<!-- -->
+```
+-   We want a high p value, which shows no difference (so the opposite of normal hypothesis tests). If there is no difference between treatment and control, that is a good thing!
+
+If we have high p-values, then we are confident that the treatment and control groups are indeed different.
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Uncertainty
+
+### Types of Uncertainty
+
+So far, we have covered uncertainty that comes from sampling.
+
+However, there is also randomisation from selection to treatment and control:
+
+-   Every time you randomly select observations to be in either group, you might get a slightly different treatment and control groups, which will result in a different outcome.
+
+<br />
+
+Our population in randomised experiments is the potential outcomes for each individual.
+
+-   We then randomly "sample" potential outcome through random selection - we choose for each observation either to take the $Y_{1i}$ or $Y_{0i}$.
+
+Thus, our estimate we obtain of the ATE is actually just for our sample - the sample average treatment effect (SATE)
+
+-   And the actual population average treatment effect will be slightly different, because drawing different random selections will result in slightly different estimates.
+
+<br />
+
+### Standard Error for Sample ATE
+
+The standard error of our estimated ATE from our sample, with $J$ possible random assignments, is:
+
+$$
+SE_{\hat{\beta}} = \sqrt{ \frac{1}{J} \sum\limits_{j=1}^J \left( \hat{\beta}_j - \bar{\hat{\beta}} \right)^2}
+$$
+
+Each little $j$ is a different way of assignment, totalling $J$ different ways. For each random assignment $j$, we can calculate a $\hat{\beta}_j$. The average $\hat{\beta}_j$ for all $j$ random assignments is $\bar{\hat{\beta}}_j$
+
+Just like the standard error in linear regressions, the standard error is the standard deviation of the sampling distribution.
+
+Obviously, calculating the mean of every possible $j$ randomisation is time consuming. There is another formula:
+
+$$
+SE_{\hat{ATE}} = \sqrt{ \left( \frac{N - N_1}{N - 1} \right) \frac{Var[Y_{1i}]}{N_1} + \left( \frac{N - N_0}{N - 1} \right) \frac{Var[Y_{0i}]}{N_1} + \left( \frac{1}{N - 1} \right) 2 Cov[Y_{1i}, y_{0i}} 
+$$
+
+Where:
+
+$$
+Var[Y_{di}] = \frac{1}{N} \sum\limits{i=1}^n \left( Y_{di} - \frac{1}{N} \left( \sum\limits_{i=1}^n Y_{di} \right) \right)
+$$
+
+$$
+Cov[Y_{1i}, Y_{0i}] = \frac{1}{N} \left( Y_{1i} - \frac{1}{N} \left( \sum\limits_{i=1}^n Y_{1i} \right) \right) \left( Y_{0i} - \frac{1}{N} \left( \sum\limits_{i=1}^n Y_{0i} \right) \right)
+$$
+
+<br />
+
+We cannot observe $Cov[Y_{1i}, Y_{0i}]$. So, to estimate the standard error conservatively, we use the formula:
+
+$$
+\hat{SE}_{\hat{ATE}} = \sqrt{}
+$$
+
+We can also estimate it with R using robust standard errors. Remember to use Robust standard errors, not normal standard errors.
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Blocking
+
+### Introduction
+
+Imagine you have data on the units that you are about to randomly assign.
+
+-   Imagine four subjects, with pre treatment outcomes of $Y_{0i} = \{2,2,8,8\}$
+
+-   There is a 1/3 chance with random assignment that $\{2, 2\}$ and $\{8, 8\}$ are placed in the same treatment or control group.
+
+That is not very good - our treatment and control groups will be very different in this case, violating our assumptions.
+
+<br />
+
+With blocking, you can ensure that groups start out with identical observable characteristics.
+
+### Blocking Procedure
+
+Before the randomisation, you desperate your sample of $N$ units, into $J$ subgroups.
+
+-   For example, you could split our above outcome into two groups, the 1st being $\{2, 2\}$ and the second being $\{8, 8\}$
+
+Then, within each group, randomly assign units to treatment and control group
+
+-   Essentially, smaller randomised experiments in smaller subgroups.
+
+These are also called stratified randomised experiments.
+
+<br />
+
+### Estimation with Blocking
+
+To estimate the ATE, we will have to take the weighted average of each sample, with the weights being the proportion of units each group accounts for.
+
+Mathematically:
+
+$$
+\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_{{ATE}_j}
+$$
+
+-   $N_j$ is the number of observations in subgroup $j$
+
+-   $N$ is the total observations in our experiement
+
+-   Thus $N_j/N$ is the proportion of total observations in subgroup $j$
+
+-   $\tau_j$ is our estimated ATE of each group.
+
+<br />
+
+### Estimation with Non-Uniform Blocking
+
+Sometimes, we may want one specific group $j$ to have a different probability of being assigned to the treatment vs. control.
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Internal & External Validity
+
+### Internal Validity
+
+Internal validity refers to the ability of a study to estimate causal effects within the study population.
+
+-   Remember, our population is the potential outcomes of our units of observation.
+
+Basically, is our study valid, given the subjects we have in our experiment.
+
+Generally, randomised selection of treatment/control groups ensures strong internal validity.
+
+<br />
+
+### Threats to Internal Validity
+
+Some things can cause internal validity to fail:
+
+1.  Failure of randomisation - if the treatment and control groups are not similar, our study does not have internal validity.
+2.  Stable Unit Treatment Value Assumption: if there are spillovers or influence from other units, this may make our estimates invalid.
+3.  Non-Compliance: Sometimes, our subjects do not comply when assigned to the treatment group. After all, we can't force them to do something.
+4.  Attrition: Sometimes, outcomes cannot be measured for some study participants. This can be due to dropping out of a study, participants refusing to answer, etc.. Often, the control group drops out more.
+
+<br />
+
+### External Validity
+
+External validity asks if we can generalise our conclusions from our subjects, to other subjects outside our experiment.
+
+-   Can we extrapolate our estimates to to other populations?
+
+For example, if we measured the effect of migration on tolerance for our subjects in India, can we say the same effect is true of someone in Japan, the US, or Europe?
+
+-   This is important - if we cannot extrapolate, some results may be very niche.
+
+<br />
+
+### Threats to External Validity
+
+To extrapolate to a greater population, our actual sample of observations in our experiment, should be representative of the greater population.
+
+-   This is often violated, as random sample for experiments is very very difficult.
+
+-   This is called $X$-Validity: we can study this with data - to see how representative our population is compared to the population.
+
+Non-representative programme of treatment is another threat:
+
+-   Sometimes, treatments will differ between areas.
+
+-   For example, if we are encouraging people to migrate to test how that changes their tolerance, how are the governmental/ngo/private agencies working with you affecting the process. Would less capable agencies create different effects?
+
+-   This is called $C$-validity, and we cannot measure this with data, unless you redo your experiment in another context.
+
+<br />

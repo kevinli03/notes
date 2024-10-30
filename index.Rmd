@@ -90,7 +90,7 @@ Course Content (Lectures, Readings, and Problems):
 2.  [Bivariate and Multivariate OLS](https://kevinli03.github.io/notes/GV481/2.html) \| [Problem Set 1](https://kevinli03.github.io/notes/GV481/problems/2.pdf)
 3.  [Uncertainty and Hypothesis Testing](https://kevinli03.github.io/notes/GV481/3.html)
 4.  [Introduction to Causal Inference](https://kevinli03.github.io/notes/GV481/4.html)
-5.  Randomised Experiments
+5.  [Randomised Controlled Trials](https://kevinli03.github.io/notes/GV481/5.html)
 
 <!-- -->
 

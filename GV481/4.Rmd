@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
 
-**Week 3, GV481 Quantitative Analysis for Political Science**
+**Week 4, GV481 Quantitative Analysis for Political Science**
 
 -   Title: Introduction to Causal Inference
 
@@ -119,7 +119,7 @@ E[Y_{1i}|D_i = 1] - E[Y_{0i} | D_i = 0]
 $$
 
 $$
-E[Y_{1i}|D_i = 1] - E[Y_{0i}|D_i=0] + \left( E[Y_{1i}|D_i=1] - E[Y_{1i}|D_i=1] \right)
+E[Y_{1i}|D_i = 1] - E[Y_{0i}|D_i=0] + \left( E[Y_{0i}|D_i=1] - E[Y_{0i}|D_i=1] \right)
 $$
 
 $$
