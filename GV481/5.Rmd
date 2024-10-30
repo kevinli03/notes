@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Title: Randomised Controlled Trials
 
--   Topics:
+-   Topics: Randomisation
 
 -   Readings:
 
@@ -206,9 +206,8 @@ We can do this with a few ways:
 
 -   Estimate the mean of $Y$ in the treatment group $\bar{Y}_t$, and the mean of $Y$ in the control group $\bar{Y}_c$, and find the difference $\bar{Y}_t - \bar{Y}_c$
 
-```{=html}
 <!-- -->
-```
+
 -   Or we can use a regression, or with a t-test difference of means. When $D$ is a binary explanatory variable, a OLS estimator is a t-test difference of means.
 
 <br />
@@ -227,9 +226,8 @@ We can do this with a pre-treatment difference of means test, where our outcome 
 
 -   We want to make sure our randomised treatment/control groups are actually the same (so we use the assignment to try to predict outcome variables age, income, other covariates, etc.)
 
-```{=html}
 <!-- -->
-```
+
 -   We want a high p value, which shows no difference (so the opposite of normal hypothesis tests). If there is no difference between treatment and control, that is a good thing!
 
 If we have high p-values, then we are confident that the treatment and control groups are indeed different.
