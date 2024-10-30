@@ -2859,7 +2859,7 @@ subgroups.</li>
 </ul>
 <p>Estimation within blocking:</p>
 <p><span class="math display">\[
-\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_{{ATE}_j}
+\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_j
 \]</span></p>
 <p><br /></p>
 <hr />
@@ -3094,7 +3094,7 @@ Cov[Y_{1i}, Y_{0i}] = \frac{1}{N} \left( Y_{1i} - \frac{1}{N} \left(
 Y_{0i}]\)</span>. So, to estimate the standard error conservatively, we
 use the formula:</p>
 <p><span class="math display">\[
-\hat{SE}_{\hat{ATE}} = \sqrt{}
+\hat{SE}_{\hat{ATE}} =
 \]</span></p>
 <p>We can also estimate it with R using robust standard errors. Remember
 to use Robust standard errors, not normal standard errors.</p>
@@ -3145,7 +3145,7 @@ each sample, with the weights being the proportion of units each group
 accounts for.</p>
 <p>Mathematically:</p>
 <p><span class="math display">\[
-\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_{{ATE}_j}
+\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_j
 \]</span></p>
 <ul>
 <li><p><span class="math inline">\(N_j\)</span> is the number of

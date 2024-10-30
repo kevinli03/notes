@@ -86,7 +86,7 @@ Then, within each group, randomly assign units to treatment and control group
 Estimation within blocking:
 
 $$
-\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_{{ATE}_j}
+\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_j
 $$
 
 <br />
@@ -293,7 +293,7 @@ $$
 We cannot observe $Cov[Y_{1i}, Y_{0i}]$. So, to estimate the standard error conservatively, we use the formula:
 
 $$
-\hat{SE}_{\hat{ATE}} = \sqrt{}
+\hat{SE}_{\hat{ATE}} =
 $$
 
 We can also estimate it with R using robust standard errors. Remember to use Robust standard errors, not normal standard errors.
@@ -341,7 +341,7 @@ To estimate the ATE, we will have to take the weighted average of each sample, w
 Mathematically:
 
 $$
-\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_{{ATE}_j}
+\tau_{ATE} = \sum\limits_{j=1}^J \frac{N_j}{N}\tau_j
 $$
 
 -   $N_j$ is the number of observations in subgroup $j$
