@@ -11,7 +11,7 @@
 
 
 
-<title>Kevin’s Notes 2024-2025</title>
+<title>Linear Regression IV: Models for Longitudinal and Clustered Data</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -2778,7 +2778,8 @@ font-size: 0.95em;
 
 
 
-<h1 class="title toc-ignore">Kevin’s Notes 2024-2025</h1>
+<h1 class="title toc-ignore">Linear Regression IV: Models for
+Longitudinal and Clustered Data</h1>
 
 </div>
 
@@ -2789,306 +2790,370 @@ max-width: 1100px;
 font-size: 12pt;
 }
 </style>
-<hr />
-<div id="quick-links" class="section level1">
-<h1>Quick Links</h1>
-<table>
-<colgroup>
-<col width="45%" />
-<col width="54%" />
-</colgroup>
-<tbody>
-<tr>
-<td><ul>
-<li><a href="https://moodle.lse.ac.uk/my/">LSE Moodle</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&amp;renew=true&amp;_gl=1*5ghr49*_gcl_au*MTk0MjQzMTI2MS4xNzEzMzg0NDcy*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w">LSE
-For You</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://portal.lse.ac.uk/studentservices/s/?_gl=1*1c1xkmp*_gcl_au*MTU2NDcwMzc5MS4xNzIxMjM1NTAz*_ga*OTczMzc3MTk2LjE3MTMzODQ0NzI.*_ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w">LSE
-Student For You</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://studenthub.lse.ac.uk/login">LSE Student
-Hub</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://outlook.office.com/mail/inbox/id/AAQkADU3NWU3M2RlLTk2NmMtNGEyZS1iYTU2LTQ2NTRhZWMzNTMyZQAQAIHp9iDvCC9KkshVxv4XT9U%3D">LSE
-Outlook Email</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://lsecloud-my.sharepoint.com">LSE OneDrive</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://www.lse.ac.uk/resources/calendar/programmeRegulations/taughtMasters/2024/MScPoliticalSciencePoliticalScienceAndPoliticalEconomy.htm">Course
-Regulations</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://www.lse.ac.uk/study-at-lse/Graduate/degree-programmes-2024/MSc-Political-Science-Political-Science-and-Political-Economy">Course
-Page</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://info.lse.ac.uk/staff/divisions/academic-registrars-division/systems/what-we-do/statistics-on-lse">Stats
-on LSE</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://info.lse.ac.uk/current-students/timetables">Timetables</a></li>
-</ul></td>
-</tr>
-<tr>
-<td><ul>
-<li><a href="https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm">Undergrad
-Modules</a></li>
-</ul></td>
-<td><ul>
-<li><a href="https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm">Postgrad
-Modules</a></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://kevinli03.github.io" class="uri">https://kevinli03.github.io</a></p>
-<p><br /></p>
-<hr />
-</div>
-<div id="introductory-courses" class="section level1">
-<h1>Introductory Courses</h1>
-<div id="gv4l8-introductory-maths" class="section level3">
-<h3>GV4L8 Introductory Maths</h3>
-<p><strong>GV4L8 Introductory Maths for Political Science</strong></p>
-<p><u>Lecturer</u>: Dr. Marta Antonetti</p>
-<p><u>Assessment</u>: None (Pre-Sessional)</p>
-<p><br /></p>
-<p>Course Content (Lectures, Readings, and Problems):</p>
-<ol style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/GV4L8/1.html">Sets,
-Expressions, Functions</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV4L8/2.html">Vectors,
-Matrices, Continuity, Limits</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV4L8/3.html">Derivatives,
-Optimisation, Integrals</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV4L8/4.html">Counting,
-Probability, Random Variables</a></li>
-</ol>
-<p><br /></p>
-<hr />
-</div>
-</div>
-<div id="autumn-term" class="section level1">
-<h1>Autumn Term</h1>
-<div id="gv481-quantitative-analysis" class="section level3">
-<h3>GV481 Quantitative Analysis</h3>
-<p><strong>GV481 Quantitative Analysis for Political
-Science</strong></p>
-<p><u>Lecturer</u>: Dr. Aliz Toth</p>
-<p><u>Formative Assessment</u>: Problem Set 1 (AT W7), Problem Set 2 (AT
-W9)</p>
-<p><u>Summative Assessment</u>: Coursework (50%, 10 Jan), Exam (50%,
-Spring)</p>
-<p><br /></p>
-<p>Course Content (Lectures, Readings, and Problems):</p>
-<ol style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/GV481/1.html">Quantitative
-Thinking and Correlations</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV481/2.html">Bivariate
-and Multivariate OLS</a> | <a href="https://kevinli03.github.io/notes/GV481/problems/2.pdf">Problem
-Set 1</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV481/3.html">Uncertainty
-and Hypothesis Testing</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV481/4.html">Introduction to
-Causal Inference</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV481/5.html">Randomised
-Controlled Trials</a></li>
-</ol>
-<!-- -->
-<ol start="7" style="list-style-type: decimal">
-<li>Selection on Observables</li>
-<li>Instrumental Variables</li>
-<li>Regression Discontinuity</li>
-<li>Differences-in-Differences</li>
-<li>Survey Experiements</li>
-</ol>
-<p>Resources:</p>
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+<p><strong>Week 5, MY452A Applied Regression Analysis</strong></p>
 <ul>
-<li><a href="https://kevinli03.github.io/notes/GV481/interpretingregression.pdf">Interpreting
-Regressions Guide</a></li>
+<li><p>Title: Linear Regression IV: Models for Longitudinal and
+Clustered Data</p></li>
+<li><p>Topics:</p></li>
+<li><p>Readings:</p></li>
 </ul>
 <p><br /></p>
 <hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
+<div id="hierarchical-data" class="section level1">
+<h1>Hierarchical Data</h1>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>Hierarchical data is data that comes in different levels:</p>
+<ul>
+<li><p>For example, our individuals in our data might come from
+different countries. The top level is country, the lower level is our
+observations.</p></li>
+<li><p>Or, our observations might come from different time periods. The
+top level is year, the lower level is our observations.</p></li>
+<li><p>Or, we have a study of twins going to different classes, to see
+who will learn better based on differences in the classes. But, there
+are different groups of twins in our example. Thus, the top level is
+twin-pair, and the bottom level is our observations.</p></li>
+</ul>
+<p><br /></p>
+<p>In all three examples, individual respondents/observations are
+grouped into “clusters”, either by country, year, or twin-pair. This is
+hierarchical data.</p>
+<ul>
+<li><p>Hierarchical data is data with a hierarchical structure - with
+different levels (as shown above).</p></li>
+<li><p>The top level is a cluster, and the bottom level are observations
+included within that cluster.</p></li>
+</ul>
+<p><br /></p>
+<p>A special type of hierarchical/clustered data is called
+panel/longintudinal data.</p>
+<ul>
+<li><p>This specifically refers to when the clusters are years.</p></li>
+<li><p>For example, a data set with sweden 2024, sweden 2023, sweden
+2022, etc.</p></li>
+<li><p>Any data set with multiple observations over time for a single
+unit, is considered to be panel or longitudinal data.</p></li>
+</ul>
+<p><br /></p>
 </div>
-<div id="gv4c8-game-theory" class="section level3">
-<h3>GV4C8 Game Theory</h3>
-<p><strong>GV4C8 Game Theory for Political Science</strong></p>
-<p><u>Lecturer</u>: Professor Rafael Hortala-Vallve</p>
-<p><u>Formative Assessment</u>: Weekly Problem Sets, Week 11 Mock
-Exam</p>
-<p><u>Summative Assessment</u>: Problem Set 1 (25%, AT W7), Problem Set
-2 (25%, AT W11) Exam (50%, Spring)</p>
+<div id="consequences-of-clustering" class="section level3">
+<h3>Consequences of Clustering</h3>
+<p>There is an issue with estimating regression when we have clustered
+data: the clusters might be different.</p>
+<ul>
+<li><p>For example, one country might be different than another country.
+Ex, sweden and north korea are very different</p></li>
+<li><p>One year might be different than another year. For example, 2008
+financial crisis might be different than 2015</p></li>
+<li><p>The twin-pairs might be different, in terms of parenting,
+genetics, etc.</p></li>
+</ul>
 <p><br /></p>
-<p>Course Content (Lectures, Readings, Problems):</p>
-<ol style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/GV4C8/1.html">Political
-Economy, Game Theory, Aggregation of Preferences</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV4C8/2.html">Nash
-Equilibrium, Static Games of Complete Information</a> | <a href="https://kevinli03.github.io/notes/GV4C8/problems/2.pdf">Problem
-Set Week 2</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV4C8/3.html">Downsian
-Models of Electoral Competition</a> | <a href="https://kevinli03.github.io/notes/GV4C8/problems/3.pdf">Problem
-Set Week 3</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV4C8/4.html">Redistributive
-Politics, Mixed Strategies, Valence Politics</a> | <a href="https://kevinli03.github.io/notes/GV4C8/problems/4.pdf">Problem
-Set Week 4</a></li>
-<li><a href="https://kevinli03.github.io/notes/GV4C8/5.html">Dynamic
-Games of Complete Information, Legislative Bargaining</a></li>
-</ol>
-<!-- -->
-<ol start="7" style="list-style-type: decimal">
-<li>Elections as Incentive Devices, Counter-terrorism, Repeated
-Games</li>
-<li>Imperfect and Incomplete Information, Bayesian Nash Equilibrium</li>
-<li>Perfect Bayesian Equilibrium</li>
-<li>Signalling and Elections as Accountability Mechanism</li>
-</ol>
-<p><br /></p>
-<hr />
-</div>
-<div id="my452a-regression-analysis" class="section level3">
-<h3>MY452A Regression Analysis</h3>
-<p><strong>MY452A Applied Regression Analysis</strong></p>
-<p><u>Lecturer</u>: Prof. Jouni Kuha</p>
-<p><u>Summative Assessment</u>: Exam (100%, Spring)</p>
-<p><br /></p>
-<p>Course Content (Lectures, Readings, and Problems):</p>
-<ol start="0" style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/MY452A/0.html">Statistical
-Inference Review</a></li>
-<li><a href="https://kevinli03.github.io/notes/MY452A/1.html">Introduction to
-Regression Modelling</a></li>
-<li><a href="https://kevinli03.github.io/notes/MY452A/2.html">Linear
-Regression I: Basic Elements</a></li>
-<li><a href="https://kevinli03.github.io/notes/MY452A/3.html">Linear
-Regression II: Different Types of Explanatory Variables</a></li>
-<li><a href="https://kevinli03.github.io/notes/MY452A/4.html">Linear
-Regression III: Model Selection and Research Design</a></li>
-<li><a href="https://kevinli03.github.io/notes/MY452A/5.html">Linear
-Regression IV: Models for Longitudinal and Clustered Data</a></li>
-</ol>
-<!-- -->
-<ol start="7" style="list-style-type: decimal">
-<li>Binary Logistic Regression I: Definition and Interpretation</li>
-<li>Binary Logistic Regression II: Estimation and Inference</li>
-<li>Models for Polytomous Responses</li>
-<li>Models for Counts</li>
-<li>Further Topics</li>
-</ol>
-<p><br /></p>
-<hr />
-</div>
-<div id="my470-computer-programming" class="section level3">
-<h3>MY470 Computer Programming</h3>
-<p><strong>MY470 Computer Programming (Autumn Term)</strong></p>
-<p><u>Lecturer</u>: Dr. Milena Tsvetkova</p>
-<p><u>Summative Assessment</u>: N/A (Auditing)</p>
-<p><br /></p>
-<p>Course Content (Lectures, Readings, and Problems):</p>
-<ol style="list-style-type: decimal">
-<li><p><a href="https://kevinli03.github.io/notes/MY470/1.html">What is
-Computation</a></p></li>
-<li><p><a href="https://kevinli03.github.io/notes/MY470/2.html">Data
-Types in Python</a></p></li>
-<li><p>Control Flow</p></li>
-<li><p>Functions</p></li>
-<li><p>Classes</p></li>
-<li><p>Testing and Debugging</p></li>
-<li><p>R Programming Language</p></li>
-<li><p>Algorithms and Order of Growth</p></li>
-<li><p>Searching and Sorting Algorithms</p></li>
-<li><p>Tree and Graph Algorithms</p></li>
-</ol>
+<p>These differences might affect our regression results - our <span class="math inline">\(\beta\)</span> might also include the effect of
+these cluster differences, not just the effect of explanatory variable
+<span class="math inline">\(X\)</span>.</p>
+<ul>
+<li><p>An example of this is calculated intraclass correlation
+(comparing correlation of <span class="math inline">\(X\)</span> and
+<span class="math inline">\(Y\)</span> within a cluster).</p></li>
+<li><p>Then we find the <span class="math inline">\(R^2\)</span> of a
+model with <span class="math inline">\(Y\)</span> but the explanatory
+variable being the clusters.</p></li>
+<li><p>Often, we find that the differences in our clusters are
+explaining the variation in <span class="math inline">\(Y\)</span>.</p></li>
+</ul>
+<p>This is an issue, since our regression <span class="math inline">\(\beta\)</span> will include these effects, when we
+only want the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span>, not the clusters. We need some way to
+account for the differences between clusters.</p>
+<ul>
+<li>This is especially the case for causal effects - however, you need a
+strong research design (as always for causal inference).</li>
+</ul>
 <p><br /></p>
 <hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
 </div>
-<div id="dv490-economic-development-i" class="section level3">
-<h3>DV490 Economic Development I</h3>
-<p><strong>DV490 Economic Development Policy I: Applied Policy Analysis
-for Macroeconomic Development (Autumn Term)</strong></p>
-<p><u>Lecturer</u>: Dr. Diana Weinhold</p>
-<p><u>Summative Assessment</u>: N/A (Auditing)</p>
-<p>Course Content (note: I did not take formal notes, but here are some
-resources):</p>
-<ol style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/DV490/1.html">Introduction to
-Long Run Macroeconomic Growth and Development</a></li>
-<li>Basics of Economic Growth and Growth Theory</li>
-<li>New Directions in Growth Theory</li>
-<li>History and Long Run Growth</li>
-<li>Globalisation and Trade</li>
-</ol>
-<!-- -->
-<ol start="7" style="list-style-type: decimal">
-<li>Inequality, Globalisation, and Growth</li>
-<li>Financial Crises Old and New</li>
-<li>Odious Debt and Original Sin</li>
-<li>International Aid and External Finance</li>
-<li>Industrial Policy</li>
-</ol>
+</div>
+<div id="fixed-effects-model" class="section level1">
+<h1>Fixed Effects Model</h1>
+<div id="example-teacher-experience" class="section level3">
+<h3>Example: Teacher Experience</h3>
+<p>In this example, we want to find if teacher experience is associated
+with better student achievement. Our data is as follows:</p>
+<ul>
+<li><p>Data on 184 pairs of dutch twins attending grade 2 o primary
+school</p></li>
+<li><p>Each twin attends the same school, but different classes</p></li>
+<li><p>2 response variables: child’s scores in reading tests and maths
+tests</p></li>
+<li><p>Main explanatory variable: teacher’s experience</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="clustered-data" class="section level3">
+<h3>Clustered Data</h3>
+<p>Is a simple regression of teacher experience <span class="math inline">\(X\)</span> predicting test scores <span class="math inline">\(Y\)</span> a good estimate of the effect of
+teacher experience on student achievement?</p>
+<ul>
+<li><p>Twins are similar in their genes, socioeconomic status, family
+environment, etc. They both also go to the same school.</p></li>
+<li><p>This is good - the idea is that since they are very similar, the
+outcome might be as a result of teacher experience - the changing
+variable.</p></li>
+</ul>
+<p><br /></p>
+<p>However, an issue is the pairs of twins (our clusters in the
+hierarchical data):</p>
+<ul>
+<li>Different sets of twins will have different genes, socioeconomic
+status, family environment, and different schools</li>
+</ul>
+<p>Thus, we need to account for this clustering of pairs to accurately
+determine the effect of teacher experience <span class="math inline">\(X\)</span> on test scores <span class="math inline">\(Y\)</span>.</p>
+<p><br /></p>
+</div>
+<div id="fixed-effects-model-1" class="section level3">
+<h3>Fixed Effects Model</h3>
+<p>A standard linear regression model, where <span class="math inline">\(Y_{it}\)</span> is the outcome variable, <span class="math inline">\(\overrightarrow{X}_{it}\)</span> is the vector
+explanatory variables, for observation <span class="math inline">\(t \in
+\{1, ..., \}\)</span> in cluster <span class="math inline">\(i \in \{1,
+..., m\}\)</span>:</p>
+<p><span class="math display">\[
+Y_{it} = \alpha_i + \overrightarrow{\beta} \overrightarrow X_{it} +
+\epsilon_{it}
+\]</span></p>
+<p>In our specific example, <span class="math inline">\(t\)</span> is
+either twin #1 or #2, in twin-pair <span class="math inline">\(i \in
+\{1, ..., 384\}\)</span></p>
+<p><br /></p>
+<p>The parameter <span class="math inline">\(\alpha_i\)</span> in the
+model is the <strong>fixed effect</strong> for the cluster <span class="math inline">\(i\)</span>. It is:</p>
+<p><span class="math display">\[
+\alpha_i = \beta_{00} + \beta_{02} D_{i2} + ... + \beta_{0m}D_{im}
+\]</span></p>
+<ul>
+<li><p>Where <span class="math inline">\(D_{i2} , ... , D_{im}\)</span>
+are dummy variables for the twin pairs <span class="math inline">\(2,
+..., m\)</span>. Twin pair 1 is the “reference category” (like a
+categorical explanatory variable).</p></li>
+<li><p><span class="math inline">\(\beta_{00}\)</span> is the average
+<span class="math inline">\(Y\)</span> of the reference cluster category
+(often cluster <span class="math inline">\(1\)</span> ) when all <span class="math inline">\(X = 0\)</span>.</p></li>
+<li><p><span class="math inline">\(\beta_{0j}\)</span> is the difference
+between the average <span class="math inline">\(Y\)</span> of cluster
+<span class="math inline">\(j\)</span> and the reference category (often
+cluster 1) when all <span class="math inline">\(X = 0\)</span>.</p></li>
+</ul>
+<p><br /></p>
+<p>In other words, including fixed effects for clusters <span class="math inline">\(i\)</span> simply means, using the cluster as a
+categorical variable in our regression.</p>
+<p>We can demonstrate this by substituting <span class="math inline">\(\alpha_i\)</span> into our above linear model to
+get:</p>
+<p><span class="math display">\[
+Y_{it} = \beta_{00} + \overrightarrow{\beta} \overrightarrow X_{it} +
+\beta_{02} D_{i2} + ... + \beta_{0m} D_{im}
+\]</span></p>
+<p><br /></p>
+</div>
+<div id="benefits-of-fixed-effects" class="section level3">
+<h3>Benefits of Fixed Effects</h3>
+<p>Here, each fixed effect <span class="math inline">\(\alpha_i\)</span>
+captures those predictors of <span class="math inline">\(Y\)</span>,
+which are shared by all observations in cluster <span class="math inline">\(i\)</span>.</p>
+<ul>
+<li>In our example, <span class="math inline">\(\alpha_i\)</span>
+captures the predictors of <span class="math inline">\(Y\)</span> that
+are shared by both twins in a twin-pair, such as socioeconomic status,
+genetics, school, etc.</li>
+</ul>
+<p>Fixed Effects allows us to focus on the variation of <span class="math inline">\(Y\)</span> resulting from differences in <span class="math inline">\(X\)</span>, without worrying about how clusters
+explain <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li>For our example, fixed effects allows us to control for this
+difference in average ability of twins.</li>
+</ul>
+<p><br /></p>
+<p>Essentially, <span class="math inline">\(\beta\)</span> now captures
+the effect of a change in <span class="math inline">\(X\)</span> on
+<span class="math inline">\(Y\)</span> within clusters.</p>
+<p>Mathematically:</p>
+<p><span class="math display">\[
+\begin{split}
+Y_{i2} - Y_{i1} &amp; = (\alpha_i + \beta X_{i2} + \epsilon_{i2}) -
+(\alpha_i + \beta X_{i1} + \epsilon_{i1}) \\
+&amp; = (\alpha_i - \alpha_i) + (\beta X_{i2} - \beta X_{1i}) +
+(\epsilon_{i2} - \epsilon_{i1}) \\
+&amp; = \beta(X_{2i} - X_{1i}) + \epsilon_i^*
+\end{split}
+\]</span></p>
+<p>So within clusters, <span class="math inline">\(\alpha_i\)</span> is
+the same, so they cancel out, leaving <span class="math inline">\(\beta\)</span> as the effect within a cluster.</p>
+<p><br /></p>
+</div>
+<div id="two-way-fixed-effects" class="section level3">
+<h3>Two-Way Fixed Effects</h3>
+<p>We will use a few common types of fixed effects:</p>
+<ul>
+<li><p>Country fixed effects <span class="math inline">\(\alpha_i\)</span> - accounting for differences
+between countries</p></li>
+<li><p>Year fixed effects <span class="math inline">\(\gamma_i\)</span>
+- accounting for differences between years</p></li>
+</ul>
+<p>We can combine these fixed effects for two-way fixed effects, which
+are useful for panel data (clusters of countries/units, with each
+cluster consisting of different year observations).</p>
+<ul>
+<li><p>Country-Year fixed effects <span class="math inline">\(\alpha_i +
+\gamma_t\)</span>. Basically, first, cluster by countries. Then within
+country clusters, cluster by years.</p></li>
+<li><p>Why does <span class="math inline">\(\gamma\)</span> have
+subscript <span class="math inline">\(t\)</span>? This is because within
+panel data, we will have clusters of countries <span class="math inline">\(i = \{1, ... , m \}\)</span>. Within each cluster
+<span class="math inline">\(i\)</span> (each country), we will have
+<span class="math inline">\(t\)</span> observations from different
+years.</p></li>
+<li><p>This basically accounts for differences in countries, and also
+how some years are different than other years.</p></li>
+</ul>
+<p><br /></p>
+<p>A two-way fixed effects takes the following form:</p>
+<p><span class="math display">\[
+Y_{it} = \alpha_i + \gamma_t + \beta X_{it} + \epsilon_{it}
+\]</span></p>
+<p>Where <span class="math inline">\(\alpha_i\)</span> is fixed effect
+for country <span class="math inline">\(i\)</span>, and <span class="math inline">\(\gamma_t\)</span> is fixed effect for year <span class="math inline">\(t\)</span>’s observation.</p>
+<p><br /></p>
+<p>Interpretation of <span class="math inline">\(\beta\)</span> is:</p>
+<ul>
+<li><span class="math inline">\(\beta\)</span> is the predicted increase
+of <span class="math inline">\(Y\)</span> given a one unit increase of
+<span class="math inline">\(X\)</span>, controlling of the levels of
+<span class="math inline">\(Y\)</span> that we would expect for that
+country and that year in general.</li>
+</ul>
 <p><br /></p>
 <hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
 </div>
 </div>
-<div id="winter-term" class="section level1">
-<h1>Winter Term</h1>
-<div id="gv482-current-issues" class="section level3">
-<h3>GV482 Current Issues</h3>
-<p><strong>GV482 Political Science and Political Economy: Current
-Issues</strong></p>
-<p>Lecturer: Prof. Stephane Wolton</p>
-<p>Assessment: Coursework (50%, WT), Online Assessment (50%, Spring)</p>
-<ol style="list-style-type: decimal">
-<li><a href="https://kevinli03.github.io/notes/GV482/1.html">States
-vs. Markets (From IR470 W1)</a></li>
-</ol>
+<div id="fixed-effects-model-selection" class="section level1">
+<h1>Fixed Effects Model Selection</h1>
+<div id="when-to-use-fixed-effects" class="section level3">
+<h3>When to Use Fixed Effects</h3>
+<p>If you want to test if you statistically need fixed effects, we can
+use a f-test of nested models</p>
+<ul>
+<li><p>After all, fixed effects are just an additional categorical
+variable</p></li>
+<li><p>So, we can use the f-test where <span class="math inline">\(M_0\)</span> has no fixed effects and <span class="math inline">\(M_a\)</span> has fixed effects.</p></li>
+</ul>
+<p><br /></p>
+</div>
+<div id="interactions-with-fixed-effects" class="section level3">
+<h3>Interactions with Fixed Effects</h3>
+<p>We can also interact fixed effects with explanatory variable.</p>
+<ul>
+<li><p>For example, let us say that country and debt ratio might
+interact to effect economic growth.</p></li>
+<li><p>Essentially, we are interacting country fixed effects <span class="math inline">\(\alpha_i\)</span> and debt ratio <span class="math inline">\(X_{it}\)</span> together, which implies that
+within different countries, the <span class="math inline">\(\beta\)</span> between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> will be different.</p></li>
+</ul>
+<p>We can express this in a model:</p>
+<p><span class="math display">\[
+Y_{it} = \alpha_i + \beta_i X_{it} + \epsilon_{it}
+\]</span></p>
+<p>The <span class="math inline">\(\beta\)</span> now has a subscript
+<span class="math inline">\(\beta_i\)</span>, which indicates that for
+every cluster <span class="math inline">\(i = \{1, ..., m \}\)</span>,
+we will have a different <span class="math inline">\(\beta\)</span>.
+I.e., the relationship between <span class="math inline">\(X\)</span>
+and <span class="math inline">\(Y\)</span> depends on the cluster <span class="math inline">\(i\)</span>.</p>
+<p><br /></p>
+</div>
+<div id="cluster-level-explanatory-variables" class="section level3">
+<h3>Cluster-Level Explanatory Variables</h3>
+<p>Let us say you have an explanatory variable <span class="math inline">\(X\)</span>, that lines up quite well with fixed
+effects <span class="math inline">\(\alpha_i\)</span>.</p>
+<ul>
+<li>For example - for our twin-pairs example, the <span class="math inline">\(X\)</span> of birth mother’s level of education
+would be exactly the same as <span class="math inline">\(\alpha_i\)</span>, since all observations within a
+twin-pair will have the same mother.</li>
+</ul>
+<p>You cannot include these variables with fixed effects.</p>
+<ul>
+<li>This is because perfect collinearity - if <span class="math inline">\(X\)</span> and <span class="math inline">\(\alpha_i\)</span> are perfectly correlated (such
+as within each cluster <span class="math inline">\(i\)</span>, <span class="math inline">\(X\)</span> is constant), linear regression
+mechanics do not work.</li>
+</ul>
+<p><br /></p>
+</div>
+<div id="extensions-of-time-fixed-effects" class="section level3">
+<h3>Extensions of Time-Fixed Effects</h3>
+<p>If <span class="math inline">\(Y\)</span> has a clear pattern over
+time (linear, polynomial, etc.), it is sometimes not neccesary to
+include fixed effects with categorical variables.</p>
+<ul>
+<li><p>Instead, we can account for them by including a continuous
+control variable</p></li>
+<li><p>For example, if there is a 2nd degree polynomial relationship
+between year and <span class="math inline">\(Y\)</span>, we can account
+for them with a <span class="math inline">\(\text{year}^2\)</span>
+term.</p></li>
+</ul>
 <p><br /></p>
 <hr />
+<p><a href="https://kevinli03.github.io/notes/#MY452A_Regression_Analysis">MY452A
+Homepage</a></p>
 </div>
-<div id="my457-causal-inference" class="section level3">
-<h3>MY457 Causal Inference</h3>
-<p><strong>MY457 Causal Inference for Observational and Experimental
-Studies</strong></p>
-<p>Lecturer: Dr. Daniel De Kadt</p>
-<p>Assessment: Take-Home Assessment (100%, Spring)</p>
+</div>
+<div id="other-methods" class="section level1">
+<h1>Other Methods</h1>
+<div id="random-effects-models" class="section level3">
+<h3>Random Effects Models</h3>
+<p>Random effects are used to account for the non-independence of
+observations within a cluster.</p>
+<ul>
+<li>These are not as useful for clustered inference, for which fixed
+effects models should be used.</li>
+</ul>
+<p>With a single cluster <span class="math inline">\(i\)</span>, a
+random effects model takes the form of:</p>
+<p><span class="math display">\[
+Y_{it} = \alpha_i + \beta X_{it} + \epsilon_{it}
+\]</span></p>
+<p>However, instead of <span class="math inline">\(\alpha_i\)</span>
+being fixed, alpha is instead a retaliation of a random variable:</p>
+<p><span class="math display">\[
+\alpha_i \sim \mathcal{N}(\beta_0, \sigma^2_\alpha )
+\]</span></p>
+<p>Unlike in fixed effects models, here explanatory variables can
+include cluster level variables.</p>
 <p><br /></p>
-<hr />
 </div>
-<div id="my455-multivariate-analysis" class="section level3">
-<h3>MY455 Multivariate Analysis</h3>
-<p><strong>MY455 Multivariate Analysis and Measurement</strong></p>
-<p>Lecturer: Prof. Jouni Kuha</p>
-<p>Assessment: Exam (100%, Spring)</p>
-<p><br /><br />
-</p>
-<hr />
+<div id="robust-standard-errors" class="section level3">
+<h3>Robust Standard Errors</h3>
+<p>Ignoring clustering in hierarchical data implies the assumption that
+observations of <span class="math inline">\(Y_{it}\)</span> are
+independent of each other, even within clusters <span class="math inline">\(i\)</span>.</p>
+<ul>
+<li><p>When this assumption is not met, standard errors of estimated
+coefficients <span class="math inline">\(\hat{\beta}\)</span> are
+inaccurate.</p></li>
+<li><p>Thus, significance tests and confidence intervals which use these
+standard errors are also wrong.</p></li>
+<li><p>Thus, we can deal with them by calculating standard errors that
+take into account clustering. This fixes the issue.</p></li>
+</ul>
+<p>These can be used with fixed effects or standard linear models (to
+deal with heteroscedasticity).</p>
 </div>
-<div id="st304-time-series" class="section level3">
-<h3>ST304 Time Series</h3>
-<p><strong>ST304 Time Series and Forecasting (Winter Term)</strong></p>
-<p>Lecturer</p>
-<p><br /></p>
-<hr />
-</div>
-</div>
-<div id="short-guides" class="section level1">
-<h1>Short Guides</h1>
 </div>
 
 

@@ -1,0 +1,329 @@
+---
+title: "Linear Regression IV: Models for Longitudinal and Clustered Data"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+**Week 5, MY452A Applied Regression Analysis**
+
+-   Title: Linear Regression IV: Models for Longitudinal and Clustered Data
+
+-   Topics:
+
+-   Readings:
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Hierarchical Data
+
+### Introduction
+
+Hierarchical data is data that comes in different levels:
+
+-   For example, our individuals in our data might come from different countries. The top level is country, the lower level is our observations.
+
+-   Or, our observations might come from different time periods. The top level is year, the lower level is our observations.
+
+-   Or, we have a study of twins going to different classes, to see who will learn better based on differences in the classes. But, there are different groups of twins in our example. Thus, the top level is twin-pair, and the bottom level is our observations.
+
+<br />
+
+In all three examples, individual respondents/observations are grouped into "clusters", either by country, year, or twin-pair. This is hierarchical data.
+
+-   Hierarchical data is data with a hierarchical structure - with different levels (as shown above).
+
+-   The top level is a cluster, and the bottom level are observations included within that cluster.
+
+<br />
+
+A special type of hierarchical/clustered data is called panel/longintudinal data.
+
+-   This specifically refers to when the clusters are years.
+
+-   For example, a data set with sweden 2024, sweden 2023, sweden 2022, etc.
+
+-   Any data set with multiple observations over time for a single unit, is considered to be panel or longitudinal data.
+
+<br />
+
+### Consequences of Clustering
+
+There is an issue with estimating regression when we have clustered data: the clusters might be different.
+
+-   For example, one country might be different than another country. Ex, sweden and north korea are very different
+
+-   One year might be different than another year. For example, 2008 financial crisis might be different than 2015
+
+-   The twin-pairs might be different, in terms of parenting, genetics, etc.
+
+<br />
+
+These differences might affect our regression results - our $\beta$ might also include the effect of these cluster differences, not just the effect of explanatory variable $X$.
+
+-   An example of this is calculated intraclass correlation (comparing correlation of $X$ and $Y$ within a cluster).
+
+-   Then we find the $R^2$ of a model with $Y$ but the explanatory variable being the clusters.
+
+-   Often, we find that the differences in our clusters are explaining the variation in $Y$.
+
+This is an issue, since our regression $\beta$ will include these effects, when we only want the effect of $X$ on $Y$, not the clusters. We need some way to account for the differences between clusters.
+
+-   This is especially the case for causal effects - however, you need a strong research design (as always for causal inference).
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Fixed Effects Model
+
+### Example: Teacher Experience
+
+In this example, we want to find if teacher experience is associated with better student achievement. Our data is as follows:
+
+-   Data on 184 pairs of dutch twins attending grade 2 o primary school
+
+-   Each twin attends the same school, but different classes
+
+-   2 response variables: child's scores in reading tests and maths tests
+
+-   Main explanatory variable: teacher's experience
+
+<br />
+
+### Clustered Data
+
+Is a simple regression of teacher experience $X$ predicting test scores $Y$ a good estimate of the effect of teacher experience on student achievement?
+
+-   Twins are similar in their genes, socioeconomic status, family environment, etc. They both also go to the same school.
+
+-   This is good - the idea is that since they are very similar, the outcome might be as a result of teacher experience - the changing variable.
+
+<br />
+
+However, an issue is the pairs of twins (our clusters in the hierarchical data):
+
+-   Different sets of twins will have different genes, socioeconomic status, family environment, and different schools
+
+Thus, we need to account for this clustering of pairs to accurately determine the effect of teacher experience $X$ on test scores $Y$.
+
+<br />
+
+### Fixed Effects Model
+
+A standard linear regression model, where $Y_{it}$ is the outcome variable, $\overrightarrow{X}_{it}$ is the vector explanatory variables, for observation $t \in \{1, ..., \}$ in cluster $i \in \{1, ..., m\}$:
+
+$$
+Y_{it} = \alpha_i + \overrightarrow{\beta} \overrightarrow X_{it} + \epsilon_{it}
+$$
+
+In our specific example, $t$ is either twin #1 or #2, in twin-pair $i \in \{1, ..., 384\}$
+
+<br />
+
+The parameter $\alpha_i$ in the model is the **fixed effect** for the cluster $i$. It is:
+
+$$
+\alpha_i = \beta_{00} + \beta_{02} D_{i2} + ... + \beta_{0m}D_{im}
+$$
+
+-   Where $D_{i2} , ... , D_{im}$ are dummy variables for the twin pairs $2, ..., m$. Twin pair 1 is the "reference category" (like a categorical explanatory variable).
+
+-   $\beta_{00}$ is the average $Y$ of the reference cluster category (often cluster $1$ ) when all $X = 0$.
+
+-   $\beta_{0j}$ is the difference between the average $Y$ of cluster $j$ and the reference category (often cluster 1) when all $X = 0$.
+
+<br />
+
+In other words, including fixed effects for clusters $i$ simply means, using the cluster as a categorical variable in our regression.
+
+We can demonstrate this by substituting $\alpha_i$ into our above linear model to get:
+
+$$
+Y_{it} = \beta_{00} + \overrightarrow{\beta} \overrightarrow X_{it} + \beta_{02} D_{i2} + ... + \beta_{0m} D_{im}
+$$
+
+<br />
+
+### Benefits of Fixed Effects
+
+Here, each fixed effect $\alpha_i$ captures those predictors of $Y$, which are shared by all observations in cluster $i$.
+
+-   In our example, $\alpha_i$ captures the predictors of $Y$ that are shared by both twins in a twin-pair, such as socioeconomic status, genetics, school, etc.
+
+Fixed Effects allows us to focus on the variation of $Y$ resulting from differences in $X$, without worrying about how clusters explain $Y$.
+
+-   For our example, fixed effects allows us to control for this difference in average ability of twins.
+
+<br />
+
+Essentially, $\beta$ now captures the effect of a change in $X$ on $Y$ within clusters.
+
+Mathematically:
+
+$$
+\begin{split}
+Y_{i2} - Y_{i1} & = (\alpha_i + \beta X_{i2} + \epsilon_{i2}) - (\alpha_i + \beta X_{i1} + \epsilon_{i1}) \\
+& = (\alpha_i - \alpha_i) + (\beta X_{i2} - \beta X_{1i}) + (\epsilon_{i2} - \epsilon_{i1}) \\
+& = \beta(X_{2i} - X_{1i}) + \epsilon_i^*
+\end{split}
+$$
+
+So within clusters, $\alpha_i$ is the same, so they cancel out, leaving $\beta$ as the effect within a cluster.
+
+<br />
+
+### Two-Way Fixed Effects
+
+We will use a few common types of fixed effects:
+
+-   Country fixed effects $\alpha_i$ - accounting for differences between countries
+
+-   Year fixed effects $\gamma_i$ - accounting for differences between years
+
+We can combine these fixed effects for two-way fixed effects, which are useful for panel data (clusters of countries/units, with each cluster consisting of different year observations).
+
+-   Country-Year fixed effects $\alpha_i + \gamma_t$. Basically, first, cluster by countries. Then within country clusters, cluster by years.
+
+-   Why does $\gamma$ have subscript $t$? This is because within panel data, we will have clusters of countries $i = \{1, ... , m \}$. Within each cluster $i$ (each country), we will have $t$ observations from different years.
+
+-   This basically accounts for differences in countries, and also how some years are different than other years.
+
+<br />
+
+A two-way fixed effects takes the following form:
+
+$$
+Y_{it} = \alpha_i + \gamma_t + \beta X_{it} + \epsilon_{it}
+$$
+
+Where $\alpha_i$ is fixed effect for country $i$, and $\gamma_t$ is fixed effect for year $t$'s observation.
+
+<br />
+
+Interpretation of $\beta$ is:
+
+-   $\beta$ is the predicted increase of $Y$ given a one unit increase of $X$, controlling of the levels of $Y$ that we would expect for that country and that year in general.
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Fixed Effects Model Selection
+
+### When to Use Fixed Effects
+
+If you want to test if you statistically need fixed effects, we can use a f-test of nested models
+
+-   After all, fixed effects are just an additional categorical variable
+
+-   So, we can use the f-test where $M_0$ has no fixed effects and $M_a$ has fixed effects.
+
+<br />
+
+### Interactions with Fixed Effects
+
+We can also interact fixed effects with explanatory variable.
+
+-   For example, let us say that country and debt ratio might interact to effect economic growth.
+
+-   Essentially, we are interacting country fixed effects $\alpha_i$ and debt ratio $X_{it}$ together, which implies that within different countries, the $\beta$ between $X$ and $Y$ will be different.
+
+We can express this in a model:
+
+$$
+Y_{it} = \alpha_i + \beta_i X_{it} + \epsilon_{it}
+$$
+
+The $\beta$ now has a subscript $\beta_i$, which indicates that for every cluster $i = \{1, ..., m \}$, we will have a different $\beta$. I.e., the relationship between $X$ and $Y$ depends on the cluster $i$.
+
+<br />
+
+### Cluster-Level Explanatory Variables
+
+Let us say you have an explanatory variable $X$, that lines up quite well with fixed effects $\alpha_i$.
+
+-   For example - for our twin-pairs example, the $X$ of birth mother's level of education would be exactly the same as $\alpha_i$, since all observations within a twin-pair will have the same mother.
+
+You cannot include these variables with fixed effects.
+
+-   This is because perfect collinearity - if $X$ and $\alpha_i$ are perfectly correlated (such as within each cluster $i$, $X$ is constant), linear regression mechanics do not work.
+
+<br />
+
+### Extensions of Time-Fixed Effects
+
+If $Y$ has a clear pattern over time (linear, polynomial, etc.), it is sometimes not neccesary to include fixed effects with categorical variables.
+
+-   Instead, we can account for them by including a continuous control variable
+
+-   For example, if there is a 2nd degree polynomial relationship between year and $Y$, we can account for them with a $\text{year}^2$ term.
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Other Methods
+
+### Random Effects Models
+
+Random effects are used to account for the non-independence of observations within a cluster.
+
+-   These are not as useful for clustered inference, for which fixed effects models should be used.
+
+With a single cluster $i$, a random effects model takes the form of:
+
+$$
+Y_{it} = \alpha_i + \beta X_{it} + \epsilon_{it}
+$$
+
+However, instead of $\alpha_i$ being fixed, alpha is instead a retaliation of a random variable:
+
+$$
+\alpha_i \sim \mathcal{N}(\beta_0, \sigma^2_\alpha )
+$$
+
+Unlike in fixed effects models, here explanatory variables can include cluster level variables.
+
+<br />
+
+### Robust Standard Errors
+
+Ignoring clustering in hierarchical data implies the assumption that observations of $Y_{it}$ are independent of each other, even within clusters $i$.
+
+-   When this assumption is not met, standard errors of estimated coefficients $\hat{\beta}$ are inaccurate.
+
+-   Thus, significance tests and confidence intervals which use these standard errors are also wrong.
+
+-   Thus, we can deal with them by calculating standard errors that take into account clustering. This fixes the issue.
+
+These can be used with fixed effects or standard linear models (to deal with heteroscedasticity).

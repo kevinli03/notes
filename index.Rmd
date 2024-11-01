@@ -156,7 +156,7 @@ Course Content (Lectures, Readings, and Problems):
 2.  [Linear Regression I: Basic Elements](https://kevinli03.github.io/notes/MY452A/2.html)
 3.  [Linear Regression II: Different Types of Explanatory Variables](https://kevinli03.github.io/notes/MY452A/3.html)
 4.  [Linear Regression III: Model Selection and Research Design](https://kevinli03.github.io/notes/MY452A/4.html)
-5.  Linear Regression IV: Models for Longitudinal and Clustered Data
+5.  [Linear Regression IV: Models for Longitudinal and Clustered Data](https://kevinli03.github.io/notes/MY452A/5.html)
 
 <!-- -->
 
