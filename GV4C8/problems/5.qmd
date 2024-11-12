@@ -1,0 +1,96 @@
+---
+title: "Problem Set Week 5"
+subtitle: "GV4C8 Game Theory for Political Science"
+author: "Kevin Li"
+format:
+    pdf:
+        documentclass: article
+        papersize: A4
+        geometry:
+            - width=150mm
+            - height=238mm
+            - top=27mm
+        linestretch: 1.25
+---
+
+# Question 4
+
+**The Department of Energy and Climate Change needs to decide on a carbon tax to companies with large energy consumption (the tax rate can be any number between 0 and 100). The current rate is 7 per cent of their profits. The Department’s preferred rate is 9 percent. Once the Department proposes a bill, the legislature is free to amend it before taking a final vote. When the preferred rate of a player is** $r_i$**, the utility they derive from rate** $r$ **is** $u_i (r) = -|r -ri|$**.**
+
+-   **a) What is the Department doing when the legislature’s preferred policy is 10%? What about 6%?**
+
+-   **b) Identify the range of values of the preferred policy of the median member of the legislature for which no bill is proposed.**
+
+Let us define the parameters and notation of this game:
+
+1.  Department $D$ is the "gatekeeper", with preferences at $r_D=9$. They can propose some rate $\tilde{r} \in [0, 100]$, or not propose legislation.
+2.  Legislature $L$ has preferences at $r_L$. Status quo policy is $r_0 = 7$.
+
+I will use $\succ$ to indicate strict preference, $\succsim$ to indicate weak preference, $\sim$ to indicate indifference, and $s.t.$ to indicate "such that".
+
+[What if $r_L = 10$?]{.underline} Let us solve by backwards induction.
+
+Since it is open rule, the legislature will always amend the department proposal $\tilde{r}$ to $r_L = 10$.
+
+Now, look at the department's choice of strategy. Department will only propose legislation $\tilde{r}$ if for themselves, $r_L \succ r_0$ (or $r_L \succsim r_0$ if indifference means acceptance, but this is not specified in the problem, and does not change the solution). Is $r_L \succ r_0$ for the department true for this scenario?
+
+-   $u_D(r_L) = -|r_L - r_D| = -|10 - 9| = -1$.
+
+-   $u_D(r_0) = -|r_0 - r_D| = -|7 - 9| = -2$.
+
+::: callout-tip
+## My Answer!
+
+Since $u_D(r_L) > u_D(r_0)$, then $r_L \succ r_0$ for the department. Thus, **department will propose legislation** when $r_L = 10$.
+:::
+
+ 
+
+[What if $r_L = 6$?]{.underline} Let us solve by backwards induction
+
+Since it is open rule, the legislature will always amend the department proposal $\tilde{r}$ to $r_L = 6$.
+
+Now, look at the department's choice of strategy. Department will only propose legislation $\tilde{r}$ if for themselves, $r_L \succ r_0$ (or or $r_L \succsim r_0$ if indifference means acceptance, but this is not specified in the problem, and does not change the solution). Is $r_L \succ r_0$ for the department true in this scenario?
+
+-   $u_D(r_L) = -|r_L - r_D| = -|6 - 9| = -3$.
+
+-   $u_D(r_0) = -|r_0 - r_D| = -|7 - 9| = -2$.
+
+::: callout-tip
+## My Answer!
+
+Since $u_D(r_L) < u_D(r_0)$, then the department will $r_0 \succ r_L$. Thus, Department likes the status quo more, and **will not propose any legislation** when $r_L = 6$.
+:::
+
+What is the range of values of the preferred policy of the median member of the legislature, $r_L$, such that no bill will be proposed by the department?
+
+We know that the department will not propose legislation when $r_0 \succsim r_L$. Thus, we must find the set of all $r_L$ s.t. $r_0 \succsim r_L$.
+
+-   This assumes indifference (of the department) means the department will not propose. If that is not the case (indifference means the department proposes), then condition is $r_0 \succ r_L$.
+
+$r_0 \succsim r_L$ if and only if $u_D(r_0) ≥ u_D(r_L)$. So, let us solve for what $r_L$ makes that previous statement true: (pardon my bad math skills)
+
+$$
+\begin{split}
+u_D(r_0) & ≥ u_D(r_L) \text{ given } r_0 = 7, r_D = 9 \\
+-|r_0 - r_D| & ≥ -|r_L -r_D| \\
+-|7 - 9| & ≥ -|r_L - 9| \\
+-2 & ≥ -|r_L - 9| \\
+2 & ≤ |r_L - 9| \\
+r_L &≤ 7, \ r_L ≥ 11
+\end{split}
+$$
+
+::: callout-tip
+## My Answer!
+
+So $r_0 \succsim r_L$ when $r_L ≤ 7$ or $r_L ≥11$, where the department will not propose anything.
+
+ 
+
+More formally, the range of values of $r_L$, for which no bill is proposed by the department, are all $\{r_L \in \mathbb{R} | 0 ≤ r_L ≤ 7 \space \lor \space 11≤r_L≤100\}$ - the set of $r_L$ in all real numbers, such that $0≤r_L ≤ 7$ **or** $11≤r_L ≤ 100$.
+:::
+
+This assumes indifference (of the department) means the department will not propose. If that is not the case (indifference means the department will propose), then the condition is $r_0 \succ r_L$.
+
+-   This would essentially mean changing all ≤ to \<.
