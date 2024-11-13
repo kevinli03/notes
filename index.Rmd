@@ -94,7 +94,7 @@ Course Content (Lectures, Readings, and Problems):
 
 <!-- -->
 
-7.  Selection on Observables
+7.  [Selection on Observables](https://kevinli03.github.io/notes/GV481/7.html)
 8.  Instrumental Variables
 9.  Regression Discontinuity
 10. Differences-in-Differences
@@ -126,7 +126,7 @@ Course Content (Lectures, Readings, Problems):
 2.  [Nash Equilibrium, Static Games of Complete Information](https://kevinli03.github.io/notes/GV4C8/2.html) \| [Problem Set Week 2](https://kevinli03.github.io/notes/GV4C8/problems/2.pdf)
 3.  [Downsian Models of Electoral Competition](https://kevinli03.github.io/notes/GV4C8/3.html) \| [Problem Set Week 3](https://kevinli03.github.io/notes/GV4C8/problems/3.pdf)
 4.  [Redistributive Politics, Mixed Strategies, Valence Politics](https://kevinli03.github.io/notes/GV4C8/4.html) \| [Problem Set Week 4](https://kevinli03.github.io/notes/GV4C8/problems/4.pdf)
-5.  [Dynamic Games of Complete Information, Legislative Bargaining](https://kevinli03.github.io/notes/GV4C8/5.html) \| [Problem Set Week 4](https://kevinli03.github.io/notes/GV4C8/problems/5.pdf)
+5.  [Dynamic Games of Complete Information, Legislative Bargaining](https://kevinli03.github.io/notes/GV4C8/5.html) \| [Problem Set Week 5](https://kevinli03.github.io/notes/GV4C8/problems/5.pdf)
 
 <!-- -->
 
