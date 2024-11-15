@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **Week 7, MY452A Applied Regression Analysis**
 
--   Title: Binary Logistic Regression I: Defintion and Interpretation
+-   Title: Binary Logistic Regression I: Definition and Interpretation
 
 -   Topics:
 
@@ -322,6 +322,8 @@ This also means, that going from $\text{odds}_0$ to $\text{odds}_1$, you have to
 
 <br />
 
+### Interpreting Odds Ratios
+
 We can calculate odds ratios by first, estimating $\beta$, then do $e^{\beta}$.
 
 So interpretation is: If a one unit increase in $X$, is associated with a $e^{\beta}$ multiplicative increase in the odds of getting category $Y=1$.
@@ -338,4 +340,68 @@ So interpretation is: If a one unit increase in $X$, is associated with a $e^{\b
 
 <br />
 
-### Variants of Interpretation
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Fitted Probabilities**
+
+### Probabilities
+
+The coefficients $\beta$ give a interpretation of the relationship between $X$ and $\pi$.
+
+However, we can also be interested in the actual probabilities $\pi_i$ being output for each unit $i$.
+
+-   For example, $X$ is age and $Y$ is vote for brexit, it would be interesting to see the probability a 20 year old votes for brexit, compared to probability a 60 year old votes for brexit.
+
+<br />
+
+To calculate fitted probabilities, we just plug things into the model in regards to $\pi_i$, after we have estimated the coefficients $\alpha$, $\beta_1, ..., \beta_k$:
+
+$$
+\pi_i = \frac{e^{(\alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki})}}{1 + e^{(\alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki})}}
+$$
+
+<br />
+
+### Interpretation
+
+Note: no single number of probability can describe the effect of $X$ on $\pi$, since the fitted probability curve is not a straight line, so the rate of change i not smooth.
+
+We can calculate fitted probabilities between groups/values of one explanatory variables (holding other explanatory variables constant), to illustrate the effect:
+
+-   For example, if one variable is gender, and another is age, we can hold all other variables constant (by predicting with the mean of other variables), and plotting the fitted probabilities for females and males in respect to gender.
+
+The figure illustrates this - holding all other variables except gender and age constant, and plot probabilities. This shows the difference between men and women.
+
+![](figure7.2.png){width="70%"}
+
+<br />
+
+### Marginal Fitted Probabilities
+
+Average/Marginal Fitted Probabilities are another way to interpret the logsitic models.
+
+Basically, what we do, is calculate the average fitted probabilties, when varying one $X$, and holding other $X$'s constant over multiple values of other $X$'s.
+
+-   Or in other words, we vary one/two $X$
+
+-   The other $X$'s we hold constant. But we do this multiple times at different values of $X$
+
+-   Then we average out the effect of our $X$'s with the different values of $X$.
+
+<br />
+
+### Classification
+
+If your goal is not the probabilities, but the actual values of $Y$, you will want to do classification.
+
+-   So, our output is not probability $\hat{\pi}_i$, but either 0 or 1 for $\hat{Y}_i$.
+
+So basically, we first calculate the probabilities in logit $\hat{\pi}_i$, then we assign observations to either $\hat{Y} = 0$ or $\hat{Y}=1$ based on the probabilities.
+
+-   Typically, if $\hat{\pi}_i > 0.5$, then you assign to $\hat{Y}_i = 1$.
+
+-   Although, you can alter this threshold depending on considerations with the application (example: are you scared of accidentally classifying to $Y = 1$, you might want to raise the threshold).
+
+<br />
