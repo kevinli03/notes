@@ -70,9 +70,8 @@ For example, in the figure below, if we regress $D$ on $Y$, we are capturing bot
 
 -   $C$ is basically the selection bias - a variable that affects who goes into treatment. For example, if the treatment is hospital, $C$ might be prior health of the individual.
 
-```{=html}
 <!-- -->
-```
+
 -   However, we want to only find the direct causal effect of $D$ on $Y$, not the other section. How do we isolate $D \rightarrow Y$ without the effect of $O \rightarrow Y$.
 
 ![](figure7.1.png){width="35%"}
@@ -93,9 +92,8 @@ Under the selection on observables, we make the assumption that assignment to tr
 
 -   Some confounding variables that are observable, causes units to be assigned into either treatment or control.
 
-```{=html}
 <!-- -->
-```
+
 -   If we observe all the confounders that caused units to be assigned to treatment, we can partial out that confounding variable and eliminate selection bias.
 
 <br />
@@ -148,9 +146,8 @@ Common Support Assumption: we observe participants and non-participants with the
 
 -   Mathematically: $0 < Pr(D = 1|X) < 1$
 
-```{=html}
 <!-- -->
-```
+
 -   We need treated and untreated individuals within every $X$ category/level of observable characteristic. This allows us to find the potential outcomes.
 
 -   In our example, we need to have both abducted and non abducted units in the young, middle, and old age group (and every age group).

@@ -3,11 +3,14 @@ title: "Kevin's Notes 2024-2025"
 output:
   html_document:
     df_print: paged
-    toc: yes
+    toc: true
     toc_float:
       collapsed: false
     toc_depth: 4
     theme: lumen
+  pdf_document:
+    toc: true
+    toc_depth: '4'
 ---
 
 ```{r setup, include=FALSE}
@@ -130,7 +133,7 @@ Course Content (Lectures, Readings, Problems):
 
 <!-- -->
 
-7.  Elections as Incentive Devices, Counter-terrorism, Repeated Games
+7.  [Applied Dynamic Games and Repeated Games](https://kevinli03.github.io/notes/GV4C8/7.html)
 8.  Imperfect and Incomplete Information, Bayesian Nash Equilibrium
 9.  Perfect Bayesian Equilibrium
 10. Signalling and Elections as Accountability Mechanism
@@ -160,7 +163,7 @@ Course Content (Lectures, Readings, and Problems):
 
 <!-- -->
 
-7.  Binary Logistic Regression I: Definition and Interpretation
+7.  [Binary Logistic Regression I: Definition and Interpretation](https://kevinli03.github.io/notes/MY452A/7.html)
 8.  Binary Logistic Regression II: Estimation and Inference
 9.  Models for Polytomous Responses
 10. Models for Counts
