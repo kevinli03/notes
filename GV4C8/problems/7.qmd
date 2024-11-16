@@ -35,7 +35,7 @@ format:
 
 ## Part b) Majority Rule
 
-**2nd round**: What budget would player $i$ propose here?
+**2nd round**: What budget would player $i$ (being rational) propose here?
 
 -   $i$ must propose some budget that themselves, and one other player want to accept (since majority rule).
 
@@ -75,16 +75,38 @@ Player 1 is proposing. They must get one other player on board with their propos
 Thus, player 1 (maximising their own payoff) would propose: $(100 - 25\delta, \ 0, \ 25\delta)$.
 
 ::: callout-tip
-## My Answer
+## My Answer for SPNE Outcome
 
 Thus SPNE outcome is:
 
 -   P1 proposes budget $(100 - 25\delta, \ 0, \ 25\delta)$
 
 -   P3 and P1 accepts that budget, P2 rejects. That is a majority. Thus that is final budget.
-
-Formal SPNE depends on $\delta$ value (since round 2 is off equilibrium path), but i'm too lazy.
 :::
+
+**Formal SPNE**
+
+There are 5 different nodes of decisions for each player, where they have to make a decision (accept/reject). Why 5:
+
+1.  1st round, when player 1 proposes $(100 - 25\delta, \ 0, \ 25\delta)$. We know in SPNE, player 1 and 3 accept, player 2 rejects.
+2.  2nd round, when player 1 proposes $(75, 25, 0)$. We know that player 1 and 2 will accept, player 3 rejects.
+3.  2nd round, when player 2 proposes $(25, 75, 0)$. We know that player 2 and 1 will accept, player 3 rejects.
+4.  2nd round, when player 3 proposes and chooses P1 as coalition partner $(25, 0 , 75)$. We know player 3 and 1 accept, player 2 rejects.
+5.  2nd round, when player 3 proposes and chooses P2 as coalition partner $(0, 25, 75)$. We know that player 3 and 2 accept, player 1 rejects.
+
+::: callout-tip
+## My Answer for SPNE
+
+Thus, the SPNE of this game is:
+
+$$
+((A A A A R), (R A A R A), (A R R A A))
+$$
+
+Where each player's strategies follow the orders of the 5 nodes listed above.
+:::
+
+ 
 
 ## Part c) Unanimity
 
@@ -117,7 +139,7 @@ Thus SPNE outcome is:
 
 -   All 3 players agree, budget is passed.
 
-&nbsp;
+ 
 
 Formally, SPNE is (given 1st strategy is 1st round, 2nd strategy is 2nd round):
 
