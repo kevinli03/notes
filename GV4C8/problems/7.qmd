@@ -1,0 +1,129 @@
+---
+title: "Problem Set Week 7"
+subtitle: "GV4C8 Game Theory for Political Science"
+author: "Kevin Li"
+format:
+    pdf:
+        documentclass: article
+        papersize: A4
+        geometry:
+            - width=150mm
+            - height=238mm
+            - top=27mm
+        linestretch: 1.25
+---
+
+# Question 3
+
+**Distributive politics (bargaining over the division of a pie with more than 2 players). Three legislators need to distribute a budget of 100. There are two rounds of negotiations.**
+
+-   **In the first round player 1 proposes a distribution of the budget among the 3 legislators. If a majority accepts the budget the game ends and the budget distributed accordingly. If the budget is rejected, the game continues to the second round.**
+
+-   **In the second round, one of the 3 players is randomly selected to propose a distribution. If a majority accepts the budget the game ends and the budget distributed accordingly. If the budget is rejected, the status quo budget (25, 25, 50) is implemented.**
+
+**Assume that players discount the future by δ and that the payoff of the players in each period is equal to the money they get.**
+
+-   **a) Model this situation as an extensive form game**
+
+-   **b) Solve the game by backwards induction. What is the SPNE of the game? (Assume that legislators vote in favour of a budget when they are indifferent)**
+
+-   **c) Assume now that unanimity is required for a proposal to be accepted (i.e. all legislators need to vote in favour). How would your responses to a and b change?**
+
+## Part a) Model
+
+![](figures/figure7.jpeg){fig-align="center" width="60%"}
+
+## Part b) Majority Rule
+
+**2nd round**: What budget would player $i$ propose here?
+
+-   $i$ must propose some budget that themselves, and one other player want to accept (since majority rule).
+
+-   $i$ also wants to maximise their own payoff. The other players will only accept if the proposal gives them equal or more payoff.
+
+-   Thus, $i$ will select a coalition partner of either player 1 or player 2 (since it makes no sense to partner with player 3, since you would need to give them 50 or more payoff).
+
+Thus, player $i$ will propose a budget such that they get 75, one other player (player 1 or 2) gets 25, and the third player always gets 0.
+
+ 
+
+Now, let us calculate the expected utilities of each player in this second round. Note that all of second round is discounted by $\delta$.
+
+Thus, expected utilities of the second round are:
+
+1.  $\mathbb{E}[u_1] = \left[\frac{1}{3}(75) + \frac{1}{3}(25) + \frac{1}{3}(\frac{1}{2})(25) \right] \delta = (\frac{100}{3} + \frac{25}{6})\delta = \frac{225}{6} = \frac{75}{2} \delta$
+    -   Why? if P1 is selected as proposer (1/3 chance), she get 75
+    -   If P2 is selected as proposer (1/3 chance), P1 is in coalition, get 25
+    -   If P3 is selected as proposer (1/3 chance), there is 1/2 chance they are in coalition.
+2.  $\mathbb{E}[U_2] = \left[ \frac{1}{3} (25) + \frac{1}{3}(75) + \frac{1}{3}(\frac{1}{2})(25) \right] \delta = \frac{75}{2} \delta$
+    -   If P1 is selected as proposer (1/3 chance), P2 is in coalition, get 25
+    -   If P2 is selected as proposer (1/3 chance), she gets 75
+    -   If P3 is selected as proposer (1/3 chance), there is 1/2 chance they are in coalition.
+3.  $\mathbb{E} [u_3] = \left[ \frac{1}{3}(0) + \frac{1}{3}(0) + \frac{1}{3}(75) \right] \delta = 25\delta$
+    -   If P1 is selected as proposer (1/3 chance), they never choose P3 as coalition partner
+
+    -   If P2 is selected as proposer (1/3 chance), they never choose P3 as coalition partner
+
+    -   If P3 is selected as proposer (1/3 chance), they get 75
+
+**1st round:**
+
+Player 1 is proposing. They must get one other player on board with their proposal. Which player should they form the coalition with?
+
+-   Well, since $25\delta < \frac{75}{2} \delta$, then player 1 should include player 3 in the coalition since they are less costly to convince.
+
+Thus, player 1 (maximising their own payoff) would propose: $(100 - 25\delta, \ 0, \ 25\delta)$.
+
+::: callout-tip
+## My Answer
+
+Thus SPNE outcome is:
+
+-   P1 proposes budget $(100 - 25\delta, \ 0, \ 25\delta)$
+
+-   P3 and P1 accepts that budget, P2 rejects. That is a majority. Thus that is final budget.
+
+Formal SPNE depends on $\delta$ value (since round 2 is off equilibrium path), but i'm too lazy.
+:::
+
+## Part c) Unanimity
+
+**2nd round**: What budget would player $i$ propose here?
+
+-   If they want proposal to be accepted, they must propose $(25, 25, 50)$, since that is the only way to not make anyone else worse off (compared to status quo) given the limited budget.
+
+Thus, expected utilities are (doesn't matter proposer or not, since status quo and proposed budget are the same):
+
+-   $\mathbb{E}[u_1] = 25 \delta$
+
+-   $\mathbb{E}[u_2] = 25 \delta$
+
+-   $\mathbb{E}[u_3] = 50 \delta$
+
+ 
+
+**1st round**: player 1 is proposing. Must make all players better off than the expected 2nd round utilities in order to pass budget.
+
+Thus, P1 will give P2 and P3 their expected 2nd round utilities (since indifference means acceptance), and P1 will take the remainder - $100 - 25 \delta - 25 \delta = 100 - 75 \delta$.
+
+Thus, proposal will be: $(100 - 75 \delta, \ 25 \delta, \ 50 \delta)$.
+
+::: callout-tip
+## My Answer
+
+Thus SPNE outcome is:
+
+-   Player 1 proposes budget $(100 - 75 \delta, \ 25 \delta, \ 50 \delta)$\$
+
+-   All 3 players agree, budget is passed.
+
+&nbsp;
+
+Formally, SPNE is (given 1st strategy is 1st round, 2nd strategy is 2nd round):
+
+$$
+(AA, AA, AA)
+$$
+
+Assuming players rationally propose budget proposals (i.e. give themselves the most possible budget while ensuring enough are on board to pass the budget).
+:::
