@@ -50,6 +50,42 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ------------------------------------------------------------------------
 
+# Polished Notes (In Progress)
+
+This series of notes on Methods in Political Science and Political Economics includes 3 sequences: Econometrics Sequence, Political Economics Sequence, and the Quantitative Methods Sequence.
+
+**NOTE:** This is a work in progress, everything is incomplete.
+
+<br />
+
+### Econometric Methods
+
+This series introduces econometric/statistical methods for analysing political phenomena empirically.
+
+1.  [Volume I: Causal Inference and Regression](https://kevinli03.github.io/metrics/1.pdf). Topics inculde: causal estimands, random experiments, linear regression, logistic regression, regression for counts.
+2.  [Volume II: Causal Estimation for Observational Studies](https://kevinli03.github.io/metrics/2.pdf). Topics include: selection on observables, instrumental variables estimator, differences-in-differences, regression discontinuity, survey experiments.
+3.  [Volume III: Topics in Measurement](https://kevinli03.github.io/metrics/3.pdf). Topics include: principle components analysis, models for latent variables, cluster analysis, naive bayes, random forest, dictionary methods, structural equation models.
+
+### Economic Modelling of Politics
+
+This series introduces using economic theory to model political behaviour and institutions.
+
+1.  [Volume I: Microeconomic Game Theory](https://kevinli03.github.io/polecon/1.pdf). Topics include: preferences and utility functions, pure and mixed nash equilibrium, dynamic games, bayesian games of incomplete information.
+2.  [Volume II: Formal Models of Politics](https://kevinli03.github.io/polecon/2.pdf). Topics include:
+3.  [Volume III: Advanced Game Theory](https://kevinli03.github.io/polecon/3.pdf). Topics include:
+
+### Quantitative Methods
+
+This companion series provides useful mathematical and statistical background knowledge. Volume I is highly recommended before starting any of the other series in these notes.
+
+1.  [Volume I: Calculus and Statistical Theory](https://kevinli03.github.io/math/1.pdf). Topics include: algebra review, single variable calculus, basic probability theory, random variables.
+2.  [Volume II: Linear Algebra and Multivariate Calculus](https://kevinli03.github.io/math/2.pdf). Topics include: matrices, system of linear equations, eigenvalues and markov chains, multivariate integration and differentiation.
+3.  [Volume III: Proof and Analysis](https://kevinli03.github.io/math/5.pdf). Topics include:
+
+<br />
+
+------------------------------------------------------------------------
+
 # Introductory Courses
 
 ### GV4L8 Introductory Maths
