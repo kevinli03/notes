@@ -134,7 +134,7 @@ Course Content (Lectures, Readings, and Problems):
 <!-- -->
 
 7.  [Selection on Observables](https://kevinli03.github.io/notes/GV481/7.html)
-8.  Instrumental Variables
+8.  [Instrumental Variables](https://kevinli03.github.io/notes/GV481/8.html)
 9.  Regression Discontinuity
 10. Differences-in-Differences
 11. Survey Experiements

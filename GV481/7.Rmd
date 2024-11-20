@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Title: Selection on Observables
 
--   Topics: Randomisation
+-   Topics: Subclassification, Matching, Fully Saturated Regression, Propensity Score Matching
 
 -   Readings:
 

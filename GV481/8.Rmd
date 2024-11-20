@@ -1,0 +1,349 @@
+---
+title: "Instrumental Variables"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+**Week 7, GV481 Quantitative Analysis for Political Science**
+
+-   Title: Instrumental Variables
+
+-   Topics:
+
+-   Readings:
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# **Instrumental Variables Design**
+
+### Reverse Causality and Compliance
+
+We want to identify the effect of some treatment $D$ on some outcome $Y$.
+
+-   However, reverse causality is also an issue - $Y$ also affects $D$
+
+-   For example, economic development could cause democracy, but democracy could also cause economic development.
+
+-   For example: Watching fox news might cause someone to vote republican, but being a republican might cause someone to watch fox news.
+
+<br />
+
+A similar problem is a randomised controlled trial with non-compliance
+
+-   Some people may not comply with treatment assignment (and we cannot force them to).
+
+-   That means some units assigned to treatment do not receive the treatment, and some units assigned to control do receive the treatment.
+
+-   But why do they choose to non-comply? This could be due to some confounding variable, thus inserting selection bias.
+
+-   One sided noncompliance - only non-compliance in one direction (only treatment non-compliance OR control non-compliance, not both)
+
+-   Two sided non-compliance - when both directions have non compliance.
+
+<br />
+
+### Solution: Instruments
+
+To solve this problem, we can use an instrument.
+
+-   We find a variable $Z$, that creates some exogenous (random) variation in $D$.
+
+-   We only focus on the effect of $D$ on $Y$, that comes from this exogenous variation in $D$.
+
+-   We will call $Z$ an instrumental variable.
+
+This random variation of $Z$ on $D$, gets rid of the effect of $Y$ on $D$.
+
+<br />
+
+For example, civil war and poverty both have causal effects on each other.
+
+-   How can we prove poverty causes civil war (and not the other way)
+
+-   We can introduce a shock on poverty that creates randomness of poverty.
+
+-   For example, a climate shock of a drought might randomly create poverty. Poverty arises from this random variation in rain/climate
+
+-   Now we have some randomly created poverty. This poverty is not caused by civil wars - it is caused by rain (civil war does not cause rain). Thus, we can eliminate the backwards effect of civil war on poverty, and focus on the effect of poverty on civil war.
+
+<br />
+
+### Ex: Televised Debates and Voting
+
+Question: Do televised debates change voter's opinions?
+
+In the days leading up to the final TV debate, a random controlled trial was conducted:
+
+-   Treatment group assigned to watch the debate between candidates
+
+-   Control group was assigned to watch placebo programme (some random programme)
+
+-   The ATE would show if televised debate would cause increased voting for either certain candidate.
+
+<br />
+
+However, there was non-compliance. Some people who were in the control group watched the debate, and some who were to watch the debate did not.
+
+-   This is an issue - we don't know why people would not-comply - it could be due to a confounding variable (thus creating selection bias).
+
+-   We had two-sided non-compliance here in this study.
+
+<br />
+
+### Ex: Migration and Tolerance
+
+Question: What is the effect of migration on migrant's tolerance
+
+A random controlled trial took place:
+
+-   Treatment group was "encouraged" to migrate with job training programmes
+
+-   Control group was not encouraged.
+
+-   The ATE would show if migration increased tolerance.
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# **IV Estimands**
+
+### Instrument and Treatment
+
+Let us denote $Z_i$ as a binary instrument:
+
+-   where $Z_i = 1$ if unit is assigned to recieve treatment
+
+-    $Z_i = 0$ if unit $i$ is assigned to receive control.
+
+Now, let us denote $D_i$ as the potential treatment status of a unit $i$ given $Z_i = z$:
+
+-   $D_{iz} = 1$ if unit $i$ takes the treatment given $Z_i = z$
+
+-   $D_{iz} = 0$ if unit $i$ does not take the treatment given $Z_i = z$
+
+The observed treatment outcome is $D_i$. It is such that:
+
+-   $D_i = D_{i1}$ if $Z_i = 1$ - so basically, what outcome we observe, given they are assigned to treatment.
+
+-   $D_i = D_{i0}$ if $Z_i = 0$. - so basically, what outcome we observe, given they are assigned to control.
+
+-   $D_i = 1$ means observed treatment, and $D_i = 0$ means observed control.
+
+<br />
+
+### Units and Potential Outcomes
+
+Compliers are units who take the treatment if assigned, and don't take the treatment if not
+
+-   $D_{i0} = 0$ and $D_{i1} = 1$ - essentially, their observed outcome is equal to their assignment $Z_i$
+
+Always-takers are units who always take the treatment, regardless of whether they were assigned to the treatment or not.
+
+-   $D_{i1} = 1$ and $D_{i0} = 1$ - essentially, their observed outcome is always 1 (take treatment), regardless of assignment $Z_i$
+
+Never-takers are units who never take the treatment, regardless of whether they were assigned or not.
+
+-   $D_{i1} = 0$ and $D_{i0} = 0$ - essentially, their observed outcome is always 0 (take control), regardless of assignment $Z_i$
+
+Defiers are units who take the treatment if not assigned, and don't take the treatment if assigned.
+
+-   $D_{i0} = 0$ and $D_{i1} = 1$ - essentially, their observed outcome is never equal to their assignment $Z_i$
+
+<br />
+
+### Potential Outcomes
+
+Every unit has 4 potential outcomes, that depend on both the treatment and the instrument
+
+-   $Y_i (D_i = 1, Z_i = 1)$ - i.e. people who undertook treatment, and were assigned to treatment (so they complied)
+
+-   $Y_i (D_i = 1, Z_i = 0)$ - i.e. people who undertook treatment, but were not assigned to treatment (did not comply)
+
+-   $Y_i(D_i = 0, Z_i = 1)$ - i.e. people who did not undertake treatment, but were assigned to treatment (did not comply)
+
+-   $Y_i (D_i = 0, Z_i = 0)$ - i.e. people who did not undertake treatment, and were not assigned to treatment (so they complied)
+
+<br />
+
+### Assumptions for Identification
+
+Assumption 1: Exogeniety of the Instrument:
+
+-   The instrument is as-if randomly assigned (so the instrument is random either 1 or 0).
+
+-   Or in other words, the instrument is independent of the potential outcomes.
+
+<br />
+
+Assumption 2: Exclusions Restriction:
+
+-   The instrument $Z$ has no independent effect on $Y$. The instrument $Z$ only has an effect on the outcome through the treatment $D$.
+
+-   I.e. $Z \rightarrow D \rightarrow Y$ is okay, while $Z \rightarrow Y$ is not okay (violates the assumption)
+
+-   Mathematically: $Y_i (D_i = 1, Z_i = 1) = Y_i(D_i = 1, Z_i = 0)$, and $Y_i (D_i = 0, Z_i = 1) = Y_i(D_i = 0, Z_i = 0)$. Through this, you can see that changing $Z_i$ does not change the value of $Y$.
+
+-   There is no way to test the exclusions restrictions. You must have some rationale behind the instrument.
+
+Under this assumption, we are left with our normal two potential outcomes: $Y_{1i}$ and $Y_{0i}$ (since only $D$ matters, $Z$ does not affect $Y$).
+
+<br />
+
+Assumption 3: First Stage Relationship
+
+-   The instrument must have an effect on the treatment.
+
+-   Basically means that there must be some compilers in both the treatment and control group.
+
+-   Mathematically: $Pr(D_{i1} = 1) ≠ Pr(D_{i0} = 1)$.
+
+<br />
+
+Assumptions 4: Monotonicity
+
+-   Says the instrument has a uniform effect on the treatment (either encourages units to take the treatment, or discourages units to not take the treatment). The instrument has some statistically significant effect on the treatment.
+
+```{=html}
+<!-- -->
+```
+-   Essentially means there are no defiers - who intentionally do the opposite.
+
+-   Mathematically: $D = D^{z = 0} + \kappa Z$ and either $\kappa ≥ 0$ for all $i$ or $\kappa ≤ 0$ for all $i$
+
+-   You can regress this to test this. It must be a statistically significant relationship.
+
+<br />
+
+### Estimands
+
+This first assumption alone (exogeniety of the instrument) gives us the **intent-to-treat (ITT) effect**
+
+-   The causal effect of the treatment assignment ignoring non-compliance (basically ATE but based on random instrument $Z$):
+
+$$
+\tau_{ITT} = \mathbb{E}[Y_i|Z_i = 1] - \mathbb{E} [Y_i | Z_i = 0]
+$$
+
+All 4 assumptions + SUTVA allows us to estimate the **Local Average Treatment Effect (LATE)**.
+
+-   Essentially, it is the ATE of people who comply.
+
+$$
+\tau_{LATE} = \mathbb{E}[Y_{1i} - Y{0i}|D_{i1} > D_{i0}]
+$$
+
+$$
+\text{or} \quad \frac{\tau_{ITT}}{\mathbb{E}[D_i | Z_i = 1] - \mathbb{E}[D_i|Z_i = 0]} = \frac{\tau_{ITT}}{\text{propotion of compliers}}
+$$
+
+Notes:
+
+-   In the first equation $D_{i1} > D_{i0}$ essentially means the treatment uptake of people assigned to treatment (value 1) should be greater than the treatment of people assigned to control (value 0). If you comply, you should meet this condition.
+
+-   The bottom equation $\mathbb{E}[D_i | Z_i = 1] - \mathbb{E}[D_i|Z_i = 0]$ is equal to the proportion of compliers. This is because the first part is the proportion of compliers in the treatment group, and the second gives you the proportion of non-compliers in the control group (since $\mathbb{E}[D_i]$ is proportion of $D_i = 1$ who take the treatment).
+
+We will discuss how to estimate these estimands.
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV481 Homepage](https://kevinli03.github.io/notes/#GV481_Quantitative_Analysis)
+
+# **IV Estimation**
+
+### Wald Estimator
+
+The wald estimator computes the LATE is just by following the definition of the LATE:
+
+$$
+\tau_{LATE} = \frac{\tau_{ITT}}{\mathbb{E}[D_i | Z_i = 1] - \mathbb{E}[D_i|Z_i = 0]}
+$$
+
+We estimate the numerator and denominator seperately. First, estimate the $\tau_{ITT}$
+
+$$
+\tau_{ITT} = \mathbb{E}[Y_i|Z_i = 1] - \mathbb{E} [Y_i | Z_i = 0]
+$$
+
+This is just a difference of means based on categories of $Z$.
+
+$$
+\tau_{ITT} = \bar{Y}_{Z_i = 1} - \bar{Y}_{Z_i = 0}
+$$
+
+We can calculate this by regression $Y \sim Z$.
+
+<br />
+
+The proportion of compliance is:
+
+$$
+\text{% compliance} = \bar{D}_{Z_i = 1} - \bar{D}_{Z_i = 0}
+$$
+
+We can estimate this by regression $D \sim Z$.
+
+<br />
+
+Then, put two together to get the LATE:
+
+$\tau_{LATE} = \frac{\bar{Y}_{Z_i = 1} - \bar{Y}_{Z_i = 0}}{\bar{D}_{Z_i = 1} - \bar{D}_{Z_i = 0}}$
+
+<br />
+
+### 2 Stage Least Squares Approach
+
+An alternative method for estimating LATE is the 2 stage least squares approach (much more useful for continuous $Z$ and $D$).
+
+We create two stages of regression:
+
+1.  First stage - regress $D \sim Z$ as follows: $D_i = \alpha_1 + \beta_1 Z_i + \epsilon_{1i}$
+2.  Second stage - regression $Y \sim \hat{D}$ as follows: $Y_i = \alpha_2 + \beta_2 \hat{D}_i + \epsilon_{2i}$.
+
+Where $\hat{D}$ are the $D_i$ we estimated from the first stage.
+
+The $\beta_2$ in the 2nd stage is an estimate of $\tau_{LATE}$.
+
+<br />
+
+The R function for this is as follows:
+
+```{r, eval = FALSE}
+model <- feols(Y ~ 1 | D ~ Z, data = mydata, se = "hetero")
+```
