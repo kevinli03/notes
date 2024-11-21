@@ -340,9 +340,3 @@ Where $\hat{D}$ are the $D_i$ we estimated from the first stage.
 The $\beta_2$ in the 2nd stage is an estimate of $\tau_{LATE}$.
 
 <br />
-
-The R function for this is as follows:
-
-```{r, eval = FALSE}
-model <- feols(Y ~ 1 | D ~ Z, data = mydata, se = "hetero")
-```

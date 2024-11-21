@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Topics:
 
--   Readings:
+-   Readings: 20:43
 
 <br />
 
@@ -54,3 +54,68 @@ Thus, this is incomplete information:
 <!-- -->
 ```
 -   We will need to introduce a way to update beliefs when new information is available.
+
+<br />
+
+For example, in an extensive form game, so far, all players know which node the game is at.
+
+-   But in incomplete information, you might not know which action your player took. Let us say they had 2 possible actions in the round prior. That means you could be at either one of the 2 nodes.
+
+-   Thus, players need to form beliefs on what node that are at.
+
+<br />
+
+### Extensive Form with Incomplete Info
+
+An extensive game with incomplete information consists of:
+
+1.  A set of players
+2.  An order of play (which player moves when, timing)
+3.  Nodes are partitioned into information sets (defined later)
+4.  At each information set, you will have a set of action
+5.  For each player, preferences over complete sequences of actions.
+
+<br />
+
+Previous to this point, information sets were just one node - we knew which node we were at.
+
+-   Now, players cannot distinguish between nodes within each set
+
+-   For example, if you are unsure of which node you are at between A and B, that means nodes A and B are part of an information set
+
+Strategies now specify action at each information set (not each node)
+
+-   Why? You don't know which node you are at within an information set, so you cannot choose different actions for each node within the information set.
+
+-   Set of actions available at each node within an information set should coincide (same actions at each node within an information set, or else, if the actions differ between the nodes, you will know which node you are at).
+
+<br />
+
+### Battle of the Sexes
+
+Recall the battle of the sexes - two individuals, trying to decide on where to go on a date. They want to be together, but they have different preferences on where to go.
+
+1.  Let us assume Alex (female) moves first, and decides to either go to the opera or football
+2.  Chris (male) moves second, but he is unaware of what Alex has chosen.
+
+We can model the game as follows:
+
+![](figure8.1.png){width="50%"}
+
+The red line represents both nodes are part of one information set.
+
+<br />
+
+------------------------------------------------------------------------
+
+[GV4C8 Homepage](https://kevinli03.github.io/notes/#GV4C8_Game_Theory)
+
+# SPNE with Incomplete Info
+
+### Subgames
+
+Remember, a subgame perfect nash equilibria requires all players to act optimally in all nodes.
+
+A subgame of an extensive game, is a game consisting of any information set containing a single node, and its subsequent actions and nodes.
+
+-   Thus, this means if node $x$ is in a subgame, all other nodes in the same info set as $x$ are also in the subgame.
