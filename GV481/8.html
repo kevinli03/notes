@@ -3067,7 +3067,7 @@ Average Treatment Effect (LATE)</strong>.</p>
 <li>Essentially, it is the ATE of people who comply.</li>
 </ul>
 <p><span class="math display">\[
-\tau_{LATE} = \mathbb{E}[Y_{1i} - Y{0i}|D_{i1} &gt; D_{i0}]
+\tau_{LATE} = \mathbb{E}[Y_{1i} - Y_{0i}|D_{i1} &gt; D_{i0}]
 \]</span></p>
 <p><span class="math display">\[
 \text{or} \quad \frac{\tau_{ITT}}{\mathbb{E}[D_i | Z_i = 1] -
@@ -3111,21 +3111,21 @@ the <span class="math inline">\(\tau_{ITT}\)</span></p>
 \]</span></p>
 <p>This is just a difference of means based on categories of <span class="math inline">\(Z\)</span>.</p>
 <p><span class="math display">\[
-\tau_{ITT} = \bar{Y}_{Z_i = 1} - \bar{Y}_{Z_i = 0}
+\tau_{ITT} = \bar{Y}_{Zi = 1} - \bar{Y}_{Zi = 0}
 \]</span></p>
 <p>We can calculate this by regression <span class="math inline">\(Y
 \sim Z\)</span>.</p>
 <p><br /></p>
 <p>The proportion of compliance is:</p>
 <p><span class="math display">\[
-\text{% compliance} = \bar{D}_{Z_i = 1} - \bar{D}_{Z_i = 0}
+\text{% compliance} = \bar{D}_{Zi = 1} - \bar{D}_{Zi = 0}
 \]</span></p>
 <p>We can estimate this by regression <span class="math inline">\(D \sim
 Z\)</span>.</p>
 <p><br /></p>
 <p>Then, put two together to get the LATE:</p>
-<p><span class="math inline">\(\tau_{LATE} = \frac{\bar{Y}_{Z_i = 1} -
-\bar{Y}_{Z_i = 0}}{\bar{D}_{Z_i = 1} - \bar{D}_{Z_i = 0}}\)</span></p>
+<p><span class="math inline">\(\tau_{LATE} = \frac{\bar{Y}_{Zi = 1} -
+\bar{Y}_{Zi = 0}}{\bar{D}_{Zi = 1} - \bar{D}_{Zi = 0}}\)</span></p>
 <p><br /></p>
 </div>
 <div id="stage-least-squares-approach" class="section level3">

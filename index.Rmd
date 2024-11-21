@@ -170,7 +170,7 @@ Course Content (Lectures, Readings, Problems):
 <!-- -->
 
 7.  [Applied Dynamic Games and Repeated Games](https://kevinli03.github.io/notes/GV4C8/7.html) \| [Problem Set Week 7](https://kevinli03.github.io/notes/GV4C8/problems/7.pdf)
-8.  Imperfect and Incomplete Information, Bayesian Nash Equilibrium
+8.  [Introduction to Incomplete Information](https://kevinli03.github.io/notes/GV4C8/8.html)
 9.  Perfect Bayesian Equilibrium
 10. Signalling and Elections as Accountability Mechanism
 

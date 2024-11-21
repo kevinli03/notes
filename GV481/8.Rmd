@@ -263,7 +263,7 @@ All 4 assumptions + SUTVA allows us to estimate the **Local Average Treatment Ef
 -   Essentially, it is the ATE of people who comply.
 
 $$
-\tau_{LATE} = \mathbb{E}[Y_{1i} - Y{0i}|D_{i1} > D_{i0}]
+\tau_{LATE} = \mathbb{E}[Y_{1i} - Y_{0i}|D_{i1} > D_{i0}]
 $$
 
 $$
@@ -303,7 +303,7 @@ $$
 This is just a difference of means based on categories of $Z$.
 
 $$
-\tau_{ITT} = \bar{Y}_{Z_i = 1} - \bar{Y}_{Z_i = 0}
+\tau_{ITT} = \bar{Y}_{Zi = 1} - \bar{Y}_{Zi = 0}
 $$
 
 We can calculate this by regression $Y \sim Z$.
@@ -313,7 +313,7 @@ We can calculate this by regression $Y \sim Z$.
 The proportion of compliance is:
 
 $$
-\text{% compliance} = \bar{D}_{Z_i = 1} - \bar{D}_{Z_i = 0}
+\text{% compliance} = \bar{D}_{Zi = 1} - \bar{D}_{Zi = 0}
 $$
 
 We can estimate this by regression $D \sim Z$.
@@ -322,7 +322,7 @@ We can estimate this by regression $D \sim Z$.
 
 Then, put two together to get the LATE:
 
-$\tau_{LATE} = \frac{\bar{Y}_{Z_i = 1} - \bar{Y}_{Z_i = 0}}{\bar{D}_{Z_i = 1} - \bar{D}_{Z_i = 0}}$
+$\tau_{LATE} = \frac{\bar{Y}_{Zi = 1} - \bar{Y}_{Zi = 0}}{\bar{D}_{Zi = 1} - \bar{D}_{Zi = 0}}$
 
 <br />
 
