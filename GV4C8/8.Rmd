@@ -509,7 +509,7 @@ $$
 Bayes' rule forms a relationship between the two conditional probabilities:
 
 $$
-Pr(A|B) = \frac{Pr(B|A) Pr(A)}{Pr(B)}
+Pr(A|B) = \frac{Pr(B|A) Pr(A)}{Pr(B)} \qquad \text{posterior} = \frac{\text{likelihood} \times \text{prior}}{\text{marginal}}
 $$
 
 We can also arrange the bottom as:
