@@ -313,7 +313,7 @@ We can calculate this by regression $Y \sim Z$.
 The proportion of compliance is:
 
 $$
-\text{% compliance} = \bar{D}_{Zi = 1} - \bar{D}_{Zi = 0}
+\text{proportion compliance} = \bar{D}_{Zi = 1} - \bar{D}_{Zi = 0}
 $$
 
 We can estimate this by regression $D \sim Z$.

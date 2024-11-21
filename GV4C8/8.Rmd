@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Topics:
 
--   Readings: 20:43
+-   Readings: 20:58
 
 <br />
 
@@ -119,3 +119,7 @@ Remember, a subgame perfect nash equilibria requires all players to act optimall
 A subgame of an extensive game, is a game consisting of any information set containing a single node, and its subsequent actions and nodes.
 
 -   Thus, this means if node $x$ is in a subgame, all other nodes in the same info set as $x$ are also in the subgame.
+
+For example: this below is a subgame:
+
+![](figure8.2.png){width="50%"}

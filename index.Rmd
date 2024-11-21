@@ -62,7 +62,7 @@ This series of notes on Methods in Political Science and Political Economics inc
 
 This series introduces econometric/statistical methods for analysing political phenomena empirically.
 
-1.  [Volume I: Causal Inference and Regression](https://kevinli03.github.io/metrics/1.pdf). Topics inculde: causal estimands, random experiments, linear regression, logistic regression, regression for counts.
+1.  [Volume I: Causal Inference and Regression](https://kevinli03.github.io/metrics/1.pdf). Topics include: causal estimands, random experiments, linear regression, logistic regression, regression for counts.
 2.  [Volume II: Causal Estimation for Observational Studies](https://kevinli03.github.io/metrics/2.pdf). Topics include: selection on observables, instrumental variables estimator, differences-in-differences, regression discontinuity, survey experiments.
 3.  [Volume III: Topics in Measurement](https://kevinli03.github.io/metrics/3.pdf). Topics include: principle components analysis, models for latent variables, cluster analysis, naive bayes, random forest, dictionary methods, structural equation models.
 
