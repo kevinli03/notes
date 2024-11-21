@@ -148,7 +148,7 @@ Let us denote $Z_i$ as a binary instrument:
 
 -   where $Z_i = 1$ if unit is assigned to recieve treatment
 
--    $Z_i = 0$ if unit $i$ is assigned to receive control.
+-   $Z_i = 0$ if unit $i$ is assigned to receive control.
 
 Now, let us denote $D_i$ as the potential treatment status of a unit $i$ given $Z_i = z$:
 
@@ -238,9 +238,8 @@ Assumptions 4: Monotonicity
 
 -   Says the instrument has a uniform effect on the treatment (either encourages units to take the treatment, or discourages units to not take the treatment). The instrument has some statistically significant effect on the treatment.
 
-```{=html}
 <!-- -->
-```
+
 -   Essentially means there are no defiers - who intentionally do the opposite.
 
 -   Mathematically: $D = D^{z = 0} + \kappa Z$ and either $\kappa ≥ 0$ for all $i$ or $\kappa ≤ 0$ for all $i$
