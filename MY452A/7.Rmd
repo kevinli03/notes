@@ -359,7 +359,7 @@ However, we can also be interested in the actual probabilities $\pi_i$ being out
 To calculate fitted probabilities, we just plug things into the model in regards to $\pi_i$, after we have estimated the coefficients $\alpha$, $\beta_1, ..., \beta_k$:
 
 $$
-\pi_i = \frac{e^{(\alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki})}}{1 + e^{(\alpha + \beta_1 X_{1i} + ... + \beta_k X_{ki})}}
+\hat{\pi}_i = \frac{e^{(\hat{\alpha} + \hat{\beta}_1 X_{1i} + ... + \hat{\beta}_k X_{ki})}}{1 + e^{(\hat{\alpha} + \hat{\beta}_1 X_{1i} + ... + \hat{\beta}_k X_{ki})}}
 $$
 
 <br />

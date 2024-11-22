@@ -200,7 +200,7 @@ Course Content (Lectures, Readings, and Problems):
 <!-- -->
 
 7.  [Binary Logistic Regression I: Definition and Interpretation](https://kevinli03.github.io/notes/MY452A/7.html)
-8.  Binary Logistic Regression II: Estimation and Inference
+8.  [Binary Logistic Regression II: Estimation and Inference](https://kevinli03.github.io/notes/MY452A/8.html)
 9.  Models for Polytomous Responses
 10. Models for Counts
 11. Further Topics

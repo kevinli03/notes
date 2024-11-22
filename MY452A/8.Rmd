@@ -1,0 +1,375 @@
+---
+title: 'Binary Logistic Regression II: Estimation and Inference'
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 4
+    theme: lumen
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+  body .main-container {
+    max-width: 1100px;
+    font-size: 12pt;
+  }
+</style>
+```
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+**Week 7, MY452A Applied Regression Analysis**
+
+-   Title: Binary Logistic Regression I: Definition and Interpretation
+
+-   Topics:
+
+-   Readings:
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# Key Points
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Estimation**
+
+### Introduction
+
+Recall that the linear regression model is estimated by the method of least squares
+
+-   Minimising the sum of squared residuals
+
+However, this approach only works with linear regression to an extent, and does not work with many other problems.
+
+<br />
+
+Instead, for binary logistic regression, we will use the method of maximum likelihood estimation
+
+-   By maximising the log likelihood function of the model
+
+-   The method of OLS is actually also maximum likelihood estimation, just a special case for linear regression with normally distributed $Y$.
+
+<br />
+
+### Maximum Likelihood Estimation
+
+The goal of maximum likelihood estimation is to find the values of the parameters of the model which maximise the probability of observed data under the fitted model
+
+For example, take this empty logistic model, when all coefficients except $\alpha$ are qual to 0:
+
+$$
+\text{logit} = \log \left( \frac{\pi_i}{1 - pi_i} \right) = \alpha
+$$
+
+Thus:
+
+$$
+\pi_i = Pr(Y_i = 1) = \frac{e^\alpha}{1 + e^\alpha}
+$$
+
+The observation $i$ does not matter since the probability $\pi$ is same for all subjects $i$
+
+<br />
+
+We have observations $Y_1, Y_2, ..., Y_n$ of a binary response variable.
+
+The **likelihood function** $l$ is the probability of observing the observed data, given $\pi$:
+
+$$
+L = \prod\limits_{i=1}^n \pi^{Yi} (1 - \pi)^{1 - Yi}
+$$
+
+With only one $\pi$ not varying with $i$, then we can simplify:
+
+$$
+L = \pi^m(1 - \pi)^{n-m}
+$$
+
+Where $m$ is the number of observations with $Y_i = 1$, and $n-m$ is the number of observations with $Y_i = 0$.
+
+<br />
+
+Now we ask the question, what value of $\pi$ would give the highest probability of observing the data we did actually see?
+
+-   The maximum likelihood estimate $\hat{\pi}$ of $\pi$ is obtained by maximizing $L$ with respect to $\pi$.
+
+-   For example, let us say in our observed data, we have 99 observations in $Y_i = 1$ cateogry, and and 1 observation in $Y_i = 1$ category. What value of $\pi$ would give the maximum likelihood of observing the data. Obviously $\pi = 0.01$ would be a poor parameter value if our sample has 99% category 1.
+
+<br />
+
+### Maximisation of Log-Likelihood
+
+It turns out that rather than maximising the likelihood function:
+
+$$
+L = \prod\limits_{i=1}^n \pi^{Yi} (1 - \pi)^{1 - Yi}
+$$
+
+It is typically easier to maximise the log likelihood function. The value of $\pi$ that maximises the original likelihood function will also maximise the log-likelihood function:
+
+$$
+\log L = \sum\limits_{i=1}^n[Y-i \log \pi + (1-Y_i) \log(1-\pi)]
+$$
+
+In very simple models (like our only $\alpha$ logit model), we can actually calculate it:
+
+$$
+\begin{split}
+\log L & = \sum\limits_{i=1}^n[Y-i \log \pi + (1-Y_i) \log(1-\pi)] \\
+\frac{\partial \log L}{\partial \pi} & = \sum\limits_{i=1}^n \left[ \frac{Y_i}{\pi} - \frac{1 - Y_i}{1 - \pi} \right] = 0 \\
+& \frac{m}{\hat{pi}} - \frac{n-m}{1 - \hat{\pi}} = 0 \\
+& \hat{\pi} = \frac{m}{n}
+\end{split}
+$$
+
+Here, the MLE is just the sample proportion of $Y_i = 1$, which is $m$ divided by $n$ (obviously).
+
+<br />
+
+### Adding Explanatory Variable
+
+If we add one explanatory variable $X$, the log-likelihood becomes
+
+$$
+\log L = \sum\limits_{i=1}^n [Y-i \log \pi + (1-Y_i) \log(1-\pi)] \quad \text{ where } \pi_i = \frac{e^{\alpha + \beta X_i}}{1 + e^{\alpha + \beta X_i}}
+$$
+
+### Gradient Descent
+
+How do you get to a mountain peak if you can't see very far (and can't see the peak)?
+
+1.  Start somewhere
+2.  Look around for the best way to go up
+3.  Go a small distance in that direction
+4.  Look around for the best way to go up
+5.  Go a small distance in that direction
+6.  Keep doing this
+7.  Stop when there is no direction when looking around that would get you further up.
+
+<br />
+
+Computer estimates the log-likelihood function with the same algorithm
+
+1.  Start somewhere
+2.  Find which direction of moving $\pi_i$ in results in the largest increase in log likelihood
+3.  Go a small distance in that direction of $\pi_i$
+4.  Find which direction of moving $\pi_i$ in results in the largest increase in log likelihood
+5.  Go a small distance in that direction of $\pi_i$
+6.  Stop when there is no direction to go that would get you a increase in log likelihood.
+
+<br />
+
+These algorithms are iterative - they repeat the basic steps until the estimates no longer improve
+
+-   For complex models, this can be difficult and slow, and not guaranteed to work
+
+-   For logistic regression, this is not too hard and works without problems, since logistic regression has a
+
+These estimation processes are used for almost any non-linear regression estimates.
+
+<br />
+
+### Properties of MLE
+
+If the sample size is not very small, MLE has several desirable properties
+
+-   Approximately unbiased (centered around the true parameter values)
+
+-   Efficient (no other estimates have smaller standard errors)
+
+-   Approximately normally distributed (have normal sampling distribution)
+
+<br />
+
+These properties also enable us to use methods of statistical inference (tests and confidence intervals) which are essentially similar to what we already know from linear regression
+
+-   But generalise to more general setting of ML estimation of many different kinds of models
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Hypothesis Testing**
+
+### Z-Test for Coefficients
+
+The most common hypothesis of interest are again:
+
+$$
+H_0 : \beta_j = 0 \quad \text{and} \quad H_1: B_j ≠ 0
+$$
+
+A test statistic for this hypothesis is:
+
+$$
+z = \frac{\hat{\beta}_j}{\widehat{SE} (\hat{\beta}_j)}
+$$
+
+The only difference between this and linear regression is because we use the standard normal distribution for the p-values, instead of the t-distribution.
+
+-   So if $z>1.96$ or $z<1.96$, then we can reject $H_0$ (assuming 5% significance level)
+
+<br />
+
+### Wald-Test Statistic
+
+The Wad test statistic is the square of the z statistic:
+
+$$
+W = \left( \frac{\hat{\beta}_j}{\widehat{SE} (\hat{\beta}_j)} \right)^2
+$$
+
+The p-value is obtained from the $\chi^2$ distribution with 1 degree of freedom.
+
+$W$ and $z$ tests for the same hypothesis are equivalent, and give the same p-value.
+
+-   Some software reports $z$, others report $W$.
+
+Wald tests can also be used to test multiple coefficients at a time.
+
+<br />
+
+### Likelihood Ratio Test
+
+Let us say you want to test multiple coefficients at a time (for example, if a polytmous categorical variable is significant). A likelihood ratio test can do this
+
+-   It can also test individual coefficients
+
+-   Essnetially, it is the F-test for logit models
+
+<br />
+
+The maximised likelihood (in a sense) is a measure of how well a model fits the observed data.
+
+-   Larger values of likelihood are good - they are more likely to explain the data below.
+
+So, the idea of the test is to compare the likelihood of two models (one model including the variables we are testing, one model without the variables we are testing)
+
+-   Then, we compare the maximised likelihood of each model
+
+-   If the difference is small, then excluding the variables do not reduce the fit of the model to a significant extent
+
+-   If the difference is large, excluding the variables did reduce the fit of the model to a significant extent.
+
+<br />
+
+We formalise this comparison using the likelihood ratio test statistic:
+
+$$
+L^2 = -2 \log \left( \frac{L_1}{L_2} \right) = 2 \log (L_2) - 2 \log (L_1)
+$$
+
+Where $L_1$ is the likelihood of the smaller model 1, and $L_2$ is the likelihood of the larger model 2.
+
+<br />
+
+The p-value is obtained from a $\chi^2$ distribution, with degrees of freedom equal to the number of extra coefficients in model 2 compared to model 1.
+
+-   Small p value means model 2 (larger) is significantly better than model 1 (smaller)
+
+-   High p value means no significant difference between model 2 and model 1
+
+<br />
+
+------------------------------------------------------------------------
+
+[MY452A Homepage](https://kevinli03.github.io/notes/#MY452A_Regression_Analysis)
+
+# **Inference with Logit**
+
+### Coefficient Confidence Intervals
+
+Confidence intervals for the coefficient $\beta_j$ are calculated in the same way, except the multiplier comes from standard normal rather than $t$-distribution:
+
+$$
+\hat{\beta}_j ±1.96 \times \widehat{SE}(\hat{\beta_j})
+$$
+
+Confidence intervals for the odds ratios are obtained by obtaining the confidence intervals of the coefficient first, then taking the exponential
+
+$$
+\left( e^{\hat{\beta}_j - 1.96 \times \widehat{SE}(\hat{\beta}_j)}, e^{\hat{\beta}_j + 1.96 \times \widehat{SE}(\hat{\beta}_j)} \right)
+$$
+
+Note: when playing with odds ratios, always do algebra on the coefficients first, then take the exponential.
+
+<br />
+
+### Prediction Confidence Intervals
+
+We can calculate fitted values as follows:
+
+$$
+\hat{\pi}_i = \frac{e^{(\hat{\alpha} + \hat{\beta}_1 X_{1i} + ... + \hat{\beta}_k X_{ki})}}{1 + e^{(\hat{\alpha} + \hat{\beta}_1 X_{1i} + ... + \hat{\beta}_k X_{ki})}}
+$$
+
+These tell us the probability $\pi$ of unit $i$ being in $Y=1$ category, given observation $i$ has values $X_{1i}, ..., X_{ki}$.
+
+We can also calculate confidence intervals for these probabilities
+
+<br />
+
+### Classification
+
+Classification is not just prediction probabilities $\pi_i$, but what category unit $i$ would be in (either category $Y=1$ or $Y=0$).
+
+-   Often, if $\pi_i > 0.5$, you would predict category $Y=1$
+
+Unlike in linear regression, where we had prediction confidence intervals, for logistic regression, this does not exist
+
+-   $Y$ can only be 1 or 0, so intervals would make no sense.
+
+<br />
+
+### Model Selection
+
+The goals and considerations of model selection are similar for logit as for linear regression.
+
+-   Some things change - $R^2$ no longer works and need to be modified, and is not common.
+
+Model selection for prediction/classification should be focused on how accurate our predictive $\hat{Y}$ match up with real observed values of $Y$.
+
+-   We can create "error rates" for classification - how many units $i$ within the total number of units $n$ does our predicted classification $\hat{Y}$ is incorrect compared to $Y$.
+
+-   Cross-validation is a way to do this with training/testing sets.
+
+<br />
+
+### Information Criteria Statistics
+
+Information criteria statistics look for a good balance between fit and parsimony of a model
+
+-   It compares the log likelihood of the model, and penalises the number of variables/parameters $k$.
+
+<br />
+
+Most common used of these is Akaike's Information Criterion (AIC):
+
+$$
+\text{AIC} = -2 \log L + 2k
+$$
+
+These are useful to compare non nested models (which likelihood ratio tests cannot be used on).
+
+-   The individual values do not mean much.
+
+-   [But the comparison between two AIC are useful. The smaller number means better model]{.underline}
+
+<br />
