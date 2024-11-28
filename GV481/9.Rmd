@@ -321,9 +321,8 @@ But with small bandwidth, the bias decreases, but the variance of $\tau$ increas
 
 -   Why bias decreases? well, we are measuring $\tau$ as we infinitely closely approach $c$, so smaller bandwidth means more comparison between similar units.
 
-```{=html}
 <!-- -->
-```
+
 -   So each observation is more influential
 
 <br />
