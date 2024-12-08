@@ -52,9 +52,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Polished Notes (In Progress)
 
-<https://statsnotes.github.io>
+Statistics Notes: <https://statsnotes.github.io>
 
-Notes on econometrics, game theory, mathematics. In progress.
+Political Science Notes: <https://politicalscience.github.io>
 
 <br />
 
