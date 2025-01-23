@@ -47,7 +47,7 @@ This is a collection of notes from my time studying at the London School of Econ
 
 Generalised Linear Model:
 
-1.  Linear Regression Model
+1.  [Linear Regression Model](https://kevinli03.github.io/notes/regression/1.html)
 2.  Logistic Regression Models
 3.  Count Regression Models
 

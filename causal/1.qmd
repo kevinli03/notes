@@ -1,6 +1,6 @@
 ---
 title: "Causal Frameworks"
-subtitle: "Kevin's Notes: Causal Inference"
+subtitle: "Kevin's PSPE Notes"
 format:
     html:
         page-layout: article
@@ -22,6 +22,22 @@ format:
         html-math-method: katex
 editor: visual
 ---
+
+::: callout-note
+## Overview
+
+This page of notes covers the following topics:
+
+-   The potential outcomes framework
+-   Causal estimands, the naive estimator, and selection bias.
+-   Graphical causal frameworks.
+
+Use the sidebar for quick navigation.
+:::
+
+<br />
+
+------------------------------------------------------------------------
 
 # **Potential Outcomes Framework**
 

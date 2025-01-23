@@ -86,7 +86,7 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Causal Frameworks</h1>
-            <p class="subtitle lead">Kevin’s Notes: Causal Inference</p>
+            <p class="subtitle lead">Kevin’s PSPE Notes</p>
                       </div>
   </div>
     
@@ -135,6 +135,27 @@ window.Quarto = {
 
 
 
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This page of notes covers the following topics:</p>
+<ul>
+<li>The potential outcomes framework</li>
+<li>Causal estimands, the naive estimator, and selection bias.</li>
+<li>Graphical causal frameworks.</li>
+</ul>
+<p>Use the sidebar for quick navigation.</p>
+</div>
+</div>
+<p><br></p>
+<hr>
 <section id="potential-outcomes-framework" class="level1">
 <h1><strong>Potential Outcomes Framework</strong></h1>
 <section id="treatment-variables" class="level3">
@@ -147,7 +168,7 @@ D_i = \begin{cases}
 \end{cases}
 </span></p>
 <div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -156,7 +177,7 @@ Additional Notes on Treatment Variables
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Causal variables/treatments must occur before the outcome. A variable cannot cause something to occur in the past.</p>
 <p>Causal variables/treatments must be able to be manipulated (in order to imagine a world where the treatment did not occur).</p>
@@ -197,7 +218,7 @@ Y_{0i} \quad \text{if } D_i = 0 \\
 <p>Before the treatment (<em>A priori</em>), both potential outcomes could be observed.</p>
 <p>After the treatment, one is <strong>observed</strong>, and the other is <strong>counterfactual</strong>. For any given experiment, only one will ever be seen, and the counterfactual will never be seen (missing data problem).</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -206,7 +227,7 @@ Neyman Urn Model
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Potential Outcomes can be visualised with the Neyman Urn Model.</p>
 <p>Before the treatment, we have a box (we cannot see) with both potential outcomes.</p>
@@ -244,7 +265,7 @@ Y_{(D_1, D_2, \dots, D_N)i} = Y_{(D_1', D_2', \dots, D_N')i}
 <li>The treatment for everyone is the same (treatment is stable and consistent)</li>
 </ul>
 <div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -253,7 +274,7 @@ Examples of SUTVA Violations
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>Spill-over effects: If we are testing a new curriculum, one student <span class="math inline">j</span> getting the new curriculum may teach their friend <span class="math inline">i</span> the new curriculum, thus affecting the potential outcomes of <span class="math inline">i</span>.</p></li>
@@ -291,7 +312,7 @@ Examples of SUTVA Violations
 <h3 class="anchored" data-anchor-id="average-treatment-effect-ate">Average Treatment Effect (ATE)</h3>
 <p>ATE is a group-level causal estimand.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -300,7 +321,7 @@ Group-Level Causal Estimands
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Consider a population of units <span class="math inline">i = 1, \dots, N</span>.</p>
 <p>The population has potential outcomes represented in two (only partially observed) vectors:</p>
@@ -335,7 +356,7 @@ Group-Level Causal Estimands
 </span></p>
 <p>This is the causal effect of <u>only variables who have received the treatment</u>.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -344,7 +365,7 @@ ATT vs.&nbsp;ATE
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>When does <span class="math inline">\tau_{ATT} = \tau_{ATE}</span>?</p>
 <ul>
@@ -402,7 +423,7 @@ ATT vs.&nbsp;ATE
 </span></p>
 <p>We can see that our naive estimator produces the <span class="math inline">\tau_{ATT}</span> <strong>plus</strong> an extra bit (called the selection bias). Thus, our naive estimator is biased, so we should be careful about using this naive estimator (correlation does not equal causation).</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -411,7 +432,7 @@ Details on Selection Bias
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
