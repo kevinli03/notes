@@ -23,19 +23,7 @@ format:
 editor: visual
 ---
 
-::: callout-note
-## Overview
-
-This page of notes covers the following topics:
-
--   The potential outcomes framework
--   Causal estimands, the naive estimator, and selection bias.
--   Graphical causal frameworks.
-
 Use the sidebar for quick navigation.
-:::
-
-<br />
 
 ------------------------------------------------------------------------
 
@@ -258,17 +246,7 @@ This estimand will go by other names, including the Local Average Treatment Effe
 
 ------------------------------------------------------------------------
 
-# **Identification**
-
-### Identification Problem
-
-We have discussed estimands. But, we cannot directly calculate these due to a lack of potential outcomes.
-
-We need some identification strategy, a combination of data and assumptions, to allow us to identify an estimand. These assumptions will help us fill in the missing potential outcomes.
-
-These identification strategies are part of estimators.
-
-<br />
+# **Selection Bias and Confounders**
 
 ### Naive Estimator and Selection Bias
 
@@ -294,6 +272,10 @@ $$
 
 We can see that our naive estimator produces the $\tau_{ATT}$ **plus** an extra bit (called the selection bias). Thus, our naive estimator is biased, so we should be careful about using this naive estimator (correlation does not equal causation).
 
-::: {.callout-tip collapse="true" appearance="simple"}
-## Details on Selection Bias
-:::
+<br />
+
+### Confounders
+
+<br />
+
+### Omitted Variable Bias in Regression

@@ -27,7 +27,7 @@ editor: visual
 ## LSE Quick Links
 
 |                                                                                                                                                                                                                                                          |                                                                                                                                                                   |                                                                                                                          |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+|---------------------------------|----------------------|------------------|
 | [Moodle](https://moodle.lse.ac.uk/my/)                                                                                                                                                                                                                   | [Course Regulations](https://www.lse.ac.uk/resources/calendar/programmeRegulations/taughtMasters/2024/MScPoliticalSciencePoliticalScienceAndPoliticalEconomy.htm) | [Timetable Info](https://info.lse.ac.uk/current-students/timetables)                                                     |
 | [Student For You](https://portal.lse.ac.uk/studentservices/s/?_gl=11c1xkmp_gcl_auMTU2NDcwMzc5MS4xNzIxMjM1NTAz_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w)                                                 | [Undergrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm)                                                                      | [Stats on LSE](https://info.lse.ac.uk/staff/divisions/academic-registrars-division/systems/what-we-do/statistics-on-lse) |
 | [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=15ghr49_gcl_auMTk0MjQzMTI2MS4xNzEzMzg0NDcy_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w) | [Postgrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm)                                                                            | [MY457 Page](https://lse-my457.github.io)                                                                                |
@@ -35,7 +35,7 @@ editor: visual
 
 This is a collection of notes from my time studying at the London School of Economics.
 
--   Topics include Statistics/Econometrics, Game Theory/Political Economy, and other materials.
+-   Topics include Statistics/Econometrics, Game Theory/Political Economy, and other materials. R-coding guide provided in statistical pages.
 -   Use the sidebar to navigate between sections.
 
 <br />
@@ -55,7 +55,7 @@ Generalised Linear Model:
 :::
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
-## Econometrics/Causal Inference
+## Applied Econometrics/Causal Inference
 
 Introductory Material:
 
@@ -70,12 +70,21 @@ Causal Identification Designs:
 6.  Differences-in-Differences
 7.  Survey Experiments
 
-Econometric Theory
-
-8.  Ordinary Least Squares Estimator
-9.  Instrumental Variables Estimator
-
 *Material in this section is taken primarily from MY457 Causal Inference for Observational and Experimental Studies. Further Material taken from GV481 Quantitative Analysis for Political Science, EC2C1 Econometrics II, EC2C3 Econometrics I, and EC2C4 Econometrics II.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Econometric Theory
+
+Econometric Theory and Estimators:
+
+1.  Properties of Estimators
+2.  Properties of the OLS Estimator
+3.  Variance of the OLS Estimator
+4.  Method of Moments and IV Estimator
+5.  Maximum Likelihood Estimator
+
+*Material in this section is taken primarily from EC2C1 Econometrics II, EC2C3 Econometrics I, and EC2C4 Econometrics II.*
 :::
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
@@ -167,10 +176,11 @@ Machine Learning Models:
 
 Models from Political Economy:
 
-1.  Median Voter Theory and Extensions
-2.  Prisoner's Dilemma and Cooperation
-3.  Legislative Bargaining Models
-4.  Models of Elections and Incentives
+1.  Basics of Game Theory
+2.  Median Voter Theory and Extensions
+3.  Prisoner's Dilemma and Cooperation
+4.  Legislative Bargaining Models
+5.  Models of Elections and Incentives
 
 *Material in this section is primarily taken from GV4C8 Game Theory for Political Science and GV482 Political Science and Political Economy.*
 :::
