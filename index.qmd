@@ -1,0 +1,213 @@
+---
+title: "Kevin's PSPE Notes"
+subtitle: "MSc Political Science & Political Economy, London School of Economics"
+format:
+    html:
+        page-layout: article
+        grid:
+          sidebar-width: 350px
+          body-width: 700px
+          margin-width: 250px
+          gutter-width: 2em
+        fontsize: 12pt
+        theme: default
+        toc: TRUE
+        toc-depth: 3
+        toc-location: left
+        toc-expand: true
+        toc-title: "Table of Contents"
+        mainfont: "Computer Modern"
+        title-block-banner: true
+        classoption: fleqn
+        html-math-method: katex
+editor: visual
+---
+
+::: {.callout-important collapse="true" icon="false"}
+## LSE Quick Links
+
+|                                                                                                                                                                                                                                                          |                                                                                                                                                                   |                                                                                                                          |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| [Moodle](https://moodle.lse.ac.uk/my/)                                                                                                                                                                                                                   | [Course Regulations](https://www.lse.ac.uk/resources/calendar/programmeRegulations/taughtMasters/2024/MScPoliticalSciencePoliticalScienceAndPoliticalEconomy.htm) | [Timetable Info](https://info.lse.ac.uk/current-students/timetables)                                                     |
+| [Student For You](https://portal.lse.ac.uk/studentservices/s/?_gl=11c1xkmp_gcl_auMTU2NDcwMzc5MS4xNzIxMjM1NTAz_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w)                                                 | [Undergrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm)                                                                      | [Stats on LSE](https://info.lse.ac.uk/staff/divisions/academic-registrars-division/systems/what-we-do/statistics-on-lse) |
+| [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=15ghr49_gcl_auMTk0MjQzMTI2MS4xNzEzMzg0NDcy_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w) | [Postgrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm)                                                                            | [MY457 Page](https://lse-my457.github.io)                                                                                |
+:::
+
+This is a collection of notes from my time studying at the London School of Economics.
+
+-   Topics include Statistics/Econometrics, Game Theory/Political Economy, and other materials.
+-   Use the sidebar to navigate between sections.
+
+<br />
+
+# Statistics/Econometrics
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Regression Models
+
+Generalised Linear Model:
+
+1.  Linear Regression Model
+2.  Logistic Regression Models
+3.  Count Regression Models
+
+*Material in this section is taken primarily from MY452 Applied Regression Analysis. Further Material taken from GV481 Quantitative Analysis for Political Science, EC2C1 Econometrics II, EC2C3 Econometrics I, and EC2C4 Econometrics II.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Econometrics/Causal Inference
+
+Introductory Material:
+
+1.  [Causal Frameworks](https://kevinli03.github.io/notes/causal/1.html)
+
+Causal Identification Designs:
+
+2.  Randomised Controlled Trials
+3.  Selection on Observables
+4.  Instrumental Variable Designs
+5.  Regression Discontinuity Designs
+6.  Differences-in-Differences
+7.  Survey Experiments
+
+Econometric Theory
+
+8.  Ordinary Least Squares Estimator
+9.  Instrumental Variables Estimator
+
+*Material in this section is taken primarily from MY457 Causal Inference for Observational and Experimental Studies. Further Material taken from GV481 Quantitative Analysis for Political Science, EC2C1 Econometrics II, EC2C3 Econometrics I, and EC2C4 Econometrics II.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Spatial Econometrics/Statistics
+
+Spatial Statistics
+
+1.  Spatial Descriptive Statistics
+2.  Weights, Aggregation, and Smoothing
+
+Spatial Econometrics
+
+3.  Spatial Regression Models
+4.  Spatial Differences-in-Differences
+5.  Spatial Discontinuity Designs
+6.  Spatial Discrete Choice Models
+7.  The Modifiable Areal Unit Problem
+
+*Material in this section taken primarily from GY460 Techniques of Spatial Economic Analysis.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Time Series Models
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Multivariate Measurement Methods
+
+Dimensional Reduction Methods:
+
+1.  Principle Components Analysis
+2.  Cluster Analysis
+
+Latent Variable Models:
+
+1.  Exploratory Factor Analysis
+2.  Confirmatory Factor Analysis
+3.  Latent Trait Models (IRT)
+4.  Latent Class Models
+5.  Structural Equation Models
+
+*Material in this section is taken primarily from MY455 Multivariate Analysis and Measurement.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Quantitative Text Analysis
+
+Text Analysis Methods
+
+1.  Quantifying Texts
+2.  Dictionary and Discriminating Words Methods
+3.  Naive Bayes Classifier
+4.  Latent Trait Scale
+5.  Text Similarity and Clustering Methods
+6.  Structural Topic Models
+
+*Material in this section is primarily taken from MY459 Quantitative Text Analysis.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Simple Machine Learning Models
+
+Machine Learning Models:
+
+1.  Generalised Additive Models
+2.  Random Forest and Bagging
+3.  Naive Bayes Classifier
+
+*Material in this section is primarily taken from ME314 Introduction to Data Science and Machine Learning.*
+:::
+
+<br />
+
+# Game Theory/Political Economy
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Concepts in Game Theory
+
+1.  Pure-Strategy Nash Equilibrium
+2.  Mixed-Strategy Nash Equilibrium
+3.  Subgame Perfect Nash Equilibrium
+4.  Perfect Bayesian Equilibrium
+
+*Material in this section is primarily taken from GV4C8 Game Theory for Political Science. Further Material from King's College London: 5SSPP227 Game Theory and Strategic Decision Making, and 6SSPP403 Advanced Game Theory.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Political Economy Models
+
+Models from Political Economy:
+
+1.  Median Voter Theory and Extensions
+2.  Prisoner's Dilemma and Cooperation
+3.  Legislative Bargaining Models
+4.  Models of Elections and Incentives
+
+*Material in this section is primarily taken from GV4C8 Game Theory for Political Science and GV482 Political Science and Political Economy.*
+:::
+
+<br />
+
+# Supplementary Materials
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Mathematics, Probability, Statistical Theory
+
+Key Mathematics:
+
+1.  Algebra and Pre-Calculus
+2.  Single Variable Calculus
+3.  Vectors and Matrices
+
+Probability and Statistical Theory
+
+4.  Introductory Probability Theory
+5.  Distribution Theory and Statistical Inference
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## R-Programming
+
+1.  R-Programming Fundamentals
+2.  Ggplot Guide
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Further Resources
+
+Mathematics and Statistics
+
+-   Calculus and Linear Algebra Part I
+-   Calculus and Linear Algebra Part II
+-   Introductory Statistical Theory
+-   Mathematical Analysis
+:::

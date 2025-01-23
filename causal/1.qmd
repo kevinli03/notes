@@ -1,13 +1,26 @@
 ---
 title: "Causal Frameworks"
-subtitle: "Causal Inference"
-format: html
-toc: true
-toc-location: left
-toc-collapse: false
+subtitle: "Kevin's Notes: Causal Inference"
+format:
+    html:
+        page-layout: article
+        grid:
+          sidebar-width: 350px
+          body-width: 700px
+          margin-width: 250px
+          gutter-width: 2em
+        fontsize: 12pt
+        theme: default
+        toc: TRUE
+        toc-depth: 3
+        toc-location: left
+        toc-expand: true
+        toc-title: "Table of Contents"
+        mainfont: "Computer Modern"
+        title-block-banner: true
+        classoption: fleqn
+        html-math-method: katex
 editor: visual
-html-math-method: katex
-classoption: fleqn
 ---
 
 # **Potential Outcomes Framework**
@@ -36,8 +49,6 @@ Causal variables/treatments must be able to be manipulated (in order to imagine 
 
 <br />
 
-<br />
-
 ### Potential Outcomes
 
 Potential Outcomes for unit $i$:
@@ -50,8 +61,6 @@ Y_{di} =\begin{cases}
 $$
 
 Alternative notation includes $Y_i(d), y_i^d$.
-
-<br />
 
 <br />
 
@@ -93,8 +102,6 @@ We are essentially sampling from potential outcomes to get observed outcomes.
 :::
 
 This missing data problem is called the **fundamental problem of causal inference**.
-
-<br />
 
 <br />
 
@@ -155,8 +162,6 @@ Thus, we almost never use individual treatment effects, and use group treatment 
 
 <br />
 
-<br />
-
 ### Average Treatment Effect (ATE)
 
 ATE is a group-level causal estimand.
@@ -191,8 +196,6 @@ We cannot calculate this with observed data - since we need all potential outcom
 
 <br />
 
-<br />
-
 ### Average Treatment Effect on the Treated (ATT)
 
 An alternative estimand to the ATE is the Average Treatment Effect on the Treated (ATT):
@@ -215,8 +218,6 @@ When does $\tau_{ATT} = \tau_{ATE}$?
 
 The opposite is also true: if the expectation of the potential outcomes of both the treated and control are different, then the two are not equal.
 :::
-
-<br />
 
 <br />
 
@@ -250,8 +251,6 @@ We have discussed estimands. But, we cannot directly calculate these due to a la
 We need some identification strategy, a combination of data and assumptions, to allow us to identify an estimand. These assumptions will help us fill in the missing potential outcomes.
 
 These identification strategies are part of estimators.
-
-<br />
 
 <br />
 

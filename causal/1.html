@@ -82,10 +82,27 @@ window.Quarto = {
 
 <body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Causal Frameworks</h1>
+            <p class="subtitle lead">Kevin’s Notes: Causal Inference</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+  <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Table of Contents</h2>
    
   <ul>
   <li><a href="#potential-outcomes-framework" id="toc-potential-outcomes-framework" class="nav-link active" data-scroll-target="#potential-outcomes-framework"><strong>Potential Outcomes Framework</strong></a>
@@ -112,26 +129,10 @@ window.Quarto = {
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Causal Frameworks</h1>
-<p class="subtitle lead">Causal Inference</p>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="potential-outcomes-framework" class="level1">
@@ -167,7 +168,6 @@ Additional Notes on Treatment Variables
 </div>
 </div>
 <p><br></p>
-<p><br></p>
 </section>
 <section id="potential-outcomes" class="level3">
 <h3 class="anchored" data-anchor-id="potential-outcomes">Potential Outcomes</h3>
@@ -179,7 +179,6 @@ Y_{di} =\begin{cases}
 \end{cases}
 </span></p>
 <p>Alternative notation includes <span class="math inline">Y_i(d), y_i^d</span>.</p>
-<p><br></p>
 <p><br></p>
 </section>
 <section id="observed-outcomes-and-missing-data" class="level3">
@@ -227,7 +226,6 @@ Neyman Urn Model
 </div>
 </div>
 <p>This missing data problem is called the <strong>fundamental problem of causal inference</strong>.</p>
-<p><br></p>
 <p><br></p>
 </section>
 <section id="stable-unit-treatment-value-assumption" class="level3">
@@ -288,7 +286,6 @@ Examples of SUTVA Violations
 </ul>
 <p>Thus, we almost never use individual treatment effects, and use group treatment effects.</p>
 <p><br></p>
-<p><br></p>
 </section>
 <section id="average-treatment-effect-ate" class="level3">
 <h3 class="anchored" data-anchor-id="average-treatment-effect-ate">Average Treatment Effect (ATE)</h3>
@@ -326,7 +323,6 @@ Group-Level Causal Estimands
 </span></p>
 <p>We cannot calculate this with observed data - since we need all potential outcomes to do this. We can estimate this (covered throughout this course).</p>
 <p><br></p>
-<p><br></p>
 </section>
 <section id="average-treatment-effect-on-the-treated-att" class="level3">
 <h3 class="anchored" data-anchor-id="average-treatment-effect-on-the-treated-att">Average Treatment Effect on the Treated (ATT)</h3>
@@ -359,7 +355,6 @@ ATT vs.&nbsp;ATE
 </div>
 </div>
 <p><br></p>
-<p><br></p>
 </section>
 <section id="conditional-average-treatment-effect-cate" class="level3">
 <h3 class="anchored" data-anchor-id="conditional-average-treatment-effect-cate">Conditional Average Treatment Effect (CATE)</h3>
@@ -385,7 +380,6 @@ ATT vs.&nbsp;ATE
 <p>We have discussed estimands. But, we cannot directly calculate these due to a lack of potential outcomes.</p>
 <p>We need some identification strategy, a combination of data and assumptions, to allow us to identify an estimand. These assumptions will help us fill in the missing potential outcomes.</p>
 <p>These identification strategies are part of estimators.</p>
-<p><br></p>
 <p><br></p>
 </section>
 <section id="naive-estimator-and-selection-bias" class="level3">
