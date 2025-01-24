@@ -38,9 +38,11 @@ This is a collection of notes from my time studying at the London School of Econ
 -   Topics include Statistics/Econometrics, Game Theory/Political Economy, and other materials. R-coding guide provided in statistical pages.
 -   Use the sidebar to navigate between sections.
 
-<br />
+------------------------------------------------------------------------
 
 # Statistics/Econometrics
+
+### General Statistical/Econometric Models
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
 ## Regression Models (for Cross-Sectional Data)
@@ -75,29 +77,6 @@ Causal Identification Designs:
 :::
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
-## Spatial Statistics/Econometrics
-
-Spatial Statistics
-
-1.  Spatial Descriptive Statistics
-2.  Weights, Aggregation, and Smoothing
-
-Spatial Econometrics
-
-3.  Spatial Regression Models
-4.  Spatial Differences-in-Differences
-5.  Spatial Discontinuity Designs
-6.  Spatial Discrete Choice Models
-7.  The Modifiable Areal Unit Problem
-
-*Material in this section taken primarily from GY460 Techniques of Spatial Economic Analysis.*
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Time Series Models
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
 ## Multivariate Measurement Methods
 
 Dimensional Reduction Methods:
@@ -117,7 +96,50 @@ Latent Variable Models:
 :::
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
-## Quantitative Text Analysis
+## Simple Machine Learning Models
+
+Machine Learning Models:
+
+1.  Generalised Additive Models
+2.  Random Forest and Bagging
+3.  Naive Bayes Classifier
+
+*Material in this section is primarily taken from ME314 Introduction to Data Science and Machine Learning.*
+:::
+
+<br />
+
+### Models for Special Types of Data
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Models for Time Series Data
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Models for Panel Data
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Models for Spatial Data
+
+Spatial Statistics
+
+1.  Spatial Descriptive Statistics
+2.  Weights, Aggregation, and Smoothing
+
+Spatial Econometrics
+
+3.  Spatial Regression Models
+4.  Spatial Differences-in-Differences
+5.  Spatial Discontinuity Designs
+6.  Spatial Discrete Choice Models
+7.  The Modifiable Areal Unit Problem
+
+*Material in this section taken primarily from GY460 Techniques of Spatial Economic Analysis.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Models for Textual Data
 
 Text Analysis Methods
 
@@ -131,19 +153,11 @@ Text Analysis Methods
 *Material in this section is primarily taken from MY459 Quantitative Text Analysis.*
 :::
 
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Simple Machine Learning Models
-
-Machine Learning Models:
-
-1.  Generalised Additive Models
-2.  Random Forest and Bagging
-3.  Naive Bayes Classifier
-
-*Material in this section is primarily taken from ME314 Introduction to Data Science and Machine Learning.*
-:::
+<br />
 
 <br />
+
+------------------------------------------------------------------------
 
 # Game Theory/Political Economy
 
@@ -174,6 +188,10 @@ Models from Political Economy:
 
 <br />
 
+<br />
+
+------------------------------------------------------------------------
+
 # Supplementary Materials
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
@@ -196,16 +214,4 @@ Probability and Statistical Theory
 
 1.  R-Programming Fundamentals
 2.  Ggplot Guide
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Further Resources
-
-Mathematics and Statistics
-
--   [Calculus and Linear Algebra Part I](https://kevinli03.github.io/notes/materials/math1.pdf)
--   [Calculus and Linear Algebra Part II](https://kevinli03.github.io/notes/materials/math2.pdf)
--   [Introductory Statistical Theory Part I](https://kevinli03.github.io/notes/materials/stats1.pdf)
--   [Introductory Statistical Theory Part II](https://kevinli03.github.io/notes/materials/stats2.pdf)
--   [Introduction to Abstract Mathematics](https://kevinli03.github.io/notes/materials/abstract.pdf)
 :::

@@ -62,7 +62,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of Contents</h2>
    
   <ul>
-  <li><a href="#statisticseconometrics" id="toc-statisticseconometrics" class="nav-link active" data-scroll-target="#statisticseconometrics">Statistics/Econometrics</a></li>
+  <li><a href="#statisticseconometrics" id="toc-statisticseconometrics" class="nav-link active" data-scroll-target="#statisticseconometrics">Statistics/Econometrics</a>
+  <ul class="collapse">
+  <li><a href="#general-statisticaleconometric-models" id="toc-general-statisticaleconometric-models" class="nav-link" data-scroll-target="#general-statisticaleconometric-models">General Statistical/Econometric Models</a></li>
+  <li><a href="#models-for-special-types-of-data" id="toc-models-for-special-types-of-data" class="nav-link" data-scroll-target="#models-for-special-types-of-data">Models for Special Types of Data</a></li>
+  </ul></li>
   <li><a href="#game-theorypolitical-economy" id="toc-game-theorypolitical-economy" class="nav-link" data-scroll-target="#game-theorypolitical-economy">Game Theory/Political Economy</a></li>
   <li><a href="#supplementary-materials" id="toc-supplementary-materials" class="nav-link" data-scroll-target="#supplementary-materials">Supplementary Materials</a></li>
   </ul>
@@ -115,9 +119,11 @@ LSE Quick Links
 <li>Topics include Statistics/Econometrics, Game Theory/Political Economy, and other materials. R-coding guide provided in statistical pages.</li>
 <li>Use the sidebar to navigate between sections.</li>
 </ul>
-<p><br></p>
+<hr>
 <section id="statisticseconometrics" class="level1">
 <h1>Statistics/Econometrics</h1>
+<section id="general-statisticaleconometric-models" class="level3">
+<h3 class="anchored" data-anchor-id="general-statisticaleconometric-models">General Statistical/Econometric Models</h3>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -176,56 +182,11 @@ Econometrics/Causal Inference
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Spatial Statistics/Econometrics
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Spatial Statistics</p>
-<ol type="1">
-<li>Spatial Descriptive Statistics</li>
-<li>Weights, Aggregation, and Smoothing</li>
-</ol>
-<p>Spatial Econometrics</p>
-<ol start="3" type="1">
-<li>Spatial Regression Models</li>
-<li>Spatial Differences-in-Differences</li>
-<li>Spatial Discontinuity Designs</li>
-<li>Spatial Discrete Choice Models</li>
-<li>The Modifiable Areal Unit Problem</li>
-</ol>
-<p><em>Material in this section taken primarily from GY460 Techniques of Spatial Economic Analysis.</em></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Time Series Models
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
 Multivariate Measurement Methods
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Dimensional Reduction Methods:</p>
 <ol type="1">
@@ -245,16 +206,103 @@ Multivariate Measurement Methods
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Simple Machine Learning Models
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Machine Learning Models:</p>
+<ol type="1">
+<li>Generalised Additive Models</li>
+<li>Random Forest and Bagging</li>
+<li>Naive Bayes Classifier</li>
+</ol>
+<p><em>Material in this section is primarily taken from ME314 Introduction to Data Science and Machine Learning.</em></p>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="models-for-special-types-of-data" class="level3">
+<h3 class="anchored" data-anchor-id="models-for-special-types-of-data">Models for Special Types of Data</h3>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Models for Time Series Data
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Quantitative Text Analysis
+Models for Panel Data
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Models for Spatial Data
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Spatial Statistics</p>
+<ol type="1">
+<li>Spatial Descriptive Statistics</li>
+<li>Weights, Aggregation, and Smoothing</li>
+</ol>
+<p>Spatial Econometrics</p>
+<ol start="3" type="1">
+<li>Spatial Regression Models</li>
+<li>Spatial Differences-in-Differences</li>
+<li>Spatial Discontinuity Designs</li>
+<li>Spatial Discrete Choice Models</li>
+<li>The Modifiable Areal Unit Problem</li>
+</ol>
+<p><em>Material in this section taken primarily from GY460 Techniques of Spatial Economic Analysis.</em></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Models for Textual Data
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Text Analysis Methods</p>
 <ol type="1">
@@ -269,34 +317,15 @@ Quantitative Text Analysis
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Simple Machine Learning Models
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Machine Learning Models:</p>
-<ol type="1">
-<li>Generalised Additive Models</li>
-<li>Random Forest and Bagging</li>
-<li>Naive Bayes Classifier</li>
-</ol>
-<p><em>Material in this section is primarily taken from ME314 Introduction to Data Science and Machine Learning.</em></p>
-</div>
-</div>
-</div>
 <p><br></p>
+<p><br></p>
+<hr>
+</section>
 </section>
 <section id="game-theorypolitical-economy" class="level1">
 <h1>Game Theory/Political Economy</h1>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -305,7 +334,7 @@ Concepts in Game Theory
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Pure-Strategy Nash Equilibrium</li>
@@ -318,7 +347,7 @@ Concepts in Game Theory
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -327,7 +356,7 @@ Political Economy Models
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Models from Political Economy:</p>
 <ol type="1">
@@ -342,11 +371,13 @@ Political Economy Models
 </div>
 </div>
 <p><br></p>
+<p><br></p>
+<hr>
 </section>
 <section id="supplementary-materials" class="level1">
 <h1>Supplementary Materials</h1>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -355,7 +386,7 @@ Mathematics, Probability, Statistical Theory
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Key Mathematics:</p>
 <ol type="1">
@@ -372,7 +403,7 @@ Mathematics, Probability, Statistical Theory
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -381,35 +412,12 @@ R-Programming
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>R-Programming Fundamentals</li>
 <li>Ggplot Guide</li>
 </ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Further Resources
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Mathematics and Statistics</p>
-<ul>
-<li><a href="https://kevinli03.github.io/notes/materials/math1.pdf">Calculus and Linear Algebra Part I</a></li>
-<li><a href="https://kevinli03.github.io/notes/materials/math2.pdf">Calculus and Linear Algebra Part II</a></li>
-<li><a href="https://kevinli03.github.io/notes/materials/stats1.pdf">Introductory Statistical Theory Part I</a></li>
-<li><a href="https://kevinli03.github.io/notes/materials/stats2.pdf">Introductory Statistical Theory Part II</a></li>
-<li><a href="https://kevinli03.github.io/notes/materials/abstract.pdf">Introduction to Abstract Mathematics</a></li>
-</ul>
 </div>
 </div>
 </div>
