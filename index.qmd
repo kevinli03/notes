@@ -203,8 +203,9 @@ Probability and Statistical Theory
 
 Mathematics and Statistics
 
--   Calculus and Linear Algebra Part I
--   Calculus and Linear Algebra Part II
--   Introductory Statistical Theory
--   Mathematical Analysis
+-   [Calculus and Linear Algebra Part I](https://kevinli03.github.io/notes/materials/math1.pdf)
+-   [Calculus and Linear Algebra Part II](https://kevinli03.github.io/notes/materials/math2.pdf)
+-   [Introductory Statistical Theory Part I](https://kevinli03.github.io/notes/materials/stats1.pdf)
+-   [Introductory Statistical Theory Part II](https://kevinli03.github.io/notes/materials/stats2.pdf)
+-   [Introduction to Abstract Mathematics](https://kevinli03.github.io/notes/materials/abstract.pdf)
 :::
