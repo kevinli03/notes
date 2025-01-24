@@ -1,6 +1,6 @@
 ---
 title: "Causal Frameworks"
-subtitle: "Kevin's PSPE Notes"
+subtitle: "Kevin's PSPE Notes: Econometrics/Causal Inference"
 format:
     html:
         page-layout: article
@@ -24,6 +24,8 @@ editor: visual
 ---
 
 Use the sidebar for quick navigation.
+
+These supplementary notes are useful to understand the notation and intuition behind causal inference designs.
 
 ------------------------------------------------------------------------
 
@@ -276,6 +278,87 @@ We can see that our naive estimator produces the $\tau_{ATT}$ **plus** an extra 
 
 ### Confounders
 
+Take the selection bias formula from above:
+
+$$
+E(Y_{0i}|D_i = 1) - E(Y_{0i} | D_i = 0)
+$$
+
+If selection bias is non-zero, this essentially states that the expected potential outcome before treatment $Y_{0i}$ between the treatment and control groups is not equal.
+
+-   Or in other words, the treatment and control groups have some other variable causing differences even before treatment has begun.
+-   This implies that the differences between the treatment and control group may not be due to treatment $D$, but due to the underlying differences before treatment even occurred.
+
+**Confounders** are variables that cause the differences between treatment and control groups before the treatment has started. Confounders are correlate with both the treatment variable and the outcome.
+
+This is why correlation does not equal causation - if the treatment and control group are different before we start the experiment, we cannot say the difference between the two is purely a result of treatment $D$.
+
 <br />
 
 ### Omitted Variable Bias in Regression
+
+Let us say we are interested in finding the relationship between treatment $D$ and outcome $Y$. However, there is a confounding variable, $X$, that is correlated with both $D$ and $Y$.
+
+We could run a simple linear regression with just $D$ and $Y$ (essentially a measure of correlation between the two):
+
+$$
+Y_i = \beta_0^S + \beta_1^SD_i + u_i^S
+$$
+
+We could also run a multiple linear regression with $D$, confounder $X$, and $Y$. This accounts for the impact of the confounder, and "partials out" the effect of the confounder (see Regression Anatomy Theorem):
+
+$$
+Y_i = \beta_0 + \beta_1D_i + \beta_2 X_i + u_i
+$$
+
+Our simple linear regression coefficient $\beta_1^S$ (a measure of correlation) is thus wrong for the causal effect - it fails to partial out the effect of confounder $X$. We can quantify "how wrong" $\beta_1^S$ is with the omitted variable bias formula:
+
+$$
+\beta_1^S = \beta_1 + \beta_2\delta_1
+$$
+
+-   Where $\delta_1$ is the coefficient of a regression between outcome $X$ and explanatory variable $D$.
+
+::: {.callout-tip collapse="true" appearance="simple"}
+## Details of Omitted Variable Bias
+
+We have a short and long regression, where the long includes confounder $X$:
+
+$$
+\begin{split}
+Y_i & = \beta_0^S + \beta_1^SD_i + u_i^S \\
+Y_i & = \beta_0 + \beta_1D_i + \beta_2X_i + u_i
+\end{split}
+$$
+
+Now consider an auxiliary regression, where the omitted variable (confounder) $X$ is the outcome variable, and $D$ is the explanatory variable:
+
+$$
+X_i = \delta_0 + \delta_1 D_i + v_i
+$$
+
+We can plug in the above $X_i$ into our long regression, to get the entire long regression equation in terms of $D_i$:
+
+$$
+\begin{split}
+Y_i & = \beta_0 + \beta_1D_i + \beta_2 X_i + u_i \\
+& = \beta_0 + \beta_1 D_i + \beta_2(\delta_0 + \delta_1 D_i + v_i) + u_i \\
+& = \beta_0 + \beta_1 D_i + \beta_2 \delta_0 + \beta_2\delta_1 D_i + \beta_2 v_i + u_i \\
+& = \beta_0 + \beta_2 \delta_0 + (\beta_1+\beta_2\delta_1)D_i + \beta_2v_i + u_i
+\end{split}
+$$
+
+The last equation is essentially a "recreation" of the short regression with only one explanatory variable. Note how the coefficient of $D_i$ in this regression is $(\beta_1 + \beta_2 \delta_1)$.
+
+Thus, $\beta_1^S = \beta_1 + \beta_2 \delta_1$. Since $\beta_1$ is the true value of the relationship between $D$ and $Y$ (since it controls for the confounder), that means $\beta_1^S$ is off by $\beta_2 \delta_1$.
+:::
+
+Thus, $\beta_2 \delta_1$ is the omitted variable **bias** in the short regression. In conclusion - if we do not account for confounding variables, we will have bias in our causal estimations. Thus, [correlation does not equal causation!]{.underline}
+
+<br />
+
+<br />
+
+------------------------------------------------------------------------
+
+# **Graphical Causal Frameworks**

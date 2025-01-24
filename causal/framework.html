@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="1_files/libs/clipboard/clipboard.min.js"></script>
-<script src="1_files/libs/quarto-html/quarto.js"></script>
-<script src="1_files/libs/quarto-html/popper.min.js"></script>
-<script src="1_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="1_files/libs/quarto-html/anchor.min.js"></script>
-<link href="1_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="1_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="1_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="framework_files/libs/clipboard/clipboard.min.js"></script>
+<script src="framework_files/libs/quarto-html/quarto.js"></script>
+<script src="framework_files/libs/quarto-html/popper.min.js"></script>
+<script src="framework_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="framework_files/libs/quarto-html/anchor.min.js"></script>
+<link href="framework_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="framework_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="framework_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="framework_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="framework_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -86,7 +86,7 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Causal Frameworks</h1>
-            <p class="subtitle lead">Kevin’s PSPE Notes</p>
+            <p class="subtitle lead">Kevin’s PSPE Notes: Econometrics/Causal Inference</p>
                       </div>
   </div>
     
@@ -125,6 +125,7 @@ window.Quarto = {
   <li><a href="#confounders" id="toc-confounders" class="nav-link" data-scroll-target="#confounders">Confounders</a></li>
   <li><a href="#omitted-variable-bias-in-regression" id="toc-omitted-variable-bias-in-regression" class="nav-link" data-scroll-target="#omitted-variable-bias-in-regression">Omitted Variable Bias in Regression</a></li>
   </ul></li>
+  <li><a href="#graphical-causal-frameworks" id="toc-graphical-causal-frameworks" class="nav-link" data-scroll-target="#graphical-causal-frameworks"><strong>Graphical Causal Frameworks</strong></a></li>
   </ul>
 </nav>
 </div>
@@ -137,6 +138,7 @@ window.Quarto = {
 
 
 <p>Use the sidebar for quick navigation.</p>
+<p>These supplementary notes are useful to understand the notation and intuition behind causal inference designs.</p>
 <hr>
 <section id="potential-outcomes-framework" class="level1">
 <h1><strong>Potential Outcomes Framework</strong></h1>
@@ -401,11 +403,82 @@ ATT vs.&nbsp;ATE
 </section>
 <section id="confounders" class="level3">
 <h3 class="anchored" data-anchor-id="confounders">Confounders</h3>
+<p>Take the selection bias formula from above:</p>
+<p><span class="math display">
+E(Y_{0i}|D_i = 1) - E(Y_{0i} | D_i = 0)
+</span></p>
+<p>If selection bias is non-zero, this essentially states that the expected potential outcome before treatment <span class="math inline">Y_{0i}</span> between the treatment and control groups is not equal.</p>
+<ul>
+<li>Or in other words, the treatment and control groups have some other variable causing differences even before treatment has begun.</li>
+<li>This implies that the differences between the treatment and control group may not be due to treatment <span class="math inline">D</span>, but due to the underlying differences before treatment even occurred.</li>
+</ul>
+<p><strong>Confounders</strong> are variables that cause the differences between treatment and control groups before the treatment has started. Confounders are correlate with both the treatment variable and the outcome.</p>
+<p>This is why correlation does not equal causation - if the treatment and control group are different before we start the experiment, we cannot say the difference between the two is purely a result of treatment <span class="math inline">D</span>.</p>
 <p><br></p>
 </section>
 <section id="omitted-variable-bias-in-regression" class="level3">
 <h3 class="anchored" data-anchor-id="omitted-variable-bias-in-regression">Omitted Variable Bias in Regression</h3>
+<p>Let us say we are interested in finding the relationship between treatment <span class="math inline">D</span> and outcome <span class="math inline">Y</span>. However, there is a confounding variable, <span class="math inline">X</span>, that is correlated with both <span class="math inline">D</span> and <span class="math inline">Y</span>.</p>
+<p>We could run a simple linear regression with just <span class="math inline">D</span> and <span class="math inline">Y</span> (essentially a measure of correlation between the two):</p>
+<p><span class="math display">
+Y_i = \beta_0^S + \beta_1^SD_i + u_i^S
+</span></p>
+<p>We could also run a multiple linear regression with <span class="math inline">D</span>, confounder <span class="math inline">X</span>, and <span class="math inline">Y</span>. This accounts for the impact of the confounder, and “partials out” the effect of the confounder (see Regression Anatomy Theorem):</p>
+<p><span class="math display">
+Y_i = \beta_0 + \beta_1D_i + \beta_2 X_i + u_i
+</span></p>
+<p>Our simple linear regression coefficient <span class="math inline">\beta_1^S</span> (a measure of correlation) is thus wrong for the causal effect - it fails to partial out the effect of confounder <span class="math inline">X</span>. We can quantify “how wrong” <span class="math inline">\beta_1^S</span> is with the omitted variable bias formula:</p>
+<p><span class="math display">
+\beta_1^S = \beta_1 + \beta_2\delta_1
+</span></p>
+<ul>
+<li>Where <span class="math inline">\delta_1</span> is the coefficient of a regression between outcome <span class="math inline">X</span> and explanatory variable <span class="math inline">D</span>.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Details of Omitted Variable Bias
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We have a short and long regression, where the long includes confounder <span class="math inline">X</span>:</p>
+<p><span class="math display">
+\begin{split}
+Y_i &amp; = \beta_0^S + \beta_1^SD_i + u_i^S \\
+Y_i &amp; = \beta_0 + \beta_1D_i + \beta_2X_i + u_i
+\end{split}
+</span></p>
+<p>Now consider an auxiliary regression, where the omitted variable (confounder) <span class="math inline">X</span> is the outcome variable, and <span class="math inline">D</span> is the explanatory variable:</p>
+<p><span class="math display">
+X_i = \delta_0 + \delta_1 D_i + v_i
+</span></p>
+<p>We can plug in the above <span class="math inline">X_i</span> into our long regression, to get the entire long regression equation in terms of <span class="math inline">D_i</span>:</p>
+<p><span class="math display">
+\begin{split}
+Y_i &amp; = \beta_0 + \beta_1D_i + \beta_2 X_i + u_i \\
+&amp; = \beta_0 + \beta_1 D_i + \beta_2(\delta_0 + \delta_1 D_i + v_i) + u_i \\
+&amp; = \beta_0 + \beta_1 D_i + \beta_2 \delta_0 + \beta_2\delta_1 D_i + \beta_2 v_i + u_i \\
+&amp; = \beta_0 + \beta_2 \delta_0 + (\beta_1+\beta_2\delta_1)D_i + \beta_2v_i + u_i
+\end{split}
+</span></p>
+<p>The last equation is essentially a “recreation” of the short regression with only one explanatory variable. Note how the coefficient of <span class="math inline">D_i</span> in this regression is <span class="math inline">(\beta_1 + \beta_2 \delta_1)</span>.</p>
+<p>Thus, <span class="math inline">\beta_1^S = \beta_1 + \beta_2 \delta_1</span>. Since <span class="math inline">\beta_1</span> is the true value of the relationship between <span class="math inline">D</span> and <span class="math inline">Y</span> (since it controls for the confounder), that means <span class="math inline">\beta_1^S</span> is off by <span class="math inline">\beta_2 \delta_1</span>.</p>
+</div>
+</div>
+</div>
+<p>Thus, <span class="math inline">\beta_2 \delta_1</span> is the omitted variable <strong>bias</strong> in the short regression. In conclusion - if we do not account for confounding variables, we will have bias in our causal estimations. Thus, <u>correlation does not equal causation!</u></p>
+<p><br></p>
+<p><br></p>
+<hr>
 </section>
+</section>
+<section id="graphical-causal-frameworks" class="level1">
+<h1><strong>Graphical Causal Frameworks</strong></h1>
 </section>
 
 </main>
