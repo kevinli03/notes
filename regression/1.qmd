@@ -1,6 +1,6 @@
 ---
 title: "Linear Regression Model"
-subtitle: "Kevin's PSPE Notes"
+subtitle: "Kevin's PSPE Notes: Regression Models"
 format:
     html:
         page-layout: article
@@ -96,10 +96,10 @@ However, not every individual lies perfectly on this linear line. This is becaus
 We can also specify the linear model in terms of linear algebra:
 
 $$
-y = X\beta + u
+\mathbf y = \mathbf X \mathbf\beta + \mathbf u
 $$
 
--   Where $y, \beta, u$ are vectors and $X$ is a $n \times (k+1)$ matrix.
+-   Where $\mathbf y, \mathbf \beta, \mathbf u$ are vectors and $\mathbf X$ is a $n \times (k+1)$ matrix.
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## More Info on the Linear Algebra Representation
@@ -113,33 +113,33 @@ $$
 We can rewrite $y_i$ to be equal to:
 
 $$
-y_i = x_i'\beta + u_i, \text{ where }\beta = \begin{bmatrix}\beta_0 \\ \beta_1 \\ \vdots \\ \beta_k\end{bmatrix} \text{ and }x_i = \begin{bmatrix}1 \\x_{1i} \\\vdots \\x_{ki}\end{bmatrix}
+y_i = \mathbf x_i^T \mathbf \beta + u_i, \text{ where } \mathbf \beta = \begin{bmatrix}\beta_0 \\ \beta_1 \\ \vdots \\ \beta_k\end{bmatrix} \text{ and } \mathbf x_i = \begin{bmatrix}1 \\x_{1i} \\\vdots \\x_{ki}\end{bmatrix}
 $$
 
 <br />
 
 Note how we have the subscript $i$ representing each individual observation. With a vector, we can expand out these subscripts.
 
-Using this logic, we can obtain the following, with the $x_i'$ and $\beta$ being vectors within a vector:
+Using this logic, we can obtain the following, with the $\mathbf x_i^T$ and $\beta$ being vectors within a vector:
 
 $$
 \begin{split}
-\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} & = \begin{pmatrix}x_1'\beta + u_1 \\ x_2'\beta + u_2 \\ \vdots \\ x_n'\beta + u_n\end{pmatrix} \\
+\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} & = \begin{pmatrix}\mathbf x_1^T\beta + u_1 \\ \mathbf x_2^T\beta + u_2 \\ \vdots \\ \mathbf x_n^T\beta + u_n\end{pmatrix} \\
 & \\
-\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix}& = \begin{pmatrix}x_1'\beta \\ x_2'\beta \\ \vdots \\ x_n'\beta\end{pmatrix} + \begin{pmatrix}u_1 \\ u_2 \\ \vdots \\ u_n\end{pmatrix}
+\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix}& = \begin{pmatrix} \mathbf x_1^T\beta \\ \mathbf x_2^T\beta \\ \vdots \\ \mathbf x_n^T\beta\end{pmatrix} + \begin{pmatrix}u_1 \\ u_2 \\ \vdots \\ u_n\end{pmatrix}
 \end{split}
 $$
 
 Since $\beta$ vector appears as a common factor for all observations $i=1,...,n$, we can factor it out and have an equation:
 
 $$
-\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} = \begin{pmatrix}x_1' \\ x_2' \\ \vdots \\ x_n'\end{pmatrix} \space \beta + \begin{pmatrix}u_1 \\ u_2 \\ \vdots \\ u_n\end{pmatrix}
+\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} = \begin{pmatrix} \mathbf x_1^T \\ \mathbf x_2^T \\ \vdots \\ \mathbf x_n^T\end{pmatrix} \space \beta + \begin{pmatrix}u_1 \\ u_2 \\ \vdots \\ u_n\end{pmatrix}
 $$
 
 We can expand the $x_1',...,x_n'$ vector into a matrix. Remember that each $x_1',...,x_n'$ is already a vector of different explanatory variables. So, we get the following result:
 
 $$
-y = X \beta + u, \text{ where } X = \begin{bmatrix}1 & x_{11} & \dots & x_{k1} \\1 & x_{12} & \dots & x_{k2} \\\vdots & \vdots & \vdots & \vdots \\1 & x_{1n} & \dots & x_{kn}\end{bmatrix}
+\mathbf y = \mathbf X \mathbf \beta + \mathbf u, \text{ where } \mathbf X = \begin{bmatrix}1 & x_{11} & \dots & x_{k1} \\1 & x_{12} & \dots & x_{k2} \\\vdots & \vdots & \vdots & \vdots \\1 & x_{1n} & \dots & x_{kn}\end{bmatrix}
 $$
 :::
 
@@ -349,11 +349,13 @@ $$
 
 I define $\widehat{\beta_j} \in \{\widehat{\beta_1}, \dots, \widehat{\beta_k}\}$. How do we interpret the $\widehat{\beta_j}$ we have estimated?
 
-|                    |                                                                                                                                                                         |                                                                                                                                                                              |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
++--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                    | **Continuous** $x_j$                                                                                                                                                    | **Binary** $x_j$                                                                                                                                                             |
++--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Continuous** $y$ | For every one unit increase in $x_j$, there is an expected $\widehat{\beta_j}$ unit change in $y$.                                                                      | There is a $\widehat{\beta_j}$ unit difference in $y$ between category $x_j = 1$ and category $x_j = 0$.                                                                     |
++--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Binary** $y$     | For every one unit increase in $x_j$, there is an expected $\widehat{\beta_j} \times 100$ percentage point change in the probability of a unit being in category $y=1$. | There is a $\widehat{\beta_j}\times 100$ percentage point difference in the probability of a unit being in category $y=1$ between category $x_j = 1$ and category $x_j = 0$. |
++--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 If you have multiple explanatory variables, always add: *while holding all other explanatory variables not* $x_j$ *constant.*
 
@@ -365,11 +367,13 @@ You can prove these explanations by plugging in $x_i = x$ and $x_i = x+1$ and fi
 
 The intercept is $\widehat{\beta_0}$ (the only parameter not multiplied to a explanatory variable).
 
-|                    |                                                                                                                                      |                                                                                                                                                                      |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                    | **Continuous** $x_j$                                                                                                                 | **Binary** $x_j$                                                                                                                                                     |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Continuous** $y$ | When all explanatory variables equal 0, the expected value of $y$ is $\widehat{\beta_0}$.                                            | For category $x_j = 0$, the expected value of $y$ is $\widehat{\beta_0}$ (when all other explanatory variables equal 0).                                             |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Binary** $y$     | When all explanatory variables equal 0, the expected probability of a unit being in category $y=1$ is $\widehat{\beta_0} \times 100$ | For category $x_j = 0$, the expected probability of a unit being in category $y=1$ is $\widehat{\beta_0} \times 100$ (when all other explanatory variables equal 0). |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 You can prove these interpretations by plugging in $x_1, \dots, x_k = 0$.
 
@@ -764,17 +768,17 @@ If we take the log of this variable, we get the following distribution that is a
 
 We have 3 types of logarithmic transformations:
 
-+------------+-------------------------------------+-----------------------------------------+
-|            | $x$                                 | $\log (x)$                              |
-+------------+-------------------------------------+-----------------------------------------+
-| $y$        | Linear Model:                       | Linear-Log Model:                       |
-|            |                                     |                                         |
-|            | $y = \beta_0 + \beta_1 x + u$       | $y = \beta_0 + \beta_1 \log x + u$      |
-+------------+-------------------------------------+-----------------------------------------+
-| $\log (y)$ | Log-Linear Model:                   | Log-Log Model:                          |
-|            |                                     |                                         |
-|            | $\log(y) = \beta_0 + \beta_1 x + u$ | $\log y = \beta_0 + \beta_1 \log x + u$ |
-+------------+-------------------------------------+-----------------------------------------+
++--------------+-------------------------------------+-----------------------------------------+
+|              | $x$                                 | $\log (x)$                              |
++--------------+-------------------------------------+-----------------------------------------+
+| $y$          | Linear Model:                       | Linear-Log Model:                       |
+|              |                                     |                                         |
+|              | $y = \beta_0 + \beta_1 x + u$       | $y = \beta_0 + \beta_1 \log x + u$      |
++--------------+-------------------------------------+-----------------------------------------+
+| $\log (y)$   | Log-Linear Model:                   | Log-Log Model:                          |
+|              |                                     |                                         |
+|              | $\log(y) = \beta_0 + \beta_1 x + u$ | $\log y = \beta_0 + \beta_1 \log x + u$ |
++--------------+-------------------------------------+-----------------------------------------+
 
 <br />
 

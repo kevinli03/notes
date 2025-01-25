@@ -27,7 +27,7 @@ editor: visual
 ## LSE Quick Links
 
 |                                                                                                                                                                                                                                                          |                                                                                                                                                                   |                                                                                                                          |
-|---------------------------------|----------------------|------------------|
+|--------------------------------|----------------------|------------------|
 | [Moodle](https://moodle.lse.ac.uk/my/)                                                                                                                                                                                                                   | [Course Regulations](https://www.lse.ac.uk/resources/calendar/programmeRegulations/taughtMasters/2024/MScPoliticalSciencePoliticalScienceAndPoliticalEconomy.htm) | [Timetable Info](https://info.lse.ac.uk/current-students/timetables)                                                     |
 | [Student For You](https://portal.lse.ac.uk/studentservices/s/?_gl=11c1xkmp_gcl_auMTU2NDcwMzc5MS4xNzIxMjM1NTAz_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w)                                                 | [Undergrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm)                                                                      | [Stats on LSE](https://info.lse.ac.uk/staff/divisions/academic-registrars-division/systems/what-we-do/statistics-on-lse) |
 | [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=15ghr49_gcl_auMTk0MjQzMTI2MS4xNzEzMzg0NDcy_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w) | [Postgrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm)                                                                            | [MY457 Page](https://lse-my457.github.io)                                                                                |
@@ -62,7 +62,7 @@ Generalised Linear Model:
 Introductory/Background Material:
 
 -   [Ordinary Least Squares Theory](https://kevinli03.github.io/notes/causal/ols.html)
--   [Causal Frameworks](https://kevinli03.github.io/notes/causal/frameworks.html)
+-   [Causal Frameworks](https://kevinli03.github.io/notes/causal/framework.html)
 
 Causal Identification Designs:
 
@@ -192,21 +192,25 @@ Models from Political Economy:
 
 ------------------------------------------------------------------------
 
-# Supplementary Materials
+# Math + Coding Materials
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
-## Mathematics, Probability, Statistical Theory
+## Mathematics
 
-Key Mathematics:
+Mathematics:
 
-1.  Algebra and Pre-Calculus
+1.  Sets and Algebra
 2.  Single Variable Calculus
-3.  Vectors and Matrices
+3.  [Vectors and Matrices](https://kevinli03.github.io/notes/maths/3.html)
+4.  Vector Spaces and Systems of Equations
+5.  Eigenvalues and Markov Chains
+6.  Multivariate Differentiation
+7.  Multivariate Optimisation
+8.  Comparative Statics and Implicit Differentiation
 
-Probability and Statistical Theory
+Probability Theory
 
-4.  Introductory Probability Theory
-5.  Distribution Theory and Statistical Inference
+9.  Basic Probability
 :::
 
 ::: {.callout-tip collapse="true" appearance="minimal"}

@@ -120,7 +120,7 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Linear Regression Model</h1>
-            <p class="subtitle lead">Kevin’s PSPE Notes</p>
+            <p class="subtitle lead">Kevin’s PSPE Notes: Regression Models</p>
                       </div>
   </div>
     
@@ -259,10 +259,10 @@ More Info on the Error Term
 </div>
 <p>We can also specify the linear model in terms of linear algebra:</p>
 <p><span class="math display">
-y = X\beta + u
+\mathbf y = \mathbf X \mathbf\beta + \mathbf u
 </span></p>
 <ul>
-<li>Where <span class="math inline">y, \beta, u</span> are vectors and <span class="math inline">X</span> is a <span class="math inline">n \times (k+1)</span> matrix.</li>
+<li>Where <span class="math inline">\mathbf y, \mathbf \beta, \mathbf u</span> are vectors and <span class="math inline">\mathbf X</span> is a <span class="math inline">n \times (k+1)</span> matrix.</li>
 </ul>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -282,25 +282,25 @@ y_i = \beta_0 + \beta_1x_{1i} + \dots + \beta_k x_{ki} + u_i
 </span></p>
 <p>We can rewrite <span class="math inline">y_i</span> to be equal to:</p>
 <p><span class="math display">
-y_i = x_i'\beta + u_i, \text{ where }\beta = \begin{bmatrix}\beta_0 \\ \beta_1 \\ \vdots \\ \beta_k\end{bmatrix} \text{ and }x_i = \begin{bmatrix}1 \\x_{1i} \\\vdots \\x_{ki}\end{bmatrix}
+y_i = \mathbf x_i^T \mathbf \beta + u_i, \text{ where } \mathbf \beta = \begin{bmatrix}\beta_0 \\ \beta_1 \\ \vdots \\ \beta_k\end{bmatrix} \text{ and } \mathbf x_i = \begin{bmatrix}1 \\x_{1i} \\\vdots \\x_{ki}\end{bmatrix}
 </span></p>
 <p><br></p>
 <p>Note how we have the subscript <span class="math inline">i</span> representing each individual observation. With a vector, we can expand out these subscripts.</p>
-<p>Using this logic, we can obtain the following, with the <span class="math inline">x_i'</span> and <span class="math inline">\beta</span> being vectors within a vector:</p>
+<p>Using this logic, we can obtain the following, with the <span class="math inline">\mathbf x_i^T</span> and <span class="math inline">\beta</span> being vectors within a vector:</p>
 <p><span class="math display">
 \begin{split}
-\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} &amp; = \begin{pmatrix}x_1'\beta + u_1 \\ x_2'\beta + u_2 \\ \vdots \\ x_n'\beta + u_n\end{pmatrix} \\
+\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} &amp; = \begin{pmatrix}\mathbf x_1^T\beta + u_1 \\ \mathbf x_2^T\beta + u_2 \\ \vdots \\ \mathbf x_n^T\beta + u_n\end{pmatrix} \\
 &amp; \\
-\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix}&amp; = \begin{pmatrix}x_1'\beta \\ x_2'\beta \\ \vdots \\ x_n'\beta\end{pmatrix} + \begin{pmatrix}u_1 \\ u_2 \\ \vdots \\ u_n\end{pmatrix}
+\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix}&amp; = \begin{pmatrix} \mathbf x_1^T\beta \\ \mathbf x_2^T\beta \\ \vdots \\ \mathbf x_n^T\beta\end{pmatrix} + \begin{pmatrix}u_1 \\ u_2 \\ \vdots \\ u_n\end{pmatrix}
 \end{split}
 </span></p>
 <p>Since <span class="math inline">\beta</span> vector appears as a common factor for all observations <span class="math inline">i=1,...,n</span>, we can factor it out and have an equation:</p>
 <p><span class="math display">
-\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} = \begin{pmatrix}x_1' \\ x_2' \\ \vdots \\ x_n'\end{pmatrix} \space \beta + \begin{pmatrix}u_1 \\ u_2 \\ \vdots \\ u_n\end{pmatrix}
+\begin{pmatrix}y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} = \begin{pmatrix} \mathbf x_1^T \\ \mathbf x_2^T \\ \vdots \\ \mathbf x_n^T\end{pmatrix} \space \beta + \begin{pmatrix}u_1 \\ u_2 \\ \vdots \\ u_n\end{pmatrix}
 </span></p>
 <p>We can expand the <span class="math inline">x_1',...,x_n'</span> vector into a matrix. Remember that each <span class="math inline">x_1',...,x_n'</span> is already a vector of different explanatory variables. So, we get the following result:</p>
 <p><span class="math display">
-y = X \beta + u, \text{ where } X = \begin{bmatrix}1 &amp; x_{11} &amp; \dots &amp; x_{k1} \\1 &amp; x_{12} &amp; \dots &amp; x_{k2} \\\vdots &amp; \vdots &amp; \vdots &amp; \vdots \\1 &amp; x_{1n} &amp; \dots &amp; x_{kn}\end{bmatrix}
+\mathbf y = \mathbf X \mathbf \beta + \mathbf u, \text{ where } \mathbf X = \begin{bmatrix}1 &amp; x_{11} &amp; \dots &amp; x_{k1} \\1 &amp; x_{12} &amp; \dots &amp; x_{k2} \\\vdots &amp; \vdots &amp; \vdots &amp; \vdots \\1 &amp; x_{1n} &amp; \dots &amp; x_{kn}\end{bmatrix}
 </span></p>
 </div>
 </div>
