@@ -23,9 +23,7 @@ format:
 editor: visual
 ---
 
-This is a collection of notes from my time studying at the London School of Economics.
-
-## Background Material
+## Mathematical Methods
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
 ## Calculus and Linear Algebra
@@ -38,7 +36,31 @@ This is a collection of notes from my time studying at the London School of Econ
 6.  Comparative Statics and Implicit Differentiation
 :::
 
-<br />
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Proof and Analysis
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Mathematical Optimisation
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Game Theory (and Applications)
+
+Introductory/Background Material:
+
+-   Basics of Game Theory
+
+Formal Models:
+
+1.  Electoral Competition (Median Voter Theory)
+2.  Public Goods and Cooperation
+3.  Legislative Bargaining Models
+4.  Models of Elections and Incentives
+5.  Cournot Equilibrium and Duopoly
+
+*Material in this section is primarily taken from GV4C8 Game Theory for Political Science and GV482 Political Science and Political Economy.*
+:::
 
 ## Statistics/Econometrics
 
@@ -144,22 +166,3 @@ Text Analysis Methods
 :::
 
 <br />
-
-## Political Economy
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Political Economy Models
-
-Introductory/Background Material:
-
--   Basics of Game Theory
-
-Formal Models:
-
-1.  Median Voter Theory and Extensions
-2.  Prisoner's Dilemma and Cooperation
-3.  Legislative Bargaining Models
-4.  Models of Elections and Incentives
-
-*Material in this section is primarily taken from GV4C8 Game Theory for Political Science and GV482 Political Science and Political Economy.*
-:::

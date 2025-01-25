@@ -362,3 +362,285 @@ $$
 Where $\mathbf B_i$ is a matrix obtained by taking the matrix $\mathbf A$, and replacing the $i$th column with the column vector $\mathbf y$.
 
 <br />
+
+<br />
+
+------------------------------------------------------------------------
+
+# **Eigenvalues and Eigenvectors**
+
+### Definitions
+
+A matrix, as we discussed, can act as an operator that maps some vector to another $\mathbf A : \mathbf x \rightarrow \mathbf y$.
+
+Geometrically, vector $\mathbf x$ points in some dimensional space. Then the matrix $\mathbf A$ comes along, and transforms it into a different vector $\mathbf x$, which might flip the direction, or rotate, or change its norm, etc. Sometimes, $\mathbf y$ will stay in the same direction or opposite direction (along the same line) as the original, even after the operator.
+
+Basically, an eigenvector of matrix $\mathbf A$ is a vector $\mathbf x$, that does not change its direction (stays on the same line) when you apply the operator $\mathbf A$ to get vector $\lambda \mathbf x$. Mathematically:
+
+$$
+\mathbf{Ax} = \lambda \mathbf x
+$$
+
+The $\lambda$ is an eigenvalue that corresponds to the eigenvector.
+
+<br />
+
+### Computing Eigenvalues
+
+Let us start with the eigenvector formula:
+
+$$
+\mathbf{Ax} = \lambda \mathbf x
+$$
+
+We can multiply the right side by the identity matrix (which does not change the result):
+
+$$
+\mathbf{Ax} = \lambda \mathbf {Ix}
+$$
+
+Now, let us move everything to one side, and simplify:
+
+$$
+\begin{split}
+\mathbf{Ax} - \lambda \mathbf {Ix} & = 0 \\
+(\mathbf A - \lambda \mathbf I) \mathbf x & = 0
+\end{split}
+$$
+
+$(\mathbf A - \lambda \mathbf I)$ is an singular matrix, meaning determinant $|(\mathbf A - \lambda \mathbf I)| = 0$. All values of $\lambda$ that solve this determinant equation will be eigenvalues of the matrix.
+
+::: {.callout-note collapse="true" appearance="simple"}
+## Example of Solving for Eigenvalues
+
+We know $|(\mathbf A - \lambda \mathbf I)| = 0$. Let us say:
+
+$$
+\mathbf A = \begin{pmatrix} 2 & 1 \\ 3 & 4 \end{pmatrix}, \quad \lambda \mathbf I \begin{pmatrix} \lambda & 0 \\ 0 & \lambda \end{pmatrix}
+$$
+
+Thus:
+
+$$
+\mathbf A - \lambda \mathbf I = \begin{pmatrix} 2 - \lambda & 1 \\ 3 & 4 - \lambda \end{pmatrix}
+$$
+
+We know the determinant should equal 0. We can solve for $\lambda$:
+
+$$
+\begin{split}
+0 & = |(\mathbf A - \lambda \mathbf I)| \\
+0 & = (2-\lambda)(4-\lambda) - 1(3) \\
+0 & = 8-2\lambda - 4 \lambda +\lambda^2 - 4 \\
+0 & = \lambda^2 - 6\lambda +4 \\
+\end{split}
+$$
+
+Let us use the quadratic formula:
+
+$$
+\begin{split}
+\lambda & = \frac{-b ± \sqrt{b^2 - 4ac}}{2a} \\
+\lambda & = \frac{6 ± \sqrt{36 - 4(1)(4)}}{2(1)} \\
+\lambda & = \frac{6 ± \sqrt{20}}{2} \\
+\lambda & = 3 ± \frac{\sqrt{20}}{2} \\
+\lambda & = 3 ± \frac{2 \sqrt{5}}{2} \\
+\lambda & = 3 ± \sqrt{5}
+\end{split}
+$$
+
+Thus, we have found our eigenvalues.
+:::
+
+<br />
+
+### Calculating Eigenvectors
+
+Let us say we have the matrix $\mathbf{A}$:
+
+$$
+\mathbf A = \begin{pmatrix} 2 & 3 \\ 2 & 1 \end{pmatrix}
+$$
+
+First, you need to calculate the eigenvalues $\lambda$ (as shown in the previous section).
+
+::: {.callout-note collapse="true" appearance="simple"}
+## Example of Calculating Eigenvalues
+
+We know $|(\mathbf A - \lambda \mathbf I)| = 0$.
+
+$$
+\mathbf A - \lambda \mathbf I = \begin{pmatrix} 2 - \lambda & 3 \\ 2 & 1 - \lambda \end{pmatrix}
+$$
+
+Now solve $|(\mathbf A - \lambda \mathbf I)| = 0$.
+
+$$
+\begin{split}
+0 & = |(\mathbf A - \lambda \mathbf I)| \\
+0 & = (2 - \lambda)(1- \lambda) - 2(3) \\
+0 & = 2 -2 \lambda - \lambda + \lambda^2 - 6 \\
+0 & = \lambda ^2 - 3\lambda - 4 \\
+0 & = (\lambda - 4)(\lambda + 1) \\
+\lambda & = 4, -1
+\end{split}
+$$
+:::
+
+For every eigenvalue, you will have an eigenvector that makes the eigenvector equation $\mathbf{Ax} = \lambda \mathbf x$ true. From above:
+
+$$
+\begin{split}
+& \mathbf{Ax} = 4 \mathbf x \\
+& \mathbf{Ax} = -1 \mathbf x
+\end{split}
+$$
+
+Remember, $\mathbf x$ is a vector here of 2 elements, $x_1, x_2$  - but we only have one equation for each eigenvalue pair. This means there will be one solution without a unique solution.
+
+::: {.callout-tip collapse="true" appearance="simple"}
+## Eigenvalues and Non-Unique Solutions
+
+It might seem simple to just solve for our $\mathbf x$ with two unknowns $x_1, x_2$.
+
+But the issue is - our equations are not linearly independent, so we do not have enough information to solve for a unique solution for one.
+
+This is actually okay - why? Well, take a look at these potential eigenvectors:
+
+$$
+\begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 2 \\ 0 \end{pmatrix}, \begin{pmatrix} 3 \\ 0 \end{pmatrix}
+$$
+
+These are different vectors - but they are all eigenvectors. This is because of the equation $\mathbf{Ax} = \lambda \mathbf x$ - if both sides have vector $(1 \ 0)$ multiplied by a constant (like the 2nd and 3rd vectors), the equation is still equal.
+
+Thus, eigenvectors are not defined uniquely - only up to a singular multiplicative constant.
+:::
+
+What we typically do is define $x_1 = 1$ (there are some cases where this does not work). Using this, we can solve for the answer.
+
+::: {.callout-note collapse="true" appearance="simple"}
+## Example of Calculating Eigenvectors
+
+Let us continue the same example from before.
+
+$$
+\mathbf A = \begin{pmatrix} 2 & 3 \\ 2 & 1 \end{pmatrix}, \quad \lambda = 4, -1, \quad \mathbf x = \begin{pmatrix} 1 \\ c \end{pmatrix}
+$$
+
+Let us solve for the eigenvalue of $\lambda = 4$.
+
+$$
+\begin{split}
+\mathbf{Ax} & = 4 \mathbf x \\
+\begin{pmatrix} 2 & 3 \\ 2 & 1 \end{pmatrix}\begin{pmatrix} 1 \\ c \end{pmatrix} & = 4\begin{pmatrix} 1 \\ c \end{pmatrix} \\
+\begin{pmatrix} 2+3c \\ 2+c \end{pmatrix} & = \begin{pmatrix} 4 \\ 4c \end{pmatrix}
+\end{split}
+$$
+
+That gives us two equations:
+
+$$
+\begin{split}
+& 2 + 3c = 4 \\
+& 2 + c = 4c
+\end{split}
+$$
+
+The answer is $c = \frac{2}{3}$ (both answers give us the equation).
+
+Thus, the eigenvector with $\lambda = 4$ is:
+
+$$
+\mathbf x = \begin{pmatrix} 1 \\ \frac{2}{3} \end{pmatrix}
+$$
+
+We can do the same for $\lambda = -1$, and we will get eigenvector:
+
+$$
+\mathbf x = \begin{pmatrix} 1 \\ -1 \end{pmatrix}
+$$
+:::
+
+<br />
+
+### Eigenvector Decomposition
+
+Matrix decomposition is to take a matrix $\mathbf A$, and decompose it into other matrices, that when multiplied together, get the original matrix.
+
+If matrix $\mathbf A$ has unique eigenvalues, you can write:
+
+$$
+\mathbf A = \mathbf {QDQ}^{-1}
+$$
+
+Where $\mathbf Q$ is made up of eigenvectors of matrix $\mathbf A$, and $\mathbf D$ is a diagonal matrix with the eigenvalues $\lambda$ on the diagonal:
+
+$$
+\mathbf D = \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}, \quad
+\mathbf Q = \begin{pmatrix} \mathbf x_1 & \mathbf x_2\end{pmatrix}
+$$
+
+Eigenvectors decomposition has a few uses:
+
+::: {.callout-tip collapse="true" appearance="simple"}
+## Taking the Power of Matrices
+
+Let us say you want to find $\mathbf A^z$. We can use matrix decomposition for this:
+
+$$
+\mathbf A^z = {QDQ}^{-1}{QDQ}^{-1}{QDQ}^{-1}\dots
+$$
+
+Notice how the $\mathbf{Q}^{-1} \mathbf Q$ occurs quite frequently, and we know by properties of inverses, that $\mathbf{Q}^{-1} \mathbf Q = \mathbf I$, and multiplying by $\mathbf I$ does nothing.
+
+Thus, we can rewrite the formula above as:
+
+$$
+\mathbf A^z = \mathbf{QD}^z\mathbf Q^{-1}
+$$
+
+This is much simpler than calculating $\mathbf A^z$, since taking diagonal matrix to a power is defined as:
+
+$$
+\mathbf D^z = \begin{pmatrix} \lambda_1^z & 0 \\ 0 & \lambda_2^z\end{pmatrix}
+$$
+
+Which is much easier to do.
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+## Finding Determinants
+
+Let us say you want to find the determinant of $\mathbf A$. The following is true:
+
+$$
+\begin{split}
+\det (\mathbf A) & = \det(\mathbf{QD}^z\mathbf Q^{-1}) \\
+& = \det (\mathbf Q) \det (\mathbf D) \det (\mathbf Q^{-1}) \\
+& = \det (\mathbf Q) \det (\mathbf D) \frac{1}{\det (\mathbf Q)} \\
+& = \det (\mathbf D)
+\end{split}
+$$
+
+Since $\mathbf D$ is diagonal, the determinant of a diagonal matrix is just the product of the diagonal elements. Thus:
+
+$$
+\det (\mathbf A) = \prod_i \lambda_i
+$$
+:::
+
+::: {.callout-tip collapse="true" appearance="simple"}
+## Principle Component Analysis
+
+Principle Component Analysis (PCA) is used when matrix $\mathbf A$ is symmetric, positive semi-definite.
+
+-   This means the eigenvectors are orthogonal (perpendicular) to each other.
+-   This means eigenvalues will always be real and non-negative.
+
+PCA is done on the covariance matrix, which is symmetric and positive semi-definite.
+
+It is a data reduction technique commonly used in statistics and data science. We will discuss this in the multivariate statistics section.
+
+-   The eigenvectors of the covariance matrix form the principle components of thee system.
+-   The eigenvalues tell us how much of the variance each component explains (more important principle components have higher eigenvalues).
+:::
