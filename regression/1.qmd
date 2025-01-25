@@ -47,8 +47,6 @@ You should not use linear regression when:
 
 ### Model Specification
 
-Let us define $y$ as our outcome variable, and $x_1, \dots, x_k$ as our explanatory variables. $\beta_0, \dots, \beta_k$ are parameters of the population.
-
 The linear regression model can be written as a conditional expectation $E(y|x)$ function:
 
 $$
@@ -153,6 +151,15 @@ $$
 \begin{split}
 SSR & = \sum\limits_{i=1}^n(y_i - \hat y_i)^2 \\
 & = \sum\limits_{i=1}^n(y_i - \widehat{\beta_0} - \widehat{\beta_1}x_{1i} - \dots - \widehat{\beta_k}x_{ki})
+\end{split}
+$$
+
+In the linear algebra representation (where $\mathbf b$ is the vector of estimated parameters $\widehat{\beta_0}, \dots, \widehat{\beta_k}$):
+
+$$
+\begin{split}
+SSR & = (\mathbf y - \mathbf{\hat y})^T(\mathbf y - \mathbf{\hat y}) \\
+& = (\mathbf y - \mathbf{Xb})^T(\mathbf y - \mathbf{Xb})
 \end{split}
 $$
 
@@ -319,7 +326,7 @@ $$
 \frac{\partial S(b)}{\partial b} \biggr|_{\hat{\beta}} = -2X'y + 2X'X \hat{\beta} = 0
 $$
 
-When assuming $X'X$ is invertable, we can isolate $\hat{\beta}$ to find the solution to OLS:
+When assuming $X'X$ is invertable (which is true if $\mathbf X$ is full rank), we can isolate $\hat{\beta}$ to find the solution to OLS:
 
 $$
 \begin{split}
@@ -337,6 +344,10 @@ $$
 \widehat{y_i} = \widehat{\beta_0} +\widehat{\beta_1}x_{1i}, \dots, \widehat{\beta_k}x_{ki}
 $$
 
+$$
+\mathbf{\hat y} = \mathbf X \hat\beta = \mathbf X (\mathbf X^T\mathbf X)^{-1} \mathbf X^T \mathbf y
+$$
+
 <br />
 
 <br />
@@ -347,7 +358,7 @@ $$
 
 ### Interpretation of Coefficients
 
-I define $\widehat{\beta_j} \in \{\widehat{\beta_1}, \dots, \widehat{\beta_k}\}$. How do we interpret the $\widehat{\beta_j}$ we have estimated?
+I define $\widehat{\beta_j} \in \{\widehat{\beta_1}, \dots, \widehat{\beta_k}\}$.
 
 +--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                    | **Continuous** $x_j$                                                                                                                                                    | **Binary** $x_j$                                                                                                                                                             |
@@ -365,7 +376,7 @@ You can prove these explanations by plugging in $x_i = x$ and $x_i = x+1$ and fi
 
 ### Interpretation of the Intercept
 
-The intercept is $\widehat{\beta_0}$ (the only parameter not multiplied to a explanatory variable).
+The intercept is $\widehat{\beta_0}$.
 
 +--------------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                    | **Continuous** $x_j$                                                                                                                 | **Binary** $x_j$                                                                                                                                                     |
@@ -381,7 +392,7 @@ You can prove these interpretations by plugging in $x_1, \dots, x_k = 0$.
 
 ### Residual Standard Deviation
 
-Residuals, as discussed in the estimation section, are:
+Residuals are:
 
 $$
 \widehat{u_i} = y_i - \widehat{y_i}
@@ -502,7 +513,7 @@ If you have homoscedasticity, you should use normal OLS standard errors.
 
 If you have heteroscedasticity, you should use robust OLS standard errors. You should also use robust standard errors if you are not sure which errors to use.
 
-Standard errors can be mathematically derived (this is shown in the OLS estimator notes in the econometrics/causal inference section).
+Standard errors can be mathematically derived (this is shown in the OLS theory notes in the causal inference section).
 
 <br />
 
@@ -561,9 +572,7 @@ $$
 
 The confidence interval means that under repeated sampling and estimating $\widehat{\beta_j}$, 95% of the confidence intervals that we construct will include the true $\beta_j$ value in the population.
 
-If the confidence interval contains 0, we cannot conclude a relationship between $x_j$ and $y$, as 0 is a plausible value of $\beta_j$.
-
--   These results will always match those of the t-test.
+If the confidence interval contains 0, we cannot conclude a relationship between $x_j$ and $y$, as 0 is a plausible value of $\beta_j$. These results will always match those of the t-test.
 
 <br />
 

@@ -201,7 +201,6 @@ window.Quarto = {
 </section>
 <section id="model-specification" class="level3">
 <h3 class="anchored" data-anchor-id="model-specification">Model Specification</h3>
-<p>Let us define <span class="math inline">y</span> as our outcome variable, and <span class="math inline">x_1, \dots, x_k</span> as our explanatory variables. <span class="math inline">\beta_0, \dots, \beta_k</span> are parameters of the population.</p>
 <p>The linear regression model can be written as a conditional expectation <span class="math inline">E(y|x)</span> function:</p>
 <p><span class="math display">
 E(y_i|x_i) = \beta_0 + \beta_1x_{1i} + \dots + \beta_kx_{ki}
@@ -314,6 +313,13 @@ y_i = \mathbf x_i^T \mathbf \beta + u_i, \text{ where } \mathbf \beta = \begin{b
 \begin{split}
 SSR &amp; = \sum\limits_{i=1}^n(y_i - \hat y_i)^2 \\
 &amp; = \sum\limits_{i=1}^n(y_i - \widehat{\beta_0} - \widehat{\beta_1}x_{1i} - \dots - \widehat{\beta_k}x_{ki})
+\end{split}
+</span></p>
+<p>In the linear algebra representation (where <span class="math inline">\mathbf b</span> is the vector of estimated parameters <span class="math inline">\widehat{\beta_0}, \dots, \widehat{\beta_k}</span>):</p>
+<p><span class="math display">
+\begin{split}
+SSR &amp; = (\mathbf y - \mathbf{\hat y})^T(\mathbf y - \mathbf{\hat y}) \\
+&amp; = (\mathbf y - \mathbf{Xb})^T(\mathbf y - \mathbf{Xb})
 \end{split}
 </span></p>
 <div class="callout callout-style-simple callout-tip callout-titled">
@@ -490,7 +496,7 @@ S(b) &amp; = y'y - b'X'y - y'Xb + b'X'Xb \\
 <p><span class="math display">
 \frac{\partial S(b)}{\partial b} \biggr|_{\hat{\beta}} = -2X'y + 2X'X \hat{\beta} = 0
 </span></p>
-<p>When assuming <span class="math inline">X'X</span> is invertable, we can isolate <span class="math inline">\hat{\beta}</span> to find the solution to OLS:</p>
+<p>When assuming <span class="math inline">X'X</span> is invertable (which is true if <span class="math inline">\mathbf X</span> is full rank), we can isolate <span class="math inline">\hat{\beta}</span> to find the solution to OLS:</p>
 <p><span class="math display">
 \begin{split}
 -2X'y + 2X'X \hat{\beta} &amp; = 0 \\
@@ -506,6 +512,9 @@ S(b) &amp; = y'y - b'X'y - y'Xb + b'X'Xb \\
 <p><span class="math display">
 \widehat{y_i} = \widehat{\beta_0} +\widehat{\beta_1}x_{1i}, \dots, \widehat{\beta_k}x_{ki}
 </span></p>
+<p><span class="math display">
+\mathbf{\hat y} = \mathbf X \hat\beta = \mathbf X (\mathbf X^T\mathbf X)^{-1} \mathbf X^T \mathbf y
+</span></p>
 <p><br></p>
 <p><br></p>
 <hr>
@@ -515,7 +524,7 @@ S(b) &amp; = y'y - b'X'y - y'Xb + b'X'Xb \\
 <h1><strong>Interpretation</strong></h1>
 <section id="interpretation-of-coefficients" class="level3">
 <h3 class="anchored" data-anchor-id="interpretation-of-coefficients">Interpretation of Coefficients</h3>
-<p>I define <span class="math inline">\widehat{\beta_j} \in \{\widehat{\beta_1}, \dots, \widehat{\beta_k}\}</span>. How do we interpret the <span class="math inline">\widehat{\beta_j}</span> we have estimated?</p>
+<p>I define <span class="math inline">\widehat{\beta_j} \in \{\widehat{\beta_1}, \dots, \widehat{\beta_k}\}</span>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
@@ -546,7 +555,7 @@ S(b) &amp; = y'y - b'X'y - y'Xb + b'X'Xb \\
 </section>
 <section id="interpretation-of-the-intercept" class="level3">
 <h3 class="anchored" data-anchor-id="interpretation-of-the-intercept">Interpretation of the Intercept</h3>
-<p>The intercept is <span class="math inline">\widehat{\beta_0}</span> (the only parameter not multiplied to a explanatory variable).</p>
+<p>The intercept is <span class="math inline">\widehat{\beta_0}</span>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 6%">
@@ -576,7 +585,7 @@ S(b) &amp; = y'y - b'X'y - y'Xb + b'X'Xb \\
 </section>
 <section id="residual-standard-deviation" class="level3">
 <h3 class="anchored" data-anchor-id="residual-standard-deviation">Residual Standard Deviation</h3>
-<p>Residuals, as discussed in the estimation section, are:</p>
+<p>Residuals are:</p>
 <p><span class="math display">
 \widehat{u_i} = y_i - \widehat{y_i}
 </span></p>
@@ -706,7 +715,7 @@ Intuitive Visualisation of Homoscedasticity
 </div>
 <p>If you have homoscedasticity, you should use normal OLS standard errors.</p>
 <p>If you have heteroscedasticity, you should use robust OLS standard errors. You should also use robust standard errors if you are not sure which errors to use.</p>
-<p>Standard errors can be mathematically derived (this is shown in the OLS estimator notes in the econometrics/causal inference section).</p>
+<p>Standard errors can be mathematically derived (this is shown in the OLS theory notes in the causal inference section).</p>
 <p><br></p>
 </section>
 <section id="t-tests" class="level3">
@@ -769,10 +778,7 @@ t = \frac{\widehat{\beta_1} - H_0}{\widehat{se}(\widehat{\beta_1})}
 <li>The 1.96 is an approximation assuming a normal distribution. The actual confidence intervals (calculated by computers) will use a t-distribution of <span class="math inline">n-k-1</span>, which will result in a slightly different multiplicative factor.</li>
 </ul>
 <p>The confidence interval means that under repeated sampling and estimating <span class="math inline">\widehat{\beta_j}</span>, 95% of the confidence intervals that we construct will include the true <span class="math inline">\beta_j</span> value in the population.</p>
-<p>If the confidence interval contains 0, we cannot conclude a relationship between <span class="math inline">x_j</span> and <span class="math inline">y</span>, as 0 is a plausible value of <span class="math inline">\beta_j</span>.</p>
-<ul>
-<li>These results will always match those of the t-test.</li>
-</ul>
+<p>If the confidence interval contains 0, we cannot conclude a relationship between <span class="math inline">x_j</span> and <span class="math inline">y</span>, as 0 is a plausible value of <span class="math inline">\beta_j</span>. These results will always match those of the t-test.</p>
 <p><br></p>
 </section>
 <section id="f-tests" class="level3">
