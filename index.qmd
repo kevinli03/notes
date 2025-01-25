@@ -33,19 +33,46 @@ editor: visual
 | [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=15ghr49_gcl_auMTk0MjQzMTI2MS4xNzEzMzg0NDcy_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w) | [Postgrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm)                                                                            | [MY457 Page](https://lse-my457.github.io)                                                                                |
 :::
 
-This is a collection of notes from my time studying at the London School of Economics.
+This is a collection of notes from my time studying at the London School of Economics. Use the sidebar for enhanced navigation.
 
--   Topics include Statistics/Econometrics, Game Theory/Political Economy, and other materials. R-coding guide provided in statistical pages.
--   Use the sidebar to navigate between sections.
+------------------------------------------------------------------------
+
+# Introductory/Background Material
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Mathematics and Probability
+
+Mathematics:
+
+1.  Sets and Algebra
+2.  Single Variable Calculus
+3.  [Vectors and Matrices](https://kevinli03.github.io/notes/maths/3.html)
+4.  Vector Spaces and Systems of Equations
+5.  Eigenvalues and Markov Chains
+6.  Multivariate Differentiation
+7.  Multivariate Optimisation
+8.  Comparative Statics and Implicit Differentiation
+
+Probability Theory
+
+9.  Basic Probability
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## R-Programming
+
+1.  R-Programming Fundamentals
+2.  Ggplot Guide
+:::
+
+<br />
 
 ------------------------------------------------------------------------
 
 # Statistics/Econometrics
 
-### General Statistical/Econometric Models
-
 ::: {.callout-tip collapse="true" appearance="minimal"}
-## Regression Models (for Cross-Sectional Data)
+## Regression Models
 
 Generalised Linear Model:
 
@@ -155,8 +182,6 @@ Text Analysis Methods
 
 <br />
 
-<br />
-
 ------------------------------------------------------------------------
 
 # Game Theory/Political Economy
@@ -188,34 +213,4 @@ Models from Political Economy:
 
 <br />
 
-<br />
-
 ------------------------------------------------------------------------
-
-# Math + Coding Materials
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Mathematics
-
-Mathematics:
-
-1.  Sets and Algebra
-2.  Single Variable Calculus
-3.  [Vectors and Matrices](https://kevinli03.github.io/notes/maths/3.html)
-4.  Vector Spaces and Systems of Equations
-5.  Eigenvalues and Markov Chains
-6.  Multivariate Differentiation
-7.  Multivariate Optimisation
-8.  Comparative Statics and Implicit Differentiation
-
-Probability Theory
-
-9.  Basic Probability
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## R-Programming
-
-1.  R-Programming Fundamentals
-2.  Ggplot Guide
-:::
