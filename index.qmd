@@ -25,40 +25,20 @@ editor: visual
 
 This is a collection of notes from my time studying at the London School of Economics.
 
-## Mathematics + Game Theory
+## Background Material
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
 ## Calculus and Linear Algebra
 
 1.  Single Variable Calculus
 2.  [Vectors and Matrices](https://kevinli03.github.io/notes/maths/2.html)
-3.  Vector Spaces and Systems of Equations
-4.  Eigenvalues and Markov Chains
-5.  Multivariate Differentiation
-6.  Multivariate Optimisation
-7.  Comparative Statics and Implicit Differentiation
+3.  [Vector Spaces and Systems of Equations](https://kevinli03.github.io/notes/maths/3.html)
+4.  Multivariate Differentiation
+5.  Multivariate Optimisation
+6.  Comparative Statics and Implicit Differentiation
 :::
 
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Proof and Analysis
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Formal Theory (Game Theory)
-
-Introductory/Background Material:
-
--   Basics of Game Theory
-
-Formal Models:
-
-1.  Median Voter Theory and Extensions
-2.  Prisoner's Dilemma and Cooperation
-3.  Legislative Bargaining Models
-4.  Models of Elections and Incentives
-
-*Material in this section is primarily taken from GV4C8 Game Theory for Political Science and GV482 Political Science and Political Economy.*
-:::
+<br />
 
 ## Statistics/Econometrics
 
@@ -165,4 +145,21 @@ Text Analysis Methods
 
 <br />
 
-------------------------------------------------------------------------
+## Political Economy
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Political Economy Models
+
+Introductory/Background Material:
+
+-   Basics of Game Theory
+
+Formal Models:
+
+1.  Median Voter Theory and Extensions
+2.  Prisoner's Dilemma and Cooperation
+3.  Legislative Bargaining Models
+4.  Models of Elections and Incentives
+
+*Material in this section is primarily taken from GV4C8 Game Theory for Political Science and GV482 Political Science and Political Economy.*
+:::
