@@ -32,7 +32,7 @@ This is a collection of notes from my time studying at the London School of Econ
 
 1.  Single Variable Calculus
 2.  [Vectors and Matrices](https://kevinli03.github.io/notes/maths/2.html)
-3.  [Vector Spaces and Systems of Equations](https://kevinli03.github.io/notes/maths/3.html)
+3.  [Linear Algebra](https://kevinli03.github.io/notes/maths/3.html)
 4.  Multivariate Differentiation
 5.  Multivariate Optimisation
 6.  Comparative Statics and Implicit Differentiation

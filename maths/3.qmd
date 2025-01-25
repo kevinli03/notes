@@ -1,5 +1,5 @@
 ---
-title: "Vector Spaces and Systems of Equations"
+title: "Linear Algebra"
 subtitle: "Kevin's PSPE Notes: Calculus and Linear Algebra"
 format:
     html:
@@ -260,7 +260,7 @@ We know if a matrix is full rank, then all rows/columns are linearly independent
 
 <br />
 
-###  Matrix Inversion
+### Matrix Inversion
 
 Matrix inversion is a way to solve a system of equations. Take this system of equations:
 
