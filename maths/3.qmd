@@ -496,7 +496,7 @@ $$
 \end{split}
 $$
 
-Remember, $\mathbf x$ is a vector here of 2 elements, $x_1, x_2$  - but we only have one equation for each eigenvalue pair. This means there will be one solution without a unique solution.
+Remember, $\mathbf x$ is a vector here of 2 elements, $x_1, x_2$ - but we only have one equation for each eigenvalue pair. This means there will be one solution without a unique solution.
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Eigenvalues and Non-Unique Solutions

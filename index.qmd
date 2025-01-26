@@ -23,7 +23,7 @@ format:
 editor: visual
 ---
 
-## Mathematical Methods
+## Mathematics
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
 ## Calculus and Linear Algebra
@@ -40,12 +40,10 @@ editor: visual
 ## Proof and Analysis
 :::
 
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Mathematical Optimisation
-:::
+## Political Economics
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
-## Game Theory (and Applications)
+## Political Economy Models
 
 Introductory/Background Material:
 
