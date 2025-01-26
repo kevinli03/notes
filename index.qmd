@@ -23,7 +23,7 @@ format:
 editor: visual
 ---
 
-## Mathematics
+## Introductory Material
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
 ## Calculus and Linear Algebra
@@ -34,10 +34,8 @@ editor: visual
 4.  Multivariate Differentiation
 5.  Multivariate Optimisation
 6.  Comparative Statics and Implicit Differentiation
-:::
 
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Proof and Analysis
+*Materials in this section is primarily taken from Moore and Siegel’s A Mathematics Course for Political and Social Research. Supplementary Material provided from MA108 Calculus and Linear Algebra and GV4L8 Introductory Mathematics.*
 :::
 
 ## Political Economics
@@ -47,7 +45,7 @@ editor: visual
 
 Introductory/Background Material:
 
--   Basics of Game Theory
+-   [Game Theory Concepts](https://kevinli03.github.io/notes/polecon/games.html)
 
 Formal Models:
 
@@ -64,8 +62,6 @@ Formal Models:
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
 ## Regression Models
-
-Generalised Linear Model:
 
 1.  [Linear Regression Model](https://kevinli03.github.io/notes/regression/1.html)
 2.  Logistic Regression Models
