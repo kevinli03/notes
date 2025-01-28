@@ -1,6 +1,6 @@
 ---
-title: "Kevin's PSPE Notes"
-subtitle: "My notes from LSE on Mathematics, Statistics, and Game Theory"
+title: "Kevin's LSE PSPE Notes (and more)"
+subtitle: "My notes on Mathematics, Statistics, and Political Economy"
 format:
     html:
         page-layout: article
@@ -29,13 +29,21 @@ editor: visual
 ## Calculus and Linear Algebra
 
 1.  Single Variable Calculus
-2.  [Vectors and Matrices](https://kevinli03.github.io/notes/maths/2.html)
-3.  [Linear Algebra](https://kevinli03.github.io/notes/maths/3.html)
+2.  [Vectors and Matrices](https://kevinli03.github.io/notes/calc/2.html)
+3.  [Linear Algebra](https://kevinli03.github.io/notes/calc/3.html)
 4.  Multivariate Differentiation
 5.  Multivariate Optimisation
 6.  Comparative Statics and Implicit Differentiation
 
 *Materials in this section is primarily taken from Moore and Siegel’s A Mathematics Course for Political and Social Research. Supplementary Material provided from MA108 Calculus and Linear Algebra and GV4L8 Introductory Mathematics.*
+:::
+
+::: {.callout-tip collapse="true" appearance="minimal"}
+## Proof and Analysis
+
+Introduction to Proofs:
+
+1.  [Introduction to Proofs and Logic](https://kevinli03.github.io/notes/proof/1.html)
 :::
 
 ## Political Economics
