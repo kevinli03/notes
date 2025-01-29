@@ -32,7 +32,7 @@ I will be making more polished notes here: <http://politicalscience.github.io>
 **LSE Links:**
 
 |                                                                                                                                                                                                                                                          |                                                                                                                                                                   |                                                                                                                          |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+|---------------------------------|----------------------|------------------|
 | [Moodle](https://moodle.lse.ac.uk/my/)                                                                                                                                                                                                                   | [Course Regulations](https://www.lse.ac.uk/resources/calendar/programmeRegulations/taughtMasters/2024/MScPoliticalSciencePoliticalScienceAndPoliticalEconomy.htm) | [Stats on LSE](https://info.lse.ac.uk/staff/divisions/academic-registrars-division/systems/what-we-do/statistics-on-lse) |
 | [Student For You](https://portal.lse.ac.uk/studentservices/s/?_gl=11c1xkmp_gcl_auMTU2NDcwMzc5MS4xNzIxMjM1NTAz_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w)                                                 | [Postgrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm)                                                                            | [Causal Inference](https://lse-my457.github.io)                                                                          |
 | [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=15ghr49_gcl_auMTk0MjQzMTI2MS4xNzEzMzg0NDcy_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w) | [Undergrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm)                                                                      | [Text Analysis](https://lse-my459.github.io)                                                                             |
@@ -82,93 +82,11 @@ Formal Models: see here.
 1.  [Linear Regression Model](https://kevinli03.github.io/notes/regression/1.html)
 2.  Logistic Regression Models
 3.  Count Regression Models
+4.  [Ordinary Least Squares Theory](https://kevinli03.github.io/notes/causal/ols.html)
 
 *Material in this section is taken primarily from MY452 Applied Regression Analysis. Further Material taken from GV481 Quantitative Analysis for Political Science, EC2C1 Econometrics II, EC2C3 Econometrics I, and EC2C4 Econometrics II.*
 :::
 
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Econometrics/Causal Inference
-
-Introductory/Background Material:
-
--   [Ordinary Least Squares Theory](https://kevinli03.github.io/notes/causal/ols.html)
--   [Causal Frameworks](https://kevinli03.github.io/notes/causal/framework.html)
-
-Causal Identification Designs:
-
-1.  Randomised Controlled Trials
-2.  Selection on Observables
-3.  Instrumental Variable Designs
-4.  Regression Discontinuity Designs
-5.  Differences-in-Differences
-6.  Survey Experiments
-
-*Material in this section is taken primarily from MY457 Causal Inference for Observational and Experimental Studies. Further Material taken from GV481 Quantitative Analysis for Political Science, EC2C1 Econometrics II, EC2C3 Econometrics I, and EC2C4 Econometrics II.*
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Multivariate Measurement Methods
-
-Dimensional Reduction Methods:
-
-1.  Principle Components Analysis
-2.  Cluster Analysis
-
-Latent Variable Models:
-
-1.  Exploratory Factor Analysis
-2.  Confirmatory Factor Analysis
-3.  Latent Trait Models (IRT)
-4.  Latent Class Models
-5.  Structural Equation Models
-
-*Material in this section is taken primarily from MY455 Multivariate Analysis and Measurement.*
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Simple Machine Learning Models
-
-Machine Learning Models:
-
-1.  Generalised Additive Models
-2.  Random Forest and Bagging
-3.  Naive Bayes Classifier
-
-*Material in this section is primarily taken from ME314 Introduction to Data Science and Machine Learning.*
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Models for Spatial Data
-
-Spatial Statistics
-
-1.  Spatial Descriptive Statistics
-2.  Weights, Aggregation, and Smoothing
-
-Spatial Econometrics
-
-3.  Spatial Regression Models
-4.  Spatial Differences-in-Differences
-5.  Spatial Discontinuity Designs
-6.  Spatial Discrete Choice Models
-7.  The Modifiable Areal Unit Problem
-
-*Material in this section taken primarily from GY460 Techniques of Spatial Economic Analysis.*
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Models for Textual Data
-
-Text Analysis Methods
-
-1.  Quantifying Texts
-2.  Dictionary and Discriminating Words Methods
-3.  Naive Bayes Classifier
-4.  Latent Trait Scale
-5.  Text Similarity and Clustering Methods
-6.  Structural Topic Models
-
-*Material in this section is primarily taken from MY459 Quantitative Text Analysis.*
-:::
+See <https://politicalscience.github.io> for more.
 
 <br />
