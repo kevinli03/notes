@@ -1,6 +1,6 @@
 ---
-title: "Kevin's LSE PSPE Notes (and more)"
-subtitle: "My notes on Mathematics, Statistics, and Political Economy"
+title: "Kevin's Notes"
+subtitle: "My notes (Not Polished)"
 format:
     html:
         page-layout: article
@@ -23,7 +23,23 @@ format:
 editor: visual
 ---
 
-## Introductory Material
+These notes are not polished - they are made for myself, so I have skipped many details that I do not think I need help with.
+
+I will be making more polished notes here: <http://politicalscience.github.io>
+
+<br />
+
+**LSE Links:**
+
+|                                                                                                                                                                                                                                                          |                                                                                                                                                                   |                                                                                                                          |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| [Moodle](https://moodle.lse.ac.uk/my/)                                                                                                                                                                                                                   | [Course Regulations](https://www.lse.ac.uk/resources/calendar/programmeRegulations/taughtMasters/2024/MScPoliticalSciencePoliticalScienceAndPoliticalEconomy.htm) | [Stats on LSE](https://info.lse.ac.uk/staff/divisions/academic-registrars-division/systems/what-we-do/statistics-on-lse) |
+| [Student For You](https://portal.lse.ac.uk/studentservices/s/?_gl=11c1xkmp_gcl_auMTU2NDcwMzc5MS4xNzIxMjM1NTAz_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyNzM4MTg5Ny4yMDMuMS4xNzI3MzgyNzQyLjguMC4w)                                                 | [Postgrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/graduate.htm)                                                                            | [Causal Inference](https://lse-my457.github.io)                                                                          |
+| [LSE For You](https://auth.lse.ac.uk/auth/login?service=https%3A%2F%2Flfy.lse.ac.uk%2Fportal%2Fp%2F&renew=true&_gl=15ghr49_gcl_auMTk0MjQzMTI2MS4xNzEzMzg0NDcy_gaOTczMzc3MTk2LjE3MTMzODQ0NzI._ga_LWTEVFESYX*MTcyMDU2MDcyMy44Mi4xLjE3MjA1NjA3NjIuMjEuMC4w) | [Undergrad Modules](https://www.lse.ac.uk/resources/calendar/courseGuides/undergraduate.htm)                                                                      | [Text Analysis](https://lse-my459.github.io)                                                                             |
+
+<br />
+
+## Mathematics
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
 ## Calculus and Linear Algebra
@@ -46,22 +62,14 @@ Introduction to Proofs:
 1.  [Introduction to Proofs and Logic](https://kevinli03.github.io/notes/proof/1.html)
 :::
 
-## Political Economics
-
 ::: {.callout-tip collapse="true" appearance="minimal"}
-## Political Economy Models
+## Game Theory
 
 Introductory/Background Material:
 
 -   [Game Theory Concepts](https://kevinli03.github.io/notes/polecon/games.html)
 
-Formal Models:
-
-1.  Electoral Competition (Median Voter Theory)
-2.  Public Goods and Cooperation
-3.  Legislative Bargaining Models
-4.  Models of Elections and Incentives
-5.  Cournot Equilibrium and Duopoly
+Formal Models: see here.
 
 *Material in this section is primarily taken from GV4C8 Game Theory for Political Science and GV482 Political Science and Political Economy.*
 :::
@@ -127,10 +135,6 @@ Machine Learning Models:
 3.  Naive Bayes Classifier
 
 *Material in this section is primarily taken from ME314 Introduction to Data Science and Machine Learning.*
-:::
-
-::: {.callout-tip collapse="true" appearance="minimal"}
-## Models for Time Series Data
 :::
 
 ::: {.callout-tip collapse="true" appearance="minimal"}
